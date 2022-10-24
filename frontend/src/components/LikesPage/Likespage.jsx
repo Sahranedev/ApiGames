@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function Likespage() {
-  return (
-    <div>Likespage</div>
-  )
+  return <div>Likespage</div>;
 }
 
-export default Likespage
+export default Likespage;

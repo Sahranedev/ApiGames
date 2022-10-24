@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function Stilllost() {
-  return (
-    <div>Stilllost</div>
-  )
+  return <div>Stilllost</div>;
 }
 
-export default Stilllost
+export default Stilllost;

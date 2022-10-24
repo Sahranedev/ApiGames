@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function Novelties() {
-  return (
-    <div>Novelties</div>
-  )
+  return <div>Novelties</div>;
 }
 
-export default Novelties
+export default Novelties;

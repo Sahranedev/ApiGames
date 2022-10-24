@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function Firstpage() {
-  return (
-    <div>Firstpage</div>
-  )
+  return <div>Firstpage</div>;
 }
 
-export default Firstpage
+export default Firstpage;
