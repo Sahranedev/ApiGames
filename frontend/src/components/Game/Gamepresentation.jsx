@@ -1,8 +1,10 @@
 import React from "react";
+import ButtonClose from "./ButtonClose";
 
 function Gamepresentation() {
   return (
     <>
+      <ButtonClose />
       <img src="props" alt="jeu" />
       {/* La div gamepagetitle comprennd le titre du jeu et le coeur pour mettre en favori  */}
       <div className="gamepagetotal">
