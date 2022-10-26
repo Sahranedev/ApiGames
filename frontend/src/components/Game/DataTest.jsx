@@ -1,4 +1,4 @@
-const dataTest = [
+const dataTest =
   // Dark Soul Remasted
   {
     type: "game",
@@ -11,11 +11,11 @@ const dataTest = [
       "Nous sommes actuellement en plein processus de restauration des serveurs en ligne pour la série de jeux Dark Souls sur PC.<br />\r\n<br />\r\nLorsque nous aurons résolu le problème, nous prévoyons de rétablir le mode en ligne de chaque jeu progressivement, en commençant par les serveurs de DARK SOULS™: REMASTERED. Nous vous tiendrons au courant dans de prochaines mises à jour dès que le planning de restauration sera établi.<br />\r\n<br />\r\nNous tenons à remercier tous les joueurs pour leur patience et leur compréhension tandis que nous nous efforçons de résoudre ce problème.<br />\r\n<br />\r\nVint alors l'avènement du Feu... Redécouvrez le jeu de référence salué par la critique. Dans cette splendide version remastérisée, retrouvez Lordran et ses décors époustouflants en haute définition et en 60 fps. <br />\r\nDark Souls Remastered comprend le jeu de base, ainsi que le DLC « Artorias of the Abyss ».<br />\r\n<br />\r\nCaractéristiques principales :<br />\r\n• Un univers sombre et profond<br />\r\n• Chaque fin est un nouveau commencement<br />\r\n• Un gameplay riche aux multiples possibilités<br />\r\n• Un sentiment de progression, de maîtrise et d'accomplissement<br />\r\n• Un mode multijoueur pouvant accueillir jusqu'à 6 joueurs sur des serveurs dédiés",
     about_the_game:
       "Nous sommes actuellement en plein processus de restauration des serveurs en ligne pour la série de jeux Dark Souls sur PC.<br />\r\n<br />\r\nLorsque nous aurons résolu le problème, nous prévoyons de rétablir le mode en ligne de chaque jeu progressivement, en commençant par les serveurs de DARK SOULS™: REMASTERED. Nous vous tiendrons au courant dans de prochaines mises à jour dès que le planning de restauration sera établi.<br />\r\n<br />\r\nNous tenons à remercier tous les joueurs pour leur patience et leur compréhension tandis que nous nous efforçons de résoudre ce problème.<br />\r\n<br />\r\nVint alors l'avènement du Feu... Redécouvrez le jeu de référence salué par la critique. Dans cette splendide version remastérisée, retrouvez Lordran et ses décors époustouflants en haute définition et en 60 fps. <br />\r\nDark Souls Remastered comprend le jeu de base, ainsi que le DLC « Artorias of the Abyss ».<br />\r\n<br />\r\nCaractéristiques principales :<br />\r\n• Un univers sombre et profond<br />\r\n• Chaque fin est un nouveau commencement<br />\r\n• Un gameplay riche aux multiples possibilités<br />\r\n• Un sentiment de progression, de maîtrise et d'accomplissement<br />\r\n• Un mode multijoueur pouvant accueillir jusqu'à 6 joueurs sur des serveurs dédiés",
-    short_description:
+    shortDescription:
       "Vint alors l'avènement du Feu... Redécouvrez le jeu de référence salué par la critique. Dans cette splendide version remastérisée, retrouvez Lordran et ses décors époustouflants en haute définition et en 60 fps.",
     supported_languages:
       "Anglais<strong>*</strong>, Français, Italien, Allemand, Espagnol - Espagne, Japonais, Coréen, Polonais, Portugais du Brésil, Russe, Chinois simplifié, Chinois traditionnel<br><strong>*</strong>Langues avec support audio complet",
-    header_image:
+    headerImage:
       "https://cdn.akamai.steamstatic.com/steam/apps/570940/header.jpg?t=1660140230",
     website: null,
     pc_requirements: {
@@ -116,7 +116,7 @@ const dataTest = [
     screenshots: [
       {
         id: 0,
-        path_thumbnail:
+        pathThumbnail:
           "https://cdn.akamai.steamstatic.com/steam/apps/570940/ss_3a71463e4ccaf28c5c27f6cf8d32a3a125f45404.600x338.jpg?t=1660140230",
         path_full:
           "https://cdn.akamai.steamstatic.com/steam/apps/570940/ss_3a71463e4ccaf28c5c27f6cf8d32a3a125f45404.1920x1080.jpg?t=1660140230",
@@ -238,7 +238,6 @@ const dataTest = [
       ids: [],
       notes: null,
     },
-  },
-];
+  };
 
 export default dataTest;
