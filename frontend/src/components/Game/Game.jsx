@@ -1,5 +1,5 @@
 import React from "react";
-import dataTest from "./dataTest";
+import dataTest from "./DataTest";
 import Gamepresentation from "./Gamepresentation";
 
 function Game() {
