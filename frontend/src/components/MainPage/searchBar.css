@@ -1,0 +1,28 @@
+.search {
+  display: flex;
+}
+.search-button {
+  height: 7vh;
+  margin-top: 1rem;
+  margin-right: 2rem;
+  position: absolute;
+  right: 0;
+  background-color: #26262600;
+  color: white;
+  border: none;
+}
+.search-bar {
+  width: 85vw;
+  height: 7vh;
+  margin: 1rem;
+  -webkit-border-radius: 18px;
+  -moz-border-radius: 18px;
+  border-radius: 18px;
+  border: 0;
+  padding-left: 1.5rem;
+  font-size: 1.2rem;
+  background-color: #262626;
+  -webkit-box-shadow: inset 1px 1px 0px 4px rgba(165, 162, 166, 0.6);
+  box-shadow: inset 1px 1px 0px 4px rgba(165, 162, 166, 0.6);
+  color: rgb(167, 150, 150);
+}
