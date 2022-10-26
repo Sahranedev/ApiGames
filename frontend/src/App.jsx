@@ -1,13 +1,10 @@
-import Game from "./components/Game/Game";
 import "./App.css";
-import Mainpage from "./components/MainPage/Mainpage";
+import FirstPage from "./components/FirstPage/FirstPage";
 
 function App() {
   return (
     <div className="App">
-      <p>coucou</p>
-      <Mainpage />
-      <Game />
+      <FirstPage />
     </div>
   );
 }
