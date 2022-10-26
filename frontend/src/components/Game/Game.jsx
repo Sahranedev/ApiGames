@@ -2,12 +2,14 @@ import React from "react";
 import dataTest from "./DataTest";
 import Gamepresentation from "./Gamepresentation";
 
-function Game() {
-  return (
+function Game({ gameList }) {
+  return gameList !== undefined ? (
     <div>
-      <Gamepresentation {...dataTest} />
+      {gameList.map((game) => (
+        <Gamepresentation key={game.id} {...game} />
+      ))}
     </div>
-  );
+  ) : null;
 }
 
 export default Game;

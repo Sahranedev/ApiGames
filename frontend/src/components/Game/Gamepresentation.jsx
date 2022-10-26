@@ -1,32 +1,24 @@
 import React from "react";
+import "./Gamepresentation.css";
 import ButtonClose from "./ButtonClose";
 
-function Gamepresentation({
-  name,
-  publishers,
-  developers,
-  headerImage,
-  shortDescription,
-  release_date: { date },
-  screenshots,
-  genres,
-  metacritic: { score },
-}) {
+function Gamepresentation({ name, background_image, metacritic }) {
   return (
     <div className="gamePageContainer">
-      <ButtonClose />
+      <h2>{name}</h2>
+      <img className="backgroundGameImage" src={background_image} alt="jeu" />
+      <div>❤️</div>
+      <div>{metacritic}</div>
+      {/* <ButtonClose />
       <img src={headerImage} alt="jeu" />
       <div className="gamePageInformations">
         <div className="gamePageTitle">
-          <h2>{name} </h2>
-          <div>❤️</div>
         </div>
         <div className="gamePageCarrousel">
           {screenshots.map((screenshot) => (
             <img src={screenshot.pathThumbnail} alt="futur carrousel" />
           ))}
         </div>
-        <div>{score}</div>
         <div className="gamePageGenre">
           {genres.map((genre) => (
             <div>{genre.description}</div>
@@ -38,7 +30,7 @@ function Gamepresentation({
           <h3>Date de sortie : {date} </h3>
         </div>
       </div>
-      <p className="gamePageDescription">{shortDescription}</p>
+      <p className="gamePageDescription">{shortDescription}</p> */}
     </div>
   );
 }
