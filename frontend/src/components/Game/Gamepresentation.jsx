@@ -10,6 +10,7 @@ function Gamepresentation({
   release_date: { date },
   screenshots,
   genres,
+  metacritic: { score },
 }) {
   return (
     <div className="gamePageContainer">
@@ -25,14 +26,14 @@ function Gamepresentation({
             <img src={screenshot.pathThumbnail} alt="futur carrousel" />
           ))}
         </div>
-        <div>Score métacritique</div>
+        <div>{score}</div>
         <div className="gamePageGenre">
           {genres.map((genre) => (
             <div>{genre.description}</div>
           ))}
         </div>
         <div className="gamePageCreators">
-          <h3>Editor : {publishers}</h3>
+          <h3>Éditeurs : {publishers}</h3>
           <h3>Développeurs : {developers}</h3>
           <h3>Date de sortie : {date} </h3>
         </div>
