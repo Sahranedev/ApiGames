@@ -112,6 +112,10 @@ const dataTest =
         id: "1",
         description: "Action",
       },
+      {
+        id: "2",
+        description: "RPG",
+      },
     ],
     screenshots: [
       {
@@ -123,35 +127,35 @@ const dataTest =
       },
       {
         id: 1,
-        path_thumbnail:
+        pathThumbnail:
           "https://cdn.akamai.steamstatic.com/steam/apps/570940/ss_92b2ba470cbfdb8839b649b3f478e5531dd81a17.600x338.jpg?t=1660140230",
         path_full:
           "https://cdn.akamai.steamstatic.com/steam/apps/570940/ss_92b2ba470cbfdb8839b649b3f478e5531dd81a17.1920x1080.jpg?t=1660140230",
       },
       {
         id: 2,
-        path_thumbnail:
+        pathThumbnail:
           "https://cdn.akamai.steamstatic.com/steam/apps/570940/ss_626cc310dc9ac7fb146011582c864a35e5f3e381.600x338.jpg?t=1660140230",
         path_full:
           "https://cdn.akamai.steamstatic.com/steam/apps/570940/ss_626cc310dc9ac7fb146011582c864a35e5f3e381.1920x1080.jpg?t=1660140230",
       },
       {
         id: 3,
-        path_thumbnail:
+        pathThumbnail:
           "https://cdn.akamai.steamstatic.com/steam/apps/570940/ss_f1617a419eb3b0cd877ec71230c59aa2672b62dc.600x338.jpg?t=1660140230",
         path_full:
           "https://cdn.akamai.steamstatic.com/steam/apps/570940/ss_f1617a419eb3b0cd877ec71230c59aa2672b62dc.1920x1080.jpg?t=1660140230",
       },
       {
         id: 4,
-        path_thumbnail:
+        pathThumbnail:
           "https://cdn.akamai.steamstatic.com/steam/apps/570940/ss_f60f54e58b13d0744853672ccd35810397e3fa26.600x338.jpg?t=1660140230",
         path_full:
           "https://cdn.akamai.steamstatic.com/steam/apps/570940/ss_f60f54e58b13d0744853672ccd35810397e3fa26.1920x1080.jpg?t=1660140230",
       },
       {
         id: 5,
-        path_thumbnail:
+        pathThumbnail:
           "https://cdn.akamai.steamstatic.com/steam/apps/570940/ss_b4a80bd6e828a81db09ecbef5694e5d0cddb2caf.600x338.jpg?t=1660140230",
         path_full:
           "https://cdn.akamai.steamstatic.com/steam/apps/570940/ss_b4a80bd6e828a81db09ecbef5694e5d0cddb2caf.1920x1080.jpg?t=1660140230",
