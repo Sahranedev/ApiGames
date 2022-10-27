@@ -15,7 +15,7 @@ function ButtonClose() {
       <nav>
         <ul>
           <li>
-            <Link to="/">Main Page</Link>
+            <Link to="/">Close Button</Link>
           </li>
         </ul>
       </nav>

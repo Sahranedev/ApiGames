@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import ButtonClose from "../Game/ButtonClose";
 import Navbar from "./Navbar";
 import Novelties from "./Novelties";
 import Quizz from "./Quizz/Quizz";
@@ -12,7 +13,8 @@ const API_URL =
   "https://api.rawg.io/api/games?key=813e525c42c04986ac0747dddec96609";
 
 function Mainpage() {
-  const [searchValue, setSearchValue] = useState("tomb");
+  const [searchValue, setSearchValue] = useState("call of");
+
   const [games, setGames] = useState([]);
   const results = games;
 
@@ -55,6 +57,7 @@ function Mainpage() {
           <li>
             <Link to="/game">Game</Link>
           </li>
+          <ButtonClose />
         </ul>
         <Routes>
           <Route path="/novelties" element={<Novelties />} />
