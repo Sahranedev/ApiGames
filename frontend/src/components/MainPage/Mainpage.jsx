@@ -7,9 +7,7 @@ import Ourlikes from "./Ourlikes";
 import Searchbar from "./Searchbar";
 import Game from "../Game/Game";
 
-function Mainpage({ games }) {
-  const [searchValue, setSearchValue] = React.useState("");
-
+function Mainpage({ games, setSearchValue, searchValue }) {
   const results = games;
   return (
     <>
@@ -17,7 +15,7 @@ function Mainpage({ games }) {
       {results
         .filter((game) => game.name.includes(searchValue))
         .map((game) => (
-          <li>{game.name}</li>
+          <p>{game.name}</p>
         ))}
       <Navbar />
       <Novelties />
