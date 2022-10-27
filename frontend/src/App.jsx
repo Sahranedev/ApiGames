@@ -24,7 +24,7 @@ export default function App() {
 
   return (
     <div className="App">
-      <Mainpage />
+      <Mainpage games={games} />
       <Game gameList={games} />
     </div>
   );

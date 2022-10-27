@@ -7,22 +7,14 @@ import Ourlikes from "./Ourlikes";
 import Searchbar from "./Searchbar";
 import Game from "../Game/Game";
 
-function Mainpage() {
+function Mainpage({ games }) {
   const [searchValue, setSearchValue] = React.useState("");
 
-  const results = {
-    applist: {
-      apps: [
-        { appid: 1, name: "Valorant" },
-        { appid: 2, name: "Fable" },
-        { appid: 3, name: "Elden ring" },
-      ],
-    },
-  };
+  const results = games;
   return (
     <>
       <Searchbar searchValue={searchValue} setSearchValue={setSearchValue} />
-      {results.applist.apps
+      {results
         .filter((game) => game.name.includes(searchValue))
         .map((game) => (
           <li>{game.name}</li>
