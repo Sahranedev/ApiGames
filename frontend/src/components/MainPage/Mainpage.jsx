@@ -1,10 +1,11 @@
 import React from "react";
-import { Router, Route, Routes, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import Novelties from "./Novelties";
 import Quizz from "./Quizz/Quizz";
 import Ourlikes from "./Ourlikes";
 import Likespage from "../LikesPage/Likespage";
+import Game from "../Game/Game";
 
 function Mainpage() {
   return (
@@ -31,7 +32,7 @@ function Mainpage() {
         <Routes>
           <Route path="/novelties" element={<Novelties />} />
           <Route path="/likes" element={<Likespage />} />
-          <Route path="/novelties" element={<Novelties />} />
+          <Route path="/game" element={<Game />} />
         </Routes>
       </div>
     </Router>

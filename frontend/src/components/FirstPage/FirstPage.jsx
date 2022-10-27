@@ -1,4 +1,4 @@
-import React from "react";
+/* import React from "react";
 import { Router, Routes, Route, Link } from "react-router-dom";
 import Mainpage from "../MainPage/Mainpage";
 
@@ -20,3 +20,4 @@ function FirstPage() {
 }
 
 export default FirstPage;
+ */
