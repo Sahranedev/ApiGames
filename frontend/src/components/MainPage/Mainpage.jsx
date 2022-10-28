@@ -1,11 +1,10 @@
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Searchbar from "./Searchbar";
-import ButtonClose from "../Game/ButtonClose";
 import Navbar from "./Navbar";
 import Novelties from "./Novelties";
-import Quizz from "./Quizz/Quizz";
-import Ourlikes from "./Ourlikes";
+import Links from "./Links";
 import Likespage from "../LikesPage/Likespage";
+import LinkToMainPage from "../Game/LinkToMainPage";
 
 import Game from "../Game/Game";
 import "./mainpage.css";
@@ -27,21 +26,9 @@ function Mainpage({ games, setSearchValue, searchValue, getGame }) {
             ))}
           <Navbar />
 
-          <li>
-            <Link to="/novelties">Novelties</Link>
-          </li>
-          <Quizz />
-          <li>
-            <Link to="/quizz">Quizz</Link>
-          </li>
-          <Ourlikes />
-          <li>
-            <Link to="/likes">Likes</Link>
-          </li>
-          <li>
-            <Link to="/game">Game</Link>
-          </li>
-          <ButtonClose />
+          <Links />
+
+          <LinkToMainPage />
         </ul>
         <Routes>
           <Route path="/novelties" element={<Novelties />} />
