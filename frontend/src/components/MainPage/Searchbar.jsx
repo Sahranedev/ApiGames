@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./searchBar.css";
 
 function Searchbar({ searchValue, setSearchValue, getGame }) {
@@ -11,9 +12,16 @@ function Searchbar({ searchValue, setSearchValue, getGame }) {
         placeholder="Nom, plateforme...."
         onChange={(e) => setSearchValue(e.target.value)}
       />
-      <button type="submit" className="search-button" onClick={() => getGame()}>
-        🔎️
-      </button>
+      <Link to="/game">
+        <button
+          type="submit"
+          className="search-button"
+          onClick={() => getGame()}
+        >
+          {" "}
+          🔎️
+        </button>
+      </Link>
     </div>
   );
 }

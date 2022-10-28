@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Game from "./components/Game/Game";
 import "./App.css";
 import Mainpage from "./components/MainPage/Mainpage";
 
@@ -16,7 +15,6 @@ export default function App() {
       .then((result) => setGames(result.results))
       .catch((err) => console.error(err));
   };
-
   return (
     <div className="App">
       <Mainpage
@@ -25,7 +23,6 @@ export default function App() {
         searchValue={searchValue}
         setSearchValue={setSearchValue}
       />
-      <Game gameList={games} />
     </div>
   );
 }

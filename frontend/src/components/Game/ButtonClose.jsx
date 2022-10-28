@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function ButtonClose() {
   // function to return to the main page. Need to make a Route to '/' and let click event to change the url
@@ -15,7 +15,7 @@ function ButtonClose() {
       <nav>
         <ul>
           <li>
-            <Link to="/">Main Page</Link>
+            <Link to="/">Close Button</Link>
           </li>
         </ul>
       </nav>
