@@ -6,13 +6,17 @@ import Quizz from "./Quizz/Quizz";
 import Ourlikes from "./Ourlikes";
 import Searchbar from "./Searchbar";
 import Game from "../Game/Game";
+import "./mainpage.css";
 
-function Mainpage({ games, setSearchValue, searchValue }) {
-  const results = games;
+function Mainpage({ games, setSearchValue, searchValue, getGame }) {
   return (
-    <>
-      <Searchbar searchValue={searchValue} setSearchValue={setSearchValue} />
-      {results
+    <div>
+      <Searchbar
+        getGame={getGame}
+        searchValue={searchValue}
+        setSearchValue={setSearchValue}
+      />
+      {games
         .filter((game) => game.name.includes(searchValue))
         .map((game) => (
           <p>{game.name}</p>
@@ -26,7 +30,7 @@ function Mainpage({ games, setSearchValue, searchValue }) {
       <Link to="/likes">Likes</Link>
       <Game />
       <Link to="/game">Game</Link>
-    </>
+    </div>
   );
 }
 
