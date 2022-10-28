@@ -1,7 +1,7 @@
 import React from "react";
-import "./gamePresentation.css";
+import "./gameStyle.css";
 
-function GamePresentation({
+function GameAffichage({
   name,
   background_image: backgroundImage,
   metacritic,
@@ -16,4 +16,4 @@ function GamePresentation({
   );
 }
 
-export default GamePresentation;
+export default GameAffichage;
