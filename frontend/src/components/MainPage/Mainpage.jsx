@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import ButtonClose from "../Game/ButtonClose";
+import LinkToMainPage from "../Game/LinkToMainPage";
 import Navbar from "./Navbar";
 import Novelties from "./Novelties";
 import Quizz from "./Quizz/Quizz";
@@ -56,7 +56,7 @@ function Mainpage() {
           <li>
             <Link to="/game">Game</Link>
           </li>
-          <ButtonClose />
+          <LinkToMainPage />
         </ul>
         <Routes>
           <Route path="/novelties" element={<Novelties />} />

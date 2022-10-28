@@ -1,5 +1,5 @@
 import React from "react";
-import "./GamePresentation.css";
+import "./gamePresentation.css";
 
 function Gamepresentation({
   name,
