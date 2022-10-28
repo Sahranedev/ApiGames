@@ -1,12 +1,15 @@
 import React from "react";
-import dataTest from "./DataTest";
 import Gamepresentation from "./Gamepresentation";
 
-function Game() {
+function Game({ gameList }) {
   return (
-    <div>
-      <Gamepresentation {...dataTest} />
-    </div>
+    gameList && (
+      <div>
+        {gameList.map((game) => (
+          <Gamepresentation key={game.id} {...game} />
+        ))}
+      </div>
+    )
   );
 }
 
