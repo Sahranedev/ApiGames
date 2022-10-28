@@ -16,7 +16,6 @@ function Mainpage() {
   const [searchValue, setSearchValue] = useState("call of");
 
   const [games, setGames] = useState([]);
-  const results = games;
 
   const getGame = () => {
     fetch(`${API_URL}&search=${searchValue}&page_size=5`)
@@ -36,7 +35,7 @@ function Mainpage() {
             searchValue={searchValue}
             setSearchValue={setSearchValue}
           />
-          {results
+          {games
             .filter((game) => game.name.includes(searchValue))
             .map((game) => (
               <p>{game.name}</p>
