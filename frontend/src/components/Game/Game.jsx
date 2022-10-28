@@ -1,12 +1,12 @@
 import React from "react";
-import Gamepresentation from "./Gamepresentation";
+import GamePresentation from "./GamePresentation";
 
 function Game({ gameList }) {
   return (
     gameList && (
       <div>
         {gameList.map((game) => (
-          <Gamepresentation key={game.id} {...game} />
+          <GamePresentation key={game.id} {...game} />
         ))}
       </div>
     )
