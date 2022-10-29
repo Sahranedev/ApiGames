@@ -23,7 +23,7 @@ function Mainpage({ games, setSearchValue, searchValue, getGame }) {
           {games
             .filter((game) => game.name.includes(searchValue))
             .map((game) => (
-              <p>{game.name}</p>
+              <p className="gameListParaph">{game.name}</p>
             ))}
           <Navbar />
           <Links searchValue={searchValue} />
