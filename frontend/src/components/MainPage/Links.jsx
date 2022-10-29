@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Quizz from "./Quizz/Quizz";
 import Ourlikes from "./Ourlikes";
 
-function Links() {
+function Links({ searchValue }) {
   return (
     <div>
       <li>
@@ -18,7 +18,10 @@ function Links() {
         <Link to="/likes">Likes</Link>
       </li>
       <li>
-        <Link to="/game">Game</Link>
+        <Link to="/gamelist">Liste de jeux filtrés par : "{searchValue}"</Link>
+      </li>
+      <li>
+        <Link to="/game">Affichage du jeu selectionné: ""</Link>
       </li>
     </div>
   );
