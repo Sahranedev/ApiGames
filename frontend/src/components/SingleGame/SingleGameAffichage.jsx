@@ -4,7 +4,7 @@ function SingleGameAffichage({
   name_original: nameOriginal,
   background_image: backgroundImage,
   metacritic,
-  /* genres, */
+  genres,
   /* developers, */
 }) {
   return (
@@ -24,14 +24,8 @@ function SingleGameAffichage({
             <img src={screenshot.pathThumbnail} alt="futur carrousel" />
           ))}
           </div> */}
-      <div className="gamePageGenre">
-        {/*  {console.log(genres[0].name, genres[1].name)} */}
-        {/*   {genres.map((genre, index) => (
-          <div>
-            <li key={index}>{genre[0].name}</li>
-          </div>
-        ))} */}
-      </div>
+      <div className="gamePageGenre" />
+
       <div className="gamePageCreators" />
 
       {/*    Développeurs :{" "}
