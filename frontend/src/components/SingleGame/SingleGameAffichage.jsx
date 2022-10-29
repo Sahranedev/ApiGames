@@ -4,7 +4,6 @@ function SingleGameAffichage({
   name_original: nameOriginal,
   background_image: backgroundImage,
   metacritic,
-  genres,
   /* developers, */
 }) {
   return (
