@@ -1,6 +1,9 @@
 /******* GLOBAL SINGLE GAME PARAMETERS ******/
 .gamePageContainer {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
 }
 
 /******* METACRITIC BUTTON *******/
@@ -57,10 +60,18 @@
 /* flex wrap before making a carrousel*/
     flex-wrap: wrap;
 /**/
-    width: 100vw;
-}
+    width: 100vw;}
 .gameImage {
     width : 100%;
+
+    box-shadow:
+    2.8px 2.8px 2.2px rgba(0, 0, 0, 0.073),
+    6.7px 6.7px 5.3px rgba(0, 0, 0, 0.105),
+    12.5px 12.5px 10px rgba(0, 0, 0, 0.13),
+    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.155),
+    41.8px 41.8px 33.4px rgba(0, 0, 0, 0.187),
+    100px 100px 80px rgba(0, 0, 0, 0.26)
+  ;
 }
 
 /******* OTHER IMAGE FROM GAME *******/
@@ -71,4 +82,45 @@
 
 .additionalGameImage{
     width: 20%;
+}
+
+/******* DETAILS GAME ********/
+.gamePageDetails {
+display: flex;
+justify-content: space-around;
+}
+
+.genreContainer{
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    padding:0;
+
+}
+
+.genre{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin:1rem;
+    width: 5rem;
+    height: 2rem;
+    border-radius: 5px;
+    background: #E0B15A;
+    color : #333;
+    }
+
+
+/******* LIKE GAME ********/
+
+.unlike {
+    width: 2rem;
+    height: 2rem;
+    background-image: url(../images/heartUnlike.svg);
+}
+.like {
+    width: 2rem;
+    height: 2rem;
+    background-image: url(../images/heart.svg);
 }

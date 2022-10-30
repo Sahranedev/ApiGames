@@ -34,17 +34,18 @@ function SingleGameAffichage({
       <div className="gamePageInformations">
         <div className="gamePageTitle">
           <h2>{nameOriginal}</h2>
-          <div>❤️</div>
+          <div className="unlike" />
           <div className={colorCritic(metacritic)}>
             <a href={metacriticUrl} target="_blank" rel="noreferrer">
               {metacritic}
             </a>
           </div>
         </div>
+        <div className="gamePageDetails">
+          {genres ? <GameGenreDetails genres={genres} /> : null}
+        </div>
       </div>
-      <div className="gamePageGenre">
-        {genres ? <GameGenreDetails genres={genres} /> : null}
-      </div>
+
       <div className="otherImage">
         <img
           className="additionalGameImage"

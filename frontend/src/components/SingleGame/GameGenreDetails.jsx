@@ -2,12 +2,14 @@ import React from "react";
 
 function GameGenreDetails({ genres: genre }) {
   return (
-    <div>
+    <ul className="genreContainer">
       {genre.map((el, i) => (
         // eslint-disable-next-line react/no-array-index-key
-        <li key={i}>{el.name}</li>
+        <li className="genre" key={i}>
+          {el.name}
+        </li>
       ))}
-    </div>
+    </ul>
   );
 }
 
