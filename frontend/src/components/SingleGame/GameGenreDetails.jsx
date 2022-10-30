@@ -4,7 +4,7 @@ function GameGenreDetails({ genres: genre }) {
   return (
     <div>
       {genre.map((el) => (
-        <p>{el.slug}</p>
+        <p>{el.name}</p>
       ))}
     </div>
   );

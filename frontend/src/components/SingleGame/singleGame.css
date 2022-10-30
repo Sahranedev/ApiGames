@@ -1,42 +1,74 @@
-.metacritic {
-    color: #eee;
-    background-color: #121212;
-    width: 5vw;
-    border-radius: 5px;
-    padding: 5px;
-    margin: 5px;
-    cursor: pointer;
+/******* GLOBAL SINGLE GAME PARAMETERS ******/
+.gamePageContainer {
+    box-sizing: border-box;
 }
 
+/******* METACRITIC BUTTON *******/
 .metacritic75100{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     background-color: #65CC33;
-    width: 5vw;
+    width: 2vw;
+    height: 2vw;
     border-radius: 5px;
-    padding: 5px;
-    margin: 5px;
+    font-size: 1rem;
+    padding: 0.8rem;
+    margin: 1rem;
     cursor: pointer;
+    font-weight: bolder;
 }
 .metacritic4074{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     background-color: #FFCC33;
     width: 5vw;
     border-radius: 5px;
     padding: 5px;
-    margin: 5px;
+    margin: 2px;
     cursor: pointer;
+    font-weight: bolder;
 }
 .metacritic039{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     background-color: #FF0000;
     width: 5vw;
     border-radius: 5px;
     padding: 5px;
-    margin: 5px;
+    margin: 2px;
     cursor: pointer;
+    font-weight: bolder;
 }
-
  a {
     all: unset;
 }
-img {
-    height : 20vh;
-    width : auto;
+
+/******** MAIN IMAGE SINGLE GAME *****/ 
+.containerGameImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+/* flex wrap before making a carrousel*/
+    flex-wrap: wrap;
+/**/
+    width: 100vw;
+}
+.gameImage {
+    width : 100%;
+}
+
+/******* OTHER IMAGE FROM GAME *******/
+/* make a little image for now, cause will see for carousel with main image */
+.otherImage {
+    width: 100vw;
+}
+
+.additionalGameImage{
+    width: 20%;
 }

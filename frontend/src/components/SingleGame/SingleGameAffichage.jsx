@@ -30,11 +30,6 @@ function SingleGameAffichage({
     <div className="gamePageContainer">
       <div className="containerGameImage">
         <img className="gameImage" src={gameImage} alt="jeu" />
-        <img
-          className="additionalGameImage"
-          src={additionalGameImage}
-          alt="jeu"
-        />
       </div>
       <div className="gamePageInformations">
         <div className="gamePageTitle">
@@ -42,26 +37,38 @@ function SingleGameAffichage({
           <div>❤️</div>
           <div className={colorCritic(metacritic)}>
             <a href={metacriticUrl} target="_blank" rel="noreferrer">
-              score
-              <br /> {metacritic}
+              {metacritic}
             </a>
           </div>
         </div>
       </div>
-      <div className="gamePageGenre" />
-      {genres ? <GameGenreDetails genres={genres} /> : null}
-      <div className="gamePageCreators" />
-      <h3>
-        Publisher :
-        {publishers ? <GamePublishersDetails publishers={publishers} /> : null}
-      </h3>
-      <h3>
-        Developer :
-        {developers ? <GameDevelopersDetails developers={developers} /> : null}
-      </h3>
-      <h3>
-        Released :{released ? <GameDateDetails released={released} /> : null}
-      </h3>
+      <div className="gamePageGenre">
+        {genres ? <GameGenreDetails genres={genres} /> : null}
+      </div>
+      <div className="otherImage">
+        <img
+          className="additionalGameImage"
+          src={additionalGameImage}
+          alt="jeu"
+        />
+      </div>
+      <div className="gamePageCreators">
+        <h3>
+          Publisher :
+          {publishers ? (
+            <GamePublishersDetails publishers={publishers} />
+          ) : null}
+        </h3>
+        <h3>
+          Developer :
+          {developers ? (
+            <GameDevelopersDetails developers={developers} />
+          ) : null}
+        </h3>
+        <h3>
+          Released :{released ? <GameDateDetails released={released} /> : null}
+        </h3>
+      </div>
       <div className="gamePageDescription">
         {description ? <GameParaphDetails description={description} /> : null}
       </div>
