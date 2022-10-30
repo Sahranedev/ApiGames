@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import SingleGameAffichage from "./SingleGameAffichage";
+import "./singleGame.css";
 
 const API_URL = "https://api.rawg.io/api/games";
 const API_KEY = "813e525c42c04986ac0747dddec96609";
@@ -20,7 +21,6 @@ function SingleGame() {
     getSingleGame();
   }, []);
 
-  // eslint-disable-next-line no-constant-condition
   return (
     <div>
       <SingleGameAffichage {...game} />

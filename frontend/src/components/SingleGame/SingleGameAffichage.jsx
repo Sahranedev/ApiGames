@@ -7,27 +7,35 @@ import GamePublishersDetails from "./GamePublishersDetails";
 
 function SingleGameAffichage({
   name_original: nameOriginal,
-  background_image: backgroundImage,
-  background_image_additional: backgroundImageAdd,
+  background_image: gameImage,
+  background_image_additional: additionalGameImage,
+  metacritic_url: metacriticUrl,
   metacritic,
   released,
   description,
   genres,
   developers,
   publishers,
-  /* description, works one time but problem for reloading */
-  /*  developers: [{ name: developer }], works one time problem for reloading  */
-  /*  publishers: [{ name: publisher }], works one time problem for reloading  */
 }) {
   return (
     <div className="gamePageContainer">
-      <img className="backgroundGameImage" src={backgroundImage} alt="jeu" />
-      <img className="backgroundGameImage" src={backgroundImageAdd} alt="jeu" />
+      <div className="containerGameImage">
+        <img className="gameImage" src={gameImage} alt="jeu" />
+        <img
+          className="additionalGameImage"
+          src={additionalGameImage}
+          alt="jeu"
+        />
+      </div>
       <div className="gamePageInformations">
         <div className="gamePageTitle">
           <h2>{nameOriginal}</h2>
           <div>❤️</div>
-          <div>{metacritic}</div>
+          <div>
+            <a href={metacriticUrl} target="_blank" rel="noreferrer">
+              {metacritic}
+            </a>
+          </div>
         </div>
       </div>
       <div className="gamePageGenre" />
