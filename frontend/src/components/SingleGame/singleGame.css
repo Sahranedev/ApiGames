@@ -131,3 +131,20 @@ font-size: 0.8rem;
     justify-content: space-around;
     align-items: center;
 }
+
+.gamePageCreators{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.detailed {
+    font-weight: 300;
+}
+
+.gamePageDescription{
+    margin: 3vw;
+    padding: 3vw;
+    text-align: justify;
+}
