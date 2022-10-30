@@ -63,7 +63,6 @@
     width: 100vw;}
 .gameImage {
     width : 100%;
-
     box-shadow:
     2.8px 2.8px 2.2px rgba(0, 0, 0, 0.073),
     6.7px 6.7px 5.3px rgba(0, 0, 0, 0.105),
@@ -88,6 +87,7 @@
 .gamePageDetails {
 display: flex;
 justify-content: space-around;
+font-size: 0.8rem;
 }
 
 .genreContainer{
@@ -104,7 +104,7 @@ justify-content: space-around;
     justify-content: center;
     text-align: center;
     margin:1rem;
-    width: 5rem;
+    width: 4rem;
     height: 2rem;
     border-radius: 5px;
     background: #E0B15A;
@@ -123,4 +123,11 @@ justify-content: space-around;
     width: 2rem;
     height: 2rem;
     background-image: url(../images/heart.svg);
+}
+
+/*******  GAME PAGE TITLE ********/
+.gamePageTitle {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
