@@ -10,7 +10,7 @@ function SingleGame() {
 
   const getSingleGame = () => {
     /*  5679 ici est la clé que nous devrons récupérer depuis la recherche */
-    fetch(`${API_URL}/3498?key=${API_KEY}`)
+    fetch(`${API_URL}/5679?key=${API_KEY}`)
       .then((response) => response.json())
       .then((result) => {
         setGame(result);

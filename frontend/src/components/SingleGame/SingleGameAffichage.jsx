@@ -17,6 +17,15 @@ function SingleGameAffichage({
   developers,
   publishers,
 }) {
+  const colorCritic = () => {
+    if (metacritic >= 75) {
+      return "metacritic75100";
+    }
+    if (metacritic >= 40) {
+      return "metacritic4074";
+    }
+    return "metacritic039";
+  };
   return (
     <div className="gamePageContainer">
       <div className="containerGameImage">
@@ -31,9 +40,10 @@ function SingleGameAffichage({
         <div className="gamePageTitle">
           <h2>{nameOriginal}</h2>
           <div>❤️</div>
-          <div>
+          <div className={colorCritic(metacritic)}>
             <a href={metacriticUrl} target="_blank" rel="noreferrer">
-              {metacritic}
+              score
+              <br /> {metacritic}
             </a>
           </div>
         </div>

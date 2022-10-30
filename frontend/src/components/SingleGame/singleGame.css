@@ -1,3 +1,41 @@
+.metacritic {
+    color: #eee;
+    background-color: #121212;
+    width: 5vw;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.metacritic75100{
+    background-color: #65CC33;
+    width: 5vw;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+.metacritic4074{
+    background-color: #FFCC33;
+    width: 5vw;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+.metacritic039{
+    background-color: #FF0000;
+    width: 5vw;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+ a {
+    all: unset;
+}
 img {
     height : 20vh;
     width : auto;
