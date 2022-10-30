@@ -1,0 +1,137 @@
+const API_URL = https://api.rawg.io/api/games
+const API_KEY = 813e525c42c04986ac0747dddec96609
+
+----------------------------------
+------> Filtered by rating <------
+----------------------------------
+(not by using rating but metacritic. tried rating but found some strange games...)
+
+(exemple : https://api.rawg.io/api/games?key=813e525c42c04986ac0747dddec96609&ordering=-metacritic&page_size=5)
+`${API_URL}?key=${API_KEY}&ordering=-metacritic&page_size=5`
+
+
+
+----------------------------------
+-----> Filtered by upcoming <-----
+----------------------------------
+(need to find the current date and make a research with these parameters)
+
+---> find month
+const getCurrentMonth = () => {
+  const month = new Date().getMonth() + 1
+  if (month < 10) {
+    return `0${month}`
+  } else {
+    return month
+  }
+};
+
+---> find day
+const getCurrentDay = () => {
+  const day = new Date().getDate()
+  if (day < 10) {
+    return `0${day}`
+  } else {
+    return day
+  }
+};
+
+---> get all date and put in the same order => year-month-day
+const currentYear = new Date().getFullYear()
+const currentMonth = getCurrentMonth()
+const currentDay = getCurrentDay()
+const currentDate = `${currentYear}-${currentMonth}-${currentDay}`
+const nextYear = `${currentYear + 1}-${currentMonth}-${currentDay}`
+const lastYear = `${currentYear - 1}-${currentMonth}-${currentDay}`
+
+(exemple : https://api.rawg.io/api/games?key=813e525c42c04986ac0747dddec96609&dates=2022-10-30,2023-10-30&ordering=-added&page_size=5)
+`${API_URL}?key=${API_KEY}}&dates=${currentDate},${nextYear}&ordering=-added&page_size=5`
+
+
+----------------------------------
+-------> Filtered by GOTY <-------
+----------------------------------
+(take the same as before but with the current year for scale)
+
+(exemple : https://api.rawg.io/api/games?key=813e525c42c04986ac0747dddec96609&dates=2021-10-30,2022-10-30&ordering=-added&page_size=5)
+`${API_URL}?key=${API_KEY}}&dates=${lastYear},${currentDate}&ordering=-added&page_size=5`
+
+----------------------------------
+----> Filtered by Novelties <-----
+----------------------------------
+(take the same as upcoming but with release order)
+(sometimes very stranges games, maybe replace 'Novelties' by upcoming games or GOTY)
+
+(exemple: https://api.rawg.io/api/games?key=813e525c42c04986ac0747dddec96609&dates=2021-10-30,2022-10-30&ordering=-released&page_size=5)
+`${API_URL}?key=${API_KEY}&dates=${lastYear},${currentDate}&ordering=-released&page_size=5`
+
+----------------------------------
+-------> Filtered by genre <------
+----------------------------------
+(multiple genre = action)
+(making a filter by metacritic to have consistent games)
+
+-----> action 
+(exemple : https://api.rawg.io/api/games?key=813e525c42c04986ac0747dddec96609&genres=action&ordering=-metacritic&page_size=5)
+`${API_URL}?key=${API_KEY}&genres=action&ordering=-metacritic&page_size=5`
+
+-----> adventure
+(exemple : https://api.rawg.io/api/games?key=813e525c42c04986ac0747dddec96609&genres=adventure&ordering=-metacritic&page_size=5)
+`${API_URL}?key=${API_KEY}&genres=adventure&ordering=-metacritic&page_size=5`
+
+----> indie
+(exemple :https://api.rawg.io/api/games?key=813e525c42c04986ac0747dddec96609&genres=indie&ordering=-metacritic&page_size=5)
+`${API_URL}?key=${API_KEY}&genres=indie&ordering=-metacritic&page_size=5`
+
+----> simulation
+(exemple : https://api.rawg.io/api/games?key=813e525c42c04986ac0747dddec96609&genres=simulation&ordering=-metacritic&page_size=5)
+`${API_URL}?key=${API_KEY}&genres=simulation&ordering=-metacritic&page_size=5`
+
+----> shooter 
+(exemple : https://api.rawg.io/api/games?key=813e525c42c04986ac0747dddec96609&genres=shooter&ordering=-metacritic&page_size=5)
+`${API_URL}?key=${API_KEY}&genres=shooter&ordering=-metacritic&page_size=5`
+
+----> MMO
+(exemple : https://api.rawg.io/api/games?key=813e525c42c04986ac0747dddec96609&genres=59&ordering=-metacritic&page_size=5)
+`${API_URL}?key=${API_KEY}&genres=59&ordering=-metacritic&page_size=5`
+
+----> arcade
+(exemple : https://api.rawg.io/api/games?key=813e525c42c04986ac0747dddec96609&genres=arcade&ordering=-metacritic&page_size=5)
+`${API_URL}?key=${API_KEY}&genres=arcade&ordering=-metacritic&page_size=5`
+
+----> racing 
+(exemple : https://api.rawg.io/api/games?key=813e525c42c04986ac0747dddec96609&genres=racing&ordering=-metacritic&page_size=5)
+`${API_URL}?key=${API_KEY}&genres=racing&ordering=-metacritic&page_size=5`
+
+----> racing 
+(exemple : https://api.rawg.io/api/games?key=813e525c42c04986ac0747dddec96609&genres=strategy&ordering=-metacritic&page_size=5)
+`${API_URL}?key=${API_KEY}&genres=strategy&ordering=-metacritic&page_size=5`
+
+----> casual (coop)
+(exemple : https://api.rawg.io/api/games?key=813e525c42c04986ac0747dddec96609&genres=casual&ordering=-metacritic&page_size=5)
+`${API_URL}?key=${API_KEY}&genres=casual&ordering=-metacritic&page_size=5`
+
+----> plateformer
+(exemple : https://api.rawg.io/api/games?key=813e525c42c04986ac0747dddec96609&genres=platformer&ordering=-metacritic&page_size=5)
+`${API_URL}?key=${API_KEY}&genres=platformer&ordering=-metacritic&page_size=5`
+
+
+----------------------------------
+-----> Filtered by platforms <----
+----------------------------------
+
+----> PC 
+(exemple : https://api.rawg.io/api/games?key=813e525c42c04986ac0747dddec96609&platforms=4&ordering=-metacritic&page_size=5)
+`${API_URL}?key=${API_KEY}&platforms=4&ordering=-metacritic&page_size=5`
+
+----> Switch
+(exemple : https://api.rawg.io/api/games?key=813e525c42c04986ac0747dddec96609&platforms=7&ordering=-metacritic&page_size=10)
+`${API_URL}?key=${API_KEY}&platforms=7&ordering=-metacritic&page_size=5`
+
+----> PS5 
+https://api.rawg.io/api/games?key=813e525c42c04986ac0747dddec96609&platforms=187&ordering=-metacritic&page_size=10
+`${API_URL}?key=${API_KEY}&platforms=187&ordering=-metacritic&page_size=5`
+
+---> Xbox One
+(exemple : https://api.rawg.io/api/games?key=813e525c42c04986ac0747dddec96609&platforms=1&ordering=-metacritic&page_size=10)
+`${API_URL}?key=${API_KEY}&platforms=1&ordering=-metacritic&page_size=5`
