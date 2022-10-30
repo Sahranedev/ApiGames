@@ -1,4 +1,9 @@
 import React from "react";
+import GameDateDetails from "./GameDateDetails";
+import GameParaphDetails from "./GameParaphDetails";
+import GameGenreDetails from "./GameGenreDetails";
+import GameDevelopersDetails from "./GameDevelopersDetails";
+import GamePublishersDetails from "./GamePublishersDetails";
 
 function SingleGameAffichage({
   name_original: nameOriginal,
@@ -6,18 +11,14 @@ function SingleGameAffichage({
   background_image_additional: backgroundImageAdd,
   metacritic,
   released,
+  description,
+  genres,
+  developers,
+  publishers,
   /* description, works one time but problem for reloading */
-  /* genres: [{ slug : genre }], works one time problem for reloading or mapping multiple elements */
   /*  developers: [{ name: developer }], works one time problem for reloading  */
   /*  publishers: [{ name: publisher }], works one time problem for reloading  */
 }) {
-  /* 
- <-------- Making new date format ------> 
-     (ok but not working with reloading)
-  const date = released.split("-").reverse();
-  const deleteDay = date.shift(0);
-  console.log(date.join(" ")); */
-
   return (
     <div className="gamePageContainer">
       <img className="backgroundGameImage" src={backgroundImage} alt="jeu" />
@@ -30,15 +31,21 @@ function SingleGameAffichage({
         </div>
       </div>
       <div className="gamePageGenre" />
-      {/*  {genre} */}
+      {genres ? <GameGenreDetails genres={genres} /> : null}
       <div className="gamePageCreators" />
-      {/* <h3>Éditeurs : {publisher}</h3>
-          <h3>Développeurs : {developer}</h3> */}
-      <h3>Date de sortie : {released} </h3>
+      <h3>
+        Publisher :
+        {publishers ? <GamePublishersDetails publishers={publishers} /> : null}
+      </h3>
+      <h3>
+        Developer :
+        {developers ? <GameDevelopersDetails developers={developers} /> : null}
+      </h3>
+      <h3>
+        Released :{released ? <GameDateDetails released={released} /> : null}
+      </h3>
       <div className="gamePageDescription">
-        {/* 
-        <------ Making a replace to delete tags ------>
-        {description.replace(/(<([^>]+)>)/gi, "")} */}
+        {description ? <GameParaphDetails description={description} /> : null}
       </div>
     </div>
   );

@@ -20,6 +20,7 @@ function SingleGame() {
     getSingleGame();
   }, []);
 
+  // eslint-disable-next-line no-constant-condition
   return (
     <div>
       <SingleGameAffichage {...game} />
