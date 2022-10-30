@@ -1,3 +1,18 @@
-.backgroundGameImage {
-  height: 300px;
+.gamePageContainer {
+  margin-bottom: 7vh;
+  border: 1px solid rgba(158, 147, 47, 0.171);
+}
+.gamePageContainer img {
+  height: 28vh;
+  width: 98vw;
+}
+.gamePageContainer h2 {
+  font-size: 1rem;
+  margin: 1rem;
+}
+.fav-metacritic {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  margin: 1rem;
 }

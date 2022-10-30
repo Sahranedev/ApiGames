@@ -10,8 +10,10 @@ function GameListAffichage({
     <div className="gamePageContainer">
       <h2>{name}</h2>
       <img className="backgroundGameImage" src={backgroundImage} alt="jeu" />
-      <div>❤️</div>
-      <div>{metacritic}</div>
+      <div className="fav-metacritic">
+        <div>❤️</div>
+        <div>Note : {metacritic}</div>
+      </div>
     </div>
   );
 }

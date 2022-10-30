@@ -1,0 +1,17 @@
+.navigation {
+  position: fixed;
+  background-color: rgba(143, 132, 31, 0.842);
+  width: 100vw;
+  bottom: 0;
+}
+.navigation-ul {
+  height: 7vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+}
+.navigation-ul li {
+  width: 30vw;
+  color: black;
+}
