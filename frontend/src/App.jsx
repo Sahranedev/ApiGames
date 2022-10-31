@@ -10,7 +10,7 @@ export default function App() {
   const [games, setGames] = useState([]);
 
   const getGame = () => {
-    fetch(`${API_URL}&search=${searchValue}&page_size=50`)
+    fetch(`${API_URL}&search=${searchValue}&page_size=5`)
       .then((response) => response.json())
       .then((result) => setGames(result.results))
       .catch((err) => console.error(err));

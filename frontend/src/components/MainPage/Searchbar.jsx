@@ -12,7 +12,7 @@ function Searchbar({ searchValue, setSearchValue, getGame }) {
         placeholder="Nom, plateforme...."
         onChange={(e) => setSearchValue(e.target.value)}
       />
-      <Link to="/game">
+      <Link to="/gamelist">
         <button
           type="submit"
           className="search-button"
