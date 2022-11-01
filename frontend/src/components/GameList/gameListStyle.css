@@ -1,13 +1,14 @@
 .gamePageContainer {
-  margin-bottom: 7vh;
+  height: 40vh;
   border: 1px solid rgba(158, 147, 47, 0.171);
+  margin: 3rem;
 }
 .gamePageContainer img {
-  height: 28vh;
+  height: 27vh;
   width: 98vw;
 }
 .gamePageContainer h2 {
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin: 1rem;
 }
 .fav-metacritic {

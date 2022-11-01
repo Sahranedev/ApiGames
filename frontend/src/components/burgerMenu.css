@@ -1,0 +1,13 @@
+.burger-visible {
+  position: fixed;
+  height: 94.8vh;
+  background-color: rgba(224, 177, 90, 0.856);
+  border: 1px solid rgba(0, 0, 0, 0.459);
+  width: 65vw;
+  top: 0;
+  right: 0;
+  margin-bottom: 5vh;
+}
+burger-hidden {
+  display: none;
+}
