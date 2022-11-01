@@ -1,18 +1,92 @@
-.gamePageContainer {
+.gameInfo {
   margin-bottom: 7vh;
-  border: 1px solid rgba(158, 147, 47, 0.171);
+  display: flex;
+
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 59vw;
+  align-items: center;
 }
-.gamePageContainer img {
-  height: 28vh;
-  width: 98vw;
+
+
+
+.backgroundGameImage img {
+  display: flex;
+  justify-content: flex-start;
+  float: left;
+  height: 25vh;
+  width: 40vw;
+  
 }
 .gamePageContainer h2 {
-  font-size: 1rem;
-  margin: 1rem;
+  font-size: 2rem;
+  margin-left: 1rem;
+  margin-bottom: 5px;
 }
 .fav-metacritic {
-  display: flex;
+  
   flex-direction: row-reverse;
-  justify-content: space-around;
+ 
   margin: 1rem;
 }
+
+.platform {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  width: 7rem;
+  height: 2rem;
+  border-radius: 5px;
+  background: #e0b15a;
+  color: #333;
+}
+
+.metacriticGreen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #65cc33;
+  width: 2vw;
+  height: 2vw;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 0.8rem;
+ 
+  cursor: pointer;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+}
+.metacriticYellow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: yellow;
+  width: 2vw;
+  height: 2vw;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 0.8rem;
+ 
+  cursor: pointer;
+  font-weight: bolder;
+}
+.metacriticRed {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: red;
+  width: 2vw;
+  height: 2vw;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 0.8rem;
+ 
+  cursor: pointer;
+  font-weight: bolder;
+}
+
