@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
+import Modale from "../SingleGame/Modal";
 import GameList from "../GameList/GameList";
 import Searchbar from "./Searchbar";
 import Navbar from "./Navbar";
@@ -8,7 +10,6 @@ import Likespage from "../LikesPage/Likespage";
 import LinkToMainPage from "../GameList/LinkToMainPage";
 
 import "./mainpage.css";
-import SingleGame from "../SingleGame/SingleGame";
 
 function Mainpage({ games, setSearchValue, searchValue, getGame }) {
   return (
@@ -33,7 +34,7 @@ function Mainpage({ games, setSearchValue, searchValue, getGame }) {
           <Route path="/novelties" element={<Novelties />} />
           <Route path="/likes" element={<Likespage />} />
           <Route path="/gamelist" element={<GameList gameList={games} />} />
-          <Route path="/game" element={<SingleGame />} />
+          <Route path="/game" element={<Modale />} />
         </Routes>
       </div>
     </Router>
