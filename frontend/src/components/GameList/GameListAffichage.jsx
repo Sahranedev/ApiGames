@@ -9,13 +9,7 @@ function GameListAffichage({
   id,
 }) {
   return (
-    <div
-      className="gamePageContainer"
-      onClick={console.log(id)}
-      onKeyPress=""
-      role="presentation"
-    >
-      {/* // voir useParams */}
+    <div className="gamePageContainer">
       <Link to={`/game/${id}`}>
         <h2>{name}</h2>
 

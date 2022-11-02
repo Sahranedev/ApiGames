@@ -10,7 +10,6 @@ function SingleGame() {
   /*   5679; */
   const [game, setGame] = useState([]);
   const { id } = useParams();
-  console.log(id);
 
   const getSingleGame = () => {
     /*  5679 ici est la clé que nous devrons récupérer depuis la recherche */
