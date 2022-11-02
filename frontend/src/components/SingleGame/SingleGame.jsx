@@ -14,8 +14,8 @@ function SingleGame({ idObtain }) {
     fetch(`${API_URL}/${idObtain}?key=${API_KEY}`)
       .then((response) => response.json())
       .then((result) => {
-        console.log(`${API_URL}/${idObtain}?key=${API_KEY}`);
-        console.log(idObtain);
+        /*  console.log(`${API_URL}/${idObtain}?key=${API_KEY}`);
+        console.log(idObtain); */
         setGame(result);
       })
       .catch((err) => console.error(err));
