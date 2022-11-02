@@ -36,7 +36,7 @@ function Mainpage({ games, setSearchValue, searchValue, getGame }) {
           <Route path="/novelties" element={<Novelties />} />
           <Route path="/likes" element={<Likespage />} />
           <Route path="/gamelist" element={<GameList gameList={games} />} />
-          <Route path="/game/:id" element={<SingleGame />} />
+          <Route path="/game/:id" element={<SingleGame games={games} />} />
         </Routes>
       </div>
     </Router>

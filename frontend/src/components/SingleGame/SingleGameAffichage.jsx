@@ -4,8 +4,8 @@ import GameParaphDetails from "./GameParaphDetails";
 import GameGenreDetails from "./GameGenreDetails";
 import GameDevelopersDetails from "./GameDevelopersDetails";
 import GamePublishersDetails from "./GamePublishersDetails";
-import IMGnotFound from "../images/IMGnotFound.png";
-
+/* import IMGnotFound from "../images/IMGnotFound.png";
+ */
 function SingleGameAffichage({
   name_original: nameOriginal,
   background_image: gameImage,
@@ -29,14 +29,53 @@ function SingleGameAffichage({
   };
   return (
     <div className="gamePageContainer">
-      <div className="containerGameImage">
-        {/*  {gameImage ? (
-          <img className="gameImage" src={gameImage} alt="Game" />
+      <div
+        id="carouselExampleFade"
+        className="carousel slide carousel-fade"
+        data-bs-ride="carousel"
+      >
+        <div className="carousel-inner">
+          <div className="carousel-item active">
+            <img src={gameImage} className="d-block w-100 h-60" alt="..." />
+          </div>
+
+          <div className="carousel-item">
+            <img
+              src={additionalGameImage}
+              className="d-block w-100"
+              alt="..."
+            />
+          </div>
+        </div>
+        <button
+          className="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleFade"
+          data-bs-slide="prev"
+        >
+          <span className="carousel-control-prev-icon" aria-hidden="true" />
+          <span className="visually-hidden">Previous</span>
+        </button>
+        <button
+          className="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleFade"
+          data-bs-slide="next"
+        >
+          <span className="carousel-control-next-icon" aria-hidden="true" />
+          <span className="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      {/*  
+  ////////////// maybe change for be sure of content. esLint problem //////////////
+  {gameImage ? (
+          <img className="gameImage" src={gameImage} className="d-block w-100 h-60" alt="game" />
         ) : (
-          <img className="gameImage" src={IMGnotFound} alt="IMG not found" />
+          <img className="gameImage" src={IMGnotFound} className="d-block w-100 h-60" alt="image not" />
         )} */}
 
-        {gameImage ? (
+      {/* {gameImage ? (
           <div
             className="gameSelected"
             style={{ backgroundImage: `url('${gameImage}')` }}
@@ -46,16 +85,18 @@ function SingleGameAffichage({
             className="gameSelected"
             style={{ backgroundImage: `url('${IMGnotFound}')` }}
           />
-        )}
-      </div>
+        )} */}
 
       <div className="gamePageInformations">
         <div className="gamePageTitle">
-          <div className={colorCritic(metacritic)}>
-            <a href={metacriticUrl} target="_blank" rel="noreferrer">
-              {metacritic}
-            </a>
-          </div>{" "}
+          {metacritic ? (
+            <div className={colorCritic(metacritic)}>
+              <a href={metacriticUrl} target="_blank" rel="noreferrer">
+                {metacritic}
+              </a>
+            </div>
+          ) : null}
+
           <h2>{nameOriginal}</h2>
           <div className="unlike" />
         </div>
@@ -64,7 +105,7 @@ function SingleGameAffichage({
         </div>
       </div>
 
-      <div className="otherImage">
+      {/*  <div className="otherImage">
         {additionalGameImage ? (
           <div
             className="additionalGameImage"
@@ -80,8 +121,8 @@ function SingleGameAffichage({
           className="additionalGameImage"
           src={additionalGameImage}
           alt="jeu"
-        /> */}
-      </div>
+        /> 
+      </div> */}
       <div className="gamePageCreators">
         <h3>
           Publisher :
