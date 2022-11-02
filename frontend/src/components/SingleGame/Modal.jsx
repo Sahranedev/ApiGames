@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+/* import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import SingleGame from "./SingleGame";
@@ -26,7 +26,7 @@ function Modale() {
         <Modal.Header closeButton>
           <Modal.Title>Affichage d'un jeu</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body class="modal">
           <SingleGame />
         </Modal.Body>
       </Modal>
@@ -35,3 +35,4 @@ function Modale() {
 }
 
 export default Modale;
+ */

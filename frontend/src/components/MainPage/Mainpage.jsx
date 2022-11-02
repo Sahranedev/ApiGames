@@ -1,6 +1,8 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import Modale from "../SingleGame/Modal";
+/* import Modale from "../SingleGame/Modal";
+ */
+import SingleGame from "@components/SingleGame/SingleGame";
 import GameList from "../GameList/GameList";
 import Searchbar from "./Searchbar";
 import Navbar from "./Navbar";
@@ -34,7 +36,7 @@ function Mainpage({ games, setSearchValue, searchValue, getGame }) {
           <Route path="/novelties" element={<Novelties />} />
           <Route path="/likes" element={<Likespage />} />
           <Route path="/gamelist" element={<GameList gameList={games} />} />
-          <Route path="/game" element={<Modale />} />
+          <Route path="/game" element={<SingleGame />} />
         </Routes>
       </div>
     </Router>
