@@ -28,6 +28,7 @@
 
   background-color: #ffcc33;
   width: 5vw;
+  height: 2vw;
   border-radius: 5px;
   padding: 5px;
   margin: 2px;
@@ -38,9 +39,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
+  
   background-color: #ff0000;
   width: 5vw;
+  height: 2vw;
   border-radius: 5px;
   padding: 5px;
   margin: 2px;
@@ -50,6 +52,16 @@
 a {
   all: unset;
 }
+
+/******* GAME SELECTED ********/
+.gameSelected {
+ width: 100vw;
+height: 60vh;
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+}
+
 
 /******** MAIN IMAGE SINGLE GAME *****/
 .containerGameImage {

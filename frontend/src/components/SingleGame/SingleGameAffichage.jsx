@@ -4,6 +4,7 @@ import GameParaphDetails from "./GameParaphDetails";
 import GameGenreDetails from "./GameGenreDetails";
 import GameDevelopersDetails from "./GameDevelopersDetails";
 import GamePublishersDetails from "./GamePublishersDetails";
+import IMGnotFound from "../images/IMGnotFound.png";
 
 function SingleGameAffichage({
   name_original: nameOriginal,
@@ -29,8 +30,25 @@ function SingleGameAffichage({
   return (
     <div className="gamePageContainer">
       <div className="containerGameImage">
-        <img className="gameImage" src={gameImage} alt="jeu" />
+        {/*  {gameImage ? (
+          <img className="gameImage" src={gameImage} alt="Game" />
+        ) : (
+          <img className="gameImage" src={IMGnotFound} alt="IMG not found" />
+        )} */}
+
+        {gameImage ? (
+          <div
+            className="gameSelected"
+            style={{ backgroundImage: `url('${gameImage}')` }}
+          />
+        ) : (
+          <div
+            className="gameSelected"
+            style={{ backgroundImage: `url('${IMGnotFound}')` }}
+          />
+        )}
       </div>
+
       <div className="gamePageInformations">
         <div className="gamePageTitle">
           <div className={colorCritic(metacritic)}>
@@ -47,11 +65,22 @@ function SingleGameAffichage({
       </div>
 
       <div className="otherImage">
-        <img
+        {additionalGameImage ? (
+          <div
+            className="additionalGameImage"
+            style={{ backgroundImage: `url('${additionalGameImage}')` }}
+          />
+        ) : (
+          <div
+            className="additionalGameImage"
+            style={{ backgroundImage: `url('${IMGnotFound}')` }}
+          />
+        )}
+        {/* <img
           className="additionalGameImage"
           src={additionalGameImage}
           alt="jeu"
-        />
+        /> */}
       </div>
       <div className="gamePageCreators">
         <h3>
