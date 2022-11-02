@@ -28,7 +28,7 @@ function SingleGameAffichage({
     return "metacritic039";
   };
   return (
-    <div className="gamePageContainer">
+    <div className="container-fluid g-0">
       <div
         id="carouselExampleFade"
         className="carousel slide carousel-fade"
@@ -87,7 +87,7 @@ function SingleGameAffichage({
           />
         )} */}
 
-      <div className="gamePageInformations">
+      <div className="container">
         <div className="gamePageTitle">
           {metacritic ? (
             <div className={colorCritic(metacritic)}>
@@ -97,7 +97,7 @@ function SingleGameAffichage({
             </div>
           ) : null}
 
-          <h2>{nameOriginal}</h2>
+          <h2 className="text-white">{nameOriginal}</h2>
           <div className="unlike" />
         </div>
         <div className="gamePageDetails">
@@ -123,24 +123,27 @@ function SingleGameAffichage({
           alt="jeu"
         /> 
       </div> */}
-      <div className="gamePageCreators">
-        <h3>
-          Publisher :
-          {publishers ? (
-            <GamePublishersDetails publishers={publishers} />
-          ) : null}
-        </h3>
-        <h3>
-          Developer :
-          {developers ? (
-            <GameDevelopersDetails developers={developers} />
-          ) : null}
-        </h3>
-        <h3>
-          Released :{released ? <GameDateDetails released={released} /> : null}
-        </h3>
+      <div className="container">
+        <div className="row">
+          <h3 className="h5 col-4 text-center text-white">
+            Publisher :
+            {publishers ? (
+              <GamePublishersDetails publishers={publishers} />
+            ) : null}
+          </h3>
+          <h3 className="h5 col-4 text-center text-white">
+            Developer :
+            {developers ? (
+              <GameDevelopersDetails developers={developers} />
+            ) : null}
+          </h3>
+          <h3 className="h5 col-4 text-center text-white">
+            Released :
+            {released ? <GameDateDetails released={released} /> : null}
+          </h3>
+        </div>
       </div>
-      <div className="gamePageDescription">
+      <div className="gamePageDescription text-white">
         {description ? <GameParaphDetails description={description} /> : null}
       </div>
     </div>
