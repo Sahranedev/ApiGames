@@ -90,7 +90,7 @@ function SingleGameAffichage({
       <div className="container">
         <div className="gamePageTitle">
           {metacritic ? (
-            <div className={colorCritic(metacritic)}>
+            <div className={`text-white ${colorCritic(metacritic)}`}>
               <a href={metacriticUrl} target="_blank" rel="noreferrer">
                 {metacritic}
               </a>
