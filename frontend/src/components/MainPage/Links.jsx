@@ -21,7 +21,7 @@ function Links({ searchValue }) {
         <Link to="/gamelist">Liste de jeux filtrés par : "{searchValue}"</Link>
       </li>
       <li>
-        <Link to="/game">Affichage du jeu selectionné: ""</Link>
+        <Link to="/game">Affichage du jeu selectionné: </Link>
       </li>
     </div>
   );

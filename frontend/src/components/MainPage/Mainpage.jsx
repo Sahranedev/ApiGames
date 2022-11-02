@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 /* import Modale from "../SingleGame/Modal";
  */
-import SingleGame from "@components/SingleGame/SingleGame";
+import SingleGame from "../SingleGame/SingleGame";
 import GameList from "../GameList/GameList";
 import Searchbar from "./Searchbar";
 import Navbar from "./Navbar";
