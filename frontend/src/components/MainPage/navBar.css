@@ -1,6 +1,7 @@
 .navigation {
   position: fixed;
-  background-color: rgba(143, 132, 31, 0.842);
+  border-radius: 0px;
+  background: linear-gradient(315deg, #ca9f51, #f0bd60);
   width: 100vw;
   bottom: 0;
 }
