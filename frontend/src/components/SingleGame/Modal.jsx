@@ -1,4 +1,4 @@
-/* import React, { useState } from "react";
+import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import SingleGame from "./SingleGame";
@@ -14,7 +14,7 @@ function Modale() {
   }
 
   return (
-    <>
+    <div className="modal">
       {values.map((v, id) => (
         // eslint-disable-next-line react/no-array-index-key
         <Button key={id} className="me-2 mb-2" onClick={() => handleShow(v)}>
@@ -30,9 +30,8 @@ function Modale() {
           <SingleGame />
         </Modal.Body>
       </Modal>
-    </>
+    </div>
   );
 }
 
 export default Modale;
- */
