@@ -1,26 +1,26 @@
-import React /* ,{ useState }  */ from "react";
-import { NavLink } from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom";
 import "./gameListStyle.css";
 
 function GameListAffichage({
   name,
   background_image: backgroundImage,
   metacritic,
-  /* id, */
+  id,
 }) {
-  /*  const [idObtain, setID] = useState();
-  const getID = () => {
-    console.log(id);
-    setID(id);
-  }; */
-
   return (
-    <div className="gamePageContainer" /* onClick={getID} */>
-      <NavLink to="/game" /* idObtain={idObtain} */>
+    <div
+      className="gamePageContainer"
+      onClick={console.log(id)}
+      onKeyPress=""
+      role="presentation"
+    >
+      {/* // voir useParams */}
+      <Link to={`/game/${id}`}>
         <h2>{name}</h2>
 
         <img className="backgroundGameImage" src={backgroundImage} alt="jeu" />
-      </NavLink>
+      </Link>
       <div className="fav-metacritic">
         <div>❤️</div>
         <div>Note : {metacritic}</div>
