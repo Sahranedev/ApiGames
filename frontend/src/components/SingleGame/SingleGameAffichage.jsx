@@ -97,10 +97,10 @@ function SingleGameAffichage({
             </div>
           ) : null}
 
-          <h2 className="text-white">{nameOriginal}</h2>
-          <div className="unlike" />
+          <h2 className="text-white text-center">{nameOriginal}</h2>
+          <div className="unlike text-center" />
         </div>
-        <div className="gamePageDetails">
+        <div className="gamePageDetails text-center">
           {genres ? <GameGenreDetails genres={genres} /> : null}
         </div>
       </div>
