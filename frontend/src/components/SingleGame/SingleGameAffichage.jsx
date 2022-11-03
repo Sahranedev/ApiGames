@@ -28,7 +28,7 @@ function SingleGameAffichage({
     return "metacritic039";
   };
   return (
-    <div className="container-fluid g-0">
+    <div className="container-fluid g-0 singleGameContainer">
       <div
         id="carouselExampleFade"
         className="carousel slide carousel-fade"
@@ -87,7 +87,7 @@ function SingleGameAffichage({
           />
         )} */}
 
-      <div className="container">
+      <div className="container rounded">
         <div className="gamePageTitle">
           {metacritic ? (
             <div className={`text-white ${colorCritic(metacritic)}`}>
