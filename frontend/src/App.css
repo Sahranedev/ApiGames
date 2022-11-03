@@ -1,6 +1,9 @@
 body {
   margin: 0;
-  background: linear-gradient(109.6deg, rgb(38, 38, 38) 11.2%, rgb(235, 171, 54) 91.3%);
+  background:#333;
+  /*  need to change background later
+  linear-gradient(109.6deg, rgb(38, 38, 38) 11.2%, rgb(235, 171, 54) 91.3%) */
   overflow-x: hidden;
 
+  color : white;
 }

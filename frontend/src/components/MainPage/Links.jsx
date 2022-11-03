@@ -5,7 +5,7 @@ import Ourlikes from "./Ourlikes";
 
 function Links({ searchValue }) {
   return (
-    <div>
+    <div className="links">
       <li>
         <Link to="/novelties">Novelties</Link>
       </li>
