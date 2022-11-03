@@ -22,25 +22,25 @@
 }
 
 /******* METACRITIC BUTTON *******/
-.metacritic75100 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.metacritic75100{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  background-color: #65cc33;
-  width: 2vw;
-  height: 2vw;
-  border-radius: 5px;
-  font-size: 1rem;
-  padding: 0.8rem;
-  margin: 1rem;
-  cursor: pointer;
-  font-weight: bolder;
+    background-color: #65CC33;
+    width: 2vw;
+    height: 2vw;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 0.8rem;
+    margin: 1rem;
+    cursor: pointer;
+    font-weight: bolder;
 }
-.metacritic4074 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.metacritic4074{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
   background-color: #ffcc33;
   width: 5vw;
@@ -51,10 +51,10 @@
   cursor: pointer;
   font-weight: bolder;
 }
-.metacritic039 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.metacritic039{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
   background-color: #ff0000;
   width: 5vw;
@@ -88,79 +88,81 @@ a {
 
 /******** MAIN IMAGE SINGLE GAME *****/
 .containerGameImage {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* flex wrap before making a carrousel*/
-  flex-wrap: wrap;
-  /**/
-  width: 100vw;
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
+/* flex wrap before making a carrousel*/
+    flex-wrap: wrap;
+/**/
+    width: 100vw;}
 .gameImage {
-  width: 100%;
-  box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.073),
+    width : 100%;
+    box-shadow:
+    2.8px 2.8px 2.2px rgba(0, 0, 0, 0.073),
     6.7px 6.7px 5.3px rgba(0, 0, 0, 0.105),
     12.5px 12.5px 10px rgba(0, 0, 0, 0.13),
     22.3px 22.3px 17.9px rgba(0, 0, 0, 0.155),
     41.8px 41.8px 33.4px rgba(0, 0, 0, 0.187),
-    100px 100px 80px rgba(0, 0, 0, 0.26);
+    100px 100px 80px rgba(0, 0, 0, 0.26)
+  ;
 }
 
 /******* OTHER IMAGE FROM GAME *******/
 /* make a little image for now, cause will see for carousel with main image */
 .otherImage {
-  width: 100vw;
+    width: 100vw;
 }
 
-.additionalGameImage {
-  width: 20%;
+.additionalGameImage{
+    width: 20%;
 }
 
 /******* DETAILS GAME ********/
 .gamePageDetails {
-  display: flex;
-  justify-content: space-around;
-  font-size: 0.8rem;
+display: flex;
+justify-content: space-around;
+font-size: 0.8rem;
 }
 
-.genreContainer {
-  display: flex;
-  list-style-type: none;
-  justify-content: center;
-  padding: 0;
+.genreContainer{
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    padding:0;
+
 }
 
-.genre {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin: 1rem;
-  width: 4rem;
-  height: 2rem;
-  border-radius: 5px;
-  background: #e0b15a;
-  color: #333;
-}
+.genre{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin:1rem;
+    width: 4rem;
+    height: 2rem;
+    border-radius: 5px;
+    background: #E0B15A;
+    color : #333;
+    }
 
 /******* LIKE GAME ********/
 
 .unlike {
-  width: 2rem;
-  height: 2rem;
-  background-image: url(../images/heartUnlike.svg);
+    width: 2rem;
+    height: 2rem;
+    background-image: url(../images/heartUnlike.svg);
 }
 .like {
-  width: 2rem;
-  height: 2rem;
-  background-image: url(../images/heart.svg);
+    width: 2rem;
+    height: 2rem;
+    background-image: url(../images/heart.svg);
 }
 
 /*******  GAME PAGE TITLE ********/
 .gamePageTitle {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .gamePageCreators {
@@ -169,11 +171,11 @@ a {
 }
 
 .detailed {
-  font-weight: 300;
+    font-weight: 300;
 }
 
-.gamePageDescription {
-  margin: 3vw;
-  padding: 3vw;
-  text-align: justify;
+.gamePageDescription{
+    margin: 3vw;
+    padding: 3vw;
+    text-align: justify;
 }

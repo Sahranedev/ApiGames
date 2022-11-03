@@ -1,18 +1,61 @@
 .navigation {
   position: fixed;
-  border-radius: 0px;
-  background: linear-gradient(315deg, #ca9f51, #f0bd60);
+  background-color: rgba(224, 177, 90, 0.856);
   width: 100vw;
   bottom: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.315);
 }
 .navigation-ul {
-  height: 7vh;
+  height: 5vh;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   list-style-type: none;
 }
 .navigation-ul li {
   width: 30vw;
   color: black;
+}
+
+.navigation-ul li img {
+  height: 2.2rem;
+  width: 2.2rem;
+}
+
+.burger {
+  position: fixed;
+  height: 94.8vh;
+  background-color: rgba(224, 177, 90, 0.856);
+  border: 1px solid rgba(0, 0, 0, 0.459);
+  width: 68vw;
+  top: 0;
+  right: 0;
+  margin-bottom: 5vh;
+}
+.hidden {
+  transform: translate(900px);
+}
+.visible {
+  transform: translate(0px);
+  transition: 0.4s;
+  display: inherit;
+}
+.menu-ul {
+  list-style-type: none;
+}
+.menu-ul li {
+  border-radius: 10px;
+  margin: auto;
+  background-color: #272626d7;
+  width: 50vw;
+  height: 3.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.7rem;
+}
+.nav-active {
+  height: 5vh;
+  background-color: rgba(0, 0, 0, 0.096);
+  bottom: 0;
 }
