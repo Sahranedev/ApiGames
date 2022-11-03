@@ -1,5 +1,7 @@
 import { NavLink } from "react-router-dom";
 import "./navBar.css";
+import home from "../../assets/home.png";
+import favoris from "../../assets/favoris.png";
 
 function Navbar() {
   return (
@@ -11,7 +13,7 @@ function Navbar() {
             className={(nav) => (nav.isActive ? "nav-active" : "")}
           >
             <li>
-              <img src="./src/assets/home.png" alt="Home" />
+              <img src={home} alt="Home" />
             </li>
           </NavLink>
           <NavLink
@@ -19,7 +21,7 @@ function Navbar() {
             className={(nav) => (nav.isActive ? "nav-active" : "")}
           >
             <li>
-              <img src="./src/assets/favoris.png" alt="Favoris" />
+              <img src={favoris} alt="Favoris" />
             </li>
           </NavLink>
 
