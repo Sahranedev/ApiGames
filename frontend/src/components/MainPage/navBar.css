@@ -10,11 +10,20 @@
 } 
 
 img {
-  height: 7vh;
+  height: 2em;
 }
 
+.navbar-toggler{
+  border: none;
+}
 
+.navbar-toggler:active{
+  border: none;
+}
 
+.navbar-toggler:hover{
+  border: none;
+}
 
 /* 
 

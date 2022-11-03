@@ -1,55 +1,8 @@
-import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./navBar.css";
 
 function Navbar() {
-  const [menuClass, setMenuClass] = useState("burger hidden");
-  const [isMenuClicked, setIsMenuClicked] = useState(false);
-  const updateMenu = () => {
-    if (!isMenuClicked) {
-      setMenuClass("burger visible");
-    } else {
-      setMenuClass("burger hidden");
-    }
-    setIsMenuClicked(!isMenuClicked);
-  };
   return (
-    /*  <div>
-      <nav className="navigation">
-        <ul className="navigation-ul">
-          <NavLink
-            to="/mainpage"
-            className={(nav) => (nav.isActive ? "nav-active" : "")}
-          >
-            <li>
-              <img src="./src/assets/home.png" alt="Home" />
-            </li>
-          </NavLink>
-          <NavLink
-            to="/likes"
-            className={(nav) => (nav.isActive ? "nav-active" : "")}
-          >
-            <li>
-              <img src="./src/assets/favoris.png" alt="Favoris" />
-            </li>
-          </NavLink>
-          <NavLink onClick={updateMenu}>
-            <li>
-              <img src="./src/assets/menu2.png" alt="Menu" />
-            </li>
-          </NavLink>
-        </ul>
-      </nav>
-      <div className={menuClass}>
-        <h3>Platform</h3>
-        <ul className="menu-ul">
-          <li>PC</li>
-          <li>PS5</li>
-          <li>XBOX</li>
-        </ul>
-      </div>
-    </div> */
-
     <nav className="navbar navbar-fluid fixed-bottom important-bg-color">
       <div className="bg-specify">
         <ul className="navigation-ul  d-flex justify-content-space-between specify-ul">
@@ -110,24 +63,24 @@ function Navbar() {
           <div className="offcanvas-body ">
             <ul className="navbar-nav justify-content-center flex-grow-1 pe-3 ">
               <li className="nav-item text-white">
-                <a className="nav-link active" aria-current="page" href="#">
-                  PC
-                </a>
+                {/* <a className="nav-link active" aria-current="page" href="#"> */}
+                PC
+                {/* </a> */}
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  PS5
-                </a>
+                {/*  <a className="nav-link" href="#"> */}
+                PS5
+                {/* </a> */}
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  SWITCH
-                </a>
+                {/* <a className="nav-link" href="#"> */}
+                SWITCH
+                {/* </a> */}
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  XBOX
-                </a>
+                {/*  <a className="nav-link" href="#"> */}
+                XBOX
+                {/* </a> */}
               </li>
             </ul>
           </div>
@@ -143,24 +96,24 @@ function Navbar() {
           <div className="offcanvas-body">
             <ul className="navbar-nav flex-grow-1 pe-3">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
-                  Action
-                </a>
+                {/* <a className="nav-link active" aria-current="page" href="#"> */}
+                Action
+                {/* </a> */}
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Horror
-                </a>
+                {/*  <a className="nav-link" href="#"> */}
+                Horror
+                {/*  </a> */}
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  MMORPG
-                </a>
+                {/* <a className="nav-link" href="#"> */}
+                MMORPG
+                {/* </a> */}
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Adventure
-                </a>
+                {/*  <a className="nav-link" href="#"> */}
+                Adventure
+                {/* </a> */}
               </li>
             </ul>
           </div>
@@ -176,24 +129,24 @@ function Navbar() {
           <div className="offcanvas-body">
             <ul className="navbar-nav justify-content-center text-center flex-grow-1 pe-3">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
-                  Single Player
-                </a>
+                {/*  <a className="nav-link active" aria-current="page" href="#"> */}
+                Single Player
+                {/* </a> */}
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Multiplayer
-                </a>
+                {/* <a className="nav-link" href="#"> */}
+                {/*     Mu */}ltiplayer
+                {/*   </a> */}
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Cooperation
-                </a>
+                {/*  <a className="nav-link" href="#"> */}
+                Cooperation
+                {/*  </a> */}
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Competitive
-                </a>
+                {/*  <a className="nav-link" href="#"> */}
+                Competitive
+                {/*  </a> */}
               </li>
             </ul>
           </div>
