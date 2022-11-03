@@ -32,8 +32,8 @@ function Mainpage({ games, setSearchValue, searchValue, getGame }) {
           <Links searchValue={searchValue} />
           <h2 className="trollpresentation">
             Please, write on the search bar 👆
+            <LinkToMainPage />
           </h2>
-          <LinkToMainPage />
         </ul>
         <Routes>
           <Route path="/novelties" element={<Novelties />} />
