@@ -9,7 +9,7 @@ function Searchbar({ searchValue, setSearchValue, getGame }) {
         value={searchValue}
         className="search-bar"
         type="text"
-        placeholder="Nom, plateforme...."
+        placeholder="Search your game here"
         onChange={(e) => setSearchValue(e.target.value)}
       />
       <Link to="/gamelist">

@@ -1,3 +1,26 @@
+.bg-specify {
+  background-color: #edad37;
+  width: 100vw;
+}
+
+ .specify-ul {
+  justify-content: space-around;
+  list-style-type: none;
+  align-items: center; 
+} 
+
+img {
+  height: 7vh;
+}
+
+
+
+
+/* 
+
+Save for later - if something had to change in the future, this is the place to do it. 
+
+
 .navigation {
   position: fixed;
   background-color: rgba(224, 177, 90, 0.856);
@@ -6,6 +29,7 @@
   border-top: 1px solid rgba(0, 0, 0, 0.315);
 }
 .navigation-ul {
+  background-color: #edad37;
   height: 5vh;
   display: flex;
   justify-content: space-between;
@@ -13,8 +37,9 @@
   list-style-type: none;
 }
 .navigation-ul li {
+  background-color: #edad37;
   width: 30vw;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 .navigation-ul li img {
@@ -23,6 +48,7 @@
 }
 
 .burger {
+  background-color: #edad37;
   position: fixed;
   height: 94.8vh;
   background-color: rgba(224, 177, 90, 0.856);
@@ -46,7 +72,7 @@
 .menu-ul li {
   border-radius: 10px;
   margin: auto;
-  background-color: #272626d7;
+ 
   width: 50vw;
   height: 3.3rem;
   display: flex;
@@ -56,6 +82,6 @@
 }
 .nav-active {
   height: 5vh;
-  background-color: rgba(0, 0, 0, 0.096);
   bottom: 0;
 }
+ */

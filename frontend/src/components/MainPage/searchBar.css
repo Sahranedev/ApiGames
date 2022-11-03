@@ -1,13 +1,12 @@
 .search {
   display: flex;
+  justify-content: space-between;
 }
 .search-button {
   height: 3vh;
-  position: relative;
-  left: 90px;
   background-color: #26262600;
   color: white;
-  border: none;
+  border: none; 
 }
 .search {
   border-radius: 10px;
@@ -16,6 +15,11 @@
   max-width: 100%;
   padding: 20px;
   margin: 30px;
+}
+
+.search-bar::placeholder{
+  font-style: italic;
+  opacity: 0.4;
 }
 
 /* Css dans la barre */
