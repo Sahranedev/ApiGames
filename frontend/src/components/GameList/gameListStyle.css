@@ -1,9 +1,8 @@
 .gameInfo {
-  margin-bottom: 7vh;
   display: flex;
-
-  justify-content: flex-start;
   flex-direction: column;
+  justify-content: flex-start;
+  height: 30vh;
   width: 59vw;
   
 }
@@ -14,28 +13,27 @@
   display: flex;
   justify-content: flex-start;
   float: left;
-  height: 25vh;
+  height: 22vh;
   width: 40vw;
+  border-radius: 5%;
+  background: center;
+  background: cover;
+  background-repeat: no-repeat;
   
 }
-.gamePageContainer h2 {
-  font-size: 2rem;
+.gameAffichageContainer h2 {
+  font-size: 1rem;
   margin-left: 1rem;
   margin-bottom: 5px;
 }
-.fav-metacritic {
-  
-  flex-direction: row-reverse;
- 
-  margin: 1rem;
-}
+
 
 .platform {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-
+  margin-left: 1rem;
   width: 7rem;
   height: 2rem;
   border-radius: 5px;
@@ -57,7 +55,7 @@
  
   cursor: pointer;
   font-weight: bolder;
-  margin-bottom: 1rem;
+  
 }
 .metacriticYellow {
   display: flex;
@@ -88,5 +86,57 @@
  
   cursor: pointer;
   font-weight: bolder;
+}
+
+.unFav {
+  width: 3rem;
+  height: 3rem;
+  background-image: url(../images/heartUnlike.svg);
+  margin-left: 3rem;
+  background-repeat: no-repeat;
+}
+
+.metaFav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 1rem;
+  margin-bottom: 0.5rem;
+
+
+}
+
+.genreAffichage {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 0.8rem;
+}
+
+
+
+.genreMap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-style: bold;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+  width: 4rem;
+  height: 2rem;
+  border-radius: 5px;
+  background: #e0b15a;
+  color: #333;
+}
+
+.release {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.release-detail {
+  margin-left: 0.5rem;
 }
 

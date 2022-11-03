@@ -1,7 +1,8 @@
 import React from "react";
 import "./gameListStyle.css";
 import "../SingleGame/singleGame.css";
-import GameGenreDetails from "../SingleGame/GameGenreDetails";
+import GameGenreAffichage from "./GameGenreAffichage";
+import GameDateAffichage from "./GameDateAffichage";
 
 function GameListAffichage({
   name,
@@ -9,7 +10,6 @@ function GameListAffichage({
   metacritic,
   released,
   genres,
-
   platforms: [
     {
       platform: { name: platformeName },
@@ -30,26 +30,29 @@ function GameListAffichage({
   };
 
   return (
-    <div className="gamePageContainer">
+    <div className="gameAffichageContainer">
       <div className="backgroundGameImage">
         <img src={backgroundImage} alt="jeu" />
       </div>
       <div className="gameInfo">
-        <h2 className="gameName">{name} </h2>
-        <div className={colorCritic(metacritic)}>
-          <a href={metacriticUrl} target="_blank" rel="noreferrer">
-            {metacritic}
-          </a>
-        </div>{" "}
-        <div className="release">
-          <strong>Sortie : </strong>
-          {released}
+        <div className="metaFav">
+          <div className={colorCritic(metacritic)}>
+            <a href={metacriticUrl} target="_blank" rel="noreferrer">
+              {metacritic}
+            </a>
+          </div>{" "}
+          <h2 className="gameName">{name} </h2>
+          <div className="unFav" />
         </div>
-        <div className="gamePageDetails">
-          {genres ? <GameGenreDetails genres={genres} /> : null}
+
+        <div className="release">
+          <strong>Released : </strong>
+          {released ? <GameDateAffichage released={released} /> : null}
+        </div>
+        <div className="gameGenresAffichage">
+          {genres ? <GameGenreAffichage genres={genres} /> : null}
         </div>
         <div className="platform">{platformeName}</div>
-        <div>❤️</div>
       </div>
     </div>
   );
