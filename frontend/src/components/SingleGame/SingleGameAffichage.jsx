@@ -138,7 +138,7 @@ function SingleGameAffichage({
             ) : null}
           </h3>
           <h3 className="h5 col-4 text-center text-white">
-            Released :
+            Released :{" "}
             {released ? <GameDateDetails released={released} /> : null}
           </h3>
         </div>

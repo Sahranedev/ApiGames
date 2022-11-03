@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./gameListStyle.css";
 import "../SingleGame/singleGame.css";
+import { Link } from "react-router-dom";
 import GameGenreAffichage from "./GameGenreAffichage";
 import GameDateAffichage from "./GameDateAffichage";
 
@@ -11,6 +11,8 @@ function GameListAffichage({
   metacritic,
   released,
   genres,
+  id,
+
   platforms: [
     {
       platform: { name: platformeName },
@@ -33,21 +35,37 @@ function GameListAffichage({
   return (
     <div className="gameAffichageContainer">
       <div className="backgroundGameImage">
-        <img src={backgroundImage} alt="jeu" />
+        <Link to={`/game/${id}`}>
+          <img src={backgroundImage} alt="jeu" />
+        </Link>
       </div>
+
       <div className="gameInfo">
         <div className="metaFav">
-          <div className={colorCritic(metacritic)}>
+          {metacritic ? (
+            <div className={colorCritic(metacritic)}>
+              <a href={metacriticUrl} target="_blank" rel="noreferrer">
+                {metacritic}
+              </a>
+            </div>
+          ) : null}
+
+          {/*  <div className={colorCritic(metacritic)}>
             <a href={metacriticUrl} target="_blank" rel="noreferrer">
               {metacritic}
             </a>
-          </div>{" "}
-          <h2 className="gameName">{name} </h2>
+          </div>
+ */}
+
+          <Link to={`/game/${id}`}>
+            <h2 className="gameName">{name} </h2>
+          </Link>
           <div className="unFav" />
         </div>
 
         <div className="release">
           <strong>Released : </strong>
+
           {released ? <GameDateAffichage released={released} /> : null}
         </div>
         <div className="gameGenresAffichage">
