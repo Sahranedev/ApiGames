@@ -25,6 +25,10 @@ img {
   border: none;
 }
 
+.important-bg-color {
+  padding : 0;
+}
+
 /* 
 
 Save for later - if something had to change in the future, this is the place to do it. 
