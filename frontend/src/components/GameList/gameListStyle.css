@@ -4,11 +4,11 @@
   margin: 3rem;
 }
 .gamePageContainer img {
-  height: 27vh;
+  height: 25vh;
   width: 98vw;
 }
 .gamePageContainer h2 {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin: 1rem;
 }
 .fav-metacritic {

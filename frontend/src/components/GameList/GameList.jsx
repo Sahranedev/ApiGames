@@ -1,5 +1,3 @@
-import React from "react";
-
 import "./gameList.css";
 import GameListAffichage from "./GameListAffichage";
 
