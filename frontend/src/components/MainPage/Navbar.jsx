@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import "./navBar.css";
 import home from "../../assets/home.png";
 import favoris from "../../assets/favoris.png";
@@ -76,11 +76,23 @@ function Navbar() {
                   Platforms
                 </a>
                 <ul className="dropdown-menu text-white text-center bg-specify-second">
-                  <li>PC</li>
-                  <li>PS5</li>
-                  <li>SWITCH</li>
-                  <li>XBOX</li>
-                  <li>Mobile</li>
+                  <li>
+                    <Link to="/gamelist/pc">PC</Link>
+                  </li>
+                  <li>
+                    <Link to="/gamelist/ps5">PS5</Link>
+                  </li>
+                  <li>
+                    <Link to="/gamelist/switch">SWITCH</Link>
+                  </li>
+                  <li>
+                    {" "}
+                    <Link to="/gamelist/xbox">XBOX</Link>
+                  </li>
+                  <li>
+                    {" "}
+                    <Link to="/gamelist/mobile">MOBILE</Link>
+                  </li>
                 </ul>
               </li>
               {/* Filtered by genre dropdown menu  */}
