@@ -1,4 +1,4 @@
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./navBar.css";
 import home from "../../assets/home.png";
 import favoris from "../../assets/favoris.png";
