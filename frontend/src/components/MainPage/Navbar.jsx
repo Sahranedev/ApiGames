@@ -107,15 +107,25 @@ function Navbar() {
                   Genres
                 </a>
                 <ul className="dropdown-menu text-white text-center bg-specify-second">
-                  <li>Action</li>
+                  <li>
+                    <Link to="/gamelist/action">action</Link>
+                  </li>
 
-                  <li>Adventure</li>
+                  <li>
+                    <Link to="/gamelist/adventure">adventure</Link>
+                  </li>
 
-                  <li>Simulation</li>
+                  <li>
+                    <Link to="/gamelist/simulation">simulation</Link>
+                  </li>
 
-                  <li>Shooter</li>
+                  <li>
+                    <Link to="/gamelist/shooter">shooter</Link>
+                  </li>
 
-                  <li>Strategy</li>
+                  <li>
+                    <Link to="/gamelist/strategy">strategy</Link>
+                  </li>
                 </ul>
               </li>
               {/* Filtered by players dropdown menu  */}
@@ -130,13 +140,21 @@ function Navbar() {
                   Players
                 </a>
                 <ul className="dropdown-menu text-center text-white bg-specify-second">
-                  <li className="text-center">Multiplayer</li>
+                  <li className="text-center">
+                    <Link to="/gamelist/multiplayer">multiplayer</Link>
+                  </li>
 
-                  <li className="text-center">Casual</li>
+                  <li className="text-center">
+                    <Link to="/gamelist/casual">casual</Link>
+                  </li>
 
-                  <li className="text-center">Competitive</li>
+                  <li className="text-center">
+                    <Link to="/gamelist/competitive">competitive</Link>
+                  </li>
 
-                  <li className="text-center">Coopération</li>
+                  <li className="text-center">
+                    <Link to="/gamelist/cooperation">cooperation</Link>
+                  </li>
                 </ul>
               </li>
             </ul>

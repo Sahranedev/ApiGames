@@ -6,7 +6,7 @@ function FiltredList() {
 
   return (
     <div>
-      <h2>Jeux filtrés - {params.filtredList}</h2>
+      <h2>Filtred games by "{params.filtredList}"</h2>
     </div>
   );
 }
