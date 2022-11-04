@@ -5,19 +5,19 @@
 .search-button {
   height: 3vh;
   background-color: #26262600;
-  color: white;
-  border: none; 
+  color: var(--main-text-color);
+  border: none;
 }
 .search {
   border-radius: 10px;
-  background: #262626;
+  background: var(--main-background-color);
   box-shadow: inset -5px 5px 9px #0f0f0f, inset 5px -5px 9px #3d3d3d;
   max-width: 100%;
   padding: 20px;
   margin: 30px;
 }
 
-.search-bar::placeholder{
+.search-bar::placeholder {
   font-style: italic;
   opacity: 0.4;
 }
@@ -30,6 +30,5 @@
   font-size: 20px; /* taille du titre dans l'input*/
   position: relative;
   left: 20px;
-  color: #e0b15a;
+  color: var(--second-background-color);
 }
-

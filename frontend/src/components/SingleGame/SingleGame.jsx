@@ -9,7 +9,7 @@ const API_KEY = "813e525c42c04986ac0747dddec96609";
 function SingleGame(games) {
   const [game, setGame] = useState([]);
   const { id } = useParams();
-
+  /* Fetch API to get details of a game */
   const getSingleGame = () => {
     fetch(`${API_URL}/${id}?key=${API_KEY}`)
       .then((response) => response.json())
