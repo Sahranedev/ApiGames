@@ -10,7 +10,7 @@ import Novelties from "./Novelties";
 import Links from "./Links";
 import Likespage from "../LikesPage/Likespage";
 import LinkToMainPage from "../GameList/LinkToMainPage";
-
+import FiltredList from "../FiltredList/FiltredlList";
 import "./mainpage.css";
 
 function Mainpage({ games, setSearchValue, searchValue, getGame }) {
@@ -38,7 +38,8 @@ function Mainpage({ games, setSearchValue, searchValue, getGame }) {
         <Routes>
           <Route path="/novelties" element={<Novelties />} />
           <Route path="/likes" element={<Likespage />} />
-          <Route path="/gamelist" element={<GameList gameList={games} />} />
+          <Route path="/gamelist/:filtredList" element={<FiltredList />} />
+          <Route path="/gamelist/" element={<GameList gameList={games} />} />
           <Route path="/game/:id" element={<SingleGame games={games} />} />
         </Routes>
       </div>

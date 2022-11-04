@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import "./navBar.css";
 import home from "../../assets/home.png";
 import favoris from "../../assets/favoris.png";
@@ -66,7 +66,7 @@ function Navbar() {
             <ul className="navbar-nav justify-content-center flex-grow-1 pe-3 ">
               <li className="nav-item text-white">
                 {/* <a className="nav-link active" aria-current="page" href="#"> */}
-                PC
+                <Link to="/gamelist/pc">PC</Link>
                 {/* </a> */}
               </li>
               <li className="nav-item">
