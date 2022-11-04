@@ -1,9 +1,24 @@
+ 
+
+.carousel .carousel-item {
+  height: 60vh;
+  width: 100vw;
+  
+}
+
+.carousel-item img {
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    min-height: 50ch;
+}
+
 /******* GLOBAL SINGLE GAME PARAMETERS ******/
 .gamePageContainer {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /******* METACRITIC BUTTON *******/
@@ -27,32 +42,51 @@
     align-items: center;
     justify-content: center;
 
-    background-color: #FFCC33;
-    width: 5vw;
-    border-radius: 5px;
-    padding: 5px;
-    margin: 2px;
-    cursor: pointer;
-    font-weight: bolder;
+  background-color: #ffcc33;
+  width: 5vw;
+  height: 2vw;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 2px;
+  cursor: pointer;
+  font-weight: bolder;
 }
 .metacritic039{
     display: flex;
     align-items: center;
     justify-content: center;
 
-    background-color: #FF0000;
-    width: 5vw;
-    border-radius: 5px;
-    padding: 5px;
-    margin: 2px;
-    cursor: pointer;
-    font-weight: bolder;
+  background-color: #ff0000;
+  width: 5vw;
+  height: 2vw;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 2px;
+  cursor: pointer;
+  font-weight: bolder;
 }
- a {
-    all: unset;
+a {
+  all: unset;
 }
 
-/******** MAIN IMAGE SINGLE GAME *****/ 
+/******* GAME SELECTED ********/
+.gameSelected {
+  width: 100vw;
+  height: 60vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.additionalGameImage {
+  width: 10vw;
+  height: 15vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/******** MAIN IMAGE SINGLE GAME *****/
 .containerGameImage {
     display: flex;
     align-items: center;
@@ -111,7 +145,6 @@ font-size: 0.8rem;
     color : #333;
     }
 
-
 /******* LIKE GAME ********/
 
 .unlike {
@@ -132,11 +165,9 @@ font-size: 0.8rem;
     align-items: center;
 }
 
-.gamePageCreators{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    font-size: 0.8rem;
+.gamePageCreators {
+  display: flex;
+  
 }
 
 .detailed {

@@ -4,7 +4,8 @@ import GameParaphDetails from "./GameParaphDetails";
 import GameGenreDetails from "./GameGenreDetails";
 import GameDevelopersDetails from "./GameDevelopersDetails";
 import GamePublishersDetails from "./GamePublishersDetails";
-
+/* import IMGnotFound from "../images/IMGnotFound.png";
+ */
 function SingleGameAffichage({
   name_original: nameOriginal,
   background_image: gameImage,
@@ -27,50 +28,122 @@ function SingleGameAffichage({
     return "metacritic039";
   };
   return (
-    <div className="gamePageContainer">
-      <div className="containerGameImage">
-        <img className="gameImage" src={gameImage} alt="jeu" />
-      </div>
-      <div className="gamePageInformations">
-        <div className="gamePageTitle">
-          <div className={colorCritic(metacritic)}>
-            <a href={metacriticUrl} target="_blank" rel="noreferrer">
-              {metacritic}
-            </a>
-          </div>{" "}
-          <h2>{nameOriginal}</h2>
-          <div className="unlike" />
+    <div className="container-fluid g-0 singleGameContainer">
+      <div
+        id="carouselExampleFade"
+        className="carousel slide carousel-fade"
+        data-bs-ride="carousel"
+      >
+        <div className="carousel-inner">
+          <div className="carousel-item active">
+            <img src={gameImage} className="d-block w-100 h-60" alt="..." />
+          </div>
+
+          <div className="carousel-item">
+            <img
+              src={additionalGameImage}
+              className="d-block w-100"
+              alt="..."
+            />
+          </div>
         </div>
-        <div className="gamePageDetails">
+        <button
+          className="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleFade"
+          data-bs-slide="prev"
+        >
+          <span className="carousel-control-prev-icon" aria-hidden="true" />
+          <span className="visually-hidden">Previous</span>
+        </button>
+        <button
+          className="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleFade"
+          data-bs-slide="next"
+        >
+          <span className="carousel-control-next-icon" aria-hidden="true" />
+          <span className="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      {/*  
+  ////////////// maybe change for be sure of content. esLint problem //////////////
+  {gameImage ? (
+          <img className="gameImage" src={gameImage} className="d-block w-100 h-60" alt="game" />
+        ) : (
+          <img className="gameImage" src={IMGnotFound} className="d-block w-100 h-60" alt="image not" />
+        )} */}
+
+      {/* {gameImage ? (
+          <div
+            className="gameSelected"
+            style={{ backgroundImage: `url('${gameImage}')` }}
+          />
+        ) : (
+          <div
+            className="gameSelected"
+            style={{ backgroundImage: `url('${IMGnotFound}')` }}
+          />
+        )} */}
+
+      <div className="container rounded">
+        <div className="gamePageTitle">
+          {metacritic ? (
+            <div className={`text-white ${colorCritic(metacritic)}`}>
+              <a href={metacriticUrl} target="_blank" rel="noreferrer">
+                {metacritic}
+              </a>
+            </div>
+          ) : null}
+
+          <h2 className="text-white text-center">{nameOriginal}</h2>
+          <div className="unlike text-center" />
+        </div>
+        <div className="gamePageDetails text-center">
           {genres ? <GameGenreDetails genres={genres} /> : null}
         </div>
       </div>
 
-      <div className="otherImage">
-        <img
+      {/*  <div className="otherImage">
+        {additionalGameImage ? (
+          <div
+            className="additionalGameImage"
+            style={{ backgroundImage: `url('${additionalGameImage}')` }}
+          />
+        ) : (
+          <div
+            className="additionalGameImage"
+            style={{ backgroundImage: `url('${IMGnotFound}')` }}
+          />
+        )}
+        {/* <img
           className="additionalGameImage"
           src={additionalGameImage}
           alt="jeu"
-        />
+        /> 
+      </div> */}
+      <div className="container">
+        <div className="row">
+          <h3 className="h5 col-4 text-center text-white">
+            Publisher :
+            {publishers ? (
+              <GamePublishersDetails publishers={publishers} />
+            ) : null}
+          </h3>
+          <h3 className="h5 col-4 text-center text-white">
+            Developer :
+            {developers ? (
+              <GameDevelopersDetails developers={developers} />
+            ) : null}
+          </h3>
+          <h3 className="h5 col-4 text-center text-white">
+            Released :{" "}
+            {released ? <GameDateDetails released={released} /> : null}
+          </h3>
+        </div>
       </div>
-      <div className="gamePageCreators">
-        <h3>
-          Publisher :
-          {publishers ? (
-            <GamePublishersDetails publishers={publishers} />
-          ) : null}
-        </h3>
-        <h3>
-          Developer :
-          {developers ? (
-            <GameDevelopersDetails developers={developers} />
-          ) : null}
-        </h3>
-        <h3>
-          Released :{released ? <GameDateDetails released={released} /> : null}
-        </h3>
-      </div>
-      <div className="gamePageDescription">
+      <div className="gamePageDescription text-white">
         {description ? <GameParaphDetails description={description} /> : null}
       </div>
     </div>
