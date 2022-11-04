@@ -7,7 +7,14 @@
   
 }
 
-
+.presentation {
+  height: 20vh;
+  width: 30vh;
+  border-radius: 5px;
+  background: center;
+  background: contain;
+  background-repeat: no-repeat;
+}
 
 .backgroundGameImage img {
   display: flex;
@@ -17,7 +24,7 @@
   width: 40vw;
   border-radius: 5%;
   background: center;
-  background: cover;
+  background: contain;
   background-repeat: no-repeat;
   
 }

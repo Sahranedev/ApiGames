@@ -52,7 +52,7 @@ function Navbar() {
           </div>
           <div className="offcanvas-header">
             <h5 className="offcanvas-title" id="offcanvasDarkNavbarLabel">
-              Platforms
+              Filtered by :
             </h5>
             <button
               type="button"
@@ -64,91 +64,68 @@ function Navbar() {
 
           <div className="offcanvas-body ">
             <ul className="navbar-nav justify-content-center flex-grow-1 pe-3 ">
-              <li className="nav-item text-white">
-                {/* <a className="nav-link active" aria-current="page" href="#"> */}
-                PC
-                {/* </a> */}
+              {/* Filtered by Platform dropdown menu  */}
+              <li className="nav-item dropdown">
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Platforms
+                </a>
+                <ul className="dropdown-menu text-white text-center bg-specify-second">
+                  <li>PC</li>
+                  <li>PS5</li>
+                  <li>SWITCH</li>
+                  <li>XBOX</li>
+                  <li>Mobile</li>
+                </ul>
               </li>
-              <li className="nav-item">
-                {/*  <a className="nav-link" href="#"> */}
-                PS5
-                {/* </a> */}
-              </li>
-              <li className="nav-item">
-                {/* <a className="nav-link" href="#"> */}
-                SWITCH
-                {/* </a> */}
-              </li>
-              <li className="nav-item">
-                {/*  <a className="nav-link" href="#"> */}
-                XBOX
-                {/* </a> */}
-              </li>
-            </ul>
-          </div>
+              {/* Filtered by genre dropdown menu  */}
+              <li className="nav-item dropdown">
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Genres
+                </a>
+                <ul className="dropdown-menu text-white text-center bg-specify-second">
+                  <li>Action</li>
 
-          <div className="offcanvas-header ">
-            <h5
-              className="offcanvas-title text-center"
-              id="offcanvasDarkNavbarLabel"
-            >
-              Genres
-            </h5>
-          </div>
-          <div className="offcanvas-body">
-            <ul className="navbar-nav flex-grow-1 pe-3">
-              <li className="nav-item">
-                {/* <a className="nav-link active" aria-current="page" href="#"> */}
-                Action
-                {/* </a> */}
-              </li>
-              <li className="nav-item">
-                {/*  <a className="nav-link" href="#"> */}
-                Horror
-                {/*  </a> */}
-              </li>
-              <li className="nav-item">
-                {/* <a className="nav-link" href="#"> */}
-                MMORPG
-                {/* </a> */}
-              </li>
-              <li className="nav-item">
-                {/*  <a className="nav-link" href="#"> */}
-                Adventure
-                {/* </a> */}
-              </li>
-            </ul>
-          </div>
+                  <li>Adventure</li>
 
-          <div className="offcanvas-header">
-            <h5
-              className="offcanvas-title text-center"
-              id="offcanvasDarkNavbarLabel"
-            >
-              Players
-            </h5>
-          </div>
-          <div className="offcanvas-body">
-            <ul className="navbar-nav justify-content-center text-center flex-grow-1 pe-3">
-              <li className="nav-item">
-                {/*  <a className="nav-link active" aria-current="page" href="#"> */}
-                Single Player
-                {/* </a> */}
+                  <li>Simulation</li>
+
+                  <li>Shooter</li>
+
+                  <li>Strategy</li>
+                </ul>
               </li>
-              <li className="nav-item">
-                {/* <a className="nav-link" href="#"> */}
-                {/*     Mu */}ltiplayer
-                {/*   </a> */}
-              </li>
-              <li className="nav-item">
-                {/*  <a className="nav-link" href="#"> */}
-                Cooperation
-                {/*  </a> */}
-              </li>
-              <li className="nav-item">
-                {/*  <a className="nav-link" href="#"> */}
-                Competitive
-                {/*  </a> */}
+              {/* Filtered by players dropdown menu  */}
+              <li className="nav-item dropdown">
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Players
+                </a>
+                <ul className="dropdown-menu text-center text-white bg-specify-second">
+                  <li className="text-center">Multiplayer</li>
+
+                  <li className="text-center">Casual</li>
+
+                  <li className="text-center">Competitive</li>
+
+                  <li className="text-center">Coopération</li>
+                </ul>
               </li>
             </ul>
           </div>
