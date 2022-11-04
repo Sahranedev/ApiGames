@@ -1,5 +1,5 @@
 .bg-specify {
-  background-color: #edad37;
+  background-color:var(--second-background-color);
   width: 100vw;
 }
 
