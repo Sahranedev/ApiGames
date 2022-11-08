@@ -77,21 +77,21 @@ function Navbar() {
                 </a>
                 <ul className="dropdown-menu text-white text-center bg-specify-second">
                   <li>
-                    <Link to="/gamelist/pc">PC</Link>
+                    <Link to="/platforms/pc">PC</Link>
                   </li>
                   <li>
-                    <Link to="/gamelist/playstation5">PS5</Link>
-                  </li>
-                  <li>
-                    <Link to="/gamelist/nintendo">SWITCH</Link>
+                    <Link to="/platforms/playstation5">PS5</Link>
                   </li>
                   <li>
                     {" "}
-                    <Link to="/gamelist/xbox">XBOX</Link>
+                    <Link to="/platforms/playstation4">PS4</Link>
                   </li>
                   <li>
                     {" "}
-                    <Link to="/gamelist/mobile">MOBILE</Link>
+                    <Link to="/platforms/xbox">XBOX</Link>
+                  </li>
+                  <li>
+                    <Link to="/platforms/nintendo">SWITCH</Link>
                   </li>
                 </ul>
               </li>
@@ -108,23 +108,34 @@ function Navbar() {
                 </a>
                 <ul className="dropdown-menu text-white text-center bg-specify-second">
                   <li>
-                    <Link to="/gamelist/action">action</Link>
+                    <Link to="/genres/arcade">arcade</Link>
+                  </li>
+                  <li>
+                    <Link to="/genres/action">action</Link>
                   </li>
 
                   <li>
-                    <Link to="/gamelist/adventure">adventure</Link>
+                    <Link to="/genres/adventure">adventure</Link>
                   </li>
 
                   <li>
-                    <Link to="/gamelist/simulation">simulation</Link>
+                    <Link to="/genres/simulation">simulation</Link>
+                  </li>
+                  <li>
+                    <Link to="/genres/racing">racing</Link>
+                  </li>
+                  <li>
+                    <Link to="/genres/shooter">shooter</Link>
                   </li>
 
                   <li>
-                    <Link to="/gamelist/shooter">shooter</Link>
+                    <Link to="/genres/strategy">strategy</Link>
                   </li>
-
                   <li>
-                    <Link to="/gamelist/strategy">strategy</Link>
+                    <Link to="/genres/puzzle">puzzle</Link>
+                  </li>
+                  <li>
+                    <Link to="/genres/platformer">platformer</Link>
                   </li>
                 </ul>
               </li>

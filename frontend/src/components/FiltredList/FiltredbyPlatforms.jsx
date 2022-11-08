@@ -1,12 +1,13 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useParams } from "react-router-dom";
-import GameListAffichage from "@components/GameList/GameListAffichage";
+import GameListAffichage from "../GameList/GameListAffichage";
 
-function FiltredList() {
+function FiltredbyPlatforms() {
   const API_URL = "https://api.rawg.io/api/games";
   const API_KEY = "813e525c42c04986ac0747dddec96609";
+  /* useRef permet ici de gérer l'état du lancement des fonctions fetch */
   const isMount = useRef(false);
-  const { filtredList } = useParams();
+  const { filtredListByPlatforms } = useParams();
   /* Transmets l'ID de la plateforme pour la donner au prochain fetch */
   const [filter, setFilter] = useState();
   /* Permet de stocker les jeux de la plateforme */
@@ -15,28 +16,24 @@ function FiltredList() {
   // Requête pour récupérer les ID des plateformes
   const getPlatformsList = async () => {
     const response = await fetch(
-      `https://api.rawg.io/api/platforms/lists/parents?key=813e525c42c04986ac0747dddec96609`
+      `https://api.rawg.io/api/platforms/lists/parents?key=${API_KEY}`
     );
     const result = await response.json();
     const platformsList = result.results;
 
     // Pour chaque plateforme de la liste je vérifie si le nom est égal à la valeur du params.
     platformsList.forEach((platform) => {
-      if (platform.slug === filtredList) {
+      if (platform.slug === filtredListByPlatforms) {
         setFilter(platform.id);
         // Si ce n'est pas bon, puisqu'il existe des sous catégories (ex:PS5) je fais pose la condition
         // sur le sous-tableau afin de faire la même vérification.
-      } else if (platform.slug !== filtredList) {
+      } else if (platform.slug !== filtredListByPlatforms) {
         platform.platforms.forEach((sousplatforms) => {
-          if (sousplatforms.slug === filtredList) {
+          if (sousplatforms.slug === filtredListByPlatforms) {
             setFilter(sousplatforms.id);
             // Si vraiment rien ne se passe on renvoie null
-          } else {
-            null;
           }
         });
-      } else {
-        console.log("après tout check non");
       }
     });
   };
@@ -48,20 +45,17 @@ function FiltredList() {
     );
     const gamesresult = await response.json();
     setGamesFiltred(gamesresult.results);
-    console.log(gamesresult.results);
   };
 
   // On utilise un useEffect basé sur l'évolution du filtredList pour réactualiser la requête
   // quand on change de plateforme depuis le menu, vu qu'onn ne change pas de composant sinon ça ne recharge pas
   useEffect(() => {
     getPlatformsList();
-    console.log(filter);
-  }, [filtredList]);
+  }, [filtredListByPlatforms]);
 
   // On utilise un useEffect basé sur le montage du composant pour ne pas déclencher la requête du listing en début de chargement de page
   useEffect(() => {
     if (isMount.current) {
-      console.log(filter);
       getFiltredList();
     } else {
       isMount.current = true;
@@ -70,9 +64,7 @@ function FiltredList() {
 
   return (
     <div>
-      <h2>Filtred games by "{filtredList}"</h2>
-
-      <h1>{filter}</h1>
+      <h2>Filtred games by " {filtredListByPlatforms.toUpperCase()} "</h2>
 
       {gamesFiltred?.map((game) => (
         <GameListAffichage {...game} key={game.id} />
@@ -81,4 +73,4 @@ function FiltredList() {
   );
 }
 
-export default FiltredList;
+export default FiltredbyPlatforms;
