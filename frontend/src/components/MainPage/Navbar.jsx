@@ -80,10 +80,10 @@ function Navbar() {
                     <Link to="/gamelist/pc">PC</Link>
                   </li>
                   <li>
-                    <Link to="/gamelist/ps5">PS5</Link>
+                    <Link to="/gamelist/playstation5">PS5</Link>
                   </li>
                   <li>
-                    <Link to="/gamelist/switch">SWITCH</Link>
+                    <Link to="/gamelist/nintendo">SWITCH</Link>
                   </li>
                   <li>
                     {" "}
