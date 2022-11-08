@@ -137,34 +137,16 @@ function Navbar() {
                   <li>
                     <Link to="/genres/platformer">platformer</Link>
                   </li>
-                </ul>
-              </li>
-              {/* Filtered by players dropdown menu  */}
-              <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="/</li>"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Players
-                </a>
-                <ul className="dropdown-menu text-center text-white bg-specify-second">
-                  <li className="text-center">
-                    <Link to="/gamelist/multiplayer">multiplayer</Link>
+                  <li>
+                    <Link to="/genres/massively-multiplayer">
+                      massively-multiplayer
+                    </Link>
                   </li>
-
-                  <li className="text-center">
-                    <Link to="/gamelist/casual">casual</Link>
+                  <li>
+                    <Link to="/genres/sports">sports</Link>
                   </li>
-
-                  <li className="text-center">
-                    <Link to="/gamelist/competitive">competitive</Link>
-                  </li>
-
-                  <li className="text-center">
-                    <Link to="/gamelist/cooperation">cooperation</Link>
+                  <li>
+                    <Link to="/genres/fighting">fighting</Link>
                   </li>
                 </ul>
               </li>
