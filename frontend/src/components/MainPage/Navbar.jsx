@@ -95,6 +95,7 @@ function Navbar() {
                   </li>
                 </ul>
               </li>
+
               {/* Filtered by genre dropdown menu  */}
               <li className="nav-item dropdown">
                 <a

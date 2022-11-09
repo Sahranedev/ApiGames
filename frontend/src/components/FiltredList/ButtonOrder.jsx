@@ -1,13 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 
 function ButtonOrder({ order, setOrder }) {
   const getReverseOrder = () => {
     setOrder(!order);
-    console.log(order);
   };
 
   return (
-    <button onClick={getReverseOrder} className="btn col-1 btn-dark ">
+    <button
+      type="button"
+      onClick={getReverseOrder}
+      className="btn col-1 btn-dark "
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="16"
