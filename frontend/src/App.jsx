@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./App.css";
+import "./Styles/App.css";
 import Mainpage from "./Pages/Mainpage";
 
 const API_URL =
