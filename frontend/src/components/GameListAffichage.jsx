@@ -1,10 +1,10 @@
 /* eslint-disable*/
 import React, { useState } from "react";
-import "./gameListStyle.css";
-import "../SingleGame/singleGame.css";
+import "../Styles/gameListStyle.css";
+import "../Styles/singleGame.css";
 import GameGenreAffichage from "./GameGenreAffichage";
 import GameDateAffichage from "./GameDateAffichage";
-import Modale from "../SingleGame/Modale";
+import Modale from "../Pages/Modale";
 
 function GameListAffichage({
   name,

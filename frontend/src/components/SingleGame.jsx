@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 // import { useParams } from "react-router-dom";
 import SingleGameAffichage from "./SingleGameAffichage";
-import "./singleGame.css";
+import "../Styles/singleGame.css";
 
 const API_URL = "https://api.rawg.io/api/games";
 const API_KEY = "813e525c42c04986ac0747dddec96609";

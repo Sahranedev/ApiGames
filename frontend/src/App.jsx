@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import Mainpage from "./components/MainPage/Mainpage";
+import Mainpage from "./Pages/Mainpage";
 
 const API_URL =
   "https://api.rawg.io/api/games?key=813e525c42c04986ac0747dddec96609";
