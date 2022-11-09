@@ -73,3 +73,7 @@
   cursor: pointer;
   font-weight: bolder;
 }
+
+.li {
+  margin: 0;
+}
