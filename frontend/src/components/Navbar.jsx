@@ -12,7 +12,7 @@ function Navbar() {
             to="/mainpage"
             className={(nav) => (nav.isActive ? "nav-active" : "")}
           >
-            <li>
+            <li className="elementsNavbar">
               <img src={home} alt="Home" />
             </li>
           </NavLink>

@@ -11,7 +11,7 @@ function LinkToMainPage() {
   return (
     <nav>
       <ul>
-        <li>
+        <li className="list-unstyled">
           <Link to="/">
             <div className="btn-center">
               <button
