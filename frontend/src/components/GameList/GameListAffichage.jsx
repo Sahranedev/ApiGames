@@ -33,45 +33,43 @@ function GameListAffichage({
   };
 
   return (
-    <div className="gameAffichageContainer">
-      <div className="backgroundGameImage">
-        <Link to={`/game/${id}`}>
-          <img src={backgroundImage} alt="jeu" />
-        </Link>
-      </div>
-
-      <div className="gameInfo">
-        <div className="metaFav">
-          {metacritic ? (
-            <div className={colorCritic(metacritic)}>
-              <a href={metacriticUrl} target="_blank" rel="noreferrer">
-                {metacritic}
-              </a>
-            </div>
-          ) : null}
-
-          {/*  <div className={colorCritic(metacritic)}>
-            <a href={metacriticUrl} target="_blank" rel="noreferrer">
-              {metacritic}
-            </a>
-          </div>
- */}
-
+    <div className="container">
+      <div className="row">
+        <div className="col mb-2">
           <Link to={`/game/${id}`}>
-            <h2 className="gameName">{name} </h2>
+            <img className="img-fluid h-100" src={backgroundImage} alt="jeu" />
           </Link>
-          <div className="unFav" />
         </div>
 
-        <div className="release">
-          <strong>Released : </strong>
+        <div className="col">
+          <div className="d-flex align-items-center mb-2">
+            {metacritic ? (
+              <div className={colorCritic(metacritic)}>
+                <a href={metacriticUrl} target="_blank" rel="noreferrer">
+                  {metacritic}
+                </a>
+              </div>
+            ) : null}
 
-          {released ? <GameDateAffichage released={released} /> : null}
+            <Link to={`/game/${id}`}>
+              <h2 className="ms-4 gameName">{name} </h2>
+            </Link>
+
+            <div className="unFav" />
+          </div>
+
+          <div className="h5 mb-2">
+            <strong>Released : </strong>
+
+            {released ? <GameDateAffichage released={released} /> : null}
+          </div>
+          <div className=" ">
+            <div className="">
+              {genres ? <GameGenreAffichage genres={genres} /> : null}
+            </div>
+          </div>
+          <div className="platform">{platformeName}</div>
         </div>
-        <div className="gameGenresAffichage">
-          {genres ? <GameGenreAffichage genres={genres} /> : null}
-        </div>
-        <div className="platform">{platformeName}</div>
       </div>
     </div>
   );

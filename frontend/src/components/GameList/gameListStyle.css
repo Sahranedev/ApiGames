@@ -1,54 +1,31 @@
-.gameInfo {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  height: 30vh;
-  width: 59vw;
-  
-}
-
-.presentation {
-  height: 20vh;
-  width: 30vh;
-  border-radius: 5px;
-  background: center;
-  background: contain;
-  background-repeat: no-repeat;
-}
-
-.backgroundGameImage img {
-  display: flex;
-  justify-content: flex-start;
-  float: left;
-  height: 22vh;
-  width: 40vw;
-  border-radius: 5%;
-  background: center;
-  background: contain;
-  background-repeat: no-repeat;
-  
-}
-.gameAffichageContainer h2 {
-  font-size: 1rem;
-  margin-left: 1rem;
-  margin-bottom: 5px;
-}
-
-
 .platform {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-left: 1rem;
   width: 7rem;
   height: 2rem;
   border-radius: 5px;
-  background: var(--second-background-color);
-  color: var(--main-background-color);
-}
+  background: #e0b15a;
+  color: #333;
+ }
 
-.metacriticGreen {
+  .genreList {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: bold;
+  
+  
+  width: 5rem;
+  height: 2rem;
+  border-radius: 5px;
+  background: #e0b15a;
+  color: #333;
+ } 
+
+ .metacriticGreen {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -64,6 +41,7 @@
   font-weight: bolder;
   
 }
+
 .metacriticYellow {
   display: flex;
   align-items: center;
@@ -79,6 +57,7 @@
   cursor: pointer;
   font-weight: bolder;
 }
+
 .metacriticRed {
   display: flex;
   align-items: center;
@@ -95,55 +74,6 @@
   font-weight: bolder;
 }
 
-.unFav {
-  width: 3rem;
-  height: 3rem;
-  background-image: url(../images/heartUnlike.svg);
-  margin-left: 3rem;
-  background-repeat: no-repeat;
+.li {
+  margin: 0;
 }
-
-.metaFav {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 0 1rem;
-  margin-bottom: 0.5rem;
-
-
-}
-
-.genreAffichage {
-  display: flex;
-  justify-content: flex-start;
-  font-size: 0.8rem;
-}
-
-
-
-.genreMap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-style: bold;
-  margin-left: 1rem;
-  margin-bottom: 0.5rem;
-  width: 4rem;
-  height: 2rem;
-  border-radius: 5px;
-  background: var(--second-background-color);
-  color: var(--main-background-color);
-}
-
-.release {
-  display: flex;
-  justify-content: flex-start;
-  margin-left: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-.release-detail {
-  margin-left: 0.5rem;
-}
-

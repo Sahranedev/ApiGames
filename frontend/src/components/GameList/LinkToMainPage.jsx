@@ -14,7 +14,11 @@ function LinkToMainPage() {
         <li>
           <Link to="/">
             <div className="btn-center">
-              <button type="button" className=" " onClick={closePage}>
+              <button
+                type="button"
+                className="btn btn-outline-light col-6 "
+                onClick={closePage}
+              >
                 X
               </button>
             </div>
