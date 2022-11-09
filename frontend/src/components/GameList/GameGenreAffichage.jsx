@@ -2,14 +2,16 @@ import React from "react";
 
 function GameGenreAffichage({ genres: genre }) {
   return (
-    <ul className="genreAffichage">
-      {genre.map((el, i) => (
-        // eslint-disable-next-line react/no-array-index-key
-        <li className="genreMap" key={i}>
-          {el.name}
-        </li>
-      ))}
-    </ul>
+    <div className="">
+      <ul className="d-flex justify-content-between">
+        {genre.map((el, i) => (
+          // eslint-disable-next-line react/no-array-index-key
+          <li className="genreList mb-4" key={i}>
+            {el.name}
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 
