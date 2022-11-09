@@ -29,6 +29,13 @@ function SingleGameAffichage({
   };
   return (
     <div className="container-fluid g-0 singleGameContainer bg-dark h-100 w-100">
+      <button
+        type="button"
+        className="close bg-dark text-white border-0"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
       <div
         id="carouselExampleFade"
         className="carousel slide carousel-fade"
