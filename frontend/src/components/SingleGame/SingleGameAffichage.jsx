@@ -28,7 +28,7 @@ function SingleGameAffichage({
     return "metacritic039";
   };
   return (
-    <div className="container-fluid g-0 singleGameContainer bg-dark">
+    <div className="container-fluid g-0 singleGameContainer bg-dark h-100 w-100">
       <div
         id="carouselExampleFade"
         className="carousel slide carousel-fade"
