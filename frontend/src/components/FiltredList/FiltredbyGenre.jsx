@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useParams } from "react-router-dom";
 import GameListAffichage from "../GameList/GameListAffichage";
+import ButtonOrder from "./ButtonOrder";
 
 function FiltredbyGenre() {
   const API_URL = "https://api.rawg.io/api/games";
@@ -13,6 +14,8 @@ function FiltredbyGenre() {
   const [filter, setFilter] = useState();
   /* Permet de stocker les jeux selon le genre */
   const [gamesFiltred, setGamesFiltred] = useState([]);
+  /* Permet d'ajuster le filtrage, remonter de state pour le faire passer au composant buttonOrder */
+  const [order, setOrder] = useState(false);
 
   // Requête pour récupérer les ID des genres
   const getGenreList = async () => {
@@ -33,7 +36,9 @@ function FiltredbyGenre() {
   // Requête pour récupérer les jeux en fonction du genre
   const getFiltredList = async () => {
     const response = await fetch(
-      `${API_URL}?key=${API_KEY}&genres=${filter}&ordering=-metacritic&page_size=5`
+      `${API_URL}?key=${API_KEY}&genres=${filter}&ordering=${
+        order ? `+metacritic` : `-metacritic`
+      }&page_size=20`
     );
     const gamesresult = await response.json();
     setGamesFiltred(gamesresult.results);
@@ -54,9 +59,18 @@ function FiltredbyGenre() {
     }
   }, [filter]);
 
+  // Mise à jour de l'ordre de tri en rappelant l'API lorsque order change
+  useEffect(() => {
+    getFiltredList();
+  }, [order]);
+
   return (
     <div>
-      <h2>Filtred games by " {filtredListByGenre} "</h2>
+      <div className="row d-flex justify-content-between ml-5 mr-5">
+        <h2 className="col-10">Filtred games by " {filtredListByGenre} "</h2>
+        <ButtonOrder order={order} setOrder={setOrder} />
+        <div className="col-1" />
+      </div>
 
       {gamesFiltred?.map((game) => (
         <GameListAffichage {...game} key={game.id} />

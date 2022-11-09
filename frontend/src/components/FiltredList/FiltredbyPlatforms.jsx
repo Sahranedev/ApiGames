@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useParams } from "react-router-dom";
 import GameListAffichage from "../GameList/GameListAffichage";
+import ButtonOrder from "./ButtonOrder";
 
 function FiltredbyPlatforms() {
   const API_URL = "https://api.rawg.io/api/games";
@@ -13,10 +14,13 @@ function FiltredbyPlatforms() {
   /* Permet de stocker les jeux de la plateforme */
   const [gamesFiltred, setGamesFiltred] = useState([]);
 
+  /* Permet d'ajuster le filtrage, remonter de state pour le faire passer au composant buttonOrder */
+  const [order, setOrder] = useState(false);
+
   // Requête pour récupérer les ID des plateformes
   const getPlatformsList = async () => {
     const response = await fetch(
-      `https://api.rawg.io/api/platforms/lists/parents?key=${API_KEY}`
+      `https://api.rawg.io/api/platforms?key=${API_KEY}`
     );
     const result = await response.json();
     const platformsList = result.results;
@@ -27,21 +31,23 @@ function FiltredbyPlatforms() {
         setFilter(platform.id);
         // Si ce n'est pas bon, puisqu'il existe des sous catégories (ex:PS5) je fais pose la condition
         // sur le sous-tableau afin de faire la même vérification.
-      } else if (platform.slug !== filtredListByPlatforms) {
+      } /* else if (platform.slug !== filtredListByPlatforms) {
         platform.platforms.forEach((sousplatforms) => {
           if (sousplatforms.slug === filtredListByPlatforms) {
             setFilter(sousplatforms.id);
             // Si vraiment rien ne se passe on renvoie null
           }
-        });
-      }
+        }); 
+       } */
     });
   };
 
   // Requête pour récupérer les jeux en fonction de la plateforme
   const getFiltredList = async () => {
     const response = await fetch(
-      `${API_URL}?key=${API_KEY}&platforms=${filter}&ordering=-metacritic&page_size=5`
+      `${API_URL}?key=${API_KEY}&platforms=${filter}&ordering=${
+        order ? `+metacritic` : `-metacritic`
+      }&page_size=20`
     );
     const gamesresult = await response.json();
     setGamesFiltred(gamesresult.results);
@@ -62,9 +68,14 @@ function FiltredbyPlatforms() {
     }
   }, [filter]);
 
+  useEffect(() => {
+    getFiltredList();
+  }, [order]);
+
   return (
     <div>
       <h2>Filtred games by " {filtredListByPlatforms.toUpperCase()} "</h2>
+      <ButtonOrder order={order} setOrder={setOrder} />
 
       {gamesFiltred?.map((game) => (
         <GameListAffichage {...game} key={game.id} />
