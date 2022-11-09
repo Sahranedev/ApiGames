@@ -28,7 +28,7 @@ function SingleGameAffichage({
     return "metacritic039";
   };
   return (
-    <div className="container-fluid g-0 singleGameContainer">
+    <div className="container-fluid g-0 singleGameContainer bg-dark">
       <div
         id="carouselExampleFade"
         className="carousel slide carousel-fade"
@@ -36,7 +36,7 @@ function SingleGameAffichage({
       >
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src={gameImage} className="d-block w-100 h-60" alt="..." />
+            <img src={gameImage} className="d-block w-100 h-100" alt="..." />
           </div>
 
           <div className="carousel-item">

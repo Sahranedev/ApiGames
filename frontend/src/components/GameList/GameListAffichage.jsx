@@ -1,9 +1,10 @@
-import React from "react";
+/* eslint-disable*/
+import React, { useState } from "react";
 import "./gameListStyle.css";
 import "../SingleGame/singleGame.css";
-import { Link } from "react-router-dom";
 import GameGenreAffichage from "./GameGenreAffichage";
 import GameDateAffichage from "./GameDateAffichage";
+import Modale from "../SingleGame/Modale";
 
 function GameListAffichage({
   name,
@@ -18,7 +19,6 @@ function GameListAffichage({
       platform: { name: platformeName },
     },
   ],
-  /* tags: [{ name: tagName }], */
 
   metacritic_url: metacriticUrl,
 }) {
@@ -31,14 +31,18 @@ function GameListAffichage({
     }
     return "metacriticRed";
   };
-
+  const [show, setShow] = useState(false);
   return (
     <div className="container">
+      <Modale show={show} setShow={setShow} id={id} />
       <div className="row">
         <div className="col mb-2">
-          <Link to={`/game/${id}`}>
-            <img className="img-fluid h-100" src={backgroundImage} alt="jeu" />
-          </Link>
+          <img
+            className="img-fluid h-100"
+            src={backgroundImage}
+            alt="jeu"
+            onClick={() => setShow(id)}
+          />
         </div>
 
         <div className="col">
@@ -51,9 +55,9 @@ function GameListAffichage({
               </div>
             ) : null}
 
-            <Link to={`/game/${id}`}>
-              <h2 className="ms-4 gameName">{name} </h2>
-            </Link>
+            <h2 className="ms-4 gameName" onClick={() => setShow(id)}>
+              {name}{" "}
+            </h2>
 
             <div className="unFav" />
           </div>

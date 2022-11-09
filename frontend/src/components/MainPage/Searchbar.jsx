@@ -3,6 +3,11 @@ import { Link } from "react-router-dom";
 import "./searchBar.css";
 
 function Searchbar({ searchValue, setSearchValue, getGame }) {
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      getGame();
+    }
+  };
   return (
     <div className="search">
       <input
@@ -11,6 +16,7 @@ function Searchbar({ searchValue, setSearchValue, getGame }) {
         type="text"
         placeholder="Search your game here"
         onChange={(e) => setSearchValue(e.target.value)}
+        onKeyDown={handleKeyDown}
       />
       <Link to="/gamelist">
         <button
