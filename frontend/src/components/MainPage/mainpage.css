@@ -1,0 +1,17 @@
+.gameListParaph {
+  display: none;
+}
+
+/* Links are display none for the moment cause of presentation sprint 3 */
+.links {
+  display: none;
+}
+
+.trollpresentation {
+  text-align: center;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
