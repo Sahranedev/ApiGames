@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
-import SingleGame from "./SingleGame";
+import SingleGame from "../components/SingleGame";
 
 function Modale({ show, setShow, id }) {
   const values = ["xxl-down"];

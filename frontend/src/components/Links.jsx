@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Quizz from "./Quizz/Quizz";
+import Quizz from "./Quizz";
 import Ourlikes from "./Ourlikes";
 
 function Links({ searchValue }) {

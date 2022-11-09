@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./searchBar.css";
+import "../Styles/searchBar.css";
 
 function Searchbar({ searchValue, setSearchValue, getGame }) {
   const handleKeyDown = (event) => {

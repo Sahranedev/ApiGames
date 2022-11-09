@@ -1,15 +1,15 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import FiltredbyGenre from "../FiltredList/FiltredbyGenre";
-import SingleGame from "../SingleGame/SingleGame";
-import GameList from "../GameList/GameList";
-import Searchbar from "./Searchbar";
-import Navbar from "./Navbar";
-import Novelties from "./Novelties";
-import Links from "./Links";
-import Likespage from "../LikesPage/Likespage";
-import LinkToMainPage from "../GameList/LinkToMainPage";
-import FiltredbyPlatforms from "../FiltredList/FiltredbyPlatforms";
-import "./mainpage.css";
+import FiltredbyGenre from "../components/FiltredbyGenre";
+import SingleGame from "../components/SingleGame";
+import GameList from "../components/GameList";
+import Searchbar from "../components/Searchbar";
+import Navbar from "../components/Navbar";
+import Novelties from "../components/Novelties";
+import Links from "../components/Links";
+import Likespage from "./Likespage";
+import LinkToMainPage from "../components/LinkToMainPage";
+import FiltredbyPlatforms from "../components/FiltredbyPlatforms";
+import "../Styles/mainpage.css";
 
 function Mainpage({ games, setSearchValue, searchValue, getGame }) {
   return (

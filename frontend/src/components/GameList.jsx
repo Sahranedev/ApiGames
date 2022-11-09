@@ -1,4 +1,4 @@
-import "./gameList.css";
+import "../Styles/gameList.css";
 import GameListAffichage from "./GameListAffichage";
 
 function GameList({ gameList }) {
