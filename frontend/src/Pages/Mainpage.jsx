@@ -14,7 +14,8 @@ import "../Styles/mainpage.css";
 function Mainpage({ games, setSearchValue, searchValue, getGame }) {
   return (
     <Router>
-      <div>
+      <div className="container">
+        <Navbar />
         <ul>
           <Searchbar
             getGame={getGame}
@@ -26,7 +27,6 @@ function Mainpage({ games, setSearchValue, searchValue, getGame }) {
             .map((game) => (
               <p className="gameListParaph">{game.name}</p>
             ))}
-          <Navbar />
           <Links searchValue={searchValue} />
           <h2 className="trollpresentation">
             Please, write on the search bar 👆
