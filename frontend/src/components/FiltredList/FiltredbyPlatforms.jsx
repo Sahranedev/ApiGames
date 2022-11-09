@@ -68,6 +68,7 @@ function FiltredbyPlatforms() {
     }
   }, [filter]);
 
+  // Mise à jour de l'ordre de tri en rappelant l'API lorsque order change
   useEffect(() => {
     getFiltredList();
   }, [order]);

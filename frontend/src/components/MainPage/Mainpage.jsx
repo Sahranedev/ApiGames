@@ -1,11 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-
-/* import Modale from "../SingleGame/Modal";
- */
-<<<<<<< HEAD
 import FiltredbyGenre from "../FiltredList/FiltredbyGenre";
-=======
->>>>>>> modificationsBarAndModal
 import SingleGame from "../SingleGame/SingleGame";
 import GameList from "../GameList/GameList";
 import Searchbar from "./Searchbar";
@@ -14,11 +8,7 @@ import Novelties from "./Novelties";
 import Links from "./Links";
 import Likespage from "../LikesPage/Likespage";
 import LinkToMainPage from "../GameList/LinkToMainPage";
-<<<<<<< HEAD
 import FiltredbyPlatforms from "../FiltredList/FiltredbyPlatforms";
-=======
-
->>>>>>> modificationsBarAndModal
 import "./mainpage.css";
 
 function Mainpage({ games, setSearchValue, searchValue, getGame }) {
@@ -46,7 +36,6 @@ function Mainpage({ games, setSearchValue, searchValue, getGame }) {
         <Routes>
           <Route path="/novelties" element={<Novelties />} />
           <Route path="/likes" element={<Likespage />} />
-<<<<<<< HEAD
           <Route
             path="/platforms/:filtredListByPlatforms"
             element={<FiltredbyPlatforms />}
@@ -56,9 +45,6 @@ function Mainpage({ games, setSearchValue, searchValue, getGame }) {
             element={<FiltredbyGenre />}
           />
           <Route path="/gamelist/" element={<GameList gameList={games} />} />
-=======
-          <Route path="/gamelist" element={<GameList gameList={games} />} />
->>>>>>> modificationsBarAndModal
           <Route path="/game/:id" element={<SingleGame games={games} />} />
         </Routes>
       </div>
