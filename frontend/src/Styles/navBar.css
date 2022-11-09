@@ -1,43 +1,42 @@
 .bg-specify {
-  background-color:var(--second-background-color);
+  background-color: var(--second-background-color);
   width: 100vw;
 }
 
 .bg-specify-second {
   background-color: var(--main-background-color);
 }
- .specify-ul {
+.specify-ul {
   justify-content: space-around;
   list-style-type: none;
-  align-items: center; 
-} 
+  align-items: center;
+}
 
 img {
   height: 2em;
 }
 
-.navbar-toggler{
+.navbar-toggler {
   border: none;
 }
 
-.navbar-toggler:active{
+.navbar-toggler:active {
   border: none;
 }
 
-.navbar-toggler:hover{
+.navbar-toggler:hover {
   border: none;
 }
 
 .important-bg-color {
-  padding : 0;
+  padding: 0;
 }
 
 li {
   margin: 1vh;
 }
 li:hover {
-background-color: var(--second-background-color) !important;
-
+  background-color: var(--second-background-color) !important;
 }
 /* 
 
