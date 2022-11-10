@@ -1,4 +1,5 @@
 import React from "react";
+import "../Styles/SingleGameAffichage.css";
 import GameDateDetails from "./GameDateDetails";
 import GameParaphDetails from "./GameParaphDetails";
 import GameGenreDetails from "./GameGenreDetails";
@@ -28,50 +29,56 @@ function SingleGameAffichage({
     return "metacritic039";
   };
   return (
-    <div className="container-fluid g-0 singleGameContainer bg-dark h-100 w-100">
-      <button
-        type="button"
-        className="close bg-dark text-white border-0"
-        aria-label="Close"
-      >
-        <span aria-hidden="true">&times;</span>
-      </button>
-      <div
-        id="carouselExampleFade"
-        className="carousel slide carousel-fade"
-        data-bs-ride="carousel"
-      >
-        <div className="carousel-inner">
-          <div className="carousel-item active">
-            <img src={gameImage} className="d-block w-100 h-100" alt="..." />
-          </div>
+    <div className="carouselContainer container-fluid g-0 singleGameContainer bg-dark h-100 w-100">
+      <div className="container w-60">
+        <button
+          type="button"
+          className="close bg-dark text-white border-0"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div
+          id="carouselExampleFade"
+          className="carousel slide carousel-fade"
+          data-bs-ride="carousel"
+        >
+          <div className="carousel-inner">
+            <div className="carousel-item active">
+              <img
+                src={gameImage}
+                className="structureImage w-100 h-100"
+                alt="..."
+              />
+            </div>
 
-          <div className="carousel-item">
-            <img
-              src={additionalGameImage}
-              className="d-block w-100"
-              alt="..."
-            />
+            <div className="carousel-item">
+              <img
+                src={additionalGameImage}
+                className="structureImage w-100"
+                alt="..."
+              />
+            </div>
           </div>
+          <button
+            className="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleFade"
+            data-bs-slide="prev"
+          >
+            <span className="carousel-control-prev-icon" aria-hidden="true" />
+            <span className="visually-hidden">Previous</span>
+          </button>
+          <button
+            className="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleFade"
+            data-bs-slide="next"
+          >
+            <span className="carousel-control-next-icon" aria-hidden="true" />
+            <span className="visually-hidden">Next</span>
+          </button>
         </div>
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleFade"
-          data-bs-slide="prev"
-        >
-          <span className="carousel-control-prev-icon" aria-hidden="true" />
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleFade"
-          data-bs-slide="next"
-        >
-          <span className="carousel-control-next-icon" aria-hidden="true" />
-          <span className="visually-hidden">Next</span>
-        </button>
       </div>
 
       {/*  
@@ -94,25 +101,26 @@ function SingleGameAffichage({
           />
         )} */}
 
-      <div className="container rounded">
-        <div className="gamePageTitle">
-          {metacritic ? (
-            <div className={`text-white ${colorCritic(metacritic)}`}>
-              <a href={metacriticUrl} target="_blank" rel="noreferrer">
-                {metacritic}
-              </a>
-            </div>
-          ) : null}
+      <div className="totalPresentation shadow-lg p-3 mb-5 rounded">
+        <div className=".md-container rounded">
+          <div className="gamePageTitle">
+            {metacritic ? (
+              <div className={`text-white ${colorCritic(metacritic)}`}>
+                <a href={metacriticUrl} target="_blank" rel="noreferrer">
+                  {metacritic}
+                </a>
+              </div>
+            ) : null}
 
-          <h2 className="text-white text-center">{nameOriginal}</h2>
-          <div className="unlike text-center" />
+            <h2 className="text-white text-center">{nameOriginal}</h2>
+            <div className="unlike text-center" />
+          </div>
+          <div className="gamePageDetails text-center">
+            {genres ? <GameGenreDetails genres={genres} /> : null}
+          </div>
         </div>
-        <div className="gamePageDetails text-center">
-          {genres ? <GameGenreDetails genres={genres} /> : null}
-        </div>
-      </div>
 
-      {/*  <div className="otherImage">
+        {/*  <div className="otherImage">
         {additionalGameImage ? (
           <div
             className="additionalGameImage"
@@ -130,28 +138,29 @@ function SingleGameAffichage({
           alt="jeu"
         /> 
       </div> */}
-      <div className="container">
-        <div className="row">
-          <h3 className="h5 col-4 text-center text-white">
-            Publisher :
-            {publishers ? (
-              <GamePublishersDetails publishers={publishers} />
-            ) : null}
-          </h3>
-          <h3 className="h5 col-4 text-center text-white">
-            Developer :
-            {developers ? (
-              <GameDevelopersDetails developers={developers} />
-            ) : null}
-          </h3>
-          <h3 className="h5 col-4 text-center text-white">
-            Released :{" "}
-            {released ? <GameDateDetails released={released} /> : null}
-          </h3>
+        <div className="container">
+          <div className="row">
+            <h3 className="h5 col-4 text-center text-white">
+              Publisher :
+              {publishers ? (
+                <GamePublishersDetails publishers={publishers} />
+              ) : null}
+            </h3>
+            <h3 className="h5 col-4 text-center text-white">
+              Developer :
+              {developers ? (
+                <GameDevelopersDetails developers={developers} />
+              ) : null}
+            </h3>
+            <h3 className="h5 col-4 text-center text-white">
+              Released :{" "}
+              {released ? <GameDateDetails released={released} /> : null}
+            </h3>
+          </div>
         </div>
-      </div>
-      <div className="gamePageDescription text-white">
-        {description ? <GameParaphDetails description={description} /> : null}
+        <div className="gamePageDescription text-white">
+          {description ? <GameParaphDetails description={description} /> : null}
+        </div>
       </div>
     </div>
   );

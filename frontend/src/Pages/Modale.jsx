@@ -23,12 +23,6 @@ function Modale({ show, setShow, id }) {
       ))}
       <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
         <SingleGame id={id} />
-        {/* <Modal.Header closeButton>
-          <Modal.Title>Affichage d'un jeu</Modal.Title>
-        </Modal.Header>
-        <Modal.Body class="modal">
-          <SingleGame />
-        </Modal.Body> */}
       </Modal>
     </div>
   );
