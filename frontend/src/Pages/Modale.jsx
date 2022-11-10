@@ -9,7 +9,7 @@ function Modale({ show, setShow, id }) {
 
   function handleShow(breakpoint) {
     setFullscreen(breakpoint);
-    setShow(true);
+    setShow(false);
   }
 
   return (
@@ -21,7 +21,13 @@ function Modale({ show, setShow, id }) {
           {typeof v === "string" && `below ${v.split("-")[0]}`}
         </Button>
       ))}
-      <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
+      <Modal
+        className="bg-dar close-btn"
+        show={show}
+        fullscreen={fullscreen}
+        onHide={() => setShow(false)}
+      >
+        <Modal.Header className="bg-dark close-btn" closeButton />
         <SingleGame id={id} />
       </Modal>
     </div>

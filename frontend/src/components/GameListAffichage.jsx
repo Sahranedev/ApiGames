@@ -6,6 +6,7 @@ import GameGenreAffichage from "./GameGenreAffichage";
 import GameDateAffichage from "./GameDateAffichage";
 import Modale from "../Pages/Modale";
 import "../Styles/GameListAffichage.css";
+import IMGnotFound from "../images/IMGnotFound.png";
 
 function GameListAffichage({
   name,
@@ -38,14 +39,22 @@ function GameListAffichage({
       <Modale show={show} setShow={setShow} id={id} />
       <div className="row">
         <div className="col mb-2 pointer">
-          <img
-            className="img-fluid h-100"
-            src={backgroundImage}
-            alt="jeu"
-            onClick={() => setShow(id)}
-          />
+          {backgroundImage ? (
+            <img
+              className="img-fluid h-100"
+              src={backgroundImage}
+              alt="jeu"
+              onClick={() => setShow(id)}
+            />
+          ) : (
+            <img
+              className="img-fluid h-100"
+              src={IMGnotFound}
+              alt="not found"
+              onClick={() => setShow(id)}
+            />
+          )}
         </div>
-
         <div className="col">
           <div className="d-flex align-items-center mb-2">
             {metacritic ? (
