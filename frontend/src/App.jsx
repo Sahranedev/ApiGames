@@ -27,7 +27,13 @@ export default function App() {
   return (
     <div className="App">
       <Router>
-        <div className="container">
+        <div className="">
+          <Navbar
+            getGame={getGame}
+            searchValue={searchValue}
+            setSearchValue={setSearchValue}
+            games={games}
+          />
           <Searchbar
             getGame={getGame}
             searchValue={searchValue}
@@ -39,13 +45,6 @@ export default function App() {
             .map((game) => (
               <p className="gameListParaph">{game.name}</p>
             ))}
-
-          <Navbar
-            getGame={getGame}
-            searchValue={searchValue}
-            setSearchValue={setSearchValue}
-            games={games}
-          />
 
           {/*  On veut que le Nav Bar et la Search Bar soient constamment présentes
 Elles sont donc dans le Router et le Router lui-même dans App pour éviter tous les problèmes de routing.

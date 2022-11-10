@@ -6,7 +6,7 @@ import Searchbar from "./Searchbar";
 
 function Navbar({ searchValue, setSearchValue, getGame }) {
   return (
-    <nav className="navbar navbar-fluid fixed-bottom important-bg-color">
+    <nav className="navbar navbar-fluid container-fluid fixed-bottom sticky-md-top important-bg-color">
       <div className="bg-specify">
         <ul className="navigation-ul  d-flex justify-content-space-between specify-ul">
           <NavLink
