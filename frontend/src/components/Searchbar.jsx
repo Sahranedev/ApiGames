@@ -25,6 +25,7 @@ function Searchbar({ searchValue, setSearchValue, getGame }) {
           onClick={() => getGame()}
         >
           {" "}
+          {/*  need to fix this icon  */}
           🔎️
         </button>
       </Link>
