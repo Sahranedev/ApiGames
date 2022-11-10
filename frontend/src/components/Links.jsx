@@ -23,6 +23,9 @@ function Links({ searchValue }) {
       <li>
         <Link to="/game">Affichage du jeu selectionné: </Link>
       </li>
+      <li>
+        <Link to="/news">News</Link>
+      </li>
     </div>
   );
 }

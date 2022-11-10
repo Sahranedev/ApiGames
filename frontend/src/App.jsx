@@ -10,6 +10,7 @@ import Novelties from "./components/Novelties";
 import Likespage from "./Pages/Likespage";
 import FiltredbyPlatforms from "./components/FiltredbyPlatforms";
 import Mainpage from "./Pages/Mainpage";
+import News from "./components/News";
 
 const API_URL =
   "https://api.rawg.io/api/games?key=813e525c42c04986ac0747dddec96609";
@@ -73,6 +74,7 @@ A voir
               element={<GameList searchValue={searchValue} gameList={games} />}
             />
             <Route path="/game/:id" element={<SingleGame games={games} />} />
+            <Route path="/news" element={<News games={games} />} />
           </Routes>
         </div>
       </Router>
