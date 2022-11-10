@@ -1,7 +1,9 @@
 import React from "react";
 
 function GameParaphDetails({ description }) {
-  return <div>{description.replace(/(<([^>]+)>)/gi, "")}</div>;
+  return (
+    <div className="p-x-5">{description.replace(/(<([^>]+)>)/gi, "")}</div>
+  );
 }
 
 export default GameParaphDetails;
