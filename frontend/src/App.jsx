@@ -66,7 +66,10 @@ Lors de l'arrivée de la WelcomePage, il faudra toutefois créer une page qui re
             path="/genres/:filtredListByGenre"
             element={<FiltredbyGenre />}
           />
-          <Route path="/gamelist/" element={<GameList gameList={games} />} />
+          <Route
+            path="/gamelist/"
+            element={<GameList searchValue={searchValue} gameList={games} />}
+          />
           <Route path="/game/:id" element={<SingleGame games={games} />} />
         </Routes>
       </Router>
