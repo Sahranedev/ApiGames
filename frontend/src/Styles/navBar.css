@@ -1,25 +1,30 @@
-
-.navbar, .navbar-nav, .dropdown-menu, .nav-link{
-  background-color:var(--second-background-color) ;
+.navbar,
+.navbar-nav,
+.dropdown-menu,
+.nav-link {
+  background-color: var(--second-background-color);
   color: black;
 }
 
-.link-nav, .nav-item {
+.link-nav,
+.nav-item {
   cursor: pointer;
 }
 
-.nav-link:hover, a:active, a:hover{
+.nav-link:hover,
+a:active,
+a:hover {
   color: white;
 }
 
-.dropdown-item:hover{
-background-color :transparent;
-color: white;
+.dropdown-item:hover {
+  background-color: transparent;
+  color: white;
 }
 
-.navbar-toggler-icon{
+.navbar-toggler-icon {
   color: black;
 }
-.navbar-toggler:focus{
-color : transparent
+.navbar-toggler:focus {
+  color: transparent;
 }

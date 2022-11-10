@@ -1,7 +1,7 @@
 import React from "react";
 
-function Ourlikes() {
+function OurLikes() {
   return <div>Ourlikes</div>;
 }
 
-export default Ourlikes;
+export default OurLikes;

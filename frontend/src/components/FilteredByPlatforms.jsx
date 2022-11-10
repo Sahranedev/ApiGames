@@ -3,40 +3,49 @@ import { useParams } from "react-router-dom";
 import GameListAffichage from "./GameListDisplay";
 import ButtonOrder from "./ButtonOrder";
 
-function FiltredbyGenre() {
+function FiltredByPlatforms() {
   const API_URL = "https://api.rawg.io/api/games";
   const API_KEY = "813e525c42c04986ac0747dddec96609";
-
   /* useRef permet ici de gérer l'état du lancement des fonctions fetch */
   const isMount = useRef(false);
-  const { filtredListByGenre } = useParams();
-  /* Transmets l'ID du genre  pour la donner au prochain fetch */
+  const { filtredListByPlatforms } = useParams();
+  /* Transmets l'ID de la plateforme pour la donner au prochain fetch */
   const [filter, setFilter] = useState();
-  /* Permet de stocker les jeux selon le genre */
+  /* Permet de stocker les jeux de la plateforme */
   const [gamesFiltred, setGamesFiltred] = useState([]);
+
   /* Permet d'ajuster le filtrage, remonter de state pour le faire passer au composant buttonOrder */
   const [order, setOrder] = useState(false);
 
-  // Requête pour récupérer les ID des genres
-  const getGenreList = async () => {
+  // Requête pour récupérer les ID des plateformes
+  const getPlatformsList = async () => {
     const response = await fetch(
-      `https://api.rawg.io/api/genres?key=${API_KEY}`
+      `https://api.rawg.io/api/platforms?key=${API_KEY}`
     );
     const result = await response.json();
-    const genreList = result.results;
+    const platformsList = result.results;
 
-    // Pour chaque genre de la liste je vérifie si le nom est égal à la valeur du params.
-    genreList.forEach((genre) => {
-      if (genre.slug === filtredListByGenre) {
-        setFilter(genre.id);
-      }
+    // Pour chaque plateforme de la liste je vérifie si le nom est égal à la valeur du params.
+    platformsList.forEach((platform) => {
+      if (platform.slug === filtredListByPlatforms) {
+        setFilter(platform.id);
+        // Si ce n'est pas bon, puisqu'il existe des sous catégories (ex:PS5) je fais pose la condition
+        // sur le sous-tableau afin de faire la même vérification.
+      } /* else if (platform.slug !== filtredListByPlatforms) {
+        platform.platforms.forEach((sousplatforms) => {
+          if (sousplatforms.slug === filtredListByPlatforms) {
+            setFilter(sousplatforms.id);
+            // Si vraiment rien ne se passe on renvoie null
+          }
+        }); 
+       } */
     });
   };
 
-  // Requête pour récupérer les jeux en fonction du genre
+  // Requête pour récupérer les jeux en fonction de la plateforme
   const getFiltredList = async () => {
     const response = await fetch(
-      `${API_URL}?key=${API_KEY}&genres=${filter}&ordering=${
+      `${API_URL}?key=${API_KEY}&platforms=${filter}&ordering=${
         order ? `+metacritic` : `-metacritic`
       }&page_size=20`
     );
@@ -47,8 +56,8 @@ function FiltredbyGenre() {
   // On utilise un useEffect basé sur l'évolution du filtredList pour réactualiser la requête
   // quand on change de plateforme depuis le menu, vu qu'onn ne change pas de composant sinon ça ne recharge pas
   useEffect(() => {
-    getGenreList();
-  }, [filtredListByGenre]);
+    getPlatformsList();
+  }, [filtredListByPlatforms]);
 
   // On utilise un useEffect basé sur le montage du composant pour ne pas déclencher la requête du listing en début de chargement de page
   useEffect(() => {
@@ -66,11 +75,8 @@ function FiltredbyGenre() {
 
   return (
     <div>
-      <div className="row d-flex justify-content-between ml-5 mr-5">
-        <h2 className="col-10">Filtred games by " {filtredListByGenre} "</h2>
-        <ButtonOrder order={order} setOrder={setOrder} />
-        <div className="col-1" />
-      </div>
+      <h2>Filtred games by " {filtredListByPlatforms.toUpperCase()} "</h2>
+      <ButtonOrder order={order} setOrder={setOrder} />
 
       {gamesFiltred?.map((game) => (
         <GameListAffichage {...game} key={game.id} />
@@ -79,4 +85,4 @@ function FiltredbyGenre() {
   );
 }
 
-export default FiltredbyGenre;
+export default FiltredByPlatforms;

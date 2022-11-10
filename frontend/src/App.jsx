@@ -1,15 +1,15 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState } from "react";
 import "./Styles/App.css";
-import Navbar from "./components/NavchangeBar";
-import FiltredbyGenre from "./components/FilteredchangebyGenre";
+import Navbar from "./components/NavBar";
+import Mainpage from "./Pages/MainPage";
+import FiltredbyGenre from "./components/FilteredByGenre";
 import SingleGame from "./components/SingleGame";
 import GameList from "./components/GameList";
-import Searchbar from "./components/SearchchangeBar";
+import Searchbar from "./components/SearchBar";
 import Novelties from "./components/Novelties";
 import Likespage from "./Pages/Favorites";
-import FiltredbyPlatforms from "./components/FilteredchangebyPlatforms";
-import Mainpage from "./Pages/Mainpage";
+import FiltredbyPlatforms from "./components/FilteredByPlatforms";
 
 const API_URL =
   "https://api.rawg.io/api/games?key=813e525c42c04986ac0747dddec96609";
