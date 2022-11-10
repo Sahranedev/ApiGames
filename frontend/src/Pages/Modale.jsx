@@ -22,7 +22,7 @@ function Modale({ show, setShow, id }) {
         </Button>
       ))}
       <Modal
-        className="bg-dar close-btn"
+        className="modal"
         show={show}
         fullscreen={fullscreen}
         onHide={() => setShow(false)}
