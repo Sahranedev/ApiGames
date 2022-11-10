@@ -53,6 +53,7 @@ Pour plus de lisibilité on intégère les Routes dans app afin de ne pas avoir 
 Dans les Routes on ajoute la route "/" qu'il manquait et qui correspond à la page principale. On change également la route
 '/mainpage' dans la navbar qui n'avait pas lieu d'être actuellement.
 Lors de l'arrivée de la WelcomePage, il faudra toutefois créer une page qui renverra donc '/' et mainpage '/mainpage'
+A voir
  */}
 
           <Routes>
