@@ -27,26 +27,27 @@ export default function App() {
   return (
     <div className="App">
       <Router>
-        <Searchbar
-          getGame={getGame}
-          searchValue={searchValue}
-          setSearchValue={setSearchValue}
-          games={games}
-        />
-        {games
-          .filter((game) => game.name.includes(searchValue))
-          .map((game) => (
-            <p className="gameListParaph">{game.name}</p>
-          ))}
+        <div className="container">
+          <Searchbar
+            getGame={getGame}
+            searchValue={searchValue}
+            setSearchValue={setSearchValue}
+            games={games}
+          />
+          {games
+            .filter((game) => game.name.includes(searchValue))
+            .map((game) => (
+              <p className="gameListParaph">{game.name}</p>
+            ))}
 
-        <Navbar
-          getGame={getGame}
-          searchValue={searchValue}
-          setSearchValue={setSearchValue}
-          games={games}
-        />
+          <Navbar
+            getGame={getGame}
+            searchValue={searchValue}
+            setSearchValue={setSearchValue}
+            games={games}
+          />
 
-        {/*  On veut que le Nav Bar et la Search Bar soient constamment présentes
+          {/*  On veut que le Nav Bar et la Search Bar soient constamment présentes
 Elles sont donc dans le Router et le Router lui-même dans App pour éviter tous les problèmes de routing.
 Pour plus de lisibilité on intégère les Routes dans app afin de ne pas avoir à les importer dans chaque page.
 Dans les Routes on ajoute la route "/" qu'il manquait et qui correspond à la page principale. On change également la route
@@ -54,24 +55,25 @@ Dans les Routes on ajoute la route "/" qu'il manquait et qui correspond à la pa
 Lors de l'arrivée de la WelcomePage, il faudra toutefois créer une page qui renverra donc '/' et mainpage '/mainpage'
  */}
 
-        <Routes>
-          <Route path="/" element={<Mainpage />} />
-          <Route path="/novelties" element={<Novelties />} />
-          <Route path="/likes" element={<Likespage />} />
-          <Route
-            path="/platforms/:filtredListByPlatforms"
-            element={<FiltredbyPlatforms />}
-          />
-          <Route
-            path="/genres/:filtredListByGenre"
-            element={<FiltredbyGenre />}
-          />
-          <Route
-            path="/gamelist/"
-            element={<GameList searchValue={searchValue} gameList={games} />}
-          />
-          <Route path="/game/:id" element={<SingleGame games={games} />} />
-        </Routes>
+          <Routes>
+            <Route path="/" element={<Mainpage />} />
+            <Route path="/novelties" element={<Novelties />} />
+            <Route path="/likes" element={<Likespage />} />
+            <Route
+              path="/platforms/:filtredListByPlatforms"
+              element={<FiltredbyPlatforms />}
+            />
+            <Route
+              path="/genres/:filtredListByGenre"
+              element={<FiltredbyGenre />}
+            />
+            <Route
+              path="/gamelist/"
+              element={<GameList searchValue={searchValue} gameList={games} />}
+            />
+            <Route path="/game/:id" element={<SingleGame games={games} />} />
+          </Routes>
+        </div>
       </Router>
     </div>
   );
