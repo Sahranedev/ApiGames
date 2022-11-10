@@ -51,10 +51,10 @@ function Navbar({ searchValue, setSearchValue, getGame }) {
           <div className="container  justify-content-space-between">
             <div className="text-right" />
           </div>
+          <div />
           <div className="offcanvas-header">
-            <h5 className="offcanvas-title h2" id="offcanvasDarkNavbarLabel">
-              Filtered by :
-            </h5>
+            <div />
+
             <button
               type="button"
               className="btn-close btn-close-white"
@@ -62,9 +62,21 @@ function Navbar({ searchValue, setSearchValue, getGame }) {
               aria-label="Close"
             />
           </div>
-
+          <h5
+            className="offcanvas-title  text-dark  h2"
+            id="offcanvasDarkNavbarLabel"
+          >
+            Filters
+          </h5>
           <div className="offcanvas-body ">
             <ul className="navbar-nav justify-content-center flex-grow-1 pe-3 ">
+              <li className="">
+                <Searchbar
+                  searchValue={searchValue}
+                  getGame={getGame}
+                  setSearchValue={setSearchValue}
+                />
+              </li>
               {/* Filtered by Platform dropdown menu  */}
               <li className="nav-item dropdown h4">
                 <a
@@ -144,13 +156,6 @@ function Navbar({ searchValue, setSearchValue, getGame }) {
                     <li className="m-1 links-a">fighting</li>
                   </Link>
                 </ul>
-              </li>
-              <li className="">
-                <Searchbar
-                  searchValue={searchValue}
-                  getGame={getGame}
-                  setSearchValue={setSearchValue}
-                />
               </li>
             </ul>
           </div>
