@@ -1,11 +1,12 @@
+/* eslint-disable */
 import React from "react";
 import GameDateDetails from "./GameDateDetails";
 import GameParaphDetails from "./GameParaphDetails";
 import GameGenreDetails from "./GameGenreDetails";
 import GameDevelopersDetails from "./GameDevelopersDetails";
 import GamePublishersDetails from "./GamePublishersDetails";
-/* import IMGnotFound from "../images/IMGnotFound.png";
- */
+import IMGnotFound from "../images/IMGnotFound.png";
+
 function SingleGameAffichage({
   name_original: nameOriginal,
   background_image: gameImage,
@@ -34,6 +35,7 @@ function SingleGameAffichage({
         className="close bg-dark text-white border-0"
         aria-label="Close"
       >
+        {/* Section of the carrousel - "IMGnotfound" when we doesn't have img from request */}
         <span aria-hidden="true">&times;</span>
       </button>
       <div
@@ -43,15 +45,30 @@ function SingleGameAffichage({
       >
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src={gameImage} className="d-block w-100 h-100" alt="..." />
+            {gameImage ? (
+              <img src={gameImage} className="d-block w-100 h-100" alt="..." />
+            ) : (
+              <img
+                src={IMGnotFound}
+                className="d-block w-100 h-100"
+                alt="not found"
+              />
+            )}
           </div>
-
           <div className="carousel-item">
-            <img
-              src={additionalGameImage}
-              className="d-block w-100"
-              alt="..."
-            />
+            {additionalGameImage ? (
+              <img
+                src={additionalGameImage}
+                className="d-block w-100"
+                alt="..."
+              />
+            ) : (
+              <img
+                src={IMGnotFound}
+                className="d-block w-100"
+                alt=" not found"
+              />
+            )}
           </div>
         </div>
         <button
@@ -74,26 +91,6 @@ function SingleGameAffichage({
         </button>
       </div>
 
-      {/*  
-  ////////////// maybe change for be sure of content. esLint problem //////////////
-  {gameImage ? (
-          <img className="gameImage" src={gameImage} className="d-block w-100 h-60" alt="game" />
-        ) : (
-          <img className="gameImage" src={IMGnotFound} className="d-block w-100 h-60" alt="image not" />
-        )} */}
-
-      {/* {gameImage ? (
-          <div
-            className="gameSelected"
-            style={{ backgroundImage: `url('${gameImage}')` }}
-          />
-        ) : (
-          <div
-            className="gameSelected"
-            style={{ backgroundImage: `url('${IMGnotFound}')` }}
-          />
-        )} */}
-
       <div className="container rounded">
         <div className="gamePageTitle">
           {metacritic ? (
@@ -104,7 +101,9 @@ function SingleGameAffichage({
             </div>
           ) : null}
 
-          <h2 className="text-white text-center">{nameOriginal}</h2>
+          {nameOriginal ? (
+            <h2 className="text-white text-center">{nameOriginal}</h2>
+          ) : null}
           <div className="unlike text-center" />
         </div>
         <div className="gamePageDetails text-center">
@@ -112,36 +111,26 @@ function SingleGameAffichage({
         </div>
       </div>
 
-      {/*  <div className="otherImage">
-        {additionalGameImage ? (
-          <div
-            className="additionalGameImage"
-            style={{ backgroundImage: `url('${additionalGameImage}')` }}
-          />
-        ) : (
-          <div
-            className="additionalGameImage"
-            style={{ backgroundImage: `url('${IMGnotFound}')` }}
-          />
-        )}
-        {/* <img
-          className="additionalGameImage"
-          src={additionalGameImage}
-          alt="jeu"
-        /> 
-      </div> */}
       <div className="container">
         <div className="row">
           <h3 className="h5 col-4 text-center text-white">
             Publisher :
             {publishers ? (
-              <GamePublishersDetails publishers={publishers} />
+              publishers.length > 0 ? (
+                <GamePublishersDetails publishers={publishers} />
+              ) : (
+                " not specified "
+              )
             ) : null}
           </h3>
           <h3 className="h5 col-4 text-center text-white">
             Developer :
             {developers ? (
-              <GameDevelopersDetails developers={developers} />
+              developers.length > 0 ? (
+                <GameDevelopersDetails developers={developers} />
+              ) : (
+                " not specified "
+              )
             ) : null}
           </h3>
           <h3 className="h5 col-4 text-center text-white">
