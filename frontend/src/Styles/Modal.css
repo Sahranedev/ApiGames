@@ -2,3 +2,7 @@
   max-height: 100vh;
   overflow-y: auto;
 }
+
+.close-btn {
+  color : white;
+}
