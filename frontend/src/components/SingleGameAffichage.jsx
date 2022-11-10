@@ -47,15 +47,11 @@ function SingleGameAffichage({
               <div className="carousel-inner">
                 <div className="carousel-item active">
                   {gameImage ? (
-                    <img
-                      src={gameImage}
-                      className="d-block w-100 h-100"
-                      alt="..."
-                    />
+                    <img src={gameImage} className="d-block w-100" alt="..." />
                   ) : (
                     <img
                       src={IMGnotFound}
-                      className="d-block w-100 h-100"
+                      className="d-block w-100"
                       alt="not found"
                     />
                   )}
@@ -105,52 +101,55 @@ function SingleGameAffichage({
         </div>
       </div>
 
-      <div className="totalPresentation @include media-breakpoint-up(md) { shadow-lg p-3 mb-5 rounded }"></div>
-      <div className=".md-container rounded">
-        <div className="gamePageTitle">
-          {metacritic ? (
-            <div className={`text-white ${colorCritic(metacritic)}`}>
-              <a href={metacriticUrl} target="_blank" rel="noreferrer">
-                {metacritic}
-              </a>
+      <div className="totalPresentation @include media-breakpoint-up(md) { shadow-lg p-3 mb-5 rounded }">
+        <div className=".md-container rounded">
+          <div className="gamePageTitle">
+            {metacritic ? (
+              <div className={`text-white ${colorCritic(metacritic)}`}>
+                <a href={metacriticUrl} target="_blank" rel="noreferrer">
+                  {metacritic}
+                </a>
+              </div>
+            ) : null}
+
+            {nameOriginal ? (
+              <h2 className="text-white text-center">{nameOriginal}</h2>
+            ) : null}
+            <div className="unlike text-center" />
+          </div>
+          <div className="details">
+            <div className="gamePageDetails text-center">
+              {genres ? <GameGenreDetails genres={genres} /> : null}
             </div>
-          ) : null}
 
-          {nameOriginal ? (
-            <h2 className="text-white text-center">{nameOriginal}</h2>
-          ) : null}
-          <div className="unlike text-center" />
-        </div>
-        <div className="gamePageDetails text-center">
-          {genres ? <GameGenreDetails genres={genres} /> : null}
-        </div>
-
-        <div className="container">
-          <div className="row">
-            <h3 className="h5 col-4 text-center text-white">
-              Publisher :
-              {publishers ? (
-                publishers.length > 0 ? (
-                  <GamePublishersDetails publishers={publishers} />
-                ) : (
-                  " not specified "
-                )
-              ) : null}
-            </h3>
-            <h3 className="h5 col-4 text-center text-white">
-              Developer :
-              {developers ? (
-                developers.length > 0 ? (
-                  <GameDevelopersDetails developers={developers} />
-                ) : (
-                  " not specified "
-                )
-              ) : null}
-            </h3>
-            <h3 className="h5 col-4 text-center text-white">
-              Released :{" "}
-              {released ? <GameDateDetails released={released} /> : null}
-            </h3>
+            <div className="container">
+              <div className="row">
+                <h3 className="h5 col-4 text-center text-white">
+                  Publisher :
+                  {publishers ? (
+                    publishers.length > 0 ? (
+                      <GamePublishersDetails publishers={publishers} />
+                    ) : (
+                      " not specified "
+                    )
+                  ) : null}
+                </h3>
+                <h3 className="h5 col-4 text-center text-white">
+                  Developer :
+                  {developers ? (
+                    developers.length > 0 ? (
+                      <GameDevelopersDetails developers={developers} />
+                    ) : (
+                      " not specified "
+                    )
+                  ) : null}
+                </h3>
+                <h3 className="h5 col-4 text-center text-white">
+                  Released :{" "}
+                  {released ? <GameDateDetails released={released} /> : null}
+                </h3>
+              </div>
+            </div>
           </div>
           <div className="gamePageDescription text-white">
             {description ? (
