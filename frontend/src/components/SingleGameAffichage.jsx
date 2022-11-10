@@ -101,7 +101,7 @@ function SingleGameAffichage({
           />
         )} */}
 
-      <div className="totalPresentation shadow-lg p-3 mb-5 rounded">
+      <div className="totalPresentation @include media-breakpoint-up(md) { shadow-lg p-3 mb-5 rounded }">
         <div className=".md-container rounded">
           <div className="gamePageTitle">
             {metacritic ? (
