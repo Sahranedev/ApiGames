@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Quizz from "./Quizz/Quizz";
+import Quizz from "./Quizz";
 import Ourlikes from "./Ourlikes";
 
 function Links({ searchValue }) {
@@ -18,7 +18,7 @@ function Links({ searchValue }) {
         <Link to="/likes">Likes</Link>
       </li>
       <li>
-        <Link to="/gamelist">Liste de jeux filtrés par : "{searchValue}"</Link>
+        <Link to="/platform">Liste de jeux filtrés par : "{searchValue}"</Link>
       </li>
       <li>
         <Link to="/game">Affichage du jeu selectionné: </Link>

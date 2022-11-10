@@ -2,10 +2,8 @@
   --main-background-color: #333;
   --second-background-color: #edad37;
   --main-text-color: white;
-  --second-text-color:var(--second-background-color);
+  --second-text-color: var(--second-background-color);
 }
-
-
 
 body {
   margin: 0;
@@ -13,5 +11,5 @@ body {
   /*  need to change background later
   linear-gradient(109.6deg, rgb(38, 38, 38) 11.2%, rgb(235, 171, 54) 91.3%) */
   overflow-x: hidden;
-  color : var(--main-text-color);
+  color: var(--main-text-color);
 }

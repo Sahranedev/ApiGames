@@ -1,0 +1,52 @@
+.bg-specify {
+  background-color: var(--second-background-color);
+  width: 100vw;
+}
+
+.bg-specify-second {
+  background-color: var(--main-background-color);
+}
+.specify-ul {
+  justify-content: space-around;
+  list-style-type: none;
+  align-items: center;
+}
+
+img {
+  height: 2em;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:active {
+  border: none;
+}
+
+.navbar-toggler:hover {
+  border: none;
+}
+
+.important-bg-color {
+  padding: 0;
+}
+
+.links-a {
+  color: var(--main-text-color);
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.5;
+
+}
+.links-a:hover {
+background-color: var(--second-background-color) !important;
+opacity: 1;
+
+
+}
+
+.like-search{
+  box-shadow: inset -5px 5px 9px  #1e1e1e, inset 5px -5px 9px #3d3d3d;
+}
+ 

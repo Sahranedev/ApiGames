@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./linktomainpage.css";
+import "../Styles/linktomainpage.css";
 
 function LinkToMainPage() {
   // function to return to the main page. Need to make a Route to '/' and let click event to change the url
@@ -11,10 +11,14 @@ function LinkToMainPage() {
   return (
     <nav>
       <ul>
-        <li>
+        <li className="list-unstyled">
           <Link to="/">
             <div className="btn-center">
-              <button type="button" className=" " onClick={closePage}>
+              <button
+                type="button"
+                className="btn btn-outline-light col-6 "
+                onClick={closePage}
+              >
                 X
               </button>
             </div>
