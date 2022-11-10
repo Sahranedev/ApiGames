@@ -2,8 +2,9 @@ import { NavLink, Link } from "react-router-dom";
 import "../Styles/navBar.css";
 import home from "../images/home.png";
 import favoris from "../images/favoris.png";
+import Searchbar from "./Searchbar";
 
-function Navbar() {
+function Navbar({ searchValue, setSearchValue, getGame }) {
   return (
     <nav className="navbar navbar-fluid fixed-bottom important-bg-color">
       <div className="bg-specify">
@@ -75,24 +76,22 @@ function Navbar() {
                 >
                   Platforms
                 </a>
-                <ul className="dropdown-menu text-white text-center bg-specify-second">
-                  <li>
-                    <Link to="/platforms/pc">PC</Link>
-                  </li>
-                  <li>
-                    <Link to="/platforms/playstation5">PS5</Link>
-                  </li>
-                  <li>
-                    {" "}
-                    <Link to="/platforms/playstation4">PS4</Link>
-                  </li>
-                  <li>
-                    {" "}
-                    <Link to="/platforms/xbox">XBOX</Link>
-                  </li>
-                  <li>
-                    <Link to="/platforms/nintendo">SWITCH</Link>
-                  </li>
+                <ul className="dropdown-menu text-white text-center bg-specify-second links">
+                  <Link to="/platforms/pc">
+                    <li>PC</li>
+                  </Link>
+                  <Link to="/platforms/playstation5">
+                    <li>PS5 </li>
+                  </Link>
+                  <Link to="/platforms/playstation4">
+                    <li>PS4</li>
+                  </Link>
+                  <Link to="/platforms/xbox-one">
+                    <li>XBOX</li>
+                  </Link>
+                  <Link to="/platforms/nintendo-switch">
+                    <li>SWITCH</li>
+                  </Link>
                 </ul>
               </li>
 
@@ -108,48 +107,50 @@ function Navbar() {
                   Genres
                 </a>
                 <ul className="dropdown-menu text-white text-center bg-specify-second">
-                  <li>
-                    <Link to="/genres/arcade">arcade</Link>
-                  </li>
-                  <li>
-                    <Link to="/genres/action">action</Link>
-                  </li>
-
-                  <li>
-                    <Link to="/genres/adventure">adventure</Link>
-                  </li>
-
-                  <li>
-                    <Link to="/genres/simulation">simulation</Link>
-                  </li>
-                  <li>
-                    <Link to="/genres/racing">racing</Link>
-                  </li>
-                  <li>
-                    <Link to="/genres/shooter">shooter</Link>
-                  </li>
-
-                  <li>
-                    <Link to="/genres/strategy">strategy</Link>
-                  </li>
-                  <li>
-                    <Link to="/genres/puzzle">puzzle</Link>
-                  </li>
-                  <li>
-                    <Link to="/genres/platformer">platformer</Link>
-                  </li>
-                  <li>
-                    <Link to="/genres/massively-multiplayer">
-                      massively-multiplayer
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/genres/sports">sports</Link>
-                  </li>
-                  <li>
-                    <Link to="/genres/fighting">fighting</Link>
-                  </li>
+                  <Link to="/genres/arcade">
+                    <li>arcade</li>
+                  </Link>
+                  <Link to="/genres/action">
+                    <li>action</li>
+                  </Link>
+                  <Link to="/genres/adventure">
+                    <li>adventure</li>
+                  </Link>
+                  <Link to="/genres/simulation">
+                    <li>simulation</li>
+                  </Link>
+                  <Link to="/genres/racing">
+                    <li>racing</li>
+                  </Link>
+                  <Link to="/genres/shooter">
+                    <li>shooter</li>
+                  </Link>
+                  <Link to="/genres/strategy">
+                    <li>strategy</li>
+                  </Link>
+                  <Link to="/genres/puzzle">
+                    <li>puzzle</li>
+                  </Link>
+                  <Link to="/genres/platformer">
+                    <li>platformer</li>
+                  </Link>
+                  <Link to="/genres/massively-multiplayer">
+                    <li>massively-multiplayer</li>{" "}
+                  </Link>
+                  <Link to="/genres/sports">
+                    <li>sports</li>
+                  </Link>
+                  <Link to="/genres/fighting">
+                    <li>fighting</li>
+                  </Link>
                 </ul>
+              </li>
+              <li>
+                <Searchbar
+                  searchValue={searchValue}
+                  getGame={getGame}
+                  setSearchValue={setSearchValue}
+                />
               </li>
             </ul>
           </div>
