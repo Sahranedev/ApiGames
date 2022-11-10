@@ -4,7 +4,7 @@ import GameListAffichage from "./GameListAffichage";
 function GameList({ gameList, searchValue }) {
   return (
     gameList && (
-      <div className="game-list">
+      <div className=".d-md-block none shadow-lg p-3 mb-5 rounded game-list">
         <h2> Liste des jeux filtrés par " {searchValue} " </h2>
         {gameList.map((game) => (
           <GameListAffichage key={game.id} {...game} />

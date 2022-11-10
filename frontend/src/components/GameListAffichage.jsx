@@ -5,6 +5,7 @@ import "../Styles/singleGame.css";
 import GameGenreAffichage from "./GameGenreAffichage";
 import GameDateAffichage from "./GameDateAffichage";
 import Modale from "../Pages/Modale";
+import "../Styles/GameListAffichage.css";
 
 function GameListAffichage({
   name,
@@ -36,7 +37,7 @@ function GameListAffichage({
     <div className="container">
       <Modale show={show} setShow={setShow} id={id} />
       <div className="row">
-        <div className="col mb-2">
+        <div className="col mb-2 pointer">
           <img
             className="img-fluid h-100"
             src={backgroundImage}
@@ -55,7 +56,7 @@ function GameListAffichage({
               </div>
             ) : null}
 
-            <h2 className="ms-4 gameName" onClick={() => setShow(id)}>
+            <h2 className="ms-4 gameName pointer" onClick={() => setShow(id)}>
               {name}{" "}
             </h2>
 

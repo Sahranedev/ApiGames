@@ -22,6 +22,10 @@
   opacity: 0.4;
 }
 
+.search-bar {
+  width: 90%;
+}
+
 /* Css dans la barre */
 .search input {
   background: transparent;
