@@ -29,9 +29,10 @@ function SingleGameDisplay({
     }
     return "metacritic039";
   };
-
+  /* In this page : ternary to check elements given by props */
   return (
     <div className="carouselContainer container-fluid g-0 singleGameContainer bg-dark h-100 w-100">
+      {/*   Carrousel  */}
       <div className="container w-60">
         <div
           id="carouselExampleFade"
@@ -101,6 +102,7 @@ function SingleGameDisplay({
         </div>
       </div>
 
+      {/* Text informations */}
       <div className="totalPresentation @include media-breakpoint-up(md) { shadow-lg p-3 mb-5 rounded }">
         <div className=".md-container rounded">
           <div className="gamePageTitle">

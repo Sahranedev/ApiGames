@@ -29,16 +29,7 @@ function FiltredByPlatforms() {
     platformsList.forEach((platform) => {
       if (platform.slug === filtredListByPlatforms) {
         setFilter(platform.id);
-        // Si ce n'est pas bon, puisqu'il existe des sous catégories (ex:PS5) je fais pose la condition
-        // sur le sous-tableau afin de faire la même vérification.
-      } /* else if (platform.slug !== filtredListByPlatforms) {
-        platform.platforms.forEach((sousplatforms) => {
-          if (sousplatforms.slug === filtredListByPlatforms) {
-            setFilter(sousplatforms.id);
-            // Si vraiment rien ne se passe on renvoie null
-          }
-        }); 
-       } */
+      }
     });
   };
 
@@ -49,8 +40,8 @@ function FiltredByPlatforms() {
         order ? `+metacritic` : `-metacritic`
       }&page_size=20`
     );
-    const gamesresult = await response.json();
-    setGamesFiltred(gamesresult.results);
+    const gamesResult = await response.json();
+    setGamesFiltred(gamesResult.results);
   };
 
   // On utilise un useEffect basé sur l'évolution du filtredList pour réactualiser la requête

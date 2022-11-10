@@ -40,8 +40,8 @@ function FiltredByGenre() {
         order ? `+metacritic` : `-metacritic`
       }&page_size=20`
     );
-    const gamesresult = await response.json();
-    setGamesFiltred(gamesresult.results);
+    const gamesResult = await response.json();
+    setGamesFiltred(gamesResult.results);
   };
 
   // On utilise un useEffect basé sur l'évolution du filtredList pour réactualiser la requête
