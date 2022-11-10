@@ -78,19 +78,19 @@ function Navbar({ searchValue, setSearchValue, getGame }) {
                 </a>
                 <ul className="dropdown-menu text-white text-center bg-specify-second text-uppercase">
                   <Link to="/platforms/pc">
-                    <li className="links-a  ">PC</li>
+                    <li className=" m-1 links-a  ">PC</li>
                   </Link>
                   <Link to="/platforms/playstation5">
-                    <li className="links-a">PS5 </li>
+                    <li className=" m-1 links-a">PS5 </li>
                   </Link>
                   <Link to="/platforms/playstation4">
-                    <li className="links-a">PS4</li>
+                    <li className=" m-1 links-a">PS4</li>
                   </Link>
                   <Link to="/platforms/xbox-one">
-                    <li className="links-a">XBOX</li>
+                    <li className=" m1 links-a">XBOX</li>
                   </Link>
                   <Link to="/platforms/nintendo-switch">
-                    <li className="links-a">SWITCH</li>
+                    <li className=" m1 links-a">SWITCH</li>
                   </Link>
                 </ul>
               </li>
@@ -106,39 +106,39 @@ function Navbar({ searchValue, setSearchValue, getGame }) {
                 >
                   Genres
                 </a>
-                <ul className="dropdown-menu text-white text-center bg-specify-second text-uppercase">
+                <ul className="dropdown-menu text-white text-center bg-specify-second text-uppercase like-search">
                   <Link to="/genres/arcade">
-                    <li className="m-1 links-a">arcade</li>
+                    <li className=" m-1 links-a">arcade</li>
                   </Link>
                   <Link to="/genres/action">
-                    <li className="m-1 links-a">action</li>
+                    <li className=" m-1 links-a">action</li>
                   </Link>
                   <Link to="/genres/adventure">
-                    <li className="m-1 links-a">adventure</li>
+                    <li className=" m-1 links-a">adventure</li>
                   </Link>
                   <Link to="/genres/simulation">
-                    <li className="m-1 links-a">simulation</li>
+                    <li className=" m-1 links-a">simulation</li>
                   </Link>
                   <Link to="/genres/racing">
-                    <li className="m-1 links-a">racing</li>
+                    <li className=" m-1 links-a">racing</li>
                   </Link>
                   <Link to="/genres/shooter">
-                    <li className="m-1 links-a">shooter</li>
+                    <li className=" m-1 links-a">shooter</li>
                   </Link>
                   <Link to="/genres/strategy">
-                    <li className="m-1 links-a">strategy</li>
+                    <li className=" m-1 links-a">strategy</li>
                   </Link>
                   <Link to="/genres/puzzle">
-                    <li className="m-1 links-a">puzzle</li>
+                    <li className=" m-1 links-a">puzzle</li>
                   </Link>
                   <Link to="/genres/platformer">
-                    <li className="m-1 links-a">platformer</li>
+                    <li className=" m-1 links-a">platformer</li>
                   </Link>
                   <Link to="/genres/massively-multiplayer">
-                    <li className="m-1 links-a">massively-multiplayer</li>{" "}
+                    <li className=" m-1 links-a">massively-multiplayer</li>{" "}
                   </Link>
                   <Link to="/genres/sports">
-                    <li className="m-1 links-a">sports</li>
+                    <li className=" m-1 links-a">sports</li>
                   </Link>
                   <Link to="/genres/fighting">
                     <li className="m-1 links-a">fighting</li>
