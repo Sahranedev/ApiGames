@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import SingleGameAffichage from "./SingleGameAffichage";
+import SingleGameAffichage from "./SingleGameDisplay";
 import "../Styles/singleGame.css";
 
 const API_URL = "https://api.rawg.io/api/games";

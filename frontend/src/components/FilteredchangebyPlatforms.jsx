@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useParams } from "react-router-dom";
-import GameListAffichage from "./GameListAffichage";
+import GameListAffichage from "./GameListDisplay";
 import ButtonOrder from "./ButtonOrder";
 
 function FiltredbyPlatforms() {

@@ -1,6 +1,6 @@
 import React from "react";
-import Quizzresult from "./Quizzresult";
-import Stilllost from "./Stilllost";
+import Quizzresult from "./QuizzchangeResult";
+import Stilllost from "./StillchangeLost";
 
 function Quizz() {
   return (

@@ -2,13 +2,13 @@
 import React, { useState } from "react";
 import "../Styles/gameListStyle.css";
 import "../Styles/singleGame.css";
-import GameGenreAffichage from "./GameGenreAffichage";
-import GameDateAffichage from "./GameDateAffichage";
+import GameGenreAffichage from "./GameGenreDisplay";
+import GameDateAffichage from "./GameDateDisplay";
 import Modale from "../Pages/Modale";
 import "../Styles/GameListAffichage.css";
 import IMGnotFound from "../images/IMGnotFound.png";
 
-function GameListAffichage({
+function GameListDisplay({
   name,
   background_image: backgroundImage,
   metacritic,
@@ -89,4 +89,4 @@ function GameListAffichage({
   );
 }
 
-export default GameListAffichage;
+export default GameListDisplay;

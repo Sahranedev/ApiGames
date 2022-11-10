@@ -1,14 +1,14 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState } from "react";
 import "./Styles/App.css";
-import Navbar from "./components/Navbar";
-import FiltredbyGenre from "./components/FiltredbyGenre";
+import Navbar from "./components/NavchangeBar";
+import FiltredbyGenre from "./components/FilteredchangebyGenre";
 import SingleGame from "./components/SingleGame";
 import GameList from "./components/GameList";
-import Searchbar from "./components/Searchbar";
+import Searchbar from "./components/SearchchangeBar";
 import Novelties from "./components/Novelties";
-import Likespage from "./Pages/Likespage";
-import FiltredbyPlatforms from "./components/FiltredbyPlatforms";
+import Likespage from "./Pages/Favorites";
+import FiltredbyPlatforms from "./components/FilteredchangebyPlatforms";
 import Mainpage from "./Pages/Mainpage";
 
 const API_URL =

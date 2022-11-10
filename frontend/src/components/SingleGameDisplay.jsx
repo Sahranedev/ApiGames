@@ -8,7 +8,7 @@ import GameDevelopersDetails from "./GameDevelopersDetails";
 import GamePublishersDetails from "./GamePublishersDetails";
 import IMGnotFound from "../images/IMGnotFound.png";
 
-function SingleGameAffichage({
+function SingleGameDisplay({
   name_original: nameOriginal,
   background_image: gameImage,
   background_image_additional: additionalGameImage,
@@ -162,4 +162,4 @@ function SingleGameAffichage({
   );
 }
 
-export default SingleGameAffichage;
+export default SingleGameDisplay;

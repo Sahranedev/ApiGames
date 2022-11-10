@@ -2,7 +2,7 @@ import { NavLink, Link } from "react-router-dom";
 import "../Styles/navBar.css";
 import logoTest from "../images/LogoTest.png";
 
-function Navbar({ searchValue, setSearchValue, getGame }) {
+function NavBar({ searchValue, setSearchValue, getGame }) {
   return (
     <nav className="navbar navbar-expand-md fixed-bottom sticky-md-top">
       <div className="container-fluid">
@@ -150,4 +150,4 @@ function Navbar({ searchValue, setSearchValue, getGame }) {
   );
 }
 
-export default Navbar;
+export default NavBar;

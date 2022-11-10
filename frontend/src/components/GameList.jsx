@@ -1,5 +1,5 @@
 import "../Styles/gameList.css";
-import GameListAffichage from "./GameListAffichage";
+import GameListAffichage from "./GameListDisplay";
 
 function GameList({ gameList, searchValue }) {
   return (

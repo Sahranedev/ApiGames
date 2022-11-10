@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Quizz from "./Quizz";
-import Ourlikes from "./Ourlikes";
+import Ourlikes from "./OurchangeLikes";
 
 function Links({ searchValue }) {
   return (
