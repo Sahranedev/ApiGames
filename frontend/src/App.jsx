@@ -23,6 +23,7 @@ export default function App() {
       .then((response) => response.json())
       .then((result) => setGames(result.results))
       .catch((err) => console.error(err));
+    setSearchValue("");
   };
   return (
     <div className="App">
@@ -34,16 +35,21 @@ export default function App() {
             setSearchValue={setSearchValue}
             games={games}
           />
+
           <Searchbar
+            className="d-none d-md-block m-3 p-3"
             getGame={getGame}
             searchValue={searchValue}
             setSearchValue={setSearchValue}
             games={games}
           />
+
           {games
             .filter((game) => game.name.includes(searchValue))
             .map((game) => (
-              <p className="gameListParaph">{game.name}</p>
+              <p key={game.id} className="gameListParaph">
+                {game.name}
+              </p>
             ))}
 
           {/*  On veut que le Nav Bar et la Search Bar soient constamment présentes

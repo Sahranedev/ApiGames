@@ -1,53 +1,25 @@
-.bg-specify {
-  background-color: var(--second-background-color);
-  width: 100vw;
+
+.navbar, .navbar-nav, .dropdown-menu, .nav-link{
+  background-color:var(--second-background-color) ;
+  color: black;
 }
 
-.bg-specify-second {
-  background-color: var(--main-background-color);
-}
-.specify-ul {
-  justify-content: space-around;
-  list-style-type: none;
-  align-items: center;
+.link-nav, .nav-item {
+  cursor: pointer;
 }
 
+.nav-link:hover, a:active, a:hover{
+  color: white;
+}
+
+.dropdown-item:hover{
+background-color :transparent;
+color: white;
+}
+
+.navbar-toggler-icon{
+  color: black;
+}
 .navbar-toggler:focus{
 color : transparent
-}
-
-img {
-  height: 2em;
-}
-
-.navbar-toggler {
-  border: none;
-}
-
-.navbar-toggler:active {
-  border: none;
-}
-
-.navbar-toggler:hover {
-  border: none;
-}
-
-.important-bg-color {
-  padding: 0;
-}
-
-.links-a {
-  color: var(--main-text-color);
-  text-decoration: none;
-  cursor: pointer;
-  opacity: 0.5;
-}
-.links-a:hover {
-  background-color: var(--second-background-color) !important;
-  opacity: 1;
-}
-
-.like-search{
-  box-shadow: inset -5px 5px 9px  #1e1e1e, inset 5px -5px 9px #3d3d3d;
-  border-radius: 10px;
 }
