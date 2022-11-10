@@ -9,7 +9,7 @@ function Navbar() {
       <div className="bg-specify">
         <ul className="navigation-ul  d-flex justify-content-space-between specify-ul">
           <NavLink
-            to="/mainpage"
+            to="/"
             className={(nav) => (nav.isActive ? "nav-active" : "")}
           >
             <li>

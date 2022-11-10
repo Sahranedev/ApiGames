@@ -1,4 +1,5 @@
 import "../Styles/gameList.css";
+import ButtonOrder from "./ButtonOrder";
 import GameListAffichage from "./GameListAffichage";
 
 function GameList({ gameList }) {
