@@ -12,6 +12,10 @@
   align-items: center;
 }
 
+.navbar-toggler:focus{
+color : transparent
+}
+
 img {
   height: 2em;
 }
@@ -48,5 +52,6 @@ opacity: 1;
 
 .like-search{
   box-shadow: inset -5px 5px 9px  #1e1e1e, inset 5px -5px 9px #3d3d3d;
+  border-radius: 10px;
 }
  

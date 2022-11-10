@@ -9,7 +9,7 @@ function Searchbar({ searchValue, setSearchValue, getGame }) {
     }
   };
   return (
-    <div className="search">
+    <div className=" search">
       <input
         value={searchValue}
         className="search-bar"

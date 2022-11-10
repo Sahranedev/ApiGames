@@ -52,7 +52,7 @@ function Navbar({ searchValue, setSearchValue, getGame }) {
             <div className="text-right" />
           </div>
           <div className="offcanvas-header">
-            <h5 className="offcanvas-title" id="offcanvasDarkNavbarLabel">
+            <h5 className="offcanvas-title h2" id="offcanvasDarkNavbarLabel">
               Filtered by :
             </h5>
             <button
@@ -66,7 +66,7 @@ function Navbar({ searchValue, setSearchValue, getGame }) {
           <div className="offcanvas-body ">
             <ul className="navbar-nav justify-content-center flex-grow-1 pe-3 ">
               {/* Filtered by Platform dropdown menu  */}
-              <li className="nav-item dropdown">
+              <li className="nav-item dropdown h4">
                 <a
                   className="nav-link dropdown-toggle"
                   href="/"
@@ -76,7 +76,7 @@ function Navbar({ searchValue, setSearchValue, getGame }) {
                 >
                   Platforms
                 </a>
-                <ul className="dropdown-menu text-white text-center bg-specify-second text-uppercase">
+                <ul className="dropdown-menu text-white m-4 text-center bg-specify-second text-uppercase like-search">
                   <Link to="/platforms/pc">
                     <li className=" m-1 links-a  ">PC</li>
                   </Link>
@@ -96,7 +96,7 @@ function Navbar({ searchValue, setSearchValue, getGame }) {
               </li>
 
               {/* Filtered by genre dropdown menu  */}
-              <li className="nav-item dropdown">
+              <li className="nav-item dropdown h4">
                 <a
                   className="nav-link dropdown-toggle"
                   href="/"
@@ -106,7 +106,7 @@ function Navbar({ searchValue, setSearchValue, getGame }) {
                 >
                   Genres
                 </a>
-                <ul className="dropdown-menu text-white text-center bg-specify-second text-uppercase like-search">
+                <ul className="dropdown-menu text-white m-4 text-center bg-specify-second text-uppercase like-search">
                   <Link to="/genres/arcade">
                     <li className=" m-1 links-a">arcade</li>
                   </Link>
@@ -145,7 +145,7 @@ function Navbar({ searchValue, setSearchValue, getGame }) {
                   </Link>
                 </ul>
               </li>
-              <li>
+              <li className="">
                 <Searchbar
                   searchValue={searchValue}
                   getGame={getGame}
