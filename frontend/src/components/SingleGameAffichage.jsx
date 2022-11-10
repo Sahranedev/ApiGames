@@ -28,8 +28,10 @@ function SingleGameAffichage({
     }
     return "metacritic039";
   };
+
   return (
     <div className="container-fluid g-0 singleGameContainer bg-dark h-100 w-100">
+      {/* Button to close the Modal - next feature*/}
       <button
         type="button"
         className="close bg-dark text-white border-0"
