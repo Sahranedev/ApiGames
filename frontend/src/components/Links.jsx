@@ -15,13 +15,16 @@ function Links({ searchValue }) {
       </li>
       <Ourlikes />
       <li>
-        <Link to="/likes">Likes</Link>
+        <Link to="/favorites">Favorites</Link>
       </li>
       <li>
         <Link to="/platform">Liste de jeux filtrés par : "{searchValue}"</Link>
       </li>
       <li>
         <Link to="/game">Affichage du jeu selectionné: </Link>
+      </li>
+      <li>
+        <Link to="/news">News</Link>
       </li>
     </div>
   );

@@ -9,6 +9,15 @@
 .link-nav,
 .nav-item {
   cursor: pointer;
+  opacity: 1;
+}
+.links-a:hover {
+  background-color: var(--second-background-color) !important;
+  opacity: 1;
+}
+
+.like-search {
+  box-shadow: inset -5px 5px 9px #1e1e1e, inset 5px -5px 9px #3d3d3d;
 }
 
 .nav-link:hover,
