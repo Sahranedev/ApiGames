@@ -1,6 +1,6 @@
 :root {
   --main-background-color: #333;
-  --second-background-color: #edad37;
+  --second-background-color: #f8ac1e;
   --main-text-color: white;
   --second-text-color: var(--second-background-color);
 }

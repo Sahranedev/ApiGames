@@ -1,6 +1,6 @@
 import React from "react";
 
-function GameGenreAffichage({ genres: genre }) {
+function GameGenreDisplay({ genres: genre }) {
   return (
     <div className="">
       <ul className="d-flex justify-content-between">
@@ -17,4 +17,4 @@ function GameGenreAffichage({ genres: genre }) {
   );
 }
 
-export default GameGenreAffichage;
+export default GameGenreDisplay;

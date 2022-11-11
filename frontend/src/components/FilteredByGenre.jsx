@@ -1,11 +1,12 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useParams } from "react-router-dom";
-import GameListAffichage from "./GameListAffichage";
+import GameListAffichage from "./GameListDisplay";
 import ButtonOrder from "./ButtonOrder";
+import LinkToMainPage from "./LinkToMainPage";
 
-function FiltredbyGenre() {
+function FiltredByGenre() {
   const API_URL = "https://api.rawg.io/api/games";
-  const API_KEY = "813e525c42c04986ac0747dddec96609";
+  const API_KEY = "b6d47b1b6d1d4e37a348869c6f3fa8a3";
 
   /* useRef permet ici de gérer l'état du lancement des fonctions fetch */
   const isMount = useRef(false);
@@ -40,8 +41,8 @@ function FiltredbyGenre() {
         order ? `+metacritic` : `-metacritic`
       }&page_size=20`
     );
-    const gamesresult = await response.json();
-    setGamesFiltred(gamesresult.results);
+    const gamesResult = await response.json();
+    setGamesFiltred(gamesResult.results);
   };
 
   // On utilise un useEffect basé sur l'évolution du filtredList pour réactualiser la requête
@@ -68,6 +69,7 @@ function FiltredbyGenre() {
     <div>
       <div className="row d-flex justify-content-between ml-5 mr-5">
         <h2 className="col-10">Filtred games by " {filtredListByGenre} "</h2>
+        <LinkToMainPage />
         <ButtonOrder order={order} setOrder={setOrder} />
         <div className="col-1" />
       </div>
@@ -79,4 +81,4 @@ function FiltredbyGenre() {
   );
 }
 
-export default FiltredbyGenre;
+export default FiltredByGenre;

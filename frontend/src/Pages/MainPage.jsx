@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "../Styles/mainpage.css";
 
-function Mainpage() {
+function MainPage() {
   return (
     <div>
       <ul>
@@ -14,4 +14,4 @@ function Mainpage() {
   );
 }
 
-export default Mainpage;
+export default MainPage;
