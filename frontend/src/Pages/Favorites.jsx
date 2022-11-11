@@ -15,20 +15,20 @@ function Favorites() {
                   <div className="col-md-2 col-sm-2">
                     <img
                       src={IMGnotFound}
-                      alt="user"
+                      alt="game"
                       className="game-photo-lg"
                     />
                   </div>
 
                   <div className="col-md-7 col-sm-7 py-4">
                     <h5>
-                      <a href="#" className="">
+                      <a href="/likes" className="">
                         Elden Ring
                       </a>
                     </h5>
                   </div>
                   <div className="col-md-3 col-sm-3 py-3">
-                    <button className="btn  pull-right">
+                    <button type="button" className="btn  pull-right">
                       <div className="like text-center" />
                     </button>
                   </div>
@@ -39,19 +39,19 @@ function Favorites() {
                   <div className="col-md-2 col-sm-2">
                     <img
                       src={IMGnotFound}
-                      alt="user"
+                      alt="game"
                       className="game-photo-lg"
                     />
                   </div>
                   <div className="col-md-7 col-sm-7 py-4">
                     <h5>
-                      <a href="#" className="profile-link">
+                      <a href="/likes" className="">
                         League of legends
                       </a>
                     </h5>
                   </div>
                   <div className="col-md-3  col-sm-3 py-3">
-                    <button className="btn  pull-right">
+                    <button type="button" className="btn  pull-right">
                       <div className="like text-center" />
                     </button>
                   </div>
@@ -62,19 +62,19 @@ function Favorites() {
                   <div className="col-md-2 col-sm-2">
                     <img
                       src={IMGnotFound}
-                      alt="user"
+                      alt="game"
                       className="game-photo-lg"
                     />
                   </div>
                   <div className="col-md-7 col-sm-7 py-4">
                     <h5>
-                      <a href="#" className="">
+                      <a href="/likes" className="">
                         Dark Souls : Remastered
                       </a>
                     </h5>
                   </div>
                   <div className="col-md-3 col-sm-3 py-3 ">
-                    <button className="btn  pull-right">
+                    <button type="button" className="btn  pull-right">
                       <div className="like text-center" />
                     </button>
                   </div>
