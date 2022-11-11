@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { useParams } from "react-router-dom";
 import GameListAffichage from "./GameListDisplay";
 import ButtonOrder from "./ButtonOrder";
+import LinkToMainPage from "./LinkToMainPage";
 
 function FiltredByGenre() {
   const API_URL = "https://api.rawg.io/api/games";
@@ -68,6 +69,7 @@ function FiltredByGenre() {
     <div>
       <div className="row d-flex justify-content-between ml-5 mr-5">
         <h2 className="col-10">Filtred games by " {filtredListByGenre} "</h2>
+        <LinkToMainPage />
         <ButtonOrder order={order} setOrder={setOrder} />
         <div className="col-1" />
       </div>

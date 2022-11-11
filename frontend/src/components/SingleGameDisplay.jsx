@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React from "react";
-import "../Styles/SingleGameAffichage.css";
+import "../Styles/singleGameDisplay.css";
 import GameDateDetails from "./GameDateDetails";
 import GameParaphDetails from "./GameParaphDetails";
 import GameGenreDetails from "./GameGenreDetails";
@@ -48,11 +48,11 @@ function SingleGameDisplay({
               <div className="carousel-inner">
                 <div className="carousel-item active">
                   {gameImage ? (
-                    <img src={gameImage} className="d-block w-100" alt="..." />
+                    <img src={gameImage} className="img-responsive" alt="..." />
                   ) : (
                     <img
                       src={IMGnotFound}
-                      className="d-block w-100"
+                      className="img-responsive"
                       alt="not found"
                     />
                   )}
@@ -61,13 +61,13 @@ function SingleGameDisplay({
                   {additionalGameImage ? (
                     <img
                       src={additionalGameImage}
-                      className="d-block w-100"
+                      className="img-responsive"
                       alt="..."
                     />
                   ) : (
                     <img
                       src={IMGnotFound}
-                      className="d-block w-100"
+                      className="img-responsive"
                       alt=" not found"
                     />
                   )}

@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { useParams } from "react-router-dom";
 import GameListAffichage from "./GameListDisplay";
 import ButtonOrder from "./ButtonOrder";
+import LinkToMainPage from "./LinkToMainPage";
 
 function FiltredByPlatforms() {
   const API_URL = "https://api.rawg.io/api/games";
@@ -67,6 +68,7 @@ function FiltredByPlatforms() {
   return (
     <div>
       <h2>Filtred games by " {filtredListByPlatforms.toUpperCase()} "</h2>
+      <LinkToMainPage />
       <ButtonOrder order={order} setOrder={setOrder} />
 
       {gamesFiltred?.map((game) => (

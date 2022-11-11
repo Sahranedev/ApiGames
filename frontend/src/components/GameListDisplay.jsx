@@ -5,7 +5,7 @@ import "../Styles/singleGame.css";
 import GameGenreAffichage from "./GameGenreDisplay";
 import GameDateAffichage from "./GameDateDisplay";
 import Modale from "../Pages/Modale";
-import "../Styles/GameListAffichage.css";
+import "../Styles/gameListDisplay.css";
 import IMGnotFound from "../images/IMGnotFound.png";
 
 function GameListDisplay({
