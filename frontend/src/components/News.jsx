@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import GameListAffichage from "./GameListAffichage";
 
-/* const API_URL = "https://api.rawg.io/api/games";
-const API_KEY = "813e525c42c04986ac0747dddec96609";
- */
 function News() {
+  /*   const API_URL = "https://api.rawg.io/api/games";
+  const API_KEY = "813e525c42c04986ac0747dddec96609"; */
   const [gameNews, setGameNews] = useState([]);
   /* const getCurrentMonth = () => {
     const month = new Date().getMonth() + 1;
@@ -29,9 +28,29 @@ function News() {
   const nextYear = `${currentYear + 1}-${currentMonth}-${currentDay}`;
   const lastYear = `${currentYear - 1}-${currentMonth}-${currentDay}`; */
 
+  /* const currentYear = new Date().getFullYear().toISOString().slice(0, 10);
+
+  const date1 = new Date().toISOString().slice(0, 10); */
+
+  /* const date1 = new Date().toISOString().slice(0, 10);
+  const newArr = [];
+  const date2 = newArr.push(date1);
+  const date3 = newArr.join("-");
+
+  console.log(date1);
+  console.log(newArr);
+  console.log(date3);
+ */
+
+  /*   const currentYear = new Date().getFullYear(); */
+
+  const date1 = new Date().toISOString().slice(0, 10);
+  const currentYear = new Date().getFullYear();
+  const nextYear = currentYear + 2;
+  /* Solution temporaire le temps que j'arrive à trouver une fonction qui permettrait d'incrémenter l'année de bordure en format ISO (toléré par l'URL) */
   const getNewsGames = () => {
     fetch(
-      "https://api.rawg.io/api/games?key=813e525c42c04986ac0747dddec96609&dates=2022-10-30,2023-10-30&ordering=-added&page_size=5)"
+      `https://api.rawg.io/api/games?key=813e525c42c04986ac0747dddec96609&dates=${date1},${nextYear}&ordering=-added&page_size=20`
     )
       .then((response) => response.json())
       .then((result) => {
@@ -46,6 +65,7 @@ function News() {
 
   return (
     <div>
+      {/* On map la data stocké dans le state en y injectant en élément le spread de la propriété game */}
       {gameNews?.map((game) => (
         <GameListAffichage {...game} key={game.id} />
       ))}

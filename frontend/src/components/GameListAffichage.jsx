@@ -8,6 +8,7 @@ import Modale from "../Pages/Modale";
 import "../Styles/GameListAffichage.css";
 
 function GameListAffichage({
+  // On extrait les propriétés qu'on veut afficher depuis le tableau de l'API
   name,
   background_image: backgroundImage,
   metacritic,
@@ -23,6 +24,7 @@ function GameListAffichage({
 
   metacritic_url: metacriticUrl,
 }) {
+  // Fonction du score métacritic relié a une classe CSS qui permet de changer la couleur en fonction du score
   const colorCritic = () => {
     if (metacritic >= 75) {
       return "metacriticGreen";
@@ -32,6 +34,7 @@ function GameListAffichage({
     }
     return "metacriticRed";
   };
+  // Déploiment du State dynamique pour gérer l'affichage du modal
   const [show, setShow] = useState(false);
   return (
     <div className="container">
@@ -48,6 +51,7 @@ function GameListAffichage({
 
         <div className="col">
           <div className="d-flex align-items-center mb-2">
+            {/* Ternaire qui pose une condition sur l'affichage des scores metacritic */}
             {metacritic ? (
               <div className={colorCritic(metacritic)}>
                 <a href={metacriticUrl} target="_blank" rel="noreferrer">
@@ -55,7 +59,7 @@ function GameListAffichage({
                 </a>
               </div>
             ) : null}
-
+            {/* Déclencement d'une fonction click pour afficher le modal */}
             <h2 className="ms-4 gameName pointer" onClick={() => setShow(id)}>
               {name}{" "}
             </h2>
@@ -65,11 +69,12 @@ function GameListAffichage({
 
           <div className="h5 mb-2">
             <strong>Released : </strong>
-
+            {/* Ternaire qui pose une condition d'affichage en appelant le composant qui contient les dates de sorties */}
             {released ? <GameDateAffichage released={released} /> : null}
           </div>
           <div className=" ">
             <div className="">
+              {/* Ternaire qui pose une condition d'affichage en appelant le composant qui contient les genres */}
               {genres ? <GameGenreAffichage genres={genres} /> : null}
             </div>
           </div>
