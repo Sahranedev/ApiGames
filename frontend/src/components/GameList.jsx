@@ -1,5 +1,5 @@
 import "../Styles/gameList.css";
-import GameListAffichage from "./GameListDisplay";
+import GameListDisplay from "./GameListDisplay";
 import LinkToMainPage from "./LinkToMainPage";
 
 function GameList({ gameList, searchValue }) {
@@ -11,7 +11,7 @@ function GameList({ gameList, searchValue }) {
         <h2> Liste des jeux filtrés par " {searchValue} " </h2>
         <LinkToMainPage />
         {gameList.map((game) => (
-          <GameListAffichage key={game.id} {...game} />
+          <GameListDisplay key={game.id} {...game} />
         ))}
       </div>
     )

@@ -105,7 +105,7 @@ function SingleGameDisplay({
       {/* Text informations */}
       <div className="totalPresentation @include media-breakpoint-up(md) { shadow-lg p-3 mb-5 rounded }">
         <div className=".md-container rounded">
-          <div className="gamePageTitle">
+          <div className="gamePageTitle mt-3 text-center">
             {metacritic ? (
               <div className={`text-white ${colorCritic(metacritic)}`}>
                 <a href={metacriticUrl} target="_blank" rel="noreferrer">

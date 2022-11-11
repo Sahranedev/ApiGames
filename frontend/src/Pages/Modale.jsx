@@ -27,7 +27,7 @@ function Modale({ show, setShow, id }) {
         fullscreen={fullscreen}
         onHide={() => setShow(false)}
       >
-        <Modal.Header className="bg-dark close-btn" closeButton />
+        <Modal.Header className="bg-dark close-btn mh-100 mw-100" closeButton />
         <SingleGame id={id} />
       </Modal>
     </div>
