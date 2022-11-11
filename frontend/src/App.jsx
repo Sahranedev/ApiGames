@@ -12,7 +12,10 @@ import Likespage from "./Pages/Favorites";
 import FiltredbyPlatforms from "./components/FilteredByPlatforms";
 
 const API_URL =
-  "https://api.rawg.io/api/games?key=813e525c42c04986ac0747dddec96609";
+  "https://api.rawg.io/api/games?key=b6d47b1b6d1d4e37a348869c6f3fa8a3";
+
+/* b6d47b1b6d1d4e37a348869c6f3fa8a3
+13e525c42c04986ac0747dddec96609 */
 
 export default function App() {
   const [searchValue, setSearchValue] = useState("");
