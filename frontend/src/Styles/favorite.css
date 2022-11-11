@@ -1,0 +1,48 @@
+
+  
+  .game-list-favorite {
+    height: 300px;
+    width: 100%;
+    border: none;
+  }
+  
+  .game-list-favorite .single-game{
+    padding: 20px ;
+    background: rgb(41,41,41);
+    background: linear-gradient(129deg, rgba(41,41,41,0.9570421918767507) 53%, rgba(248,172,30,1) 100%);    box-shadow: #1E1E1E 0px 0px 10px 0px;
+    border-radius: 7px;
+    margin-bottom: 20px;
+  }
+  
+ .single-game{
+    width: auto;
+ }
+  img.game-photo-lg{
+    height: 80px;
+    width: 80px;
+   
+  }
+
+  .favorite-container{
+    height: 100vh;
+     background : #292929;
+    box-shadow: #121212 0px 0px 10px 0px; 
+   
+  }
+  
+  .unlike {
+    width: 2rem;
+    height: 2rem;
+    background-image: url(../images/heartUnlike.svg);
+  }
+  .like {
+    width: 2rem;
+    height: 2rem;
+    background-image: url(../images/heart.svg);
+    background-position:center;
+    background-size: cover;
+    background-repeat: none;
+  }
+
+  /*  background: rgb(41,41,41);
+background: linear-gradient(129deg, rgba(41,41,41,0.9570421918767507) 53%, rgba(248,172,30,1) 100%);     */

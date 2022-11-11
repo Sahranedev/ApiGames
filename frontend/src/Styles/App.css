@@ -13,3 +13,7 @@ body {
   overflow-x: hidden;
   color: var(--main-text-color);
 }
+
+
+* {font-family: 'Roboto', sans-serif;}
+/* font-family: 'Roboto', sans-serif; */
