@@ -6,6 +6,10 @@
   color: black;
 }
 
+.navbar {
+  box-shadow: #1e1e1e 0px 0px 10px 1px;
+}
+
 .link-nav,
 .nav-item {
   cursor: pointer;

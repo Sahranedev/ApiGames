@@ -8,7 +8,7 @@
 .search {
   border-radius: 10px;
   background: var(--main-background-color);
-  box-shadow: inset -5px 5px 9px #0f0f0f, inset 5px -5px 9px #3d3d3d;
+  box-shadow: inset -5px 5px 9px #0f0f0f, inset 5px -5px 9px #3a3a3abe;
 }
 
 .search-bar::placeholder {
