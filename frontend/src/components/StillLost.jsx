@@ -36,7 +36,7 @@ function StillLost() {
   }, [newRandomID]);
 
   return (
-    <div className="container-md  vh-100 p-5 rounded still-container">
+    <div className="container-md  p-5 rounded still-container">
       <LinkToMainPage />
       <div className="row">
         {/* Title */}
@@ -62,7 +62,6 @@ function StillLost() {
             alt="not found"
           />
         )}
-
         {/* col same row but next to image */}
         <div className="col-fluid col-md-6">
           <div className="container-md">
@@ -139,14 +138,12 @@ function StillLost() {
             </div>
           </Collapse>
         </div>
-
         {/* I want to display description on md-screen */}
         <div className="d-none d-md-inline row mt-3 mb-3">
           <p className="text-justify mb-3 ">
             {randomGame ? randomGame.description_raw : null}
           </p>
         </div>
-
         {/* Maybe I want to add to my favorite list */}
         <div className="mb-3 d-flex justify-content-center">
           <button
@@ -156,7 +153,6 @@ function StillLost() {
             <div className="unlike text-center" />
           </button>
         </div>
-
         {/* I want to get a new Random Game */}
         <div className="mb-5 d-flex justify-content-center">
           <button
@@ -166,7 +162,7 @@ function StillLost() {
           >
             Try again
           </button>
-        </div>
+        </div>{" "}
       </div>
     </div>
   );

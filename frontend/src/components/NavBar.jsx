@@ -8,7 +8,7 @@ function NavBar({ searchValue, setSearchValue, getGame }) {
       <div className="container-fluid">
         {/* Home */}
         <NavLink to="/" className="link-nav">
-          <img src={logoTest} alt="Home" style={{ width: "5em" }} />
+          <img src={logoTest} alt="Home" style={{ maxWidth: "4em" }} />
         </NavLink>
         <button
           className="navbar-toggler"
