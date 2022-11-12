@@ -1,7 +1,7 @@
 import React from "react";
 
-function GameDateAffichage({ released }) {
+function GameDateDisplay({ released }) {
   return <span className="release-detail">{released}</span>;
 }
 
-export default GameDateAffichage;
+export default GameDateDisplay;

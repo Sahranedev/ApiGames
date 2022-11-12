@@ -1,11 +1,12 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useParams } from "react-router-dom";
-import GameListAffichage from "./GameListAffichage";
+import GameListAffichage from "./GameListDisplay";
 import ButtonOrder from "./ButtonOrder";
+import LinkToMainPage from "./LinkToMainPage";
 
-function FiltredbyPlatforms() {
+function FiltredByPlatforms() {
   const API_URL = "https://api.rawg.io/api/games";
-  const API_KEY = "813e525c42c04986ac0747dddec96609";
+  const API_KEY = "b6d47b1b6d1d4e37a348869c6f3fa8a3";
   /* useRef permet ici de gérer l'état du lancement des fonctions fetch */
   const isMount = useRef(false);
   const { filtredListByPlatforms } = useParams();
@@ -29,16 +30,7 @@ function FiltredbyPlatforms() {
     platformsList.forEach((platform) => {
       if (platform.slug === filtredListByPlatforms) {
         setFilter(platform.id);
-        // Si ce n'est pas bon, puisqu'il existe des sous catégories (ex:PS5) je fais pose la condition
-        // sur le sous-tableau afin de faire la même vérification.
-      } /* else if (platform.slug !== filtredListByPlatforms) {
-        platform.platforms.forEach((sousplatforms) => {
-          if (sousplatforms.slug === filtredListByPlatforms) {
-            setFilter(sousplatforms.id);
-            // Si vraiment rien ne se passe on renvoie null
-          }
-        }); 
-       } */
+      }
     });
   };
 
@@ -49,8 +41,8 @@ function FiltredbyPlatforms() {
         order ? `+metacritic` : `-metacritic`
       }&page_size=20`
     );
-    const gamesresult = await response.json();
-    setGamesFiltred(gamesresult.results);
+    const gamesResult = await response.json();
+    setGamesFiltred(gamesResult.results);
   };
 
   // On utilise un useEffect basé sur l'évolution du filtredList pour réactualiser la requête
@@ -76,6 +68,7 @@ function FiltredbyPlatforms() {
   return (
     <div>
       <h2>Filtred games by " {filtredListByPlatforms.toUpperCase()} "</h2>
+      <LinkToMainPage />
       <ButtonOrder order={order} setOrder={setOrder} />
 
       {gamesFiltred?.map((game) => (
@@ -85,4 +78,4 @@ function FiltredbyPlatforms() {
   );
 }
 
-export default FiltredbyPlatforms;
+export default FiltredByPlatforms;

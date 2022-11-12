@@ -1,9 +1,11 @@
 import React from "react";
 
-function GameGenreAffichage({ genres: genre }) {
+function GameGenreDisplay({ genres: genre }) {
   return (
     <div className="">
       <ul className="d-flex justify-content-between">
+        {/* On map la props pour permettre l'affichage de plusieurs genres si il y (sinon seul le premier genre du tableau apparaît) */}
+
         {genre.map((el, i) => (
           // eslint-disable-next-line react/no-array-index-key
           <li className="genreList mb-4" key={i}>
@@ -15,4 +17,4 @@ function GameGenreAffichage({ genres: genre }) {
   );
 }
 
-export default GameGenreAffichage;
+export default GameGenreDisplay;

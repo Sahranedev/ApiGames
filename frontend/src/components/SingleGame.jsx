@@ -1,30 +1,28 @@
 import React, { useState, useEffect } from "react";
-// import { useParams } from "react-router-dom";
-import SingleGameAffichage from "./SingleGameAffichage";
 import "../Styles/singleGame.css";
+import SingleGameDisplay from "./SingleGameDisplay";
 
 const API_URL = "https://api.rawg.io/api/games";
-const API_KEY = "813e525c42c04986ac0747dddec96609";
+const API_KEY = "b6d47b1b6d1d4e37a348869c6f3fa8a3";
+/* b6d47b1b6d1d4e37a348869c6f3fa8a3
+13e525c42c04986ac0747dddec96609 */
 
 function SingleGame({ id }) {
   const [game, setGame] = useState([]);
-  // const { id } = useParams();
-  /* Fetch API to get details of a game */
-  const getSingleGame = () => {
-    fetch(`${API_URL}/${id}?key=${API_KEY}`)
-      .then((response) => response.json())
-      .then((result) => {
-        setGame(result);
-      })
-      .catch((err) => console.error(err));
+
+  const getSingleGame = async () => {
+    const response = await fetch(`${API_URL}/${id}?key=${API_KEY}`);
+    const result = await response.json();
+    setGame(result);
   };
+
   useEffect(() => {
     getSingleGame();
   }, []);
 
   return (
     <div>
-      <SingleGameAffichage {...game} />
+      <SingleGameDisplay game={game} {...game} />
     </div>
   );
 }

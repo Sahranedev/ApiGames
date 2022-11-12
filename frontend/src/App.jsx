@@ -1,18 +1,23 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState } from "react";
 import "./Styles/App.css";
-import Navbar from "./components/Navbar";
-import FiltredbyGenre from "./components/FiltredbyGenre";
+import StillLost from "@components/StillLost";
+import Navbar from "./components/NavBar";
+import Mainpage from "./Pages/MainPage";
+import FilteredbyGenre from "./components/FilteredByGenre";
 import SingleGame from "./components/SingleGame";
 import GameList from "./components/GameList";
-import Searchbar from "./components/Searchbar";
+import Searchbar from "./components/SearchBar";
 import Novelties from "./components/Novelties";
-import Likespage from "./Pages/Likespage";
-import FiltredbyPlatforms from "./components/FiltredbyPlatforms";
-import Mainpage from "./Pages/Mainpage";
+import Favorites from "./Pages/Favorites";
+import FilteredbyPlatforms from "./components/FilteredByPlatforms";
+import News from "./components/News";
 
 const API_URL =
-  "https://api.rawg.io/api/games?key=813e525c42c04986ac0747dddec96609";
+  "https://api.rawg.io/api/games?key=b6d47b1b6d1d4e37a348869c6f3fa8a3";
+
+/* b6d47b1b6d1d4e37a348869c6f3fa8a3
+13e525c42c04986ac0747dddec96609 */
 
 export default function App() {
   const [searchValue, setSearchValue] = useState("");
@@ -23,29 +28,34 @@ export default function App() {
       .then((response) => response.json())
       .then((result) => setGames(result.results))
       .catch((err) => console.error(err));
+    setSearchValue("");
   };
   return (
     <div className="App">
       <Router>
-        <div className="container">
-          <Searchbar
-            getGame={getGame}
-            searchValue={searchValue}
-            setSearchValue={setSearchValue}
-            games={games}
-          />
-          {games
-            .filter((game) => game.name.includes(searchValue))
-            .map((game) => (
-              <p className="gameListParaph">{game.name}</p>
-            ))}
-
+        <div className="">
           <Navbar
             getGame={getGame}
             searchValue={searchValue}
             setSearchValue={setSearchValue}
             games={games}
           />
+
+          <Searchbar
+            className="d-none d-md-block m-3 p-3"
+            getGame={getGame}
+            searchValue={searchValue}
+            setSearchValue={setSearchValue}
+            games={games}
+          />
+
+          {games
+            .filter((game) => game.name.includes(searchValue))
+            .map((game) => (
+              <p key={game.id} className="gameListParaph">
+                {game.name}
+              </p>
+            ))}
 
           {/*  On veut que le Nav Bar et la Search Bar soient constamment présentes
 Elles sont donc dans le Router et le Router lui-même dans App pour éviter tous les problèmes de routing.
@@ -58,21 +68,23 @@ A voir
 
           <Routes>
             <Route path="/" element={<Mainpage />} />
+            <Route path="/random/:randomID" element={<StillLost />} />
             <Route path="/novelties" element={<Novelties />} />
-            <Route path="/likes" element={<Likespage />} />
+            <Route path="/favorites" element={<Favorites />} />
             <Route
               path="/platforms/:filtredListByPlatforms"
-              element={<FiltredbyPlatforms />}
+              element={<FilteredbyPlatforms />}
             />
             <Route
               path="/genres/:filtredListByGenre"
-              element={<FiltredbyGenre />}
+              element={<FilteredbyGenre />}
             />
             <Route
               path="/gamelist/"
               element={<GameList searchValue={searchValue} gameList={games} />}
             />
             <Route path="/game/:id" element={<SingleGame games={games} />} />
+            <Route path="/news" element={<News games={games} />} />
           </Routes>
         </div>
       </Router>
