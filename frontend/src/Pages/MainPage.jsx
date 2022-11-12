@@ -11,7 +11,7 @@ function MainPage() {
   };
 
   return (
-    <div>
+    <div className="container vh-100">
       <ul>
         <h2 className="trollpresentation">THE MAIN PAGE</h2>
         <Link to={`/random/${randomID}`}>

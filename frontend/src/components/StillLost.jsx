@@ -85,10 +85,8 @@ function StillLost() {
             <div className="row my-md-5 md-flex align-items-md-center">
               Genres :{" "}
               {randomGame
-                ? randomGame.genres.map((genre, i) => (
-                    <li className="genreList mx-1 my-1" key={i}>
-                      {genre.name}
-                    </li>
+                ? randomGame.genres.map((genre) => (
+                    <li className="genreList mx-1 my-1">{genre.name}</li>
                   ))
                 : null}
             </div>
@@ -145,7 +143,7 @@ function StillLost() {
         {/* I want to display description on md-screen */}
         <div className="d-none d-md-inline row mt-3 mb-3">
           <p className="text-justify mb-3 ">
-            Description {randomGame ? randomGame.description_raw : null}
+            {randomGame ? randomGame.description_raw : null}
           </p>
         </div>
 
