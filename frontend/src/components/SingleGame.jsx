@@ -22,7 +22,7 @@ function SingleGame({ id }) {
 
   return (
     <div>
-      <SingleGameDisplay {...game} />
+      <SingleGameDisplay game={game} {...game} />
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../Styles/linkToMainPage.css";
+import "../Styles/linktomainpage.css";
 
 function LinkToMainPage() {
   // function to return to the main page. Need to make a Route to '/' and let click event to change the url

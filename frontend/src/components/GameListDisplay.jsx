@@ -7,7 +7,7 @@ import Modale from "../Pages/Modale";
 import IMGnotFound from "../images/IMGnotFound.png";
 
 function GameListDisplay({
-    // On extrait les propriétés qu'on veut afficher depuis le tableau de l'API
+  // On extrait les propriétés qu'on veut afficher depuis le tableau de l'API
   name,
   background_image: backgroundImage,
   metacritic,
