@@ -28,7 +28,7 @@ function NavBar({ searchValue, setSearchValue, getGame }) {
             {/* Favorite Page */}
             <li className="nav-item mx-3">
               <a className="nav-link" aria-current="page" href="/likes">
-                <NavLink to="/likes"> Favorites</NavLink>
+                <NavLink to="/favorites"> Favorites</NavLink>
               </a>
             </li>
 

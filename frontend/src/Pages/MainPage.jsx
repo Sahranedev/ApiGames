@@ -1,13 +1,31 @@
-import StillLost from "@components/StillLost";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import "../Styles/mainpage.css";
 
 function MainPage() {
+  // Function to get a random game from the API from the mainpage
+  const [randomID, setRandomID] = useState(Math.floor(Math.random() * 1000));
+
+  const getRandomID = () => {
+    setRandomID(Math.floor(Math.random() * 1000));
+  };
+
   return (
     <div>
       <ul>
         <h2 className="trollpresentation">THE MAIN PAGE</h2>
-        <StillLost />
+        <Link to={`/random/${randomID}`}>
+          {" "}
+          <button type="button" onClick={getRandomID}>
+            Get random
+          </button>
+        </Link>
       </ul>
+      <Link to="/news">
+        <button type="button">News</button>
+      </Link>
+
+      <div />
     </div>
   );
 }

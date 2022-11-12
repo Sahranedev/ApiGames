@@ -1,0 +1,51 @@
+@media screen and (min-width: 768px) {
+.still-container {
+background : #1d1d1d;
+box-shadow: #121212 0px 0px 10px 0px; 
+}
+    
+}
+
+.random-img {
+    padding: 0;
+    border-radius: 10px;
+    box-shadow: #0c0c0c 0px 0px 10px 3px;
+}
+
+.random-img:hover {
+    transform: scale(1.02);
+    transition: 0.4s;
+}
+
+.description-button,  .btn-outline-light
+{
+    color :white;
+    border: none;
+    background-color: transparent;
+  
+}
+
+.description-button:active,  .btn-outline-light:active
+{
+    color :white;
+    border: none;
+    background-color: transparent;
+  
+}
+
+.description-button:focus,  .btn-outline-light:focus
+{
+    color :white;
+    border: none;
+    background-color: transparent;
+  
+}
+
+.description-button:hover,  .btn-outline-light:hover
+{
+    color :white;
+    border: none;
+    background-color: transparent;
+  
+}
+

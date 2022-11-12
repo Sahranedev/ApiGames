@@ -6,7 +6,7 @@ import LinkToMainPage from "./LinkToMainPage";
 
 function FiltredByPlatforms() {
   const API_URL = "https://api.rawg.io/api/games";
-  const API_KEY = "813e525c42c04986ac0747dddec96609";
+  const API_KEY = "b6d47b1b6d1d4e37a348869c6f3fa8a3";
   /* useRef permet ici de gérer l'état du lancement des fonctions fetch */
   const isMount = useRef(false);
   const { filtredListByPlatforms } = useParams();

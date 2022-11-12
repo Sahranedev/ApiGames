@@ -34,6 +34,9 @@
     width: 2rem;
     height: 2rem;
     background-image: url(../images/heartUnlike.svg);
+    background-position:center;
+    background-size: cover;
+    background-repeat: none;
   }
   .like {
     width: 2rem;
