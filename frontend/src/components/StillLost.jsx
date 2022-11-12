@@ -36,7 +36,7 @@ function StillLost() {
   }, [newRandomID]);
 
   return (
-    <div className="container-md  p-5 rounded still-container">
+    <div className="container-md vh-100 p-5 rounded still-container">
       <LinkToMainPage />
       <div className="row">
         {/* Title */}
