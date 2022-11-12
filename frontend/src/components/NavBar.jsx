@@ -27,7 +27,11 @@ function NavBar({ searchValue, setSearchValue, getGame }) {
           <ul className="navbar-nav me-auto mb-2 ">
             {/* Favorite Page */}
             <li className="nav-item mx-3">
-              <a className="nav-link" aria-current="page" href="/likes">
+              <a
+                className="nav-link d-flex justify-content-end align-items-center"
+                aria-current="page"
+                href="/likes"
+              >
                 <NavLink to="/favorites"> Favorites</NavLink>
               </a>
             </li>
@@ -35,7 +39,7 @@ function NavBar({ searchValue, setSearchValue, getGame }) {
             {/* Dropdown Menu by platforms */}
             <li className="nav-item mx-3 dropdown">
               <a
-                className="nav-link dropdown-toggle"
+                className="nav-link d-flex justify-content-end align-items-center dropdown-toggle"
                 href="/"
                 role="button"
                 data-bs-toggle="dropdown"
@@ -43,8 +47,8 @@ function NavBar({ searchValue, setSearchValue, getGame }) {
               >
                 Platforms
               </a>
-              <ul className="dropdown-menu">
-                <li className="dropdown-item">
+              <ul className="dropdown-menu ">
+                <li className="dropdown-item d-flex justify-content-end justify-content-md-start ">
                   <Link to="/platforms/pc">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -59,7 +63,7 @@ function NavBar({ searchValue, setSearchValue, getGame }) {
                     PC
                   </Link>
                 </li>
-                <li className="dropdown-item">
+                <li className="dropdown-item d-flex justify-content-end justify-content-md-start">
                   <Link to="/platforms/playstation5">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +78,7 @@ function NavBar({ searchValue, setSearchValue, getGame }) {
                     PS5
                   </Link>
                 </li>
-                <li className="dropdown-item">
+                <li className="dropdown-item d-flex justify-content-end justify-content-md-start">
                   <Link to="/platforms/playstation4">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +93,7 @@ function NavBar({ searchValue, setSearchValue, getGame }) {
                     PS4
                   </Link>
                 </li>
-                <li className="dropdown-item">
+                <li className="dropdown-item d-flex justify-content-end justify-content-md-start">
                   <Link to="/platforms/xbox-one">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -104,7 +108,7 @@ function NavBar({ searchValue, setSearchValue, getGame }) {
                     Xbox
                   </Link>
                 </li>
-                <li className="dropdown-item">
+                <li className="dropdown-item d-flex justify-content-end justify-content-md-start">
                   <Link to="/platforms/nintendo-switch">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -126,7 +130,7 @@ function NavBar({ searchValue, setSearchValue, getGame }) {
             {/* Dropdown Menu by genres */}
             <li className="nav-item  mx-3 dropdown">
               <a
-                className="nav-link dropdown-toggle"
+                className="nav-link d-flex justify-content-end align-items-center dropdown-toggle"
                 href="/"
                 role="button"
                 data-bs-toggle="dropdown"
@@ -135,7 +139,7 @@ function NavBar({ searchValue, setSearchValue, getGame }) {
                 Genres
               </a>
               <ul className="dropdown-menu">
-                <li className="dropdown-item">
+                <li className="dropdown-item d-flex justify-content-end justify-content-md-start">
                   <Link to="/genres/arcade">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -151,7 +155,7 @@ function NavBar({ searchValue, setSearchValue, getGame }) {
                     Arcade
                   </Link>
                 </li>
-                <li className="dropdown-item">
+                <li className="dropdown-item d-flex justify-content-end justify-content-md-start">
                   <Link to="/genres/action">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -166,7 +170,7 @@ function NavBar({ searchValue, setSearchValue, getGame }) {
                     Action
                   </Link>
                 </li>
-                <li className="dropdown-item">
+                <li className="dropdown-item d-flex justify-content-end justify-content-md-start">
                   <Link to="/genres/adventure">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -181,7 +185,7 @@ function NavBar({ searchValue, setSearchValue, getGame }) {
                     Adventure
                   </Link>
                 </li>
-                <li className="dropdown-item">
+                <li className="dropdown-item d-flex justify-content-end justify-content-md-start">
                   <Link to="/genres/simulation">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -196,7 +200,7 @@ function NavBar({ searchValue, setSearchValue, getGame }) {
                     Simulation
                   </Link>
                 </li>
-                <li className="dropdown-item">
+                <li className="dropdown-item d-flex justify-content-end justify-content-md-start">
                   <Link to="/genres/racing">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -212,7 +216,7 @@ function NavBar({ searchValue, setSearchValue, getGame }) {
                     Racing
                   </Link>
                 </li>
-                <li className="dropdown-item">
+                <li className="dropdown-item d-flex justify-content-end justify-content-md-start">
                   <Link to="/genres/shooter">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -227,7 +231,7 @@ function NavBar({ searchValue, setSearchValue, getGame }) {
                     Shooter
                   </Link>
                 </li>
-                <li className="dropdown-item">
+                <li className="dropdown-item d-flex justify-content-end justify-content-md-start">
                   <Link to="/genres/strategy">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -242,7 +246,7 @@ function NavBar({ searchValue, setSearchValue, getGame }) {
                     Strategy
                   </Link>
                 </li>
-                <li className="dropdown-item">
+                <li className="dropdown-item d-flex justify-content-end justify-content-md-start">
                   <Link to="/genres/puzzle">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -257,7 +261,7 @@ function NavBar({ searchValue, setSearchValue, getGame }) {
                     Puzzle
                   </Link>
                 </li>
-                <li className="dropdown-item">
+                <li className="dropdown-item d-flex justify-content-end justify-content-md-start">
                   <Link to="/genres/platformer">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -272,7 +276,7 @@ function NavBar({ searchValue, setSearchValue, getGame }) {
                     Platformer
                   </Link>
                 </li>
-                <li className="dropdown-item">
+                <li className="dropdown-item d-flex justify-content-end justify-content-md-start">
                   <Link to="/genres/massively-multiplayer">
                     {" "}
                     <svg
@@ -288,7 +292,7 @@ function NavBar({ searchValue, setSearchValue, getGame }) {
                     MMO
                   </Link>
                 </li>
-                <li className="dropdown-item">
+                <li className="dropdown-item d-flex justify-content-end justify-content-md-start">
                   <Link to="/genres/sports">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -303,7 +307,7 @@ function NavBar({ searchValue, setSearchValue, getGame }) {
                     Sports
                   </Link>
                 </li>
-                <li className="dropdown-item">
+                <li className="dropdown-item d-flex justify-content-end justify-content-md-start">
                   <Link to="/genres/fighting">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
