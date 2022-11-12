@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import SingleGameDisplay from "./SingleGameDisplay";
 import "../Styles/singleGame.css";
+import SingleGameDisplay from "./SingleGameDisplay";
 
 const API_URL = "https://api.rawg.io/api/games";
 const API_KEY = "b6d47b1b6d1d4e37a348869c6f3fa8a3";
@@ -22,7 +22,7 @@ function SingleGame({ id }) {
 
   return (
     <div>
-      <SingleGameDisplay {...game} />
+      <SingleGameDisplay game={game} {...game} />
     </div>
   );
 }

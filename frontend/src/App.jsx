@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState } from "react";
 import "./Styles/App.css";
+import StillLost from "@components/StillLost";
 import Navbar from "./components/NavBar";
 import Mainpage from "./Pages/MainPage";
 import FilteredbyGenre from "./components/FilteredByGenre";
@@ -67,6 +68,7 @@ A voir
 
           <Routes>
             <Route path="/" element={<Mainpage />} />
+            <Route path="/random/:randomID" element={<StillLost />} />
             <Route path="/novelties" element={<Novelties />} />
             <Route path="/favorites" element={<Favorites />} />
             <Route

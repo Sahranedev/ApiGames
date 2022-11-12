@@ -1,9 +1,12 @@
-.navbar,
-.navbar-nav,
-.dropdown-menu,
-.nav-link {
-  background-color: var(--second-background-color);
+.dropdown-menu {
+  background-color: #feaa0e;
   color: black;
+}
+
+.navbar {
+  background-color: #feaa0ea1;
+  -webkit-backdrop-filter: blur(1em);
+  backdrop-filter: blur(1em);
 }
 
 .link-nav,
