@@ -1,5 +1,6 @@
 /* eslint-disable */
-import React from "react";
+/* eslint eqeqeq: 0 */
+import React, { useState } from "react";
 import "../Styles/singleGameDisplay.css";
 import GameDateDetails from "./GameDateDetails";
 import GameParaphDetails from "./GameParaphDetails";
@@ -19,7 +20,9 @@ function SingleGameDisplay({
   genres,
   developers,
   publishers,
+  game,
 }) {
+  const [isFavorite, setIsFavorite] = useState(false);
   const colorCritic = () => {
     if (metacritic >= 75) {
       return "metacritic75100";
@@ -28,6 +31,23 @@ function SingleGameDisplay({
       return "metacritic4074";
     }
     return "metacritic039";
+  };
+  const addStorage = () => {
+    let storedData = window.localStorage.games
+      ? window.localStorage.games.split(",")
+      : [];
+
+    if (!storedData.includes(game.id.toString())) {
+      storedData.push(game.id);
+      window.localStorage.games = storedData;
+    }
+    setIsFavorite(!isFavorite);
+  };
+  const removeStorage = () => {
+    let storedData = window.localStorage.games.split(",");
+    let newData = storedData.filter((id) => id != game.id);
+    window.localStorage.games = newData;
+    setIsFavorite(!isFavorite);
   };
   /* In this page : ternary to check elements given by props */
   return (
@@ -117,7 +137,11 @@ function SingleGameDisplay({
             {nameOriginal ? (
               <h2 className="text-white text-center">{nameOriginal}</h2>
             ) : null}
-            <div className="unlike text-center" />
+            {isFavorite ? (
+              <div onClick={removeStorage} className="like text-center" />
+            ) : (
+              <div onClick={addStorage} className="unlike text-center" />
+            )}
           </div>
           <div className="details">
             <div className="gamePageDetails text-center">
