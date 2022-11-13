@@ -68,11 +68,15 @@ function SingleGameDisplay({
               <div className="carousel-inner">
                 <div className="carousel-item active">
                   {gameImage ? (
-                    <img src={gameImage} className="img-responsive" alt="..." />
+                    <img
+                      src={gameImage}
+                      className="singleGameImage img-responsive"
+                      alt="..."
+                    />
                   ) : (
                     <img
                       src={IMGnotFound}
-                      className="img-responsive"
+                      className="singleGameImage img-responsive"
                       alt="not found"
                     />
                   )}
