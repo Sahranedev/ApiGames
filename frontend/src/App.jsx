@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState, useEffect } from "react";
-import useLocalStorage from "use-local-storage";
 
 import "./Styles/App.css";
 import StillLost from "@components/StillLost";
@@ -25,12 +24,12 @@ export default function App() {
   const [searchValue, setSearchValue] = useState("");
   const [games, setGames] = useState([]);
   /* Make a hook to get the theme */
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
   const toggleTheme = () => {
-    if (theme === `dark`) {
-      setTheme(`light`);
-    } else {
+    if (theme === `light`) {
       setTheme(`dark`);
+    } else {
+      setTheme(`light`);
     }
   };
   /* update on theme */
@@ -47,18 +46,19 @@ export default function App() {
     setSearchValue("");
   };
   return (
-    <div className="App" data-theme={theme}>
+    <div className={`App ${theme}`}>
       <div className="first-background">
         <div className="second-background">
           <Router>
             <div className="">
-              {/* make a button to toggle the theme */}
+              {/* give props to toggle the theme */}
               <Navbar
                 getGame={getGame}
                 searchValue={searchValue}
                 setSearchValue={setSearchValue}
                 games={games}
                 toggleTheme={toggleTheme}
+                theme={theme}
               />
 
               <Searchbar
@@ -67,6 +67,7 @@ export default function App() {
                 searchValue={searchValue}
                 setSearchValue={setSearchValue}
                 games={games}
+                theme={theme}
               />
 
               {games
@@ -87,10 +88,16 @@ A voir
  */}
 
               <Routes>
-                <Route path="/" element={<Mainpage />} />
-                <Route path="/random/:randomID" element={<StillLost />} />
+                <Route path="/" element={<Mainpage theme={theme} />} />
+                <Route
+                  path="/random/:randomID"
+                  element={<StillLost theme={theme} />}
+                />
                 <Route path="/novelties" element={<Novelties />} />
-                <Route path="/favorites" element={<Favorites />} />
+                <Route
+                  path="/favorites"
+                  element={<Favorites theme={theme} />}
+                />
                 <Route
                   path="/platforms/:filtredListByPlatforms"
                   element={<FilteredbyPlatforms />}

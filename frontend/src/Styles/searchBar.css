@@ -2,13 +2,18 @@
   height: 5vh;
   width: 5vw;
   background-color: transparent;
-  color: var(--main-text-color);
   border: none;
 }
 .search {
   border-radius: 10px;
   background: var(--dark-element-background-color);
   box-shadow: inset -5px 5px 9px #0f0f0f, inset 5px -5px 9px #3a3a3abe;
+}
+
+.search-bar-light {
+  border-radius: 10px;
+  background: #eee;
+  box-shadow: inset -5px 5px 9px #d4d3d3, inset 5px -5px 9px #ffffffbe;
 }
 
 .search-bar::placeholder {
