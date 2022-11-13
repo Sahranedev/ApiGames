@@ -1,7 +1,8 @@
 /* eslint eqeqeq: 0 */
 
-import React from "react";
+import React, { useState } from "react";
 import "../Styles/favorite.css";
+import Modale from "./Modale";
 
 function FavoriteGame({ game }) {
   const removeStorage = () => {
@@ -10,18 +11,32 @@ function FavoriteGame({ game }) {
     window.localStorage.games = newData;
     window.location.reload();
   };
+  const [show, setShow] = useState(false);
   return (
     <div className="single-game">
       <div className="row">
         <div className="col-md-2 col-sm-2">
-          <img
-            src={game.background_image}
-            alt="game"
-            className="game-photo-lg"
-          />
+          <Modale show={show} setShow={setShow} id={game.id} />
+          <button
+            className="btn  pull-right"
+            type="button"
+            onClick={() => setShow(game.id)}
+          >
+            <img
+              src={game.background_image}
+              alt="game"
+              className="game-photo-lg"
+            />
+          </button>
         </div>
-        <div className="col-md-7 col-sm-7 py-4">
-          <h5>{game.name}</h5>
+        <div className="game-name col-md-7 col-sm-7 py-4">
+          <button
+            className="btn  pull-right"
+            type="button"
+            onClick={() => setShow(game.id)}
+          >
+            <h5>{game.name}</h5>
+          </button>
         </div>
         <div className="col-md-3 col-sm-3 py-3 ">
           <button
