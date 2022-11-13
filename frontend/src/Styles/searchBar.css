@@ -7,7 +7,7 @@
 }
 .search {
   border-radius: 10px;
-  background: var(--main-background-color);
+  background: var(--dark-element-background-color);
   box-shadow: inset -5px 5px 9px #0f0f0f, inset 5px -5px 9px #3a3a3abe;
 }
 

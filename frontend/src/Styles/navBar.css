@@ -1,13 +1,14 @@
 
 .dropdown-menu{
-  background-color: #feaa0e;
-  color: black;
-}
+  background-color: var(--punctuation-color);
+  }
 
+/* Special color for make the glass effect */
 .navbar {
-  background-color: #feaa0ea1;
-    -webkit-backdrop-filter: blur(1em);
-    backdrop-filter: blur(1em);
+  background-color: #FDAA0F;
+    -webkit-backdrop-filter: blur(0.5em);
+    backdrop-filter: blur(0.5em);
+    
 }
 
 .link-nav,
@@ -15,10 +16,7 @@
   cursor: pointer;
   opacity: 1;
 }
-.links-a:hover {
-  background-color: var(--second-background-color) !important;
-  opacity: 1;
-}
+
 
 .like-search {
   box-shadow: inset -5px 5px 9px #1e1e1e, inset 5px -5px 9px #3d3d3d;
@@ -40,4 +38,28 @@ a:hover {
 }
 .navbar-toggler:focus {
   color: transparent;
+}
+
+.form-check-input{
+  background-color: #eee;
+  
+}
+.form-check-input:checked{
+  background-color: #eee;
+  border : 1px solid black
+}
+
+.form-switch .form-check-input:checked{
+  background-color: #333;
+  border: none;
+}
+
+ .form-check-input .form-check-input:focus, .form-check-input:active{
+  box-shadow: none;
+  border: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280, 10, 0, 0.25%29'/%3e%3c/svg%3e") ;
+}
+
+.form-switch .form-check-input:focus {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280, 10, 0, 0.25%29'/%3e%3c/svg%3e");
 }

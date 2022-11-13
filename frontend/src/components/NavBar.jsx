@@ -2,7 +2,7 @@ import { NavLink, Link } from "react-router-dom";
 import "../Styles/navBar.css";
 import logoTest from "../images/LogoTest.png";
 
-function NavBar({ searchValue, setSearchValue, getGame }) {
+function NavBar({ searchValue, setSearchValue, getGame, toggleTheme }) {
   return (
     <nav className="navbar navbar-expand-md fixed-bottom sticky-md-top">
       <div className="container-fluid">
@@ -327,9 +327,27 @@ function NavBar({ searchValue, setSearchValue, getGame }) {
                 </li>
               </ul>
             </li>
+            {/* Toggle light mode or dark mode */}
+
+            <li className="dropdown-item d-flex justify-content-end justify-content-md-start">
+              <div className="form-check mx-3 form-switch mx-md-5 my-md-2 d-flex justify-content-end justify-content-md-start toggle-btn">
+                <input
+                  className="form-check-input"
+                  type="checkbox"
+                  onClick={toggleTheme}
+                  role="switch"
+                  id="flexSwitchCheckDefault"
+                />
+                <label
+                  className="form-check-label"
+                  htmlFor="flexSwitchCheckDefault"
+                />
+              </div>
+            </li>
           </ul>
 
           {/* Search Bar  */}
+
           <form className="d-flex  m-1 p-1 search" role="search">
             <input
               className="search-bar"

@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import useLocalStorage from "use-local-storage";
+
 import "./Styles/App.css";
 import StillLost from "@components/StillLost";
 import Navbar from "./components/NavBar";
@@ -22,6 +24,20 @@ const API_URL =
 export default function App() {
   const [searchValue, setSearchValue] = useState("");
   const [games, setGames] = useState([]);
+  /* Make a hook to get the theme */
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
+  const toggleTheme = () => {
+    if (theme === `dark`) {
+      setTheme(`light`);
+    } else {
+      setTheme(`dark`);
+    }
+  };
+  /* update on theme */
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+    document.body.className = theme;
+  }, [theme]);
 
   const getGame = () => {
     fetch(`${API_URL}&search=${searchValue}&page_size=5`)
@@ -31,33 +47,37 @@ export default function App() {
     setSearchValue("");
   };
   return (
-    <div className="App">
-      <Router>
-        <div className="">
-          <Navbar
-            getGame={getGame}
-            searchValue={searchValue}
-            setSearchValue={setSearchValue}
-            games={games}
-          />
+    <div className="App" data-theme={theme}>
+      <div className="first-background">
+        <div className="second-background">
+          <Router>
+            <div className="">
+              {/* make a button to toggle the theme */}
+              <Navbar
+                getGame={getGame}
+                searchValue={searchValue}
+                setSearchValue={setSearchValue}
+                games={games}
+                toggleTheme={toggleTheme}
+              />
 
-          <Searchbar
-            className="d-none d-md-block m-3 p-3"
-            getGame={getGame}
-            searchValue={searchValue}
-            setSearchValue={setSearchValue}
-            games={games}
-          />
+              <Searchbar
+                className="d-none d-md-block m-3 p-3"
+                getGame={getGame}
+                searchValue={searchValue}
+                setSearchValue={setSearchValue}
+                games={games}
+              />
 
-          {games
-            .filter((game) => game.name.includes(searchValue))
-            .map((game) => (
-              <p key={game.id} className="gameListParaph">
-                {game.name}
-              </p>
-            ))}
+              {games
+                .filter((game) => game.name.includes(searchValue))
+                .map((game) => (
+                  <p key={game.id} className="gameListParaph">
+                    {game.name}
+                  </p>
+                ))}
 
-          {/*  On veut que le Nav Bar et la Search Bar soient constamment présentes
+              {/*  On veut que le Nav Bar et la Search Bar soient constamment présentes
 Elles sont donc dans le Router et le Router lui-même dans App pour éviter tous les problèmes de routing.
 Pour plus de lisibilité on intégère les Routes dans app afin de ne pas avoir à les importer dans chaque page.
 Dans les Routes on ajoute la route "/" qu'il manquait et qui correspond à la page principale. On change également la route
@@ -66,28 +86,35 @@ Lors de l'arrivée de la WelcomePage, il faudra toutefois créer une page qui re
 A voir
  */}
 
-          <Routes>
-            <Route path="/" element={<Mainpage />} />
-            <Route path="/random/:randomID" element={<StillLost />} />
-            <Route path="/novelties" element={<Novelties />} />
-            <Route path="/favorites" element={<Favorites />} />
-            <Route
-              path="/platforms/:filtredListByPlatforms"
-              element={<FilteredbyPlatforms />}
-            />
-            <Route
-              path="/genres/:filtredListByGenre"
-              element={<FilteredbyGenre />}
-            />
-            <Route
-              path="/gamelist/"
-              element={<GameList searchValue={searchValue} gameList={games} />}
-            />
-            <Route path="/game/:id" element={<SingleGame games={games} />} />
-            <Route path="/news" element={<News games={games} />} />
-          </Routes>
+              <Routes>
+                <Route path="/" element={<Mainpage />} />
+                <Route path="/random/:randomID" element={<StillLost />} />
+                <Route path="/novelties" element={<Novelties />} />
+                <Route path="/favorites" element={<Favorites />} />
+                <Route
+                  path="/platforms/:filtredListByPlatforms"
+                  element={<FilteredbyPlatforms />}
+                />
+                <Route
+                  path="/genres/:filtredListByGenre"
+                  element={<FilteredbyGenre />}
+                />
+                <Route
+                  path="/gamelist/"
+                  element={
+                    <GameList searchValue={searchValue} gameList={games} />
+                  }
+                />
+                <Route
+                  path="/game/:id"
+                  element={<SingleGame games={games} />}
+                />
+                <Route path="/news" element={<News games={games} />} />
+              </Routes>
+            </div>
+          </Router>
         </div>
-      </Router>
+      </div>
     </div>
   );
 }
