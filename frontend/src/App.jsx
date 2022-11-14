@@ -91,7 +91,6 @@ A voir
               path="/random/:randomID"
               element={<StillLost theme={theme} />}
             />
-            <Route path="/novelties" element={<Novelties />} />
             <Route path="/favorites" element={<Favorites theme={theme} />} />
             <Route
               path="/platforms/:filtredListByPlatforms"
@@ -112,7 +111,10 @@ A voir
               }
             />
             <Route path="/game/:id" element={<SingleGame games={games} />} />
-            <Route path="/news" element={<News games={games} />} />
+            <Route
+              path="/news"
+              element={<News games={games} theme={theme} />}
+            />
           </Routes>
         </div>
       </Router>
