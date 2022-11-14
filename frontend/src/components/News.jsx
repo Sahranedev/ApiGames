@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import GameListDisplay from "./GameListDisplay";
 
-function News() {
+function News({ theme }) {
   /*   const API_URL = "https://api.rawg.io/api/games";
   const API_KEY = "b6d47b1b6d1d4e37a348869c6f3fa8a3"; */
   const [gameNews, setGameNews] = useState([]);
@@ -64,10 +64,12 @@ function News() {
   }, []);
 
   return (
-    <div>
+    <div className="vh-100 p-3 contain-fixed">
+      {" "}
+      <h2 className="m-3">Incoming Games :</h2>
       {/* On map la data stocké dans le state en y injectant en élément le spread de la propriété game */}
       {gameNews?.map((game) => (
-        <GameListDisplay {...game} key={game.id} />
+        <GameListDisplay {...game} key={game.id} theme={theme} />
       ))}
     </div>
   );

@@ -29,7 +29,7 @@ function FavoriteGame({ game, theme }) {
             />
           </button>
         </div>
-        <div className="game-name col-md-7 col-sm-7 py-4">
+        <div className={`game-name-${theme} col-md-7 col-sm-7 py-4`}>
           <button
             className="btn  pull-right"
             type="button"

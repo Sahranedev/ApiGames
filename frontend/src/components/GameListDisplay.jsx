@@ -1,12 +1,13 @@
 /* eslint-disable*/
 import React, { useState } from "react";
-import "../Styles/gameListStyle.css";
+import "../Styles/GameListDisplay.css";
 import GameGenreDisplay from "./GameGenreDisplay";
 import GameDateDisplay from "./GameDateDisplay";
 import Modale from "../Pages/Modale";
 import IMGnotFound from "../images/IMGnotFound.png";
 
 function GameListDisplay({
+  theme,
   // On extrait les propriétés qu'on veut afficher depuis le tableau de l'API
   name,
   background_image: backgroundImage,
@@ -36,56 +37,71 @@ function GameListDisplay({
   // Déploiment du State dynamique pour gérer l'affichage du modal
   const [show, setShow] = useState(false);
   return (
-    <div className="container mt-4">
+    <div className="container px-4 image-container">
       <Modale show={show} setShow={setShow} id={id} />
-      <div className="row">
-        <div className="col mb-2 pointer">
+      <div className={`row rounded my-3 cards-${theme}`}>
+        <div className="col-md-4  col-6 p-0 ">
           {backgroundImage ? (
             <img
-              className="img-fluid h-100"
+              className="img-fluid img-responsive rounded image-list"
+              style={{ maxHeight: "300px", minHeight: "150px" }}
               src={backgroundImage}
               alt="jeu"
               onClick={() => setShow(id)}
             />
           ) : (
             <img
-              className="img-fluid h-100"
+              className="img-fluid img-thumbnail"
               src={IMGnotFound}
               alt="not found"
               onClick={() => setShow(id)}
             />
           )}
         </div>
-        <div className="col">
-          <div className="d-flex align-items-center mb-2">
-            {/* Ternaire qui pose une condition sur l'affichage des scores metacritic */}
-            {metacritic ? (
-              <div className={colorCritic(metacritic)}>
-                <a href={metacriticUrl} target="_blank" rel="noreferrer">
-                  {metacritic}
-                </a>
+        <div className="col-md-8 col-6 px-2 px-md-3">
+          <div className="container p-1 ">
+            <div className="row">
+              {" "}
+              <h2
+                className="title-game-list col-md-11 col-8"
+                onClick={() => setShow(id)}
+              >
+                {name}{" "}
+              </h2>
+              <div className="col-md-6 col-2">
+                {metacritic ? (
+                  <div className={colorCritic(metacritic)}>
+                    <a href={metacriticUrl} target="_blank" rel="noreferrer">
+                      {metacritic}
+                    </a>
+                  </div>
+                ) : null}
               </div>
-            ) : null}
-            {/* Déclenchement d'une fonction click pour afficher le modal */}
-            <h2 className="ms-4 gameName pointer" onClick={() => setShow(id)}>
-              {name}{" "}
-            </h2>
+            </div>
+            {/*  Ternaire qui pose une condition d'affichage en appelant le
+              composant qui contient les dates de sorties */}
+            <div className="row-fluid ">
+              <span className="text-personalize">
+                {" "}
+                Released : {""}
+                {released ? <GameDateDisplay released={released} /> : null}
+              </span>
+            </div>
 
-            <div className="unFav" />
-          </div>
+            <div className="row-fluid ">
+              <span className="text-personalize">
+                {" "}
+                Platform : {""}
+                {platformeName}
+              </span>
+            </div>
+            {/* Ternaire qui pose une condition d'affichage en appelant le composant qui contient les genres */}
 
-          <div className="h5 mb-2">
-            <strong>Released : </strong>
-            {/* Ternaire qui pose une condition d'affichage en appelant le composant qui contient les dates de sorties */}
-            {released ? <GameDateDisplay released={released} /> : null}
-          </div>
-          <div className=" ">
-            <div className="">
-              {/* Ternaire qui pose une condition d'affichage en appelant le composant qui contient les genres */}
+            <div className="row-fluid d-flex flex-wrap text-personalize">
+              <div className="col-fluid"></div>
               {genres ? <GameGenreDisplay genres={genres} /> : null}
             </div>
           </div>
-          <div className="platform mx-3">{platformeName}</div>
         </div>
       </div>
     </div>
