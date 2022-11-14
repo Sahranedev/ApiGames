@@ -67,6 +67,9 @@ img.game-photo-lg {
   background-size: cover;
   background-repeat: none;
 }
+.game-name h5 {
+  color: white;
+}
 
 /*  background: rgb(41,41,41);
   background: linear-gradient(129deg, rgba(41,41,41,0.9570421918767507) 53%, rgba(248,172,30,1) 100%);     */

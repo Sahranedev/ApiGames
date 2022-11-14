@@ -14,7 +14,7 @@ function Favorites({ theme }) {
     const gameId = window.localStorage.games
       ? window.localStorage.games.split(",")
       : [];
-    // pour chaque id dans game id,faire un fetch
+    // pour chaque id dans gameId,faire un fetch
     /* eslint-disable-next-line no-plusplus */
     for (let i = 0; i < gameId.length; i++) {
       fetch(`${API_URL}/${gameId[i]}?key=${API_KEY}`)
@@ -30,6 +30,7 @@ function Favorites({ theme }) {
             <div className={`container p-md-5 favorite-container-${theme}`}>
               <div className="container">
                 <h2 className="p-md-5">Favorite</h2>
+                {/* si il y'a quelque chose dans listeData tu me le map sinon tu renvoit un h2 Nothing fav */}
                 {listData.length > 0 ? (
                   listData.map((game) => (
                     <FavoriteGame game={game} key={game.id} theme={theme} />

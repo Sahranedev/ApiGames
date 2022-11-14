@@ -22,6 +22,7 @@ function SingleGameDisplay({
   publishers,
   game,
 }) {
+  // use state qui va gere la classe du boutton like/unlike selon si le jeux est en favoris
   const [isFavorite, setIsFavorite] = useState(false);
   const colorCritic = () => {
     if (metacritic >= 75) {
@@ -32,17 +33,21 @@ function SingleGameDisplay({
     }
     return "metacritic039";
   };
+  // fonction qui va stocker l'id du jeux dans le localstorage
   const addStorage = () => {
+    // var storedData qui contiendra la liste games du local storage,la ternaire check si il y'a quelque chose dans la liste games du localStorage
+    // si oui elle renvoi un tableau split par une "," sinon revoie un tableau vide []
     let storedData = window.localStorage.games
       ? window.localStorage.games.split(",")
       : [];
-
+    // si la var storedData ne contien pas deja l'id clické alors tu le push dans stored data en tant que string  puis le locale storage recoit les donné de storedData
     if (!storedData.includes(game.id.toString())) {
       storedData.push(game.id);
       window.localStorage.games = storedData;
     }
     setIsFavorite(!isFavorite);
   };
+  // fonction pour delete un id de jeux du localStorage
   const removeStorage = () => {
     let storedData = window.localStorage.games.split(",");
     let newData = storedData.filter((id) => id != game.id);
