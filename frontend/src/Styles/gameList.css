@@ -1,3 +1,6 @@
-.game-list {
+/* .game-list {
   margin-bottom: 5vh;
 }
+ */
+
+ .contain-fixed {min-height: -webkit-fill-available}

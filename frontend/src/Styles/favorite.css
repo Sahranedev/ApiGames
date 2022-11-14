@@ -39,17 +39,22 @@ img.game-photo-lg {
   width: 80px;
 }
 
-.favorite-container-dark {
-  height: 100vh;
-  background: #292929;
-  box-shadow: #121212 0px 0px 10px 0px;
+@media screen and (min-width: 800px) {
+  .favorite-container-dark {
+    height: 100vh;
+    background: #292929;
+    box-shadow: #121212 0px 0px 10px 0px;
+  }
+  
+  .favorite-container-light {
+    height: 100vh;
+    background: #eee;
+    box-shadow: #a09e9efe 0px 0px 15px 4px;
+  }
+  
 }
 
-.favorite-container-light {
-  height: 100vh;
-  background: #eee;
-  box-shadow: #a09e9efe 0px 0px 15px 4px;
-}
+
 
 .unlike {
   width: 2rem;
@@ -67,9 +72,10 @@ img.game-photo-lg {
   background-size: cover;
   background-repeat: none;
 }
-.game-name h5 {
-  color: white;
+.game-name-dark h5 {
+ color: #eee;
 }
 
-/*  background: rgb(41,41,41);
-  background: linear-gradient(129deg, rgba(41,41,41,0.9570421918767507) 53%, rgba(248,172,30,1) 100%);     */
+.game-name-light h5 {
+  color: #333;
+ }

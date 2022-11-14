@@ -1,6 +1,7 @@
 :root {
   /* Variable for main theme - Dark theme */
-  --dark-main-background-color: linear-gradient(
+  --dark-main-background-color: #333;
+   /* linear-gradient(
     45deg,
     hsl(0deg 0% 0%) 0%,
     hsl(344deg 0% 0%) 0%,
@@ -26,7 +27,7 @@
     hsl(38deg 68% 43%) 100%,
     hsl(38deg 73% 49%) 100%,
     hsl(39deg 94% 55%) 100% 
-  );
+  ); */
   --dark-element-background-color: #121212;
   --dark-main-text-color: #e8e8e8;
 
@@ -34,7 +35,7 @@
   --special-color: #f8ac1e;
  
 /* Variables for light theme color */
-  --light-main-background-color: linear-gradient(34deg, rgba(255,255,255,1) 7%, rgba(238,238,238,1) 87%, rgba(253,170,15,1) 99%);
+  --light-main-background-color: #eee; /* linear-gradient(34deg, rgba(255,255,255,1) 7%, rgba(238,238,238,1) 87%, rgba(253,170,15,1) 99%); */
   --light-element-background-color: #eee;
   --light-main-text-color: #2e2e2e;
 
@@ -51,7 +52,7 @@ body {
 }
 
 .light {
-  background: linear-gradient(34deg, rgba(255,255,255,1) 7%, rgba(238,238,238,1) 87%, rgba(253,170,15,1) 99%);
+  background: #eee;
   color : var(--light-main-text-color);
 }
 

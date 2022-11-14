@@ -23,12 +23,12 @@ function Favorites({ theme }) {
     }
   }, []);
   return (
-    <div className="container h-100 md-p-5 ">
+    <div className="container vh-100 md-p-5 ">
       <div className="row">
         <div className="col">
           <div className={`game-list-favorite-${theme}`}>
             <div
-              className={`container p-md-5 h-100 favorite-container-${theme}`}
+              className={`container p-md-5 vh-100 favorite-container-${theme}`}
             >
               <div className="container">
                 <h2 className="p-md-5">Favorite</h2>

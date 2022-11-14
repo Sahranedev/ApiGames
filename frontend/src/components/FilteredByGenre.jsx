@@ -4,7 +4,7 @@ import GameListAffichage from "./GameListDisplay";
 import ButtonOrder from "./ButtonOrder";
 import LinkToMainPage from "./LinkToMainPage";
 
-function FiltredByGenre() {
+function FiltredByGenre({ theme }) {
   const API_URL = "https://api.rawg.io/api/games";
   const API_KEY = "b6d47b1b6d1d4e37a348869c6f3fa8a3";
 
@@ -67,15 +67,21 @@ function FiltredByGenre() {
 
   return (
     <div>
-      <div className="row d-flex justify-content-between ml-5 mr-5">
-        <h2 className="col-10">Filtred games by " {filtredListByGenre} "</h2>
-        <LinkToMainPage />
-        <ButtonOrder order={order} setOrder={setOrder} />
+      <div className="row d-flex justify-content-between ml-5 mr-5 p-3">
+        <h2 className="col-10">Filtered {filtredListByGenre} games</h2>
+        <div className="container ">
+          <div className="d-flex flex-row justify-content-center">
+            <ButtonOrder order={order} setOrder={setOrder} />
+            <div className="">
+              <LinkToMainPage />
+            </div>
+          </div>
+        </div>
         <div className="col-1" />
       </div>
 
       {gamesFiltred?.map((game) => (
-        <GameListAffichage {...game} key={game.id} />
+        <GameListAffichage {...game} key={game.id} theme={theme} />
       ))}
     </div>
   );
