@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../Styles/searchBar.css";
 
-function SearchBar({ searchValue, setSearchValue, getGame }) {
+function SearchBar({ searchValue, setSearchValue, getGame, theme }) {
   return (
-    <div className="d-md-none m-3 p-3 search">
-      <form className="d-flex d-md-none  m-1 p-1 " role="search">
+    <div className={`d-md-none m-3 p-3 search search-bar-${theme}`}>
+      <form className={`d-flex d-md-none  m-1 p-1 `} role="search">
         {/* Take the input on change to find make a game list */}
         <input
           value={searchValue}

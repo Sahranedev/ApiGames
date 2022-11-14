@@ -8,7 +8,7 @@ function GameGenreDisplay({ genres: genre }) {
 
         {genre.map((el, i) => (
           // eslint-disable-next-line react/no-array-index-key
-          <li className="genreList mb-4" key={i}>
+          <li className="genreList my-4 mx-3" key={i}>
             {el.name}
           </li>
         ))}

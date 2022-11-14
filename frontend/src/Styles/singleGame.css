@@ -11,15 +11,7 @@
   min-height: 50ch;
 }
 /* 
-.rounded {
-  border-collapse: separate; 
-  perspective: 1px;
-  overflow: hidden;
-  border: 1px solid red;
-  -webkit-border-radius: 100px 100px 0px 0px;
-  -moz-border-radius: 100px 100px 0px 0px;
-  border-radius: 100px 100px 0px 0px;
-} */
+
 /******* GLOBAL SINGLE GAME PARAMETERS ******/
 .gamePageContainer {
   box-sizing: border-box;
@@ -145,8 +137,8 @@ a {
   width: 4rem;
   height: 2rem;
   border-radius: 5px;
-  background: var(--second-background-color);
-  color: var(--main-background-color);
+  background: var( --special-color);
+  color: var(--light-main-text-color);
 }
 
 /******* LIKE GAME ********/

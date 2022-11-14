@@ -5,7 +5,7 @@ import FavoriteGame from "./FavoriteGame";
 const API_URL = "https://api.rawg.io/api/games";
 const API_KEY = "b6d47b1b6d1d4e37a348869c6f3fa8a3";
 
-function Favorites() {
+function Favorites({ theme }) {
   // useState qui va contenir la liste des jeux mis en favoris sur le localStorage
   const [listData, setListData] = useState([]);
 
@@ -14,7 +14,7 @@ function Favorites() {
     const gameId = window.localStorage.games
       ? window.localStorage.games.split(",")
       : [];
-    // pour chaque id dans game id,faire un fetch
+    // pour chaque id dans gameId,faire un fetch
     /* eslint-disable-next-line no-plusplus */
     for (let i = 0; i < gameId.length; i++) {
       fetch(`${API_URL}/${gameId[i]}?key=${API_KEY}`)
@@ -23,16 +23,19 @@ function Favorites() {
     }
   }, []);
   return (
-    <div className="container md-p-5 ">
+    <div className="container h-100 md-p-5 ">
       <div className="row">
         <div className="col">
-          <div className="game-list-favorite">
-            <div className="container p-md-5 favorite-container">
+          <div className={`game-list-favorite-${theme}`}>
+            <div
+              className={`container p-md-5 h-100 favorite-container-${theme}`}
+            >
               <div className="container">
                 <h2 className="p-md-5">Favorite</h2>
+                {/* si il y'a quelque chose dans listeData tu me le map sinon tu renvoit un h2 Nothing fav */}
                 {listData.length > 0 ? (
                   listData.map((game) => (
-                    <FavoriteGame game={game} key={game.id} />
+                    <FavoriteGame game={game} key={game.id} theme={theme} />
                   ))
                 ) : (
                   <h2>Nothing fav for the moments</h2>

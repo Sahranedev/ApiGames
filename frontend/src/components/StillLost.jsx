@@ -7,7 +7,7 @@ import LinkToMainPage from "./LinkToMainPage";
 import IMGnotFound from "../images/IMGnotFound.png";
 import "../Styles/stillLost.css";
 
-function StillLost() {
+function StillLost({ theme }) {
   const API_URL = "https://api.rawg.io/api/games";
   const API_KEY = "b6d47b1b6d1d4e37a348869c6f3fa8a3";
   const { randomID } = useParams();
@@ -36,7 +36,7 @@ function StillLost() {
   }, [newRandomID]);
 
   return (
-    <div className="container-md vh-100 p-5 rounded still-container">
+    <div className={`container-md p-5 rounded still-container-${theme}`}>
       <LinkToMainPage />
       <div className="row">
         {/* Title */}
@@ -52,13 +52,13 @@ function StillLost() {
         {randomGame ? (
           <img
             src={randomGame.background_image}
-            className="col-fluid col-md-6 img-responsive  random-img"
-            alt="..."
+            className={`col-fluid col-md-6 img-responsive  random-img-${theme}`}
+            alt="Title of the game"
           />
         ) : (
           <img
             src={IMGnotFound}
-            className="col-fluid col-md-6 img-responsive  random-img"
+            className={`col-fluid col-md-6 img-responsive  random-img-${theme}`}
             alt="not found"
           />
         )}
@@ -70,24 +70,24 @@ function StillLost() {
             </div>
             {/* I want to display the name of the publishers */}
             <div className="row my-md-5">
+              Publishers :{" "}
               {randomGame
-                ? `Publishers : ${randomGame.publishers.map(
-                    (publisher) => publisher.name
-                  )}`
+                ? randomGame.publishers?.map((publisher) => publisher.name) ||
+                  `Publishers not found`
                 : null}
             </div>
             {/* I want to display the release date */}
             <div className="row my-md-5">
-              Released : {randomGame ? randomGame.released : null}
+              Released : {randomGame ? randomGame.released : "Date not found"}
             </div>
             {/* I want to display genres */}
             <div className="row my-md-5 md-flex align-items-md-center">
               Genres :{" "}
               {randomGame
-                ? randomGame.genres.map((genre) => (
+                ? randomGame.genres?.map((genre) => (
                     <li className="genreList mx-1 my-1">{genre.name}</li>
-                  ))
-                : null}
+                  )) || "Genre not found"
+                : "The game is deleted"}
             </div>
           </div>
         </div>
