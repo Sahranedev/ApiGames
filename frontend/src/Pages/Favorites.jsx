@@ -23,7 +23,7 @@ function Favorites() {
     }
   }, []);
   return (
-    <div className="container md-p-5 ">
+    <div className="container vh-100 md-p-5 ">
       <div className="row">
         <div className="col">
           <div className="game-list-favorite">
