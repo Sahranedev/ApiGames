@@ -52,21 +52,13 @@
   color : var(--light-main-text-color);
 }
 
-html {
-  background: var(--dark-main-background-color);
-}
 body {
   margin: 0;
   padding: 0;
   height: 100%;
   overflow-x: hidden;  
-}
 
-body {
-  font-family: "Inter", sans-serif;
-}
-
-body {font-family: 'Inter', sans-serif;}
+font-family: 'Inter', sans-serif;}
 h1, h2, h3, h4, h5, h6 {font-family: 'Montserrat', sans-serif;}
 
 
