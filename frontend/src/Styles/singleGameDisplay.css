@@ -18,3 +18,9 @@
 .gamePageDetails {
   margin-bottom: 2em;
 }
+
+.singleGameImage {
+  width: 82%;
+  max-height: 100%;
+  aspect-ratio: auto;
+}

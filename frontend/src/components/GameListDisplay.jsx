@@ -36,7 +36,7 @@ function GameListDisplay({
   // Déploiment du State dynamique pour gérer l'affichage du modal
   const [show, setShow] = useState(false);
   return (
-    <div className="container">
+    <div className="container mt-4">
       <Modale show={show} setShow={setShow} id={id} />
       <div className="row">
         <div className="col mb-2 pointer">
@@ -85,7 +85,7 @@ function GameListDisplay({
               {genres ? <GameGenreDisplay genres={genres} /> : null}
             </div>
           </div>
-          <div className="platform">{platformeName}</div>
+          <div className="platform mx-3">{platformeName}</div>
         </div>
       </div>
     </div>

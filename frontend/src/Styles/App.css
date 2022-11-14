@@ -62,6 +62,15 @@ body {
   overflow-x: hidden;  
 }
 
+body {
+  font-family: "Inter", sans-serif;
+}
 
-body {font-family: 'Inter', sans-serif !important;}
-h1, h2, h3, h4, h5, h6 {font-family: 'Montserrat', sans-serif !important;}
+body {font-family: 'Inter', sans-serif;}
+h1, h2, h3, h4, h5, h6 {font-family: 'Montserrat', sans-serif;}
+
+
+/*font-family: 'Chivo', sans-serif;
+font-family: 'Lora', serif;
+font-family: 'Montserrat', sans-serif;
+*/
