@@ -5,7 +5,7 @@ import FavoriteGame from "./FavoriteGame";
 const API_URL = "https://api.rawg.io/api/games";
 const API_KEY = "b6d47b1b6d1d4e37a348869c6f3fa8a3";
 
-function Favorites() {
+function Favorites({ theme }) {
   // useState qui va contenir la liste des jeux mis en favoris sur le localStorage
   const [listData, setListData] = useState([]);
 
@@ -26,13 +26,13 @@ function Favorites() {
     <div className="container vh-100 md-p-5 ">
       <div className="row">
         <div className="col">
-          <div className="game-list-favorite">
-            <div className="container p-md-5 favorite-container">
+          <div className={`game-list-favorite-${theme}`}>
+            <div className={`container p-md-5 favorite-container-${theme}`}>
               <div className="container">
                 <h2 className="p-md-5">Favorite</h2>
                 {listData.length > 0 ? (
                   listData.map((game) => (
-                    <FavoriteGame game={game} key={game.id} />
+                    <FavoriteGame game={game} key={game.id} theme={theme} />
                   ))
                 ) : (
                   <h2>Nothing fav for the moments</h2>

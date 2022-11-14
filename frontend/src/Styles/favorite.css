@@ -4,18 +4,32 @@
   border: none;
 }
 
-.game-list-favorite .single-game {
+.game-list-favorite-dark .single-game-dark {
   padding: 20px;
   background: rgb(41, 41, 41);
   background: linear-gradient(
     129deg,
-    rgba(41, 41, 41, 1) 53%,
-    rgba(248, 172, 30, 1) 100%
+    rgba(41, 41, 41, 1) 70%,
+    rgba(243, 161, 10, 0.4) 100%
   );
   box-shadow: #1e1e1e 0px 0px 10px 0px;
   border-radius: 7px;
   margin-bottom: 20px;
 }
+
+.game-list-favorite-light .single-game-light {
+  padding: 20px;
+  background: #eee;
+  background: linear-gradient(
+    129deg,
+    #eee 73%,
+    rgba(248, 172, 30, 0.4) 100%
+  );
+  box-shadow:  #a09e9efe 0px 0px 15px 4px;
+  border-radius: 7px;
+  margin-bottom: 20px;
+}
+
 
 .single-game {
   width: auto;
@@ -25,10 +39,16 @@ img.game-photo-lg {
   width: 80px;
 }
 
-.favorite-container {
+.favorite-container-dark {
   height: 100vh;
   background: #292929;
   box-shadow: #121212 0px 0px 10px 0px;
+}
+
+.favorite-container-light {
+  height: 100vh;
+  background: #eee;
+  box-shadow: #a09e9efe 0px 0px 15px 4px;
 }
 
 .unlike {

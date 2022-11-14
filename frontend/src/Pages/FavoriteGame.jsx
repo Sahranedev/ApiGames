@@ -3,7 +3,7 @@
 import React from "react";
 import "../Styles/favorite.css";
 
-function FavoriteGame({ game }) {
+function FavoriteGame({ game, theme }) {
   const removeStorage = () => {
     const storedData = window.localStorage.games.split(",");
     const newData = storedData.filter((id) => id != game.id);
@@ -11,7 +11,7 @@ function FavoriteGame({ game }) {
     window.location.reload();
   };
   return (
-    <div className="single-game">
+    <div className={`single-game-${theme}`}>
       <div className="row">
         <div className="col-md-2 col-sm-2">
           <img
