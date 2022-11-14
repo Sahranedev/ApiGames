@@ -52,13 +52,13 @@ function StillLost({ theme }) {
         {randomGame ? (
           <img
             src={randomGame.background_image}
-            className="col-fluid col-md-6 img-responsive  random-img"
+            className={`col-fluid col-md-6 img-responsive  random-img-${theme}`}
             alt="Title of the game"
           />
         ) : (
           <img
             src={IMGnotFound}
-            className="col-fluid col-md-6 img-responsive  random-img"
+            className={`col-fluid col-md-6 img-responsive  random-img-${theme}`}
             alt="not found"
           />
         )}

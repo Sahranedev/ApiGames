@@ -10,10 +10,15 @@ box-shadow: #110f0ffe 0px 0px 15px 4px;
     }
 }
 
-.random-img {
+.random-img-dark{
   padding: 0;
   border-radius: 10px;
   box-shadow: #0c0c0c 0px 0px 10px 3px;
+}
+.random-img-light {
+  padding: 0;
+  border-radius: 10px;
+  box-shadow: #6b6a6a 0px 0px 10px 3px;
 }
 
 .random-img:hover {
