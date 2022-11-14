@@ -109,7 +109,11 @@ A voir
                 <Route
                   path="/gamelist/"
                   element={
-                    <GameList searchValue={searchValue} gameList={games} />
+                    <GameList
+                      searchValue={searchValue}
+                      gameList={games}
+                      theme={theme}
+                    />
                   }
                 />
                 <Route
