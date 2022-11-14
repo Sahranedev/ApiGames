@@ -23,11 +23,13 @@ function Favorites({ theme }) {
     }
   }, []);
   return (
-    <div className="container vh-100 md-p-5 ">
+    <div className="container h-100 md-p-5 ">
       <div className="row">
         <div className="col">
           <div className={`game-list-favorite-${theme}`}>
-            <div className={`container p-md-5 favorite-container-${theme}`}>
+            <div
+              className={`container p-md-5 h-100 favorite-container-${theme}`}
+            >
               <div className="container">
                 <h2 className="p-md-5">Favorite</h2>
                 {/* si il y'a quelque chose dans listeData tu me le map sinon tu renvoit un h2 Nothing fav */}
