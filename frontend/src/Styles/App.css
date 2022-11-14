@@ -27,7 +27,7 @@
     hsl(38deg 73% 49%) 100%,
     hsl(39deg 94% 55%) 100% 
   );
-  --dark-element-background-color: #333;
+  --dark-element-background-color: #121212;
   --dark-main-text-color: #e8e8e8;
 
 /* Variable for specials colours  */
@@ -52,10 +52,13 @@
   color : var(--light-main-text-color);
 }
 
-
+html {
+  background: var(--dark-main-background-color);
+}
 body {
   margin: 0;
-  height: 100vh;
+  padding: 0;
+  height: 100%;
   overflow-x: hidden;  
 }
 

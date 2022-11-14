@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "../Styles/mainpage.css";
 
-function MainPage({ theme }) {
+function MainPage() {
   // Function to get a random game from the API from the mainpage
   const [randomID, setRandomID] = useState(Math.floor(Math.random() * 1000));
 

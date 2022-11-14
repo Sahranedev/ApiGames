@@ -46,7 +46,7 @@ export default function App() {
     setSearchValue("");
   };
   return (
-    <div className={`App ${theme}`}>
+    <div className={`App  ${theme}`}>
       <div className="first-background">
         <div className="second-background">
           <Router>
