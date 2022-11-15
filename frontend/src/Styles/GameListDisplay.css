@@ -1,17 +1,16 @@
-
 @media screen and (max-width: 800px) {
-  .title-game-list{
-  font-size: 1em;
-  cursor: pointer;}
+  .title-game-list {
+    font-size: 1em;
+    cursor: pointer;
+  }
 
-  .text-personalize{
+  .text-personalize {
     font-size: 0.8em;
   }
 
-  .image-container{
+  .image-container {
     margin-top: 1.5em;
   }
-
 }
 .button-personalize {
   margin: 0.4em;
@@ -21,15 +20,15 @@
   padding-bottom: 100%;
   margin-bottom: -100%;
 }
-  
-  .title-game-list{
-    cursor: pointer;
-  }
 
-  .image-list{
-box-shadow: rgb(63, 63, 63) 0px 0px 5px;
-cursor: pointer;
-  }
+.title-game-list {
+  cursor: pointer;
+}
+
+.image-list {
+  box-shadow: rgb(63, 63, 63) 0px 0px 5px;
+  cursor: pointer;
+}
 
 .cards-dark {
   background-color: rgb(32, 32, 32);
@@ -41,10 +40,9 @@ cursor: pointer;
   box-shadow: rgb(161, 161, 161) 0px 0px 10px;
 }
 
-
 /********* Metacritic Button ********/
 
- .metacriticGreen {
+.metacriticGreen {
   margin-left: 0.1em;
   display: flex;
   align-items: center;
@@ -97,4 +95,3 @@ cursor: pointer;
   font-weight: bolder;
   color: white;
 }
- 

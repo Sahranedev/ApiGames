@@ -9,7 +9,6 @@ import FilteredbyGenre from "./components/FilteredByGenre";
 import SingleGame from "./components/SingleGame";
 import GameList from "./components/GameList";
 import Searchbar from "./components/SearchBar";
-import Novelties from "./components/Novelties";
 import Favorites from "./Pages/Favorites";
 import FilteredbyPlatforms from "./components/FilteredByPlatforms";
 import News from "./components/News";

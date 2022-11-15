@@ -1,16 +1,16 @@
 @media screen and (min-width: 768px) {
-.still-container-dark {
-background : #28282889;
-box-shadow: #110f0ffe 0px 0px 15px 4px; 
-}
-    
-.still-container-light {
-    background : #eee;
-    box-shadow: #a09e9efe 0px 0px 15px 4px; 
-    }
+  .still-container-dark {
+    background: #28282889;
+    box-shadow: #110f0ffe 0px 0px 15px 4px;
+  }
+
+  .still-container-light {
+    background: #eee;
+    box-shadow: #a09e9efe 0px 0px 15px 4px;
+  }
 }
 
-.random-img-dark{
+.random-img-dark {
   padding: 0;
   border-radius: 10px;
   box-shadow: #0c0c0c 0px 0px 10px 3px;
@@ -53,4 +53,3 @@ box-shadow: #110f0ffe 0px 0px 15px 4px;
   border: none;
   background-color: transparent;
 }
-

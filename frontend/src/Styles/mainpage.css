@@ -15,3 +15,21 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+button {
+  border: none;
+  background: none;
+  text-decoration: underline;
+  text-decoration-color: #fdaa0feb;
+  color: white;
+}
+
+img.game-photo {
+  height: 25vh;
+  width: 30vw;
+}
+.news-img {
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+}

@@ -3,4 +3,6 @@
 }
  */
 
- .contain-fixed {min-height: -webkit-fill-available}
+.contain-fixed {
+  min-height: -webkit-fill-available;
+}

@@ -137,7 +137,7 @@ a {
   width: 4rem;
   height: 2rem;
   border-radius: 5px;
-  background: var( --special-color);
+  background: var(--special-color);
   color: var(--light-main-text-color);
 }
 

@@ -1,14 +1,12 @@
-
-.dropdown-menu{
+.dropdown-menu {
   background-color: var(--special-color);
-  }
+}
 
 /* Special color for make the glass effect */
 .navbar {
   background-color: #fdaa0feb;
-    -webkit-backdrop-filter: blur(0.2em);
-    backdrop-filter: blur(0.2em);
-    
+  -webkit-backdrop-filter: blur(0.2em);
+  backdrop-filter: blur(0.2em);
 }
 
 .link-nav,
@@ -16,7 +14,6 @@
   cursor: pointer;
   opacity: 1;
 }
-
 
 .like-search {
   box-shadow: inset -5px 5px 9px #1e1e1e, inset 5px -5px 9px #3d3d3d;
@@ -40,27 +37,25 @@ a:hover {
   color: transparent;
 }
 
-.form-check-input{
+.form-check-input {
   background-color: rgb(52, 52, 52);
-  border : none;
-  
-  
+  border: none;
 }
-.form-check-input:checked{
+.form-check-input:checked {
   background-color: #eee;
-  border : 1px solid black;
- 
+  border: 1px solid black;
 }
 
-.form-switch .form-check-input:checked{
+.form-switch .form-check-input:checked {
   background-color: #eee;
   border: none;
 }
 
- .form-check-input .form-check-input:focus, .form-check-input:active{
+.form-check-input .form-check-input:focus,
+.form-check-input:active {
   box-shadow: none;
   border: none;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280, 10, 0, 0.80%29'/%3e%3c/svg%3e") ;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280, 10, 0, 0.80%29'/%3e%3c/svg%3e");
 }
 
 .form-switch .form-check-input:focus {
