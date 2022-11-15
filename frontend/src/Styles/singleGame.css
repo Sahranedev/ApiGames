@@ -4,6 +4,17 @@
 
 }
 
+.bglight{
+  background-color: #eee;
+  color : #333;
+}
+
+.bgdark{
+  background-color: #333;
+  color : #eee;
+
+}
+
 @media screen and (max-width: 768px) {
 
   .carousel-item img {
@@ -12,7 +23,7 @@
     width: 100%;
     top: 0;
     left: 0;
-    min-height: 60ch;
+    min-height: 50ch;
   }
 }
   
@@ -25,7 +36,7 @@
   width: 100vw;
   top: 0;
   left: 0;
-  min-height: 60ch;
+  min-height: 50ch;
 }
 /* 
 
@@ -122,9 +133,6 @@ a {
 }
 
 
-.carrouselcontain{
-min-height: 60ch;
-}
 /******* OTHER IMAGE FROM GAME *******/
 /* make a little image for now, cause will see for carousel with main image */
 .otherImage {

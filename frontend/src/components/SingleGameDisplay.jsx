@@ -10,6 +10,7 @@ import GamePublishersDetails from "./GamePublishersDetails";
 import IMGnotFound from "../images/IMGnotFound.png";
 
 function SingleGameDisplay({
+  theme,
   name_original: nameOriginal,
   background_image: gameImage,
   background_image_additional: additionalGameImage,
@@ -56,7 +57,9 @@ function SingleGameDisplay({
   };
   /* In this page : ternary to check elements given by props */
   return (
-    <div className="carouselContainer container-fluid g-0 singleGameContainer bg-dark h-100 w-100">
+    <div
+      className={`carouselContainer container-fluid g-0 singleGameContainer h-100 w-100 bg${theme}`}
+    >
       {/*   Carrousel  */}
       <div className="container w-60 carrouselcontain">
         <div
@@ -64,7 +67,9 @@ function SingleGameDisplay({
           className="carousel slide carousel-fade"
           data-bs-ride="carousel"
         >
-          <div className="container-fluid g-0 singleGameContainer bg-dark h-100 w-100">
+          <div
+            className={`container-fluid g-0 singleGameContainer bg${theme} h-100 w-100`}
+          >
             <div
               id="carouselExampleFade"
               className="carousel slide carousel-fade"
@@ -144,7 +149,7 @@ function SingleGameDisplay({
             ) : null}
 
             {nameOriginal ? (
-              <h2 className="text-white text-center">{nameOriginal}</h2>
+              <h2 className="text-center">{nameOriginal}</h2>
             ) : null}
             {isFavorite ? (
               <div onClick={removeStorage} className="like text-center" />
@@ -159,7 +164,7 @@ function SingleGameDisplay({
 
             <div className="container-fluid">
               <div className="d-flex justify-content-center justify-content-md-around">
-                <p className=" col-md-4 text-center mx-3 text-white">
+                <p className=" col-md-4 text-center mx-3">
                   Publisher :
                   {publishers ? (
                     publishers.length > 0 ? (
@@ -169,7 +174,7 @@ function SingleGameDisplay({
                     )
                   ) : null}
                 </p>
-                <p className="col-md-4 text-center mx-3 text-white">
+                <p className="col-md-4 text-center mx-3">
                   Developer :
                   {developers ? (
                     developers.length > 0 ? (
@@ -179,14 +184,14 @@ function SingleGameDisplay({
                     )
                   ) : null}
                 </p>
-                <p className=" col-md-4 text-center mx-3 text-white">
+                <p className=" col-md-4 text-center mx-3">
                   Released :{" "}
                   {released ? <GameDateDetails released={released} /> : null}
                 </p>
               </div>
             </div>
           </div>
-          <div className="gamePageDescription text-white">
+          <div className="gamePageDescription">
             {description ? (
               <GameParaphDetails description={description} />
             ) : null}

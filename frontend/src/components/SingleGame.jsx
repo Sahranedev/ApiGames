@@ -7,7 +7,7 @@ const API_KEY = "b6d47b1b6d1d4e37a348869c6f3fa8a3";
 /* b6d47b1b6d1d4e37a348869c6f3fa8a3
 13e525c42c04986ac0747dddec96609 */
 
-function SingleGame({ id }) {
+function SingleGame({ id, theme }) {
   const [game, setGame] = useState([]);
 
   const getSingleGame = async () => {
@@ -22,7 +22,7 @@ function SingleGame({ id }) {
 
   return (
     <div>
-      <SingleGameDisplay game={game} {...game} />
+      <SingleGameDisplay game={game} {...game} theme={theme} />
     </div>
   );
 }

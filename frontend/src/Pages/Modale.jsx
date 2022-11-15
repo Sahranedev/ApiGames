@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 import SingleGame from "../components/SingleGame";
 import "../Styles/modale.css";
 
-function Modale({ show, setShow, id }) {
+function Modale({ show, setShow, id, theme }) {
   const values = ["xxl-down"];
   const [fullscreen, setFullscreen] = useState(true);
 
@@ -28,8 +28,11 @@ function Modale({ show, setShow, id }) {
         fullscreen={fullscreen}
         onHide={() => setShow(false)}
       >
-        <Modal.Header className="bg-dark close-btn mh-100 mw-100" closeButton />
-        <SingleGame id={id} />
+        <Modal.Header
+          className={`bg${theme} close-btn mh-100 mw-100`}
+          closeButton
+        />
+        <SingleGame id={id} theme={theme} />
       </Modal>
     </div>
   );
