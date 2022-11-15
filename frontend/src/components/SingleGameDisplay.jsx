@@ -58,7 +58,7 @@ function SingleGameDisplay({
   return (
     <div className="carouselContainer container-fluid g-0 singleGameContainer bg-dark h-100 w-100">
       {/*   Carrousel  */}
-      <div className="container w-60">
+      <div className="container w-60 carrouselcontain">
         <div
           id="carouselExampleFade"
           className="carousel slide carousel-fade"
@@ -134,7 +134,7 @@ function SingleGameDisplay({
       {/* Text informations */}
       <div className="totalPresentation @include media-breakpoint-up(md) { shadow-lg p-3 mb-5 rounded }">
         <div className=".md-container rounded">
-          <div className="gamePageTitle mt-3 text-center">
+          <div className="gamePageTitle mt-3 text-center d-flex flex-wrap flex-md-no-wrap">
             {metacritic ? (
               <div className={`text-white ${colorCritic(metacritic)}`}>
                 <a href={metacriticUrl} target="_blank" rel="noreferrer">
@@ -157,9 +157,9 @@ function SingleGameDisplay({
               {genres ? <GameGenreDetails genres={genres} /> : null}
             </div>
 
-            <div className="container">
-              <div className="row">
-                <h3 className="h5 col-4 text-center text-white">
+            <div className="container-fluid">
+              <div className="d-flex justify-content-center justify-content-md-around">
+                <p className=" col-md-4 text-center mx-3 text-white">
                   Publisher :
                   {publishers ? (
                     publishers.length > 0 ? (
@@ -168,8 +168,8 @@ function SingleGameDisplay({
                       " not specified "
                     )
                   ) : null}
-                </h3>
-                <h3 className="h5 col-4 text-center text-white">
+                </p>
+                <p className="col-md-4 text-center mx-3 text-white">
                   Developer :
                   {developers ? (
                     developers.length > 0 ? (
@@ -178,11 +178,11 @@ function SingleGameDisplay({
                       " not specified "
                     )
                   ) : null}
-                </h3>
-                <h3 className="h5 col-4 text-center text-white">
+                </p>
+                <p className=" col-md-4 text-center mx-3 text-white">
                   Released :{" "}
                   {released ? <GameDateDetails released={released} /> : null}
-                </h3>
+                </p>
               </div>
             </div>
           </div>

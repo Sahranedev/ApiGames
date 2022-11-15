@@ -1,14 +1,31 @@
 .carousel .carousel-item {
   height: 60vh;
   width: 100vw;
+
 }
 
+@media screen and (max-width: 768px) {
+
+  .carousel-item img {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    top: 0;
+    left: 0;
+    min-height: 60ch;
+  }
+}
+  
+
+
 .carousel-item img {
-  position: absolute;
+  position: center center;
+  
   object-fit: cover;
+  width: 100vw;
   top: 0;
   left: 0;
-  min-height: 50ch;
+  min-height: 60ch;
 }
 /* 
 
@@ -104,6 +121,10 @@ a {
     100px 100px 80px rgba(0, 0, 0, 0.26);
 }
 
+
+.carrouselcontain{
+min-height: 60ch;
+}
 /******* OTHER IMAGE FROM GAME *******/
 /* make a little image for now, cause will see for carousel with main image */
 .otherImage {
