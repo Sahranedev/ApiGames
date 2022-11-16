@@ -1,12 +1,13 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useParams } from "react-router-dom";
+import Skeleton from "react-loading-skeleton";
 import GameListAffichage from "./GameListDisplay";
 import ButtonOrder from "./ButtonOrder";
 import LinkToMainPage from "./LinkToMainPage";
 
 function FiltredByGenre({ theme }) {
   const API_URL = "https://api.rawg.io/api/games";
-  const API_KEY = "b6d47b1b6d1d4e37a348869c6f3fa8a3";
+  const API_KEY = "5954a0ffab034307b0f8bb9adcd5f008";
 
   /* useRef permet ici de gérer l'état du lancement des fonctions fetch */
   const isMount = useRef(false);
@@ -17,6 +18,7 @@ function FiltredByGenre({ theme }) {
   const [gamesFiltred, setGamesFiltred] = useState([]);
   /* Permet d'ajuster le filtrage, remonter de state pour le faire passer au composant buttonOrder */
   const [order, setOrder] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   // Requête pour récupérer les ID des genres
   const getGenreList = async () => {
@@ -43,6 +45,7 @@ function FiltredByGenre({ theme }) {
     );
     const gamesResult = await response.json();
     setGamesFiltred(gamesResult.results);
+    setIsLoading(false);
   };
 
   // On utilise un useEffect basé sur l'évolution du filtredList pour réactualiser la requête
@@ -69,12 +72,18 @@ function FiltredByGenre({ theme }) {
     <div>
       <div className="row d-flex justify-content-between ml-5 mr-5 p-3">
         <h2 className="col-10">Filtered {filtredListByGenre} games</h2>
+        <div className="container">
+          {isLoading && <Skeleton height={200} count={5} />}
+        </div>
         <div className="container ">
           <div className="d-flex flex-row justify-content-center">
             <ButtonOrder order={order} setOrder={setOrder} />
             <div className="">
               <LinkToMainPage />
             </div>
+          </div>
+          <div className="container">
+            {isLoading && <Skeleton height={200} count={5} />}
           </div>
         </div>
         <div className="col-1" />

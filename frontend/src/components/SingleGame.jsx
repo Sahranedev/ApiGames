@@ -3,11 +3,11 @@ import "../Styles/singleGame.css";
 import SingleGameDisplay from "./SingleGameDisplay";
 
 const API_URL = "https://api.rawg.io/api/games";
-const API_KEY = "5657950b80b34f3491f12b3319827e0f";
+const API_KEY = "5954a0ffab034307b0f8bb9adcd5f008";
 /* b6d47b1b6d1d4e37a348869c6f3fa8a3
 13e525c42c04986ac0747dddec96609 */
 
-function SingleGame({ id }) {
+function SingleGame({ id, theme }) {
   const [game, setGame] = useState([]);
 
   const getSingleGame = async () => {
@@ -22,7 +22,7 @@ function SingleGame({ id }) {
 
   return (
     <div>
-      <SingleGameDisplay game={game} {...game} />
+      <SingleGameDisplay game={game} {...game} theme={theme} />
     </div>
   );
 }

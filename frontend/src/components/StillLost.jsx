@@ -1,7 +1,10 @@
+/* eslint-disable */
+/* eslint eqeqeq: 0 */
 import { useParams } from "react-router";
 import { useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import Collapse from "react-bootstrap/Collapse";
+import Skeleton from "react-loading-skeleton";
 
 import LinkToMainPage from "./LinkToMainPage";
 import IMGnotFound from "../images/IMGnotFound.png";
@@ -14,6 +17,8 @@ function StillLost({ theme }) {
   const [randomGame, setRandomGame] = useState(null);
   const [newRandomID, setNewRandomID] = useState(randomID);
   const [open, setOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isFavorite, setIsFavorite] = useState(false);
 
   // I want to get a new random ID if the user clicks the button
   const getNewRandomID = async () => {
@@ -29,15 +34,38 @@ function StillLost({ theme }) {
     );
     const resultRandom = await response.json();
     setRandomGame(resultRandom);
+    setIsLoading(false);
   };
 
   useEffect(() => {
     getRandomGame();
   }, [newRandomID]);
-
+  const addStorage = () => {
+    // var storedData qui contiendra la liste games du local storage,la ternaire check si il y'a quelque chose dans la liste games du localStorage
+    // si oui elle renvoi un tableau split par une "," sinon revoie un tableau vide []
+    const storedData = window.localStorage.games
+      ? window.localStorage.games.split(",")
+      : [];
+    // si la var storedData ne contien pas deja l'id clické alors tu le push dans stored data en tant que string  puis le locale storage recoit les donné de storedData
+    if (!storedData.includes(randomGame.id.toString())) {
+      storedData.push(randomGame.id);
+      window.localStorage.games = storedData;
+    }
+    setIsFavorite(!isFavorite);
+  };
+  // fonction pour delete un id de jeux du localStorage
+  const removeStorage = () => {
+    const storedData = window.localStorage.games.split(",");
+    const newData = storedData.filter((id) => id != randomGame.id);
+    window.localStorage.games = newData;
+    setIsFavorite(!isFavorite);
+  };
   return (
     <div className={`container-md p-5 rounded still-container-${theme}`}>
       <LinkToMainPage />
+      <div className="container">
+        {isLoading && <Skeleton height={200} count={5} />}
+      </div>
       <div className="row">
         {/* Title */}
         {randomGame ? (
@@ -66,7 +94,9 @@ function StillLost({ theme }) {
         <div className="col-fluid col-md-6">
           <div className="container-md">
             <div className="row text-muted">
-              {randomGame ? `INFORMATIONS ABOUT ${randomGame.name}` : null}
+              {randomGame
+                ? `INFORMATIONS ABOUT ${randomGame.name}`
+                : "Oups, this is a mistake"}
             </div>
             {/* I want to display the name of the publishers */}
             <div className="row my-md-5">
@@ -81,11 +111,15 @@ function StillLost({ theme }) {
               Released : {randomGame ? randomGame.released : "Date not found"}
             </div>
             {/* I want to display genres */}
-            <div className="row my-md-5 md-flex align-items-md-center">
+            <div className="row my-md-5 md-flex align-items-md-center ">
               Genres :{" "}
               {randomGame
                 ? randomGame.genres?.map((genre) => (
-                    <li className="genreList mx-1 my-1">{genre.name}</li>
+                    <div className="col d-flex flex-wrap justify-content-md-center">
+                      <div className="btn btn-warning btn-sm mx-3 p-1 text-personalize button-personalized-lost">
+                        {genre.name}
+                      </div>
+                    </div>
                   )) || "Genre not found"
                 : "The game is deleted"}
             </div>
@@ -146,12 +180,11 @@ function StillLost({ theme }) {
         </div>
         {/* Maybe I want to add to my favorite list */}
         <div className="mb-3 d-flex justify-content-center">
-          <button
-            type="button"
-            className="btn  mb-1 d-flex justify-content-center"
-          >
-            <div className="unlike text-center" />
-          </button>
+          {isFavorite ? (
+            <div onClick={removeStorage} className="like text-center" />
+          ) : (
+            <div onClick={addStorage} className="unlike text-center" />
+          )}
         </div>
         {/* I want to get a new Random Game */}
         <div className="mb-5 d-flex justify-content-center">
