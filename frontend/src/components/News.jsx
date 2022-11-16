@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
+import Skeleton from "react-loading-skeleton";
 import GameListDisplay from "./GameListDisplay";
+import "react-loading-skeleton/dist/skeleton.css";
 
 function News({ theme }) {
   /*   const API_URL = "https://api.rawg.io/api/games";
   const API_KEY = "b6d47b1b6d1d4e37a348869c6f3fa8a3"; */
+  const [isLoading, setIsLoading] = useState(true);
   const [gameNews, setGameNews] = useState([]);
   /* const getCurrentMonth = () => {
     const month = new Date().getMonth() + 1;
@@ -50,11 +53,12 @@ function News({ theme }) {
   /* Solution temporaire le temps que j'arrive à trouver une fonction qui permettrait d'incrémenter l'année de bordure en format ISO (toléré par l'URL) */
   const getNewsGames = () => {
     fetch(
-      `https://api.rawg.io/api/games?key=b6d47b1b6d1d4e37a348869c6f3fa8a3&dates=${date1},${nextYear}&ordering=-added&page_size=20`
+      `https://api.rawg.io/api/games?key=5954a0ffab034307b0f8bb9adcd5f008&dates=${date1},${nextYear}&ordering=-added&page_size=20`
     )
       .then((response) => response.json())
       .then((result) => {
         setGameNews(result.results);
+        setIsLoading(false);
       })
       .catch((err) => console.error(err));
   };
@@ -67,6 +71,9 @@ function News({ theme }) {
     <div className="vh-100 p-3 contain-fixed">
       {" "}
       <h2 className="m-3">Incoming Games :</h2>
+      <div className="container">
+        {isLoading && <Skeleton height={200} count={5} />}
+      </div>
       {/* On map la data stocké dans le state en y injectant en élément le spread de la propriété game */}
       {gameNews?.map((game) => (
         <GameListDisplay {...game} key={game.id} theme={theme} />

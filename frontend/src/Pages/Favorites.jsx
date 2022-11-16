@@ -3,7 +3,7 @@ import "../Styles/favorite.css";
 import FavoriteGame from "./FavoriteGame";
 
 const API_URL = "https://api.rawg.io/api/games";
-const API_KEY = "b6d47b1b6d1d4e37a348869c6f3fa8a3";
+const API_KEY = "5657950b80b34f3491f12b3319827e0f";
 
 function Favorites({ theme }) {
   // useState qui va contenir la liste des jeux mis en favoris sur le localStorage

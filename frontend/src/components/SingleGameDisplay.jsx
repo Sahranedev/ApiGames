@@ -10,6 +10,7 @@ import GamePublishersDetails from "./GamePublishersDetails";
 import IMGnotFound from "../images/IMGnotFound.png";
 
 function SingleGameDisplay({
+  theme,
   name_original: nameOriginal,
   background_image: gameImage,
   background_image_additional: additionalGameImage,
@@ -56,15 +57,19 @@ function SingleGameDisplay({
   };
   /* In this page : ternary to check elements given by props */
   return (
-    <div className="carouselContainer container-fluid g-0 singleGameContainer bg-dark h-100 w-100">
+    <div
+      className={`carouselContainer container-fluid g-0 singleGameContainer h-100 w-100 bg${theme}`}
+    >
       {/*   Carrousel  */}
-      <div className="container w-60">
+      <div className="container w-60 carrouselcontain">
         <div
           id="carouselExampleFade"
           className="carousel slide carousel-fade"
           data-bs-ride="carousel"
         >
-          <div className="container-fluid g-0 singleGameContainer bg-dark h-100 w-100">
+          <div
+            className={`container-fluid g-0 singleGameContainer bg${theme} h-100 w-100`}
+          >
             <div
               id="carouselExampleFade"
               className="carousel slide carousel-fade"
@@ -134,7 +139,7 @@ function SingleGameDisplay({
       {/* Text informations */}
       <div className="totalPresentation @include media-breakpoint-up(md) { shadow-lg p-3 mb-5 rounded }">
         <div className=".md-container rounded">
-          <div className="gamePageTitle mt-3 text-center">
+          <div className="gamePageTitle mt-3 text-center d-flex flex-wrap flex-md-no-wrap">
             {metacritic ? (
               <div className={`text-white ${colorCritic(metacritic)}`}>
                 <a href={metacriticUrl} target="_blank" rel="noreferrer">
@@ -144,7 +149,7 @@ function SingleGameDisplay({
             ) : null}
 
             {nameOriginal ? (
-              <h2 className="text-white text-center">{nameOriginal}</h2>
+              <h2 className="text-center">{nameOriginal}</h2>
             ) : null}
             {isFavorite ? (
               <div onClick={removeStorage} className="like text-center" />
@@ -157,9 +162,9 @@ function SingleGameDisplay({
               {genres ? <GameGenreDetails genres={genres} /> : null}
             </div>
 
-            <div className="container">
-              <div className="row">
-                <h3 className="h5 col-4 text-center text-white">
+            <div className="container-fluid">
+              <div className="d-flex justify-content-center justify-content-md-around">
+                <p className=" col-md-4 text-center mx-3">
                   Publisher :
                   {publishers ? (
                     publishers.length > 0 ? (
@@ -168,8 +173,8 @@ function SingleGameDisplay({
                       " not specified "
                     )
                   ) : null}
-                </h3>
-                <h3 className="h5 col-4 text-center text-white">
+                </p>
+                <p className="col-md-4 text-center mx-3">
                   Developer :
                   {developers ? (
                     developers.length > 0 ? (
@@ -178,15 +183,15 @@ function SingleGameDisplay({
                       " not specified "
                     )
                   ) : null}
-                </h3>
-                <h3 className="h5 col-4 text-center text-white">
+                </p>
+                <p className=" col-md-4 text-center mx-3">
                   Released :{" "}
                   {released ? <GameDateDetails released={released} /> : null}
-                </h3>
+                </p>
               </div>
             </div>
           </div>
-          <div className="gamePageDescription text-white">
+          <div className="gamePageDescription">
             {description ? (
               <GameParaphDetails description={description} />
             ) : null}
