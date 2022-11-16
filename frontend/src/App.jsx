@@ -97,7 +97,7 @@ A voir
               <Route path="/" element={<Mainpage theme={theme} />} />
               <Route
                 path="/random/:randomID"
-                element={<StillLost theme={theme} />}
+                element={<StillLost games={games} theme={theme} />}
               />
               <Route path="/favorites" element={<Favorites theme={theme} />} />
               <Route
