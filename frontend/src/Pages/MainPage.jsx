@@ -31,20 +31,13 @@ function MainPage() {
   }, []);
 
   return (
-    <div className="container vh-100 padding0">
-      <ul>
-        <h2 className="trollpresentation">THE MAIN PAGE</h2>
-        <Link to={`/random/${randomID}`}>
-          {" "}
-          <button type="button" onClick={getRandomID}>
-            Get random
-          </button>
-        </Link>
-      </ul>
+    <div className="container vh-100 padding0 mb-">
       <div className="title">
         <h2>Incoming games</h2>
         <Link to="/news">
-          <button type="button">View All</button>
+          <button className="button-news" type="button">
+            View All
+          </button>
         </Link>
       </div>
       <div className="news-img">
@@ -54,7 +47,47 @@ function MainPage() {
           <h2>Please Wait...</h2>
         )}
       </div>
-      <div />
+      <hr className="mt-5" />
+      <div className="container random-title d-flex flex-column pt-5">
+        <h2 className="d-flex justify-content-center">LOST ?</h2>
+        <h2 className="text-warning d-flex justify-content-center display-1">
+          Randomize
+        </h2>
+        <h2 className="d-flex justify-content-center"> your LIFE</h2>
+        <ul>
+          <Link to={`/random/${randomID}`}>
+            {" "}
+            <button
+              className="container button-class d-flex justify-content-center btn btn-dark col-6 mt-5 "
+              type="button"
+              onClick={getRandomID}
+            >
+              Get random
+            </button>
+          </Link>
+        </ul>
+      </div>
+
+      <hr className="mt-4" />
+
+      <div className="game-select">
+        <h2>Our selection</h2>
+        <div className="d-flex justify-content-center mt-5">
+          <div className="like text-center" />{" "}
+          <h2 className="mx-1 ">
+            {" "}
+            Game Name by <span className="text-warning">Name</span>
+          </h2>
+        </div>
+        <div className="d-flex justify-content-center">
+          <div className="like text-center" />{" "}
+          <h2 className="mx-1 "> Game Name by Name</h2>
+        </div>{" "}
+        <div className="d-flex justify-content-center">
+          <div className="like text-center" />{" "}
+          <h2 className=" mx-1 "> Game Name by Name</h2>
+        </div>
+      </div>
     </div>
   );
 }
