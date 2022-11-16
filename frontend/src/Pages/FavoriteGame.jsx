@@ -16,7 +16,7 @@ function FavoriteGame({ game, theme }) {
     <div className={`single-game-${theme}`}>
       <div className="row">
         <div className="col-md-2 col-sm-2">
-          <Modale show={show} setShow={setShow} id={game.id} />
+          <Modale show={show} setShow={setShow} id={game.id} theme={theme} />
           <button
             className="btn  pull-right"
             type="button"
