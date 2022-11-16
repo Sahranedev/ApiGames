@@ -71,3 +71,27 @@ img.game-photo {
 .button-new-games {
   text-decoration: none;
 }
+
+@media screen and (min-width: 768px) {
+  img.game-photo {
+    height: 35vh;
+    width: 45vw;
+  }
+  .padding0 {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+  }
+  .news-img {
+    width: 100vw;
+  }
+  .title {
+    width: 100vw;
+  }
+  .title h2 {
+    margin-left: 2rem;
+  }
+  .title button {
+    margin-right: 2rem;
+  }
+}

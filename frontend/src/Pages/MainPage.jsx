@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Novelties from "../components/Novelties";
 import "../Styles/mainpage.css";
 
@@ -16,14 +16,22 @@ function MainPage() {
   const currentYear = new Date().getFullYear();
   const nextYear = currentYear + 2;
 
-  fetch(
-    `https://api.rawg.io/api/games?key=5657950b80b34f3491f12b3319827e0f&dates=${date1},${nextYear}&ordering=-added&page_size=2`
-  )
-    .then((res) => res.json())
-    .then((data) => setMaingames(data.results));
+  const getNewsGames = () => {
+    fetch(
+      `https://api.rawg.io/api/games?key=5954a0ffab034307b0f8bb9adcd5f008&dates=${date1},${nextYear}&ordering=-added&page_size=2`
+    )
+      .then((response) => response.json())
+      .then((result) => {
+        setMaingames(result.results);
+      })
+      .catch((err) => console.error(err));
+  };
+  useEffect(() => {
+    getNewsGames();
+  }, []);
 
   return (
-    <div className="container vh-100">
+    <div className="container vh-100 padding0">
       <ul>
         <h2 className="trollpresentation">THE MAIN PAGE</h2>
         <Link to={`/random/${randomID}`}>
@@ -34,7 +42,7 @@ function MainPage() {
         </Link>
       </ul>
       <div className="title">
-        <h2>New</h2>
+        <h2>Incoming games</h2>
         <Link to="/news">
           <button type="button">View All</button>
         </Link>
@@ -43,7 +51,7 @@ function MainPage() {
         {Maingames.length > 0 ? (
           Maingames.map((game) => <Novelties game={game} key={game.id} />)
         ) : (
-          <h2>Nothing fav for the moments</h2>
+          <h2>Please Wait...</h2>
         )}
       </div>
       <div />
