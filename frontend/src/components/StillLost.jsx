@@ -1,3 +1,5 @@
+/* eslint-disable */
+/* eslint eqeqeq: 0 */
 import { useParams } from "react-router";
 import { useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
@@ -16,6 +18,7 @@ function StillLost({ theme }) {
   const [newRandomID, setNewRandomID] = useState(randomID);
   const [open, setOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [isFavorite, setIsFavorite] = useState(false);
 
   // I want to get a new random ID if the user clicks the button
   const getNewRandomID = async () => {
@@ -37,7 +40,26 @@ function StillLost({ theme }) {
   useEffect(() => {
     getRandomGame();
   }, [newRandomID]);
-
+  const addStorage = () => {
+    // var storedData qui contiendra la liste games du local storage,la ternaire check si il y'a quelque chose dans la liste games du localStorage
+    // si oui elle renvoi un tableau split par une "," sinon revoie un tableau vide []
+    const storedData = window.localStorage.games
+      ? window.localStorage.games.split(",")
+      : [];
+    // si la var storedData ne contien pas deja l'id clické alors tu le push dans stored data en tant que string  puis le locale storage recoit les donné de storedData
+    if (!storedData.includes(randomGame.id.toString())) {
+      storedData.push(randomGame.id);
+      window.localStorage.games = storedData;
+    }
+    setIsFavorite(!isFavorite);
+  };
+  // fonction pour delete un id de jeux du localStorage
+  const removeStorage = () => {
+    const storedData = window.localStorage.games.split(",");
+    const newData = storedData.filter((id) => id != randomGame.id);
+    window.localStorage.games = newData;
+    setIsFavorite(!isFavorite);
+  };
   return (
     <div className={`container-md p-5 rounded still-container-${theme}`}>
       <LinkToMainPage />
@@ -158,12 +180,11 @@ function StillLost({ theme }) {
         </div>
         {/* Maybe I want to add to my favorite list */}
         <div className="mb-3 d-flex justify-content-center">
-          <button
-            type="button"
-            className="btn  mb-1 d-flex justify-content-center"
-          >
-            <div className="unlike text-center" />
-          </button>
+          {isFavorite ? (
+            <div onClick={removeStorage} className="like text-center" />
+          ) : (
+            <div onClick={addStorage} className="unlike text-center" />
+          )}
         </div>
         {/* I want to get a new Random Game */}
         <div className="mb-5 d-flex justify-content-center">
