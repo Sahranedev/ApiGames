@@ -21,7 +21,7 @@ body {
 .dark {
   background: var(--dark-main-background-color);
   color: var(--dark-main-text-color);
-  transition: 0.2s;
+  transition: 0.2s;}
 
 
 
@@ -49,4 +49,4 @@ h6 {
   font-family: "Montserrat", sans-serif;
 }
 
-/
+
