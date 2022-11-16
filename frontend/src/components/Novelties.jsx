@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useState } from "react";
 import Modale from "../Pages/Modale";
 
@@ -11,6 +12,7 @@ function Novelties({ game }) {
         <img
           src={game.background_image}
           alt="game"
+          type="button"
           className="img-fluid mx-auto d-block p-0 img-personnalized"
           onClick={() => setShow(game.id)}
         />
