@@ -25,11 +25,49 @@ button {
 }
 
 img.game-photo {
-  height: 25vh;
-  width: 30vw;
+  height: 20vh;
+  width: 45vw;
 }
+
 .news-img {
   display: flex;
   justify-content: space-around;
-  width: 100vw;
+  width: 95vw;
+  padding: 0;
+  margin: 0;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.underline {
+  height: 1px;
+  background-color: #fdaa0f6d;
+  width: 70%;
+  margin: auto;
+  position: relative;
+  bottom: 2.5rem;
+}
+
+.game-name {
+  background-color: rgba(0, 0, 0, 0.501);
+  font-size: 0.85rem;
+  height: 3rem;
+  position: relative;
+  bottom: 3rem;
+  width: 45vw;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.new-container {
+  height: 20vh;
+}
+
+.button-new-games {
+  text-decoration: none;
 }

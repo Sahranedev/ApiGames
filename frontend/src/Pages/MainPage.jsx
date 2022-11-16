@@ -17,7 +17,7 @@ function MainPage() {
   const nextYear = currentYear + 2;
 
   fetch(
-    `https://api.rawg.io/api/games?key=b6d47b1b6d1d4e37a348869c6f3fa8a3&dates=${date1},${nextYear}&ordering=-added&page_size=2`
+    `https://api.rawg.io/api/games?key=5657950b80b34f3491f12b3319827e0f&dates=${date1},${nextYear}&ordering=-added&page_size=2`
   )
     .then((res) => res.json())
     .then((data) => setMaingames(data.results));
@@ -33,9 +33,12 @@ function MainPage() {
           </button>
         </Link>
       </ul>
-      <Link to="/news">
-        <button type="button">News</button>
-      </Link>
+      <div className="title">
+        <h2>New</h2>
+        <Link to="/news">
+          <button type="button">View All</button>
+        </Link>
+      </div>
       <div className="news-img">
         {Maingames.length > 0 ? (
           Maingames.map((game) => <Novelties game={game} key={game.id} />)
