@@ -75,7 +75,7 @@ function NavBar({ searchValue, setSearchValue, getGame, toggleTheme, theme }) {
               <a
                 className="nav-link d-flex justify-content-end align-items-center"
                 aria-current="page"
-                href="/likes"
+                href="/favorites"
               >
                 <NavLink to="/favorites"> Favorites</NavLink>
               </a>
@@ -85,7 +85,7 @@ function NavBar({ searchValue, setSearchValue, getGame, toggleTheme, theme }) {
               <a
                 className="nav-link d-flex justify-content-end align-items-center"
                 aria-current="page"
-                href="/likes"
+                href="/news"
               >
                 <NavLink to="/news">Incoming</NavLink>
               </a>
