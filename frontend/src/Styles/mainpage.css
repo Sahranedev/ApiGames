@@ -1,17 +1,36 @@
-.gameListParaph {
-  display: none;
+
+.text-personnalized {
+  font-size: 0.8em;
 }
 
-/* Links are display none for the moment cause of presentation sprint 3 */
-.links {
-  display: none;
+.bg-personnalized {
+  background-color: rgba(51, 51, 51, 0.607);
+  -webkit-backdrop-filter: blur(0.2em);
+  backdrop-filter: blur(0.2em);
+  border-radius: 0 0 10px 10px;
+  color: white;
 }
 
-.trollpresentation {
-  text-align: center;
+.text-personnalized-color, .text-personnalized-color:hover ,
+ .text-personnalized-color:active , .btn-link:hover , .btn-link:active, .btn-link, .btn:first-child:active {
+  color: var(--special-color);
 }
 
-ul {
-  margin: 0;
-  padding: 0;
+.img-personnalized{
+ border-radius: 10px 10px 10px 10px;
+}
+
+@media screen and (min-width: 800px) {
+  .text-personnalized {
+    font-size: 1.3em;
+  }
+}
+
+hr {
+  border: none;
+  height: 2px;
+  /* Set the hr color */
+  color: #eee; /* old IE */
+  background-color: #eee; /* Modern Browsers */
+
 }

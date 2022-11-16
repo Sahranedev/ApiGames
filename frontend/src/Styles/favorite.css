@@ -20,16 +20,11 @@
 .game-list-favorite-light .single-game-light {
   padding: 20px;
   background: #eee;
-  background: linear-gradient(
-    129deg,
-    #eee 73%,
-    rgba(248, 172, 30, 0.4) 100%
-  );
-  box-shadow:  #a09e9efe 0px 0px 15px 4px;
+  background: linear-gradient(129deg, #eee 73%, rgba(248, 172, 30, 0.4) 100%);
+  box-shadow: #a09e9efe 0px 0px 15px 4px;
   border-radius: 7px;
   margin-bottom: 20px;
 }
-
 
 .single-game {
   width: auto;
@@ -45,16 +40,13 @@ img.game-photo-lg {
     background: #292929;
     box-shadow: #121212 0px 0px 10px 0px;
   }
-  
+
   .favorite-container-light {
     height: 100vh;
     background: #eee;
     box-shadow: #a09e9efe 0px 0px 15px 4px;
   }
-  
 }
-
-
 
 .unlike {
   width: 2rem;
@@ -73,9 +65,9 @@ img.game-photo-lg {
   background-repeat: none;
 }
 .game-name-dark h5 {
- color: #eee;
+  color: #eee;
 }
 
 .game-name-light h5 {
   color: #333;
- }
+}
