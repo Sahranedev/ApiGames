@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Novelties from "../components/Novelties";
 import "../Styles/mainpage.css";
 
-function MainPage() {
+function MainPage({ theme }) {
   // Function to get a random game from the API from the mainpage
   const [randomID, setRandomID] = useState(Math.floor(Math.random() * 1000));
   const [Maingames, setMaingames] = useState([]);
@@ -31,41 +31,47 @@ function MainPage() {
   }, []);
 
   return (
-    <div className="container vh-100 padding0 mb-">
-      <div className="title">
+    <div className={`container vh-100 favorite-container-${theme}  py-md-5`}>
+      <div className="d-flex justify-content-between">
+        {" "}
+        {/* title */}
         <h2>Incoming games</h2>
         <Link to="/news">
-          <button className="button-news" type="button">
+          <button
+            className="btn btn-link text-personnalized-color"
+            type="button"
+          >
             View All
           </button>
         </Link>
       </div>
-      <div className="news-img">
-        {Maingames.length > 0 ? (
-          Maingames.map((game) => <Novelties game={game} key={game.id} />)
-        ) : (
-          <h2>Please Wait...</h2>
-        )}
+      <div className="container">
+        <div className="row">
+          {Maingames.length > 0 ? (
+            Maingames.map((game) => <Novelties game={game} key={game.id} />)
+          ) : (
+            <h2>Please Wait...</h2>
+          )}
+        </div>
       </div>
-      <hr className="mt-5" />
+      <hr className="mt-md-5 my-md-5" />
       <div className="container random-title d-flex flex-column pt-5">
         <h2 className="d-flex justify-content-center">LOST ?</h2>
-        <h2 className="text-warning d-flex justify-content-center display-1">
+        <h2 className="text-personnalized-color d-flex justify-content-center display-1">
           Randomize
         </h2>
         <h2 className="d-flex justify-content-center"> your LIFE</h2>
-        <ul>
-          <Link to={`/random/${randomID}`}>
-            {" "}
-            <button
-              className="container button-class d-flex justify-content-center btn btn-dark col-6 mt-5 "
-              type="button"
-              onClick={getRandomID}
-            >
-              Get random
-            </button>
-          </Link>
-        </ul>
+
+        <Link to={`/random/${randomID}`}>
+          {" "}
+          <button
+            className="container button-class d-flex justify-content-center btn btn-dark col-6 mt-5 my-md-5 "
+            type="button"
+            onClick={getRandomID}
+          >
+            Get random
+          </button>
+        </Link>
       </div>
 
       <hr className="mt-4" />
@@ -76,16 +82,22 @@ function MainPage() {
           <div className="like text-center" />{" "}
           <h2 className="mx-1 ">
             {" "}
-            Game Name by <span className="text-warning">Name</span>
+            Game Name by <span className="text-personnalized-color">Name</span>
           </h2>
         </div>
-        <div className="d-flex justify-content-center">
+        <div className="d-flex justify-content-center mt-5">
           <div className="like text-center" />{" "}
-          <h2 className="mx-1 "> Game Name by Name</h2>
-        </div>{" "}
-        <div className="d-flex justify-content-center">
+          <h2 className="mx-1 ">
+            {" "}
+            Game Name by <span className="text-personnalized-color">Name</span>
+          </h2>
+        </div>
+        <div className="d-flex justify-content-center mt-5">
           <div className="like text-center" />{" "}
-          <h2 className=" mx-1 "> Game Name by Name</h2>
+          <h2 className="mx-1 ">
+            {" "}
+            Game Name by <span className="text-personnalized-color">Name</span>
+          </h2>
         </div>
       </div>
     </div>

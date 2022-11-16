@@ -9,7 +9,7 @@ import "../Styles/stillLost.css";
 
 function StillLost({ theme }) {
   const API_URL = "https://api.rawg.io/api/games";
-  const API_KEY = "b6d47b1b6d1d4e37a348869c6f3fa8a3";
+  const API_KEY = "5954a0ffab034307b0f8bb9adcd5f008";
   const { randomID } = useParams();
   const [randomGame, setRandomGame] = useState(null);
   const [newRandomID, setNewRandomID] = useState(randomID);

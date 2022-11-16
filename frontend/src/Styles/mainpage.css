@@ -1,96 +1,27 @@
-.gameListParaph {
-  display: none;
+
+.text-personnalized {
+  font-size: 0.8em;
 }
 
-/* Links are display none for the moment cause of presentation sprint 3 */
-.links {
-  display: none;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-.button-news {
-  border: none;
-  background: none;
-  text-decoration: underline;
-  text-decoration-color: #fdaa0feb;
+.bg-personnalized {
+  background-color: rgba(51, 51, 51, 0.607);
+  -webkit-backdrop-filter: blur(0.2em);
+  backdrop-filter: blur(0.2em);
+  border-radius: 0 0 10px 10px;
   color: white;
 }
 
-img.game-photo {
-  height: 20vh;
-  width: 45vw;
+.text-personnalized-color, .text-personnalized-color:hover ,
+ .text-personnalized-color:active , .btn-link:hover , .btn-link:active, .btn-link, .btn:first-child:active {
+  color: var(--special-color);
 }
 
-.news-img {
-  display: flex;
-  justify-content: space-around;
-  width: 95vw;
-  padding: 0;
-  margin: 0;
-}
-
-.title {
-  display: flex;
-  justify-content: space-between;
-}
-
-.underline {
-  height: 1px;
-  background-color: #fdaa0f6d;
-  width: 70%;
-  margin: auto;
-  position: relative;
-  bottom: 2.5rem;
-}
-
-.game-name {
-  background-color: rgba(0, 0, 0, 0.501);
-  font-size: 0.85rem;
-  height: 3rem;
-  position: relative;
-  bottom: 3rem;
-  width: 45vw;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.new-container {
-  height: 20vh;
-}
-
-.button-new-games {
-  text-decoration: none;
-  border: none;
-  background: none;
-  color: white;
+.img-personnalized{
+ border-radius: 10px 10px 0 0;
 }
 
 @media screen and (min-width: 800px) {
-  img.game-photo {
-    height: 35vh;
-    width: 45vw;
-  }
-  .padding0 {
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-  }
-  .news-img {
-    width: 100vw;
-  }
-  .title {
-    width: 100vw;
-  }
-  .title h2 {
-    margin-left: 2rem;
-  }
-  .title button {
-    margin-right: 2rem;
+  .text-personnalized {
+    font-size: 1.3em;
   }
 }
