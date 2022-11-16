@@ -81,11 +81,15 @@ function StillLost({ theme }) {
               Released : {randomGame ? randomGame.released : "Date not found"}
             </div>
             {/* I want to display genres */}
-            <div className="row my-md-5 md-flex align-items-md-center">
+            <div className="row my-md-5 md-flex align-items-md-center ">
               Genres :{" "}
               {randomGame
                 ? randomGame.genres?.map((genre) => (
-                    <li className="genreList mx-1 my-1">{genre.name}</li>
+                    <div className="col d-flex flex-wrap justify-content-md-center">
+                      <div className="btn btn-warning btn-sm mx-3 p-1 text-personalize button-personalized-lost">
+                        {genre.name}
+                      </div>
+                    </div>
                   )) || "Genre not found"
                 : "The game is deleted"}
             </div>
