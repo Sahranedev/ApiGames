@@ -17,11 +17,20 @@
 }
 
 .img-personnalized{
- border-radius: 10px 10px 0 0;
+ border-radius: 10px 10px 10px 10px;
 }
 
 @media screen and (min-width: 800px) {
   .text-personnalized {
     font-size: 1.3em;
   }
+}
+
+hr {
+  border: none;
+  height: 2px;
+  /* Set the hr color */
+  color: #eee; /* old IE */
+  background-color: #eee; /* Modern Browsers */
+
 }
