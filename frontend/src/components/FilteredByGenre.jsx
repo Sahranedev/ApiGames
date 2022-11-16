@@ -1,12 +1,13 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useParams } from "react-router-dom";
+import Skeleton from "react-loading-skeleton";
 import GameListAffichage from "./GameListDisplay";
 import ButtonOrder from "./ButtonOrder";
 import LinkToMainPage from "./LinkToMainPage";
 
 function FiltredByGenre({ theme }) {
   const API_URL = "https://api.rawg.io/api/games";
-  const API_KEY = "5657950b80b34f3491f12b3319827e0f";
+  const API_KEY = "5954a0ffab034307b0f8bb9adcd5f008";
 
   /* useRef permet ici de gérer l'état du lancement des fonctions fetch */
   const isMount = useRef(false);
@@ -71,6 +72,9 @@ function FiltredByGenre({ theme }) {
     <div>
       <div className="row d-flex justify-content-between ml-5 mr-5 p-3">
         <h2 className="col-10">Filtered {filtredListByGenre} games</h2>
+        <div className="container">
+          {isLoading && <Skeleton height={200} count={5} />}
+        </div>
         <div className="container ">
           <div className="d-flex flex-row justify-content-center">
             <ButtonOrder order={order} setOrder={setOrder} />
@@ -78,10 +82,13 @@ function FiltredByGenre({ theme }) {
               <LinkToMainPage />
             </div>
           </div>
+          <div className="container">
+            {isLoading && <Skeleton height={200} count={5} />}
+          </div>
         </div>
         <div className="col-1" />
       </div>
-      {isLoading && <p>Is loading ...</p>}
+
       {gamesFiltred?.map((game) => (
         <GameListAffichage {...game} key={game.id} theme={theme} />
       ))}

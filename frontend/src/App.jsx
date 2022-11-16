@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState, useEffect } from "react";
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
 import "./Styles/App.css";
 import StillLost from "@components/StillLost";
@@ -52,36 +54,37 @@ export default function App() {
   };
   return (
     <div className={`App  ${theme}`}>
-      <Router>
-        <div className="">
-          {/* give props to toggle the theme */}
-          <Navbar
-            getGame={getGame}
-            searchValue={searchValue}
-            setSearchValue={setSearchValue}
-            games={games}
-            toggleTheme={toggleTheme}
-            theme={theme}
-          />
+      <SkeletonTheme baseColor="#202020" highlightColor="#444">
+        <Router>
+          <div className="">
+            {/* give props to toggle the theme */}
+            <Navbar
+              getGame={getGame}
+              searchValue={searchValue}
+              setSearchValue={setSearchValue}
+              games={games}
+              toggleTheme={toggleTheme}
+              theme={theme}
+            />
 
-          <Searchbar
-            className="d-none d-md-block m-3 p-3"
-            getGame={getGame}
-            searchValue={searchValue}
-            setSearchValue={setSearchValue}
-            games={games}
-            theme={theme}
-          />
+            <Searchbar
+              className="d-none d-md-block m-3 p-3"
+              getGame={getGame}
+              searchValue={searchValue}
+              setSearchValue={setSearchValue}
+              games={games}
+              theme={theme}
+            />
 
-          {games
-            .filter((game) => game.name.includes(searchValue))
-            .map((game) => (
-              <p key={game.id} className="gameListParaph">
-                {game.name}
-              </p>
-            ))}
+            {games
+              .filter((game) => game.name.includes(searchValue))
+              .map((game) => (
+                <p key={game.id} className="gameListParaph">
+                  {game.name}
+                </p>
+              ))}
 
-          {/*  On veut que le Nav Bar et la Search Bar soient constamment présentes
+            {/*  On veut que le Nav Bar et la Search Bar soient constamment présentes
 Elles sont donc dans le Router et le Router lui-même dans App pour éviter tous les problèmes de routing.
 Pour plus de lisibilité on intégère les Routes dans app afin de ne pas avoir à les importer dans chaque page.
 Dans les Routes on ajoute la route "/" qu'il manquait et qui correspond à la page principale. On change également la route
@@ -90,40 +93,41 @@ Lors de l'arrivée de la WelcomePage, il faudra toutefois créer une page qui re
 A voir
  */}
 
-          <Routes>
-            <Route path="/" element={<Mainpage theme={theme} />} />
-            <Route
-              path="/random/:randomID"
-              element={<StillLost theme={theme} />}
-            />
-            <Route path="/favorites" element={<Favorites theme={theme} />} />
-            <Route
-              path="/platforms/:filtredListByPlatforms"
-              element={<FilteredbyPlatforms theme={theme} />}
-            />
-            <Route
-              path="/genres/:filtredListByGenre"
-              element={<FilteredbyGenre theme={theme} />}
-            />
-            <Route
-              path="/gamelist/"
-              element={
-                <GameList
-                  searchValue={searchValue}
-                  gameList={games}
-                  isLoading={isLoading}
-                  theme={theme}
-                />
-              }
-            />
-            <Route path="/game/:id" element={<SingleGame games={games} />} />
-            <Route
-              path="/news"
-              element={<News games={games} theme={theme} />}
-            />
-          </Routes>
-        </div>
-      </Router>
+            <Routes>
+              <Route path="/" element={<Mainpage theme={theme} />} />
+              <Route
+                path="/random/:randomID"
+                element={<StillLost theme={theme} />}
+              />
+              <Route path="/favorites" element={<Favorites theme={theme} />} />
+              <Route
+                path="/platforms/:filtredListByPlatforms"
+                element={<FilteredbyPlatforms theme={theme} />}
+              />
+              <Route
+                path="/genres/:filtredListByGenre"
+                element={<FilteredbyGenre theme={theme} />}
+              />
+              <Route
+                path="/gamelist/"
+                element={
+                  <GameList
+                    searchValue={searchValue}
+                    gameList={games}
+                    isLoading={isLoading}
+                    theme={theme}
+                  />
+                }
+              />
+              <Route path="/game/:id" element={<SingleGame games={games} />} />
+              <Route
+                path="/news"
+                element={<News games={games} theme={theme} />}
+              />
+            </Routes>
+          </div>
+        </Router>
+      </SkeletonTheme>
     </div>
   );
 }

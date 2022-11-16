@@ -2,6 +2,7 @@ import { useParams } from "react-router";
 import { useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import Collapse from "react-bootstrap/Collapse";
+import Skeleton from "react-loading-skeleton";
 
 import LinkToMainPage from "./LinkToMainPage";
 import IMGnotFound from "../images/IMGnotFound.png";
@@ -9,7 +10,7 @@ import "../Styles/stillLost.css";
 
 function StillLost({ theme }) {
   const API_URL = "https://api.rawg.io/api/games";
-  const API_KEY = "5657950b80b34f3491f12b3319827e0f";
+  const API_KEY = "5954a0ffab034307b0f8bb9adcd5f008";
   const { randomID } = useParams();
   const [randomGame, setRandomGame] = useState(null);
   const [newRandomID, setNewRandomID] = useState(randomID);
@@ -40,7 +41,9 @@ function StillLost({ theme }) {
   return (
     <div className={`container-md p-5 rounded still-container-${theme}`}>
       <LinkToMainPage />
-      {isLoading && <p>Is loading...</p>}
+      <div className="container">
+        {isLoading && <Skeleton height={200} count={5} />}
+      </div>
       <div className="row">
         {/* Title */}
         {randomGame ? (
@@ -69,7 +72,9 @@ function StillLost({ theme }) {
         <div className="col-fluid col-md-6">
           <div className="container-md">
             <div className="row text-muted">
-              {randomGame ? `INFORMATIONS ABOUT ${randomGame.name}` : null}
+              {randomGame
+                ? `INFORMATIONS ABOUT ${randomGame.name}`
+                : "Oups, this is a mistake"}
             </div>
             {/* I want to display the name of the publishers */}
             <div className="row my-md-5">
