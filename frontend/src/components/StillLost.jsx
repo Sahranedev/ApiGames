@@ -9,11 +9,12 @@ import "../Styles/stillLost.css";
 
 function StillLost({ theme }) {
   const API_URL = "https://api.rawg.io/api/games";
-  const API_KEY = "b6d47b1b6d1d4e37a348869c6f3fa8a3";
+  const API_KEY = "5657950b80b34f3491f12b3319827e0f";
   const { randomID } = useParams();
   const [randomGame, setRandomGame] = useState(null);
   const [newRandomID, setNewRandomID] = useState(randomID);
   const [open, setOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   // I want to get a new random ID if the user clicks the button
   const getNewRandomID = async () => {
@@ -29,6 +30,7 @@ function StillLost({ theme }) {
     );
     const resultRandom = await response.json();
     setRandomGame(resultRandom);
+    setIsLoading(false);
   };
 
   useEffect(() => {
@@ -38,6 +40,7 @@ function StillLost({ theme }) {
   return (
     <div className={`container-md p-5 rounded still-container-${theme}`}>
       <LinkToMainPage />
+      {isLoading && <p>Is loading...</p>}
       <div className="row">
         {/* Title */}
         {randomGame ? (

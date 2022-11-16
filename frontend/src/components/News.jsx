@@ -50,7 +50,7 @@ function News({ theme }) {
   /* Solution temporaire le temps que j'arrive à trouver une fonction qui permettrait d'incrémenter l'année de bordure en format ISO (toléré par l'URL) */
   const getNewsGames = () => {
     fetch(
-      `https://api.rawg.io/api/games?key=b6d47b1b6d1d4e37a348869c6f3fa8a3&dates=${date1},${nextYear}&ordering=-added&page_size=20`
+      `https://api.rawg.io/api/games?key=5657950b80b34f3491f12b3319827e0f&dates=${date1},${nextYear}&ordering=-added&page_size=20`
     )
       .then((response) => response.json())
       .then((result) => {

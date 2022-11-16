@@ -14,12 +14,15 @@ import FilteredbyPlatforms from "./components/FilteredByPlatforms";
 import News from "./components/News";
 
 const API_URL =
-  "https://api.rawg.io/api/games?key=b6d47b1b6d1d4e37a348869c6f3fa8a3";
+  "https://api.rawg.io/api/games?key=5657950b80b34f3491f12b3319827e0f";
 
 /* b6d47b1b6d1d4e37a348869c6f3fa8a3
-13e525c42c04986ac0747dddec96609 */
+13e525c42c04986ac0747dddec96609 
+5657950b80b34f3491f12b3319827e0f
+*/
 
 export default function App() {
+  const [isLoading, setIsLoading] = useState(true);
   const [searchValue, setSearchValue] = useState("");
   const [games, setGames] = useState([]);
   /* Make a hook to get the theme */
@@ -40,7 +43,10 @@ export default function App() {
   const getGame = () => {
     fetch(`${API_URL}&search=${searchValue}&page_size=10`)
       .then((response) => response.json())
-      .then((result) => setGames(result.results))
+      .then((result) => {
+        setGames(result.results);
+        setIsLoading(false);
+      })
       .catch((err) => console.error(err));
     setSearchValue("");
   };
@@ -105,6 +111,7 @@ A voir
                 <GameList
                   searchValue={searchValue}
                   gameList={games}
+                  isLoading={isLoading}
                   theme={theme}
                 />
               }

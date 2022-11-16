@@ -6,7 +6,7 @@ import LinkToMainPage from "./LinkToMainPage";
 
 function FiltredByGenre({ theme }) {
   const API_URL = "https://api.rawg.io/api/games";
-  const API_KEY = "b6d47b1b6d1d4e37a348869c6f3fa8a3";
+  const API_KEY = "5657950b80b34f3491f12b3319827e0f";
 
   /* useRef permet ici de gérer l'état du lancement des fonctions fetch */
   const isMount = useRef(false);
@@ -17,6 +17,7 @@ function FiltredByGenre({ theme }) {
   const [gamesFiltred, setGamesFiltred] = useState([]);
   /* Permet d'ajuster le filtrage, remonter de state pour le faire passer au composant buttonOrder */
   const [order, setOrder] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   // Requête pour récupérer les ID des genres
   const getGenreList = async () => {
@@ -43,6 +44,7 @@ function FiltredByGenre({ theme }) {
     );
     const gamesResult = await response.json();
     setGamesFiltred(gamesResult.results);
+    setIsLoading(false);
   };
 
   // On utilise un useEffect basé sur l'évolution du filtredList pour réactualiser la requête
@@ -79,7 +81,7 @@ function FiltredByGenre({ theme }) {
         </div>
         <div className="col-1" />
       </div>
-
+      {isLoading && <p>Is loading ...</p>}
       {gamesFiltred?.map((game) => (
         <GameListAffichage {...game} key={game.id} theme={theme} />
       ))}
