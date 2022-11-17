@@ -2,14 +2,17 @@ import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import SingleGame from "../components/SingleGame";
+import "../Styles/modale.css";
 
-function Modale({ show, setShow, id }) {
+function Modale({ show, setShow, id, theme }) {
+  /*  Loading page  */
+
   const values = ["xxl-down"];
   const [fullscreen, setFullscreen] = useState(true);
 
   function handleShow(breakpoint) {
     setFullscreen(breakpoint);
-    setShow(true);
+    setShow(false);
   }
 
   return (
@@ -21,14 +24,19 @@ function Modale({ show, setShow, id }) {
           {typeof v === "string" && `below ${v.split("-")[0]}`}
         </Button>
       ))}
-      <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
-        <SingleGame id={id} />
-        {/* <Modal.Header closeButton>
-          <Modal.Title>Affichage d'un jeu</Modal.Title>
-        </Modal.Header>
-        <Modal.Body class="modal">
-          <SingleGame />
-        </Modal.Body> */}
+
+      <Modal
+        className="modal"
+        show={show}
+        fullscreen={fullscreen}
+        onHide={() => setShow(false)}
+      >
+        <Modal.Header
+          className={`bg${theme} close-btn mh-100 mw-100`}
+          closeButton
+        />
+
+        <SingleGame id={id} theme={theme} />
       </Modal>
     </div>
   );

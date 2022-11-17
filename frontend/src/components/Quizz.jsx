@@ -1,12 +1,13 @@
 import React from "react";
-import Quizzresult from "./Quizzresult";
-import Stilllost from "./Stilllost";
+import LinkToMainPage from "./LinkToMainPage";
+import QuizzResult from "./QuizzResult";
 
 function Quizz() {
   return (
     <>
-      <Quizzresult />
-      <Stilllost />
+      <QuizzResult />
+      <LinkToMainPage />
+      {/*  work in progress  */}
     </>
   );
 }

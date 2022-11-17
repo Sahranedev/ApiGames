@@ -1,13 +1,20 @@
-import "../Styles/gameList.css";
-import GameListAffichage from "./GameListAffichage";
+import Skeleton from "react-loading-skeleton";
+import GameListDisplay from "./GameListDisplay";
+import LinkToMainPage from "./LinkToMainPage";
 
-function GameList({ gameList, searchValue }) {
+function GameList({ gameList, theme, isLoading }) {
   return (
     gameList && (
-      <div className=".d-md-block none shadow-lg p-3 mb-5 rounded game-list">
-        <h2> Liste des jeux filtrés par " {searchValue} " </h2>
+      /* Map the gamelistdisplay  */
+      <div className="vh-100 p-3 contain-fixed">
+        {" "}
+        <h2 className="m-3">Games filtered by revelance :</h2>
+        <div className="container">
+          {isLoading && <Skeleton height={200} count={5} />}
+        </div>
+        <LinkToMainPage />
         {gameList.map((game) => (
-          <GameListAffichage key={game.id} {...game} />
+          <GameListDisplay key={game.id} {...game} theme={theme} />
         ))}
       </div>
     )

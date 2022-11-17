@@ -1,52 +1,69 @@
-.bg-specify {
-  background-color: var(--second-background-color);
-  width: 100vw;
+.dropdown-menu {
+  background-color: var(--special-color);
 }
 
-.bg-specify-second {
-  background-color: var(--main-background-color);
-}
-.specify-ul {
-  justify-content: space-around;
-  list-style-type: none;
-  align-items: center;
+/* Special color for make the glass effect */
+.navbar {
+  background-color: #fdaa0feb;
+  -webkit-backdrop-filter: blur(0.2em);
+  backdrop-filter: blur(0.2em);
 }
 
-img {
-  height: 2em;
-}
-
-.navbar-toggler {
-  border: none;
-}
-
-.navbar-toggler:active {
-  border: none;
-}
-
-.navbar-toggler:hover {
-  border: none;
-}
-
-.important-bg-color {
-  padding: 0;
-}
-
-.links-a {
-  color: var(--main-text-color);
-  text-decoration: none;
+.link-nav,
+.nav-item {
   cursor: pointer;
-  opacity: 0.5;
-
-}
-.links-a:hover {
-background-color: var(--second-background-color) !important;
-opacity: 1;
-
-
+  opacity: 1;
 }
 
-.like-search{
-  box-shadow: inset -5px 5px 9px  #1e1e1e, inset 5px -5px 9px #3d3d3d;
+.like-search {
+  box-shadow: inset -5px 5px 9px #1e1e1e, inset 5px -5px 9px #3d3d3d;
 }
- 
+
+.nav-link:hover,
+a:active,
+a:hover {
+  color: white;
+}
+
+.dropdown-item:hover {
+  background-color: transparent;
+  color: white;
+}
+
+.navbar-toggler-icon {
+  color: black;
+}
+.navbar-toggler:focus {
+  color: transparent;
+}
+
+.form-check-input {
+  background-color: rgb(52, 52, 52);
+  border: none;
+}
+.form-check-input:checked {
+  background-color: #eee;
+  border: 1px solid black;
+}
+
+.form-switch .form-check-input:checked {
+  background-color: #eee;
+  border: none;
+}
+
+.form-check-input .form-check-input:focus,
+.form-check-input:active {
+  box-shadow: none;
+  border: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280, 10, 0, 0.80%29'/%3e%3c/svg%3e");
+}
+
+.form-switch .form-check-input:focus {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280, 10, 0, 0.25%29'/%3e%3c/svg%3e");
+}
+
+.search-bar-light {
+  border-radius: 10px;
+  background: #eee;
+  box-shadow: inset -5px 5px 9px #d4d3d3, inset 5px -5px 9px #ffffffbe;
+}

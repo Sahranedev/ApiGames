@@ -1,33 +1,70 @@
+/* Media Queries - Bootstrap overlay */
+@media screen and (max-width: 768px) {
+
+  .carousel-item img {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+} 
+
+/* Carrousel */
+
 .carousel .carousel-item {
   height: 60vh;
   width: 100vw;
+
+}
+  
+.carousel {
+  margin-bottom: 60px;
 }
 
-.carousel-item img {
-  position: absolute;
-  object-fit: cover;
-  top: 0;
-  left: 0;
-  min-height: 50ch;
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
 }
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  min-width: 100%;
+  background-color: #fff;
+}
+
+.carousel-inner > .item > img {
+  min-width: 100%;
+  height: 100%;
+}
+
+
+/* Light Mode  */
+.bglight{
+  background-color: #eee;
+  color : #333;
+}
+
+/* Dark Mode */
+.bgdark{
+  background-color: #333;
+  color : #eee;
+
+}
+
+
+
 /* 
-.rounded {
-  border-collapse: separate; 
-  perspective: 1px;
-  overflow: hidden;
-  border: 1px solid red;
-  -webkit-border-radius: 100px 100px 0px 0px;
-  -moz-border-radius: 100px 100px 0px 0px;
-  border-radius: 100px 100px 0px 0px;
-} */
-/******* GLOBAL SINGLE GAME PARAMETERS ******/
+
+/* GLOBAL SINGLE GAME PARAMETERS */
 .gamePageContainer {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/******* METACRITIC BUTTON *******/
+/* METACRITIC BUTTON */
 .metacritic75100 {
   display: flex;
   align-items: center;
@@ -71,6 +108,7 @@
   cursor: pointer;
   font-weight: bolder;
 }
+
 a {
   all: unset;
 }
@@ -112,6 +150,7 @@ a {
     100px 100px 80px rgba(0, 0, 0, 0.26);
 }
 
+
 /******* OTHER IMAGE FROM GAME *******/
 /* make a little image for now, cause will see for carousel with main image */
 .otherImage {
@@ -145,8 +184,8 @@ a {
   width: 4rem;
   height: 2rem;
   border-radius: 5px;
-  background: var(--second-background-color);
-  color: var(--main-background-color);
+  background: var(--special-color);
+  color: var(--light-main-text-color);
 }
 
 /******* LIKE GAME ********/
