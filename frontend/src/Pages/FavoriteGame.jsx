@@ -5,14 +5,16 @@ import "../Styles/favorite.css";
 import Modale from "./Modale";
 
 function FavoriteGame({ game, theme }) {
+  const [isFavorite, setIsFavorite] = useState(true);
+  const storedData = window.localStorage.games.split(",");
+  const newData = storedData.filter((id) => id != game.id);
   const removeStorage = () => {
-    const storedData = window.localStorage.games.split(",");
-    const newData = storedData.filter((id) => id != game.id);
     window.localStorage.games = newData;
-    window.location.reload();
+    setIsFavorite(!isFavorite);
   };
   const [show, setShow] = useState(false);
-  return (
+
+  return isFavorite ? (
     <div className={`single-game-${theme}`}>
       <div className="row d-flex ">
         <div className="col-3 ">
@@ -50,6 +52,8 @@ function FavoriteGame({ game, theme }) {
         </div>
       </div>
     </div>
+  ) : (
+    <div />
   );
 }
 

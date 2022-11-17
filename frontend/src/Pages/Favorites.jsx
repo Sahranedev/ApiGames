@@ -36,15 +36,16 @@ function Favorites({ theme }) {
               className={`container p-md-5 vh-100 favorite-container-${theme}`}
             >
               <div className="container">
-                <h2 className="p-md-5">Favorite</h2>
+                <h2 className="p-md-5">Favorites</h2>
                 {/* If there is something in listData, map it or send h2 tag */}
-                {isLoading && <Skeleton height={200} count={3} />}
+                {/*                 {isLoading && <Skeleton height={200} count={3} />}
+                 */}{" "}
                 {listData.length > 0 ? (
                   listData.map((game) => (
                     <FavoriteGame game={game} key={game.id} theme={theme} />
                   ))
                 ) : (
-                  <h2>Nothing fav for the moments</h2>
+                  <h3>... Nothing in your favorites for the moment</h3>
                 )}
               </div>
             </div>
