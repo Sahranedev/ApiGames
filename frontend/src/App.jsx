@@ -14,6 +14,7 @@ import Searchbar from "./components/SearchBar";
 import Favorites from "./Pages/Favorites";
 import FilteredbyPlatforms from "./components/FilteredByPlatforms";
 import News from "./components/News";
+import OurLikes from "./components/OurLikes";
 
 const API_URL =
   "https://api.rawg.io/api/games?key=5954a0ffab034307b0f8bb9adcd5f008";
@@ -123,6 +124,7 @@ A voir
               path="/news"
               element={<News games={games} theme={theme} />}
             />
+            <Route path="/api/games" element={<OurLikes />} />
           </Routes>
         </Router>
       </SkeletonTheme>

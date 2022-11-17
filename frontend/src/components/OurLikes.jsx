@@ -1,7 +1,23 @@
-import React from "react";
+// import React, { useState, useEffect } from "react";
 
-function OurLikes() {
-  return <div>Ourlikes</div>;
-}
+// function OurLikes() {
+//   const [Ourlikes, setOurlikes] = useState([]);
 
-export default OurLikes;
+//   const getOurLikes = () => {
+//     console.log("on est dans le ourLikes");
+//     fetch(`http://localhost:5000/api/games`)
+//       .then((response) => response.json())
+//       .then((result) => {
+//         setOurlikes(result.results);
+//       })
+//       .catch((err) => console.error(err));
+//   };
+
+//   useEffect(() => {
+//     getOurLikes();
+//   }, []);
+
+//   return <div>Ourlikes</div>;
+// }
+
+// export default OurLikes;

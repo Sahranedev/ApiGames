@@ -1,7 +1,7 @@
 :root {
   /* Variable for main theme - Dark theme */
   --dark-main-background-color: #333;
-  
+
   --dark-element-background-color: #121212;
   --dark-main-text-color: #e8e8e8;
 
@@ -21,9 +21,8 @@ body {
 .dark {
   background: var(--dark-main-background-color);
   color: var(--dark-main-text-color);
-  transition: 0.2s;}
-
-
+  transition: 0.2s;
+}
 
 .light {
   background: #eee;
@@ -32,7 +31,7 @@ body {
 }
 
 .gameListParaph {
-  display : none;
+  display: none;
 }
 
 body {
@@ -51,5 +50,3 @@ h5,
 h6 {
   font-family: "Montserrat", sans-serif;
 }
-
-

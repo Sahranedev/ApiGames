@@ -1,45 +1,25 @@
 const express = require("express");
-const fs = require("fs");
-const path = require("path");
-const cors = require("cors");
-const router = require("./router");
 
 const app = express();
-
-// use some application-level middlewares
-app.use(
-  cors({
-    origin: process.env.FRONTEND_URL ?? "http://localhost:3000",
-    optionsSuccessStatus: 200,
-  })
-);
-
 app.use(express.json());
 
-// Serve the public folder for public resources
-app.use(express.static(path.join(__dirname, "../public")));
+// call our api
+const welcome = (req, res) => {
+  res.send("Welcome to our favourite game list !");
+};
 
-// Serve REACT APP
-app.use(express.static(path.join(__dirname, "..", "..", "frontend", "dist")));
+app.get("/", welcome);
 
-// API routes
-app.use(router);
+const gamesHandlers = require("./gamesHandlers");
 
-// Redirect all requests to the REACT app
-const reactIndexFile = path.join(
-  __dirname,
-  "..",
-  "..",
-  "frontend",
-  "dist",
-  "index.html"
-);
+app.get("/api/games", gamesHandlers.getGames);
+app.get("/api/games/:id", gamesHandlers.getGameById);
 
-if (fs.existsSync(reactIndexFile)) {
-  app.get("*", (req, res) => {
-    res.sendFile(reactIndexFile);
-  });
-}
+app.post("/api/games", gamesHandlers.postGame);
+
+app.put("/api/games/:id", gamesHandlers.updateGame);
+
+app.delete("/api/games/:id", gamesHandlers.deleteGame);
 
 // ready to export
 module.exports = app;
