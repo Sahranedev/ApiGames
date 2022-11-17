@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useEffect, useState } from "react";
 import "../Styles/favorite.css";
 import Skeleton from "react-loading-skeleton";
