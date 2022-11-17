@@ -24,6 +24,17 @@
   .text-personnalized {
     font-size: 1.3em;
   }
+  .mainpage-container-dark {
+      height: 200vh;      
+      background: #292929;
+      box-shadow: #121212 0px 0px 10px 0px;
+  }
+
+  .mainpage-container-light {
+    height: 200vh; 
+      background: #f1f1f1;
+      box-shadow: #dedede 0px 0px 10px 0px;
+  }
 }
 
 hr {
@@ -34,3 +45,4 @@ hr {
   background-color: #eee; /* Modern Browsers */
 
 }
+
