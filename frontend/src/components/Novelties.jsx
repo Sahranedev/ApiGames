@@ -15,7 +15,11 @@ function Novelties({ game, theme }) {
           className="img-fluid mx-0 d-block p-0 img-personnalized"
           onClick={() => setShow(game.id)}
         />
-        <div className="col position-absolute bottom-0  text-personnalized bg-personnalized">
+        <div
+          className="col position-absolute bottom-0  text-personnalized bg-personnalized"
+          onClick={() => setShow(game.id)}
+          type="button"
+        >
           {game.name}
         </div>
       </div>
