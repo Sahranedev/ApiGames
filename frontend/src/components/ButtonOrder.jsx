@@ -1,6 +1,7 @@
 import React from "react";
 
 function ButtonOrder({ order, setOrder }) {
+  /* Button order of filtred lists */
   const getReverseOrder = () => {
     setOrder(!order);
   };

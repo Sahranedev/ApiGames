@@ -1,3 +1,5 @@
+/* Media Queries - Bootstrap overlay */
+
 @media screen and (min-width: 600px) {
   .totalPresentation {
     margin-left: 8em;

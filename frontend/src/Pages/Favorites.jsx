@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from "react";
 import "../Styles/favorite.css";
+import Skeleton from "react-loading-skeleton";
 import FavoriteGame from "./FavoriteGame";
 
 const API_URL = "https://api.rawg.io/api/games";
 const API_KEY = "5954a0ffab034307b0f8bb9adcd5f008";
 
 function Favorites({ theme }) {
-  // useState qui va contenir la liste des jeux mis en favoris sur le localStorage
+  /* State to contain the game list put in favorite on the local storage */
+  const [isLoading, setIsLoading] = useState(true);
   const [listData, setListData] = useState([]);
 
   useEffect(() => {
-    // si il ya des quelque chose dans la liste games du local storage,tu me le split et stock dans gameId siono gameId = []
+    /* if something in the game list  of local storage, split and stock it  in GameId or gameID = [] */
     const gameId = window.localStorage.games
       ? window.localStorage.games.split(",")
       : [];
@@ -20,8 +22,10 @@ function Favorites({ theme }) {
       fetch(`${API_URL}/${gameId[i]}?key=${API_KEY}`)
         .then((res) => res.json())
         .then((results) => setListData((data) => [...data, results]));
+      setIsLoading(false);
     }
   }, []);
+
   return (
     <div className="container vh-100 md-p-5 ">
       <div className="row">
@@ -32,7 +36,8 @@ function Favorites({ theme }) {
             >
               <div className="container">
                 <h2 className="p-md-5">Favorite</h2>
-                {/* si il y'a quelque chose dans listeData tu me le map sinon tu renvoit un h2 Nothing fav */}
+                {/* If there is something in listData, map it or send h2 tag */}
+                {isLoading && <Skeleton height={200} count={3} />}
                 {listData.length > 0 ? (
                   listData.map((game) => (
                     <FavoriteGame game={game} key={game.id} theme={theme} />

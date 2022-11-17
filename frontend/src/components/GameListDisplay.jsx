@@ -8,23 +8,20 @@ import IMGnotFound from "../images/IMGnotFound.png";
 
 function GameListDisplay({
   theme,
-  // On extrait les propriétés qu'on veut afficher depuis le tableau de l'API
   name,
   background_image: backgroundImage,
   metacritic,
   released,
   genres,
   id,
-
   platforms: [
     {
       platform: { name: platformeName },
     },
   ],
-
   metacritic_url: metacriticUrl,
 }) {
-  // Fonction du score métacritic relié a une classe CSS qui permet de changer la couleur en fonction du score
+  /* metacritic conditions */
   const colorCritic = () => {
     if (metacritic >= 75) {
       return "metacriticGreen";
@@ -34,10 +31,13 @@ function GameListDisplay({
     }
     return "metacriticRed";
   };
-  // Déploiment du State dynamique pour gérer l'affichage du modal
+
+  /* State for the modale */
   const [show, setShow] = useState(false);
+
   return (
     <div className="container px-4 image-container">
+      {/* modale */}
       <Modale show={show} setShow={setShow} id={id} theme={theme} />
       <div className={`row rounded my-3 cards-${theme}`}>
         <div className="col-md-4  col-6 p-0 ">

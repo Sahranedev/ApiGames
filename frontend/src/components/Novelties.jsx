@@ -7,6 +7,7 @@ function Novelties({ game, theme }) {
   return (
     <div className="col-6">
       <div className="row position-relative p-0 mx-md-1">
+        {/* Press to show modale */}
         <Modale show={show} setShow={setShow} id={game.id} theme={theme} />
         <img
           src={game.background_image}
@@ -16,7 +17,7 @@ function Novelties({ game, theme }) {
           onClick={() => setShow(game.id)}
         />
         <div
-          className="col position-absolute bottom-0  text-personnalized bg-personnalized"
+          className="col position-absolute bottom-0 text-center  text-personnalized bg-personnalized"
           onClick={() => setShow(game.id)}
           type="button"
         >

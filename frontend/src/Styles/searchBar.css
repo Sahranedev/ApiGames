@@ -25,12 +25,12 @@
   width: 90%;
 }
 
-/* Css dans la barre */
+/* Overlay search bar */
 .search input {
   background: transparent;
   border: 0;
   outline: none;
-  font-size: 20px; /* taille du titre dans l'input*/
+  font-size: 20px;
   position: relative;
   left: 20px;
   color: var(--second-text-color);

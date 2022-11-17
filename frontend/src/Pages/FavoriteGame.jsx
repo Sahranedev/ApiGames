@@ -1,10 +1,11 @@
 /* eslint eqeqeq: 0 */
-
 import React, { useState } from "react";
 import "../Styles/favorite.css";
 import Modale from "./Modale";
 
 function FavoriteGame({ game, theme }) {
+  /* state on local data */
+
   const removeStorage = () => {
     const storedData = window.localStorage.games.split(",");
     const newData = storedData.filter((id) => id != game.id);
@@ -12,10 +13,12 @@ function FavoriteGame({ game, theme }) {
     window.location.reload();
   };
   const [show, setShow] = useState(false);
+
   return (
     <div className={`single-game-${theme}`}>
       <div className="row">
         <div className="col-md-2 col-sm-2">
+          {/* Show modale when clicked */}
           <Modale show={show} setShow={setShow} id={game.id} theme={theme} />
           <button
             className="btn  pull-right"

@@ -1,7 +1,7 @@
 import React from "react";
 
 function QuizzResult() {
-  return <div>QuizzResult</div>;
+  return <div>{/* work in progress */}</div>;
 }
 
 export default QuizzResult;

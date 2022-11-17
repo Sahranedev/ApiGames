@@ -1,16 +1,21 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import Skeleton from "react-loading-skeleton";
 import Novelties from "../components/Novelties";
 import "../Styles/mainpage.css";
 
 function MainPage({ theme }) {
+  /*  Loading page  */
+  const [isLoading, setIsLoading] = useState(true);
+
   // Function to get a random game from the API from the mainpage
   const [randomID, setRandomID] = useState(Math.floor(Math.random() * 1000));
-  const [Maingames, setMaingames] = useState([]);
-
   const getRandomID = () => {
     setRandomID(Math.floor(Math.random() * 1000));
   };
+
+  /* API call for news on the mainpage  */
+  const [Maingames, setMaingames] = useState([]);
 
   const date1 = new Date().toISOString().slice(0, 10);
   const currentYear = new Date().getFullYear();
@@ -23,6 +28,7 @@ function MainPage({ theme }) {
       .then((response) => response.json())
       .then((result) => {
         setMaingames(result.results);
+        setIsLoading(false);
       })
       .catch((err) => console.error(err));
   };
@@ -47,14 +53,16 @@ function MainPage({ theme }) {
           </Link>
         </div>
         <div className="container">
+          <div className="container">
+            {isLoading && <Skeleton height={200} count={1} />}
+          </div>
           <div className="row">
-            {Maingames.length > 0 ? (
-              Maingames.map((game) => (
-                <Novelties game={game} key={game.id} theme={theme} />
-              ))
-            ) : (
-              <h2>Please Wait...</h2>
-            )}
+            {/* Affichage appel API */}
+            {Maingames.length > 0
+              ? Maingames.map((game) => (
+                  <Novelties game={game} key={game.id} theme={theme} />
+                ))
+              : null}
           </div>
         </div>
         <hr className="mt-md-5 my-md-5" />
