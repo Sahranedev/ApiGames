@@ -2,6 +2,8 @@
 /* eslint eqeqeq: 0 */
 import { useParams } from "react-router";
 import { useState, useEffect } from "react";
+
+/*  Import components React  */
 import Button from "react-bootstrap/Button";
 import Collapse from "react-bootstrap/Collapse";
 import Skeleton from "react-loading-skeleton";
@@ -11,15 +13,16 @@ import IMGnotFound from "../images/IMGnotFound.png";
 import "../Styles/stillLost.css";
 
 function StillLost({ theme }) {
+  /* API params */
   const API_URL = "https://api.rawg.io/api/games";
   const API_KEY = "5954a0ffab034307b0f8bb9adcd5f008";
+
+  /* Import random ID from Main Page */
   const { randomID } = useParams();
+
+  /* Params to call the API */
   const [randomGame, setRandomGame] = useState(null);
   const [newRandomID, setNewRandomID] = useState(randomID);
-  const [open, setOpen] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
-  const [isFavorite, setIsFavorite] = useState(false);
-
   // I want to get a new random ID if the user clicks the button
   const getNewRandomID = async () => {
     setNewRandomID(Math.floor(Math.random() * 1000));
@@ -40,26 +43,36 @@ function StillLost({ theme }) {
   useEffect(() => {
     getRandomGame();
   }, [newRandomID]);
+
+  /* Set favorite */
+  const [isFavorite, setIsFavorite] = useState(false);
   const addStorage = () => {
-    // var storedData qui contiendra la liste games du local storage,la ternaire check si il y'a quelque chose dans la liste games du localStorage
-    // si oui elle renvoi un tableau split par une "," sinon revoie un tableau vide []
+    /* storeData contain the game list of localstorage. Tenary to check if something is stock
+    if yes -> splitted array / if no -> empty array */
     const storedData = window.localStorage.games
       ? window.localStorage.games.split(",")
       : [];
-    // si la var storedData ne contien pas deja l'id clické alors tu le push dans stored data en tant que string  puis le locale storage recoit les donné de storedData
+
+    /* if storeData doesnt contain the id -> push as a string  */
     if (!storedData.includes(randomGame.id.toString())) {
       storedData.push(randomGame.id);
       window.localStorage.games = storedData;
     }
     setIsFavorite(!isFavorite);
   };
-  // fonction pour delete un id de jeux du localStorage
+  /* Remove from local storage */
   const removeStorage = () => {
     const storedData = window.localStorage.games.split(",");
     const newData = storedData.filter((id) => id != randomGame.id);
     window.localStorage.games = newData;
     setIsFavorite(!isFavorite);
   };
+
+  /*  State for the loading screen and description*/
+
+  const [open, setOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
     <div className={`container-md p-5 rounded still-container-${theme}`}>
       <LinkToMainPage />

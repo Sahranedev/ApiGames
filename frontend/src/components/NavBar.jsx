@@ -5,6 +5,7 @@ import logoTest from "../images/LogoTest.png";
 /* eslint-disable */
 
 function NavBar({ searchValue, setSearchValue, getGame, toggleTheme, theme }) {
+  /* State for the toggle theme icon */
   const [bulb, setBulb] = useState(false);
   const handleBulb = () => {
     setBulb(!bulb);
@@ -33,6 +34,7 @@ function NavBar({ searchValue, setSearchValue, getGame, toggleTheme, theme }) {
         <div className="collapse navbar-collapse " id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 ">
             <li className=" d-flex justify-content-end  ">
+              {/*  Toggle theme */}
               <div
                 className="form-check mx-3 form-switch mx-md-5 my-md-2 d-flex justify-content-end justify-content-md-start toggle-btn"
                 onClick={toggleTheme}
@@ -80,7 +82,7 @@ function NavBar({ searchValue, setSearchValue, getGame, toggleTheme, theme }) {
                 <NavLink to="/favorites"> Favorites</NavLink>
               </a>
             </li>
-
+            {/* Incomine Games */}
             <li className="nav-item mx-3">
               <a
                 className="nav-link d-flex justify-content-end align-items-center"

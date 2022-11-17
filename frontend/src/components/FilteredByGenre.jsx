@@ -9,26 +9,25 @@ function FiltredByGenre({ theme }) {
   const API_URL = "https://api.rawg.io/api/games";
   const API_KEY = "5954a0ffab034307b0f8bb9adcd5f008";
 
-  /* useRef permet ici de gérer l'état du lancement des fonctions fetch */
-  const isMount = useRef(false);
+  /* Params to filter the ID */
+
   const { filtredListByGenre } = useParams();
-  /* Transmets l'ID du genre  pour la donner au prochain fetch */
+
+  /* Stock genre games */
   const [filter, setFilter] = useState();
-  /* Permet de stocker les jeux selon le genre */
   const [gamesFiltred, setGamesFiltred] = useState([]);
-  /* Permet d'ajuster le filtrage, remonter de state pour le faire passer au composant buttonOrder */
+  /* Update the order of games */
   const [order, setOrder] = useState(false);
+
   const [isLoading, setIsLoading] = useState(true);
 
-  // Requête pour récupérer les ID des genres
+  // Request API platforms by ID
   const getGenreList = async () => {
     const response = await fetch(
       `https://api.rawg.io/api/genres?key=${API_KEY}`
     );
     const result = await response.json();
     const genreList = result.results;
-
-    // Pour chaque genre de la liste je vérifie si le nom est égal à la valeur du params.
     genreList.forEach((genre) => {
       if (genre.slug === filtredListByGenre) {
         setFilter(genre.id);
@@ -36,7 +35,7 @@ function FiltredByGenre({ theme }) {
     });
   };
 
-  // Requête pour récupérer les jeux en fonction du genre
+  /* Request API games filtred */
   const getFiltredList = async () => {
     const response = await fetch(
       `${API_URL}?key=${API_KEY}&genres=${filter}&ordering=${
@@ -54,7 +53,8 @@ function FiltredByGenre({ theme }) {
     getGenreList();
   }, [filtredListByGenre]);
 
-  // On utilise un useEffect basé sur le montage du composant pour ne pas déclencher la requête du listing en début de chargement de page
+  /* useRef is use here to fix the state of functions fetched */
+  const isMount = useRef(false);
   useEffect(() => {
     if (isMount.current) {
       getFiltredList();
@@ -63,7 +63,8 @@ function FiltredByGenre({ theme }) {
     }
   }, [filter]);
 
-  // Mise à jour de l'ordre de tri en rappelant l'API lorsque order change
+  /* Update the order of games */
+
   useEffect(() => {
     getFiltredList();
   }, [order]);

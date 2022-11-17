@@ -6,11 +6,12 @@ import "../Styles/mainpage.css";
 function MainPage({ theme }) {
   // Function to get a random game from the API from the mainpage
   const [randomID, setRandomID] = useState(Math.floor(Math.random() * 1000));
-  const [Maingames, setMaingames] = useState([]);
-
   const getRandomID = () => {
     setRandomID(Math.floor(Math.random() * 1000));
   };
+
+  /* API call for news on the mainpage  */
+  const [Maingames, setMaingames] = useState([]);
 
   const date1 = new Date().toISOString().slice(0, 10);
   const currentYear = new Date().getFullYear();
@@ -48,6 +49,7 @@ function MainPage({ theme }) {
         </div>
         <div className="container">
           <div className="row">
+            {/* Affichage appel API */}
             {Maingames.length > 0 ? (
               Maingames.map((game) => (
                 <Novelties game={game} key={game.id} theme={theme} />

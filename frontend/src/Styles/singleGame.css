@@ -1,20 +1,4 @@
-.carousel .carousel-item {
-  height: 60vh;
-  width: 100vw;
-
-}
-
-.bglight{
-  background-color: #eee;
-  color : #333;
-}
-
-.bgdark{
-  background-color: #333;
-  color : #eee;
-
-}
-
+/* Media Queries - Bootstrap overlay */
 @media screen and (max-width: 768px) {
 
   .carousel-item img {
@@ -26,6 +10,14 @@
     height: 100%;
   }
 } 
+
+/* Carrousel */
+
+.carousel .carousel-item {
+  height: 60vh;
+  width: 100vw;
+
+}
   
 .carousel {
   margin-bottom: 60px;
@@ -47,16 +39,32 @@
   height: 100%;
 }
 
+
+/* Light Mode  */
+.bglight{
+  background-color: #eee;
+  color : #333;
+}
+
+/* Dark Mode */
+.bgdark{
+  background-color: #333;
+  color : #eee;
+
+}
+
+
+
 /* 
 
-/******* GLOBAL SINGLE GAME PARAMETERS ******/
+/* GLOBAL SINGLE GAME PARAMETERS */
 .gamePageContainer {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/******* METACRITIC BUTTON *******/
+/* METACRITIC BUTTON */
 .metacritic75100 {
   display: flex;
   align-items: center;
@@ -100,6 +108,7 @@
   cursor: pointer;
   font-weight: bolder;
 }
+
 a {
   all: unset;
 }

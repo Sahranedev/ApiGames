@@ -1,8 +1,11 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState, useEffect } from "react";
+
+/* Import Skeleton theme for loading screen */
 import { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
+/* Import components */
 import "./Styles/App.css";
 import StillLost from "@components/StillLost";
 import Navbar from "./components/NavBar";
@@ -15,19 +18,30 @@ import Favorites from "./Pages/Favorites";
 import FilteredbyPlatforms from "./components/FilteredByPlatforms";
 import News from "./components/News";
 
+/* Import API params */
 const API_URL =
   "https://api.rawg.io/api/games?key=5954a0ffab034307b0f8bb9adcd5f008";
 
-/* b6d47b1b6d1d4e37a348869c6f3fa8a3
-13e525c42c04986ac0747dddec96609 
-5657950b80b34f3491f12b3319827e0f
-*/
-
 export default function App() {
+  /* State to define loading screen */
   const [isLoading, setIsLoading] = useState(true);
+
+  /* State to define the value of the search bar  */
   const [searchValue, setSearchValue] = useState("");
   const [games, setGames] = useState([]);
-  /* Make a hook to get the theme */
+
+  const getGame = () => {
+    fetch(`${API_URL}&search=${searchValue}&page_size=10`)
+      .then((response) => response.json())
+      .then((result) => {
+        setGames(result.results);
+        setIsLoading(false);
+      })
+      .catch((err) => console.error(err));
+    setSearchValue("");
+  };
+
+  /* State to define  the theme */
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
   const toggleTheme = () => {
     if (theme === `light`) {
@@ -42,21 +56,10 @@ export default function App() {
     document.body.className = theme;
   }, [theme]);
 
-  const getGame = () => {
-    fetch(`${API_URL}&search=${searchValue}&page_size=10`)
-      .then((response) => response.json())
-      .then((result) => {
-        setGames(result.results);
-        setIsLoading(false);
-      })
-      .catch((err) => console.error(err));
-    setSearchValue("");
-  };
   return (
     <div className={`App  ${theme}`}>
       <SkeletonTheme baseColor="#202020" highlightColor="#444">
         <Router>
-          {/* give props to toggle the theme */}
           <Navbar
             getGame={getGame}
             searchValue={searchValue}
