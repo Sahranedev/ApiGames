@@ -1,23 +1,30 @@
-// import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import OurLikesDisplay from "./OurLikesDisplay";
 
-// function OurLikes() {
-//   const [Ourlikes, setOurlikes] = useState([]);
+function OurLikes() {
+  const [ourLikes, setOurLikes] = useState([]);
 
-//   const getOurLikes = () => {
-//     console.log("on est dans le ourLikes");
-//     fetch(`http://localhost:5000/api/games`)
-//       .then((response) => response.json())
-//       .then((result) => {
-//         setOurlikes(result.results);
-//       })
-//       .catch((err) => console.error(err));
-//   };
+  const getOurLikes = () => {
+    fetch(`http://localhost:5000/api/games`)
+      .then((response) => response.json())
+      .then((result) => {
+        setOurLikes(result);
+      })
+      .catch((err) => console.error(err));
+  };
 
-//   useEffect(() => {
-//     getOurLikes();
-//   }, []);
+  useEffect(() => {
+    getOurLikes();
+  }, []);
 
-//   return <div>Ourlikes</div>;
-// }
+  return (
+    <div>
+      {/* Affichage appel API */}
+      {ourLikes?.map((game) => {
+        return <OurLikesDisplay key={game.id} {...game} />;
+      })}
+    </div>
+  );
+}
 
-// export default OurLikes;
+export default OurLikes;
