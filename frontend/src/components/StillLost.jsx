@@ -77,7 +77,7 @@ function StillLost({ theme }) {
     <div className={`container-md p-5 rounded still-container-${theme}`}>
       <LinkToMainPage />
       <div className="container">
-        {isLoading && <Skeleton height={200} count={5} />}
+        {isLoading && <Skeleton height={200} count={1} />}
       </div>
       <div className="row">
         {/* Title */}

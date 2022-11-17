@@ -5,6 +5,8 @@ import SingleGame from "../components/SingleGame";
 import "../Styles/modale.css";
 
 function Modale({ show, setShow, id, theme }) {
+  /*  Loading page  */
+
   const values = ["xxl-down"];
   const [fullscreen, setFullscreen] = useState(true);
 
@@ -22,6 +24,7 @@ function Modale({ show, setShow, id, theme }) {
           {typeof v === "string" && `below ${v.split("-")[0]}`}
         </Button>
       ))}
+
       <Modal
         className="modal"
         show={show}
@@ -32,6 +35,7 @@ function Modale({ show, setShow, id, theme }) {
           className={`bg${theme} close-btn mh-100 mw-100`}
           closeButton
         />
+
         <SingleGame id={id} theme={theme} />
       </Modal>
     </div>
