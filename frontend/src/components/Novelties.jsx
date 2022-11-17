@@ -2,12 +2,12 @@
 import React, { useState } from "react";
 import Modale from "../Pages/Modale";
 
-function Novelties({ game }) {
+function Novelties({ game, theme }) {
   const [show, setShow] = useState(false);
   return (
     <div className="col-6">
       <div className="row position-relative p-0 mx-md-1">
-        <Modale show={show} setShow={setShow} id={game.id} />
+        <Modale show={show} setShow={setShow} id={game.id} theme={theme} />
         <img
           src={game.background_image}
           alt="game"

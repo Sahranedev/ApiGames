@@ -49,7 +49,9 @@ function MainPage({ theme }) {
         <div className="container">
           <div className="row">
             {Maingames.length > 0 ? (
-              Maingames.map((game) => <Novelties game={game} key={game.id} />)
+              Maingames.map((game) => (
+                <Novelties game={game} key={game.id} theme={theme} />
+              ))
             ) : (
               <h2>Please Wait...</h2>
             )}
