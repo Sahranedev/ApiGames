@@ -5,7 +5,7 @@ import Skeleton from "react-loading-skeleton";
 import FavoriteGame from "./FavoriteGame";
 
 const API_URL = "https://api.rawg.io/api/games";
-const API_KEY = "5954a0ffab034307b0f8bb9adcd5f008";
+const API_KEY = "f88c36680add4122a8999654d4320443";
 
 function Favorites({ theme }) {
   /* State to contain the game list put in favorite on the local storage */
@@ -28,13 +28,11 @@ function Favorites({ theme }) {
   }, []);
 
   return (
-    <div className="container vh-100 md-p-5 ">
+    <div className="container  md-p-5 ">
       <div className="row">
         <div className="col">
           <div className={`game-list-favorite-${theme}`}>
-            <div
-              className={`container p-md-5 vh-100 favorite-container-${theme}`}
-            >
+            <div className={`container p-md-5 favorite-container-${theme}`}>
               <div className="container">
                 <h2 className="p-md-5">Favorites</h2>
                 {/* If there is something in listData, map it or send h2 tag */}
