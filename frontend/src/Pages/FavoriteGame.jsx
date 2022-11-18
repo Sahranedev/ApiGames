@@ -45,45 +45,6 @@ function FavoriteGame({ game, theme }) {
           <div className="like text-center" />
         </button>
       </div>
-
-      {/* 
-
-
-      <div className="row d-flex ">
-        <div className="col-2">
-          <Modale show={show} setShow={setShow} id={game.id} theme={theme} />
-
-          <img
-            src={game.background_image}
-            alt="game"
-            className="img-fluid game-photo"
-            type="button"
-            onClick={() => setShow(game.id)}
-          />
-        </div>
-        <div className="col-9 d-flex">
-          <div
-            className={`game-name-${theme} col-11 py-5 m-1 d-flex justify-content-center`}
-          >
-            <button
-              className="btn  pull-right  d-md-block"
-              type="button"
-              onClick={() => setShow(game.id)}
-            >
-              <h5>{game.name}</h5>
-            </button>
-          </div>
-          <div className="col-1  d-flex justify-content-center py-5 ">
-            <button
-              onClick={removeStorage}
-              type="button"
-              className="btn  pull-right"
-            >
-              <div className="like text-center" />
-            </button>
-          </div>
-        </div>
-      </div> */}
     </div>
   ) : (
     <div />
