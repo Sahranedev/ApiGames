@@ -8,6 +8,7 @@ import "react-loading-skeleton/dist/skeleton.css";
 /* Import components */
 import "./Styles/App.css";
 import StillLost from "@components/StillLost";
+import Goty from "./components/Goty";
 import Landpage from "./components/Landpage";
 import Navbar from "./components/NavBar";
 import Mainpage from "./Pages/MainPage";
@@ -21,7 +22,7 @@ import News from "./components/News";
 
 /* Import API params */
 const API_URL =
-  "https://api.rawg.io/api/games?key=f88c36680add4122a8999654d4320443";
+  "https://api.rawg.io/api/games?key=17de4caa2f4543e6878ebbdafe4072c8";
 
 export default function App() {
   const [loader, setLoader] = useState(true);
@@ -129,6 +130,10 @@ export default function App() {
             <Route
               path="/news"
               element={<News games={games} theme={theme} />}
+            />
+            <Route
+              path="/goty"
+              element={<Goty games={games} theme={theme} />}
             />
           </Routes>
         </Router>
