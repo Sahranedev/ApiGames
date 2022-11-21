@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Skeleton from "react-loading-skeleton";
-import GameListDisplay from "./GameListDisplay";
 import "react-loading-skeleton/dist/skeleton.css";
-import { Link } from "react-router-dom";
 import LinkToMainPage from "./LinkToMainPage";
+import GameListDisplay from "./GameListDisplay";
 
 const API_KEY = "17de4caa2f4543e6878ebbdafe4072c8";
 
