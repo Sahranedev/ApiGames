@@ -176,32 +176,31 @@ function MainPage({ theme }) {
         {/*  Our selection */}
         <hr className="mt-4 d-none d-md-block" />
 
-        <div className="game-select">
-          <h2>Our selection</h2>
-          <div className="d-flex justify-content-center mt-5">
-            <div className="like text-center" />{" "}
-            <h2 className="mx-1 ">
-              {" "}
-              Game Name by{" "}
-              <span className="text-personnalized-color">Name</span>
-            </h2>
-          </div>
-          <div className="d-flex justify-content-center mt-5">
-            <div className="like text-center" />{" "}
-            <h2 className="mx-1 ">
-              {" "}
-              Game Name by{" "}
-              <span className="text-personnalized-color">Name</span>
-            </h2>
-          </div>
-          <div className="d-flex justify-content-center mt-5">
-            <div className="like text-center" />{" "}
-            <h2 className="mx-1 ">
-              {" "}
-              Game Name by{" "}
-              <span className="text-personnalized-color">Name</span>
-            </h2>
-          </div>
+        <div className="container">
+          <div className="game-select" />
+        </div>
+
+        <div className="container random-title d-flex flex-column pt-5 pb-5">
+          <h2 className="d-flex justify-content-center">Discover</h2>
+          <h2 className="text-personnalized-color d-flex justify-content-center display-1">
+            Our Selection
+          </h2>
+          <h2 className="d-flex justify-content-center">
+            {" "}
+            (We have good taste...)
+          </h2>
+          <h3 className="d-flex justify-content-center"> (Really.)</h3>
+
+          <Link to="/ourlikes">
+            {" "}
+            <button
+              className="mb-5 container button-class d-flex justify-content-center btn btn-dark col-6 mt-5 my-md-5 "
+              type="button"
+              onClick={getRandomID}
+            >
+              Let's go
+            </button>
+          </Link>
         </div>
       </div>
     </div>

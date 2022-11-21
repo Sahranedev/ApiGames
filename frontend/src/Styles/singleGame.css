@@ -1,6 +1,5 @@
 /* Media Queries - Bootstrap overlay */
 @media screen and (max-width: 768px) {
-
   .carousel-item img {
     position: absolute;
     object-fit: cover;
@@ -9,16 +8,15 @@
     left: 0;
     height: 100%;
   }
-} 
+}
 
 /* Carrousel */
 
 .carousel .carousel-item {
   height: 60vh;
   width: 100vw;
-
 }
-  
+
 .carousel {
   margin-bottom: 60px;
 }
@@ -39,21 +37,17 @@
   height: 100%;
 }
 
-
 /* Light Mode  */
-.bglight{
+.bglight {
   background-color: #eee;
-  color : #333;
+  color: #333;
 }
 
 /* Dark Mode */
-.bgdark{
+.bgdark {
   background-color: #333;
-  color : #eee;
-
+  color: #eee;
 }
-
-
 
 /* 
 
@@ -149,7 +143,6 @@ a {
     41.8px 41.8px 33.4px rgba(0, 0, 0, 0.187),
     100px 100px 80px rgba(0, 0, 0, 0.26);
 }
-
 
 /******* OTHER IMAGE FROM GAME *******/
 /* make a little image for now, cause will see for carousel with main image */

@@ -19,6 +19,7 @@ import Searchbar from "./components/SearchBar";
 import Favorites from "./Pages/Favorites";
 import FilteredbyPlatforms from "./components/FilteredByPlatforms";
 import News from "./components/News";
+import OurLikes from "./components/OurLikes";
 
 /* Import API params */
 const API_URL =
@@ -131,6 +132,7 @@ export default function App() {
               path="/news"
               element={<News games={games} theme={theme} />}
             />
+            <Route path="/ourlikes" element={<OurLikes />} />
             <Route
               path="/goty"
               element={<Goty games={games} theme={theme} />}
