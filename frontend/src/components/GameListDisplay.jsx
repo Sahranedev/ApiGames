@@ -36,7 +36,7 @@ function GameListDisplay({
   const [show, setShow] = useState(false);
 
   return (
-    <div className="container px-4 image-container">
+    <div className="container px-4 image-container my-5">
       {/* modale */}
       <Modale show={show} setShow={setShow} id={id} theme={theme} />
       <div className={`row rounded my-3 cards-${theme}`}>

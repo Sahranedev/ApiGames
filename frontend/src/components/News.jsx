@@ -35,9 +35,9 @@ function News({ theme }) {
   }, []);
 
   return (
-    <div className="vh-100 p-3 contain-fixed">
+    <div className="p-3 contain-fixed ">
       {" "}
-      <div className="container-fluid d-md-flex align-items-center justify-content-md-between">
+      <div className="container-fluid d-md-flex align-items-center justify-content-md-between ">
         <h2 className="col-md-11 col-fluid m-3 d-flex d-md-block justify-content-center justify-content-md-start">
           {" "}
           <svg
