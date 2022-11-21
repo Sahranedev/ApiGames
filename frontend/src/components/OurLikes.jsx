@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import OurLikesDisplay from "./OurLikesDisplay";
 
-function OurLikes() {
+function OurLikes({ theme }) {
   const [ourLikes, setOurLikes] = useState([]);
 
   const getOurLikes = () => {
@@ -21,7 +21,7 @@ function OurLikes() {
     <div>
       {/* Affichage appel API */}
       {ourLikes?.map((game) => {
-        return <OurLikesDisplay key={game.id} {...game} />;
+        return <OurLikesDisplay key={game.id} {...game} theme={theme} />;
       })}
     </div>
   );

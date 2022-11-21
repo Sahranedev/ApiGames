@@ -132,7 +132,7 @@ export default function App() {
               path="/news"
               element={<News games={games} theme={theme} />}
             />
-            <Route path="/ourlikes" element={<OurLikes />} />
+            <Route path="/ourlikes" element={<OurLikes theme={theme} />} />
             <Route
               path="/goty"
               element={<Goty games={games} theme={theme} />}
