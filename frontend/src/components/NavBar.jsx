@@ -74,39 +74,50 @@ function NavBar({ searchValue, setSearchValue, getGame, toggleTheme, theme }) {
             </li>
             {/* Favorite Page */}
             <li className="nav-item mx-3">
-              <a
+              <div
                 className="nav-link d-flex justify-content-end align-items-center"
                 aria-current="page"
                 href="/favorites"
               >
                 <NavLink to="/favorites"> Favorites</NavLink>
-              </a>
+              </div>
             </li>
-            {/* Incoming Games */}
+
             <li className="nav-item mx-3">
-              <a
+              <div
+                className="nav-link d-flex justify-content-end align-items-center"
+                aria-current="page"
+                href="/ourlikes"
+              >
+                <NavLink to="/ourlikes">Selection</NavLink>
+              </div>
+            </li>
+
+            {/* Incomine Games */}
+            <li className="nav-item mx-3">
+              <div
                 className="nav-link d-flex justify-content-end align-items-center"
                 aria-current="page"
                 href="/news"
               >
                 <NavLink to="/news">Incoming</NavLink>
-              </a>
+              </div>
             </li>
 
             {/* GOTY Games */}
             <li className="nav-item mx-3">
-              <a
+              <div
                 className="nav-link d-flex justify-content-end align-items-center"
                 aria-current="page"
                 href="/goty"
               >
                 <NavLink to="/goty">GOTY</NavLink>
-              </a>
+              </div>
             </li>
 
             {/* Dropdown Menu by platforms */}
             <li className="nav-item mx-3 dropdown">
-              <a
+              <div
                 className="nav-link d-flex justify-content-end align-items-center dropdown-toggle"
                 href="/"
                 role="button"
@@ -114,7 +125,7 @@ function NavBar({ searchValue, setSearchValue, getGame, toggleTheme, theme }) {
                 aria-expanded="false"
               >
                 Platforms
-              </a>
+              </div>
               <ul className="dropdown-menu ">
                 <li className="dropdown-item d-flex justify-content-end justify-content-md-start ">
                   <Link to="/platforms/pc">
@@ -197,7 +208,7 @@ function NavBar({ searchValue, setSearchValue, getGame, toggleTheme, theme }) {
 
             {/* Dropdown Menu by genres */}
             <li className="nav-item  mx-3 dropdown">
-              <a
+              <div
                 className="nav-link d-flex justify-content-end align-items-center dropdown-toggle"
                 href="/"
                 role="button"
@@ -205,7 +216,7 @@ function NavBar({ searchValue, setSearchValue, getGame, toggleTheme, theme }) {
                 aria-expanded="false"
               >
                 Genres
-              </a>
+              </div>
               <ul className="dropdown-menu">
                 <li className="dropdown-item d-flex justify-content-end justify-content-md-start">
                   <Link to="/genres/arcade">
