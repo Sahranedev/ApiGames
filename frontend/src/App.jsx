@@ -15,6 +15,7 @@ import Mainpage from "./Pages/MainPage";
 import FilteredbyGenre from "./components/FilteredByGenre";
 import SingleGame from "./components/SingleGame";
 import GameList from "./components/GameList";
+import Searchbar from "./components/SearchBar";
 import Favorites from "./Pages/Favorites";
 import FilteredbyPlatforms from "./components/FilteredByPlatforms";
 import News from "./components/News";
@@ -78,6 +79,15 @@ export default function App() {
             setSearchValue={setSearchValue}
             games={games}
             toggleTheme={toggleTheme}
+            theme={theme}
+          />
+
+          <Searchbar
+            className="d-none d-md-block m-3 p-3"
+            getGame={getGame}
+            searchValue={searchValue}
+            setSearchValue={setSearchValue}
+            games={games}
             theme={theme}
           />
 
