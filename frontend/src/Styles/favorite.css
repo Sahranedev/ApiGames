@@ -35,13 +35,13 @@ img.game-photo {
 
 @media screen and (min-width: 800px) {
   .favorite-container-dark {
-    height: 100vh;
+    height: 100%;
     background: #292929;
     box-shadow: #121212 0px 0px 10px 0px;
   }
 
   .favorite-container-light {
-    height: 100vh;
+    height: 100%;
     background: #eee;
     box-shadow: #a09e9efe 0px 0px 15px 4px;
   }

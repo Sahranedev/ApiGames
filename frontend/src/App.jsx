@@ -8,6 +8,8 @@ import "react-loading-skeleton/dist/skeleton.css";
 /* Import components */
 import "./Styles/App.css";
 import StillLost from "@components/StillLost";
+import Goty from "./components/Goty";
+import Landpage from "./components/Landpage";
 import Navbar from "./components/NavBar";
 import Mainpage from "./Pages/MainPage";
 import FilteredbyGenre from "./components/FilteredByGenre";
@@ -23,6 +25,14 @@ const API_URL =
   "https://api.rawg.io/api/games?key=17d306a6417e451dbac7946b20c1301c";
 
 export default function App() {
+  const [loader, setLoader] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoader(false);
+    }, 3000);
+  }, []);
+
   /* State to define loading screen */
   const [isLoading, setIsLoading] = useState(true);
 
@@ -56,7 +66,9 @@ export default function App() {
     document.body.className = theme;
   }, [theme]);
 
-  return (
+  return loader ? (
+    <Landpage />
+  ) : (
     <div className={`App  ${theme}`}>
       <SkeletonTheme baseColor="#202020" highlightColor="#444">
         <Router>
@@ -118,6 +130,10 @@ export default function App() {
             <Route
               path="/news"
               element={<News games={games} theme={theme} />}
+            />
+            <Route
+              path="/goty"
+              element={<Goty games={games} theme={theme} />}
             />
           </Routes>
         </Router>
