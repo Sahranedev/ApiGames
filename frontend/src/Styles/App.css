@@ -53,3 +53,7 @@ h5,
 h6 {
   font-family: "Montserrat", sans-serif;
 }
+
+.fixed-bot {
+  padding-bottom: 13vh;
+}

@@ -15,10 +15,10 @@ import Mainpage from "./Pages/MainPage";
 import FilteredbyGenre from "./components/FilteredByGenre";
 import SingleGame from "./components/SingleGame";
 import GameList from "./components/GameList";
-import Searchbar from "./components/SearchBar";
 import Favorites from "./Pages/Favorites";
 import FilteredbyPlatforms from "./components/FilteredByPlatforms";
 import News from "./components/News";
+import OurLikes from "./components/OurLikes";
 
 /* Import API params */
 const API_URL =
@@ -81,15 +81,6 @@ export default function App() {
             theme={theme}
           />
 
-          <Searchbar
-            className="d-none d-md-block m-3 p-3"
-            getGame={getGame}
-            searchValue={searchValue}
-            setSearchValue={setSearchValue}
-            games={games}
-            theme={theme}
-          />
-
           {games
             .filter((game) => game.name.includes(searchValue))
             .map((game) => (
@@ -131,6 +122,7 @@ export default function App() {
               path="/news"
               element={<News games={games} theme={theme} />}
             />
+            <Route path="/ourlikes" element={<OurLikes theme={theme} />} />
             <Route
               path="/goty"
               element={<Goty games={games} theme={theme} />}
