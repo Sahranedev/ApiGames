@@ -1,4 +1,3 @@
-
 .text-personnalized {
   font-size: 0.8em;
 }
@@ -11,13 +10,18 @@
   color: white;
 }
 
-.text-personnalized-color, .text-personnalized-color:hover ,
- .text-personnalized-color:active , .btn-link:hover , .btn-link:active, .btn-link, .btn:first-child:active {
+.text-personnalized-color,
+.text-personnalized-color:hover,
+.text-personnalized-color:active,
+.btn-link:hover,
+.btn-link:active,
+.btn-link,
+.btn:first-child:active {
   color: var(--special-color);
 }
 
-.img-personnalized{
- border-radius: 10px 10px 10px 10px;
+.img-personnalized {
+  border-radius: 10px 10px 10px 10px;
 }
 
 @media screen and (min-width: 800px) {
@@ -25,15 +29,15 @@
     font-size: 1.3em;
   }
   .mainpage-container-dark {
-      height: 200vh;      
-      background: #292929;
-      box-shadow: #121212 0px 0px 10px 0px;
+    height: 200vh;
+    background: #292929;
+    box-shadow: #121212 0px 0px 10px 0px;
   }
 
   .mainpage-container-light {
-    height: 200vh; 
-      background: #f1f1f1;
-      box-shadow: #dedede 0px 0px 10px 0px;
+    height: 200vh;
+    background: #f1f1f1;
+    box-shadow: #dedede 0px 0px 10px 0px;
   }
 }
 
@@ -43,6 +47,4 @@ hr {
   /* Set the hr color */
   color: #eee; /* old IE */
   background-color: #eee; /* Modern Browsers */
-
 }
-

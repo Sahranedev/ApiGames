@@ -20,7 +20,7 @@ import News from "./components/News";
 
 /* Import API params */
 const API_URL =
-  "https://api.rawg.io/api/games?key=5954a0ffab034307b0f8bb9adcd5f008";
+  "https://api.rawg.io/api/games?key=17d306a6417e451dbac7946b20c1301c";
 
 export default function App() {
   /* State to define loading screen */

@@ -30,7 +30,7 @@
   width: auto;
 }
 img.game-photo {
- min-width: 20vh;
+  min-width: 20vh;
 }
 
 @media screen and (min-width: 800px) {
