@@ -82,6 +82,17 @@ function NavBar({ searchValue, setSearchValue, getGame, toggleTheme, theme }) {
                 <NavLink to="/favorites"> Favorites</NavLink>
               </a>
             </li>
+
+            <li className="nav-item mx-3">
+              <a
+                className="nav-link d-flex justify-content-end align-items-center"
+                aria-current="page"
+                href="/ourlikes"
+              >
+                <NavLink to="/ourlikes">Selection</NavLink>
+              </a>
+            </li>
+
             {/* Incomine Games */}
             <li className="nav-item mx-3">
               <a

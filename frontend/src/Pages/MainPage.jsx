@@ -88,7 +88,9 @@ function MainPage({ theme }) {
         <hr className="mt-4" />
 
         <div className="game-select">
-          <h2>Our selection</h2>
+          <Link to="/ourlikes">
+            <h2>Our selection</h2>
+          </Link>
           <div className="d-flex justify-content-center mt-5">
             <div className="like text-center" />{" "}
             <h2 className="mx-1 ">

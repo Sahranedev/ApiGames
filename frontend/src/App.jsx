@@ -127,7 +127,7 @@ A voir
               path="/news"
               element={<News games={games} theme={theme} />}
             />
-            <Route path="/api/games" element={<OurLikes />} />
+            <Route path="/ourlikes" element={<OurLikes />} />
           </Routes>
         </Router>
       </SkeletonTheme>
