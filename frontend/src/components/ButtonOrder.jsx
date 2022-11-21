@@ -7,7 +7,7 @@ function ButtonOrder({ order, setOrder }) {
   };
 
   return (
-    <div className="col-6">
+    <div className="">
       <button
         type="button"
         onClick={getReverseOrder}

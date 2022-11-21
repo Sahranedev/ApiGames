@@ -82,7 +82,7 @@ function NavBar({ searchValue, setSearchValue, getGame, toggleTheme, theme }) {
                 <NavLink to="/favorites"> Favorites</NavLink>
               </a>
             </li>
-            {/* Incomine Games */}
+            {/* Incoming Games */}
             <li className="nav-item mx-3">
               <a
                 className="nav-link d-flex justify-content-end align-items-center"
@@ -90,6 +90,17 @@ function NavBar({ searchValue, setSearchValue, getGame, toggleTheme, theme }) {
                 href="/news"
               >
                 <NavLink to="/news">Incoming</NavLink>
+              </a>
+            </li>
+
+            {/* GOTY Games */}
+            <li className="nav-item mx-3">
+              <a
+                className="nav-link d-flex justify-content-end align-items-center"
+                aria-current="page"
+                href="/goty"
+              >
+                <NavLink to="/goty">GOTY</NavLink>
               </a>
             </li>
 

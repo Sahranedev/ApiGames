@@ -13,7 +13,7 @@ export default function Landpage() {
   };
 
   return (
-    <div className="d-flex justify-content-center  flex-column  text-center container p-5 my-5">
+    <div className="d-flex justify-content-center  flex-column  text-center ">
       {" "}
       <h1 className="my-5 special-text">Welcome on Api Games</h1>
       <Lottie options={defaultOptions} height={400} width={400} />
