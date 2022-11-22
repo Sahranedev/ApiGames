@@ -30,7 +30,7 @@ body {
   transition: 0.2s;
 }
 
-.special-text{
+.special-text {
   color: var(--special-color);
 }
 .gameListParaph {
@@ -55,5 +55,5 @@ h6 {
 }
 
 .fixed-bot {
-padding-bottom: 13vh;
+  padding-bottom: 13vh;
 }

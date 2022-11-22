@@ -3,19 +3,19 @@
   justify-content: flex-end;
 }
 
-.ourpi-img{
-box-shadow: rgb(22, 22, 22) 0px 2px 15px;
+.ourpi-img {
+  box-shadow: rgb(22, 22, 22) 0px 2px 15px;
 }
 
-.text-personalized{
-font-size: 1.2em;
+.text-personalized {
+  font-size: 1.2em;
 }
 
 .title {
   color: var(--special-color);
 }
 
-.card-personnalized-dark{
+.card-personnalized-dark {
   background-color: rgb(32, 32, 32);
   box-shadow: rgb(23, 22, 22) 0px 0px 10px;
 }
@@ -23,5 +23,4 @@ font-size: 1.2em;
 .card-personnalized-light {
   background-color: #eee;
   box-shadow: rgb(161, 161, 161) 0px 0px 10px;
-
 }
