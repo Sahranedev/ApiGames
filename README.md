@@ -1,4 +1,4 @@
-<h1 align="center">⏝⏜⏝⏜ Welcome to Rijks'Art project ⏝⏜⏝⏜</h1>
+<h1 align="center">⏝⏜ Welcome to Api Games ⏜⏝</h1>
 <h2></h2>
 
 <h1 href='#'>Introduction</h1>
@@ -29,15 +29,36 @@ Thanks a lot to RAWG to make a simple and free <a href='https://rawg.io/'>API</a
 <br/>
 <br/>
 
-<h1 href='#'>Packages to install</h1>
+<h1 href='#'>Setup and Packages to install</h1>
 <ul>
-<li><a href='https://www.npmjs.com/package/react-router-dom'>React-Router</a></li>
-<li><a href='https://www.npmjs.com/package/bootstrap'>Bootstrap</a></li>
-<li><a href='https://www.npmjs.com/package/react-loading-skeleton'>Skeleton</a></li>
-<li><a href='https://www.npmjs.com/package/react-lottie'>Lottie</a></li>
-<li>Please, import the DB on your SQL</li>
+<li>1/ npm run setup</li>
+<li><a href='https://www.npmjs.com/package/react-router-dom'>2/ React-Router</a></li>
+<li><a href='https://www.npmjs.com/package/bootstrap'>3/ Bootstrap</a></li>
+<li><a href='https://www.npmjs.com/package/react-loading-skeleton'>4/ Skeleton</a></li>
+<li><a href='https://www.npmjs.com/package/react-lottie'>5/ Lottie</a></li>
+<li>6/ Please, import the DB on your SQL</li>
 </ul>
 
+<h1>Available commands</h1>
+
+- `setup` : Initialization of frontend and backend, as well as all toolings
+- `migrate` : Run the database migration script
+- `dev` : Starts both servers (frontend + backend) in one terminal
+- `dev-front` : Starts the React frontend server
+- `dev-back` : Starts the Express backend server
+- `lint` : Runs validation tools, and refuses unclean code (will be executed on every _commit_)
+- `fix` : Fixes linter errors (run it if `lint` growls on your code !)
+
+
+<h1>Tools</h1>
+
+- _Concurrently_ : Allows for several commands to run concurrently in the same CLI
+- _Husky_ : Allows to execute specific commands that trigger on _git_ events
+- _Vite_ : Alternative to _Create-React-App_, packaging less tools for a more fluid experience
+- _ESLint_ : "Quality of code" tool, ensures chosen rules will be enforced
+- _Prettier_ : "Quality of code" tool as well, focuses on the styleguide
+- _ Airbnb Standard_ : One of the most known "standards", even though it's not officially linked to ES/JS
+- _Nodemon_ : Allows to restart the server everytime a .js file is udated
 
 
   
@@ -47,15 +68,16 @@ Thanks a lot to RAWG to make a simple and free <a href='https://rawg.io/'>API</a
   <img src="" width="350" title="hover text">
 </p>
 <p align="center">
-<img src="" alt="Home" border="0">
-<img src="" alt="Gallery" border="0">
-<img src="" alt="Search" border="0">
-<img src="" alt="Focus" border="0">
-<img src="" alt="Artists" border="0">
-<img src="" alt="About" border="0">
+<img src="https://i.ibb.co/ZGnNrRC/Capture-d-e-cran-2022-11-22-a-14-14-47.png" alt="" border="0">
+<!-- <img src="" alt="" border="0">
+<img src="" alt="" border="0">
+<img src="" alt="" border="0">
+<img src="" alt="" border="0">
+<img src="" alt="" border="0"> -->
 </p>
 <br/>
 <br/>
+
 
 
 <h1 href='#'>Work in progress</h1>
@@ -73,47 +95,3 @@ Thanks a lot to RAWG to make a simple and free <a href='https://rawg.io/'>API</a
 
 
 
-
-
-
-
-
-
-
-
-
-## Concept
-
-This template is meant to serve as a foundation for every P2/P3 following the React-Express-MySQL stack, as learned in Wild Code School.
-It's pre-configured with a set of tools which'll help students produce industry-quality and easier-to-maintain code, while staying as simple as possible to use.
-
-## Setup & Use
-
-### Project Initialization
-
-- In VSCode, install plugins **Prettier - Code formatter** and **ESLint** and configure them
-- Clone this repo, enter it
-- Run command `npm run setup`
-- _NB: To launch the backend server, you'll need an environment file with database credentials. You'll find a template one in `backend/.env.sample`_
-
-### Available Commands
-
-- `setup` : Initialization of frontend and backend, as well as all toolings
-- `migrate` : Run the database migration script
-- `dev` : Starts both servers (frontend + backend) in one terminal
-- `dev-front` : Starts the React frontend server
-- `dev-back` : Starts the Express backend server
-- `lint` : Runs validation tools, and refuses unclean code (will be executed on every _commit_)
-- `fix` : Fixes linter errors (run it if `lint` growls on your code !)
-
-## FAQ
-
-### Tools
-
-- _Concurrently_ : Allows for several commands to run concurrently in the same CLI
-- _Husky_ : Allows to execute specific commands that trigger on _git_ events
-- _Vite_ : Alternative to _Create-React-App_, packaging less tools for a more fluid experience
-- _ESLint_ : "Quality of code" tool, ensures chosen rules will be enforced
-- _Prettier_ : "Quality of code" tool as well, focuses on the styleguide
-- _ Airbnb Standard_ : One of the most known "standards", even though it's not officially linked to ES/JS
-- _Nodemon_ : Allows to restart the server everytime a .js file is udated
