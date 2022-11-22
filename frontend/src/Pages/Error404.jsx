@@ -1,8 +1,8 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "../Styles/error404.css";
 import Lottie from "react-lottie";
 import animationData from "../lotties/error404.json";
-import { NavLink } from "react-router-dom";
 
 function Error404() {
   const defaultOptions = {
