@@ -18,20 +18,24 @@ function NavBar({ searchValue, setSearchValue, getGame, toggleTheme, theme }) {
         <NavLink to="/" className="link-nav">
           <img src={logoTest} alt="Home" style={{ maxWidth: "4em" }} />
         </NavLink>
+
+        {/*  toggle navbar */}
+
         <button
           className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
+          data-backdrop="true"
           data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
-          aria-expanded="false"
+          aria-expanded="true"
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon" />
         </button>
 
         {/* "Body" of the navbar */}
-        <div className="collapse navbar-collapse " id="navbarSupportedContent">
+        <div className="collapse navbar-collapse  " id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 ">
             <li className=" d-flex justify-content-end  ">
               {/*  Toggle theme */}
