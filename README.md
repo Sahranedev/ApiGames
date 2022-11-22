@@ -20,14 +20,12 @@ Thanks a lot to RAWG to make a simple and free <a href='https://rawg.io/'>API</a
 <li><a href='https://github.com/Clochettenb'>Chloé</a></li>
 <li><a href='https://github.com/Hysilie'>Marion</a></li>
 </ul>
-<br/>
-<br/>
+
 <h1 href='#'>Tech Stack</h1>
 <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> 
   <a href="https://bootstrap.com/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" alt="tailwind" width="40" height="40"/> </a> 
 <a href="https://www.figma.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40" height="40"/> </a>  </p>
-<br/>
-<br/>
+
 
 <h1 href='#'>Setup and Packages to install</h1>
 <ul>
@@ -63,18 +61,13 @@ Thanks a lot to RAWG to make a simple and free <a href='https://rawg.io/'>API</a
 
   
 <h1 href='#'>WireFrame</h1>
-<p> Access to the Figma -> <a href='https://www.figma.com/file/KBUQYRHGm10a7J3GR7q4zf/Api-crew---Api-Games?node-id=0%3A1' ART?node-id=0%3A1' >Here</a></p>
+<p> Access to the Figma -> <a href='https://i.ibb.co/zhZJRMp/Capture-d-e-cran-2022-11-22-a-14-21-39.png' ART?node-id=0%3A1' >Here</a></p>
 
 <p align="center">
 <img src="https://i.ibb.co/ZGnNrRC/Capture-d-e-cran-2022-11-22-a-14-14-47.png" alt="" border="0">
-<!-- <img src="" alt="" border="0">
-<img src="" alt="" border="0">
-<img src="" alt="" border="0">
-<img src="" alt="" border="0">
-<img src="" alt="" border="0"> -->
+
+
 </p>
-<br/>
-<br/>
 
 
 
