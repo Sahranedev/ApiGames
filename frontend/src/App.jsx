@@ -20,10 +20,11 @@ import Favorites from "./Pages/Favorites";
 import FilteredbyPlatforms from "./components/FilteredByPlatforms";
 import News from "./components/News";
 import OurLikes from "./components/OurLikes";
+import Error404 from "./Pages/Error404";
 
 /* Import API params */
 const API_URL =
-  "https://api.rawg.io/api/games?key=17de4caa2f4543e6878ebbdafe4072c8";
+  "https://api.rawg.io/api/games?key=17d306a6417e451dbac7946b20c1301c";
 
 export default function App() {
   const [loader, setLoader] = useState(true);
@@ -103,6 +104,7 @@ export default function App() {
 
           <Routes>
             <Route path="/" element={<Mainpage theme={theme} />} />
+            <Route path="*" element={<Error404 theme={theme} />} />
             <Route
               path="/random/:randomID"
               element={<StillLost games={games} theme={theme} />}

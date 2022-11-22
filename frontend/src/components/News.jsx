@@ -4,7 +4,7 @@ import GameListDisplay from "./GameListDisplay";
 import "react-loading-skeleton/dist/skeleton.css";
 import LinkToMainPage from "./LinkToMainPage";
 
-const API_KEY = "17de4caa2f4543e6878ebbdafe4072c8";
+const API_KEY = "17d306a6417e451dbac7946b20c1301c";
 
 function News({ theme }) {
   /*  Loading screen */
