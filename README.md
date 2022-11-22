@@ -1,3 +1,87 @@
+<h1 align="center">⏝⏜⏝⏜ Welcome to Rijks'Art project ⏝⏜⏝⏜</h1>
+<h2></h2>
+
+<h1 href='#'>Introduction</h1>
+<p>We started to learn web development in Sept 22. This project is our second formation's project to learn React and the CSS framework of our choice. We choose Bootstrap. <br/>
+
+We choose to make gaming referral site  because it was a universe that linked each member of the team.
+<br/>
+Thanks a lot to RAWG to make a simple and free <a href='https://rawg.io/'>API</a>. <br/>
+</p>
+<br/>
+<br/>
+<h1 href='#'>About the team</h1>
+<p>The team is composed :</p>
+<p>(You can click to link to our github'profiles )</p>
+<ul>
+<li><a src='https://github.com/Sahranedev'>Sahrane</a></li>
+<li><a src='https://github.com/DsSamy'>Samy</a></li>
+<li><a src='https://github.com/IdirX69'>Idir</a></li>
+<li><a src='https://github.com/Clochettenb'>Chloé</a></li>
+<li><a src='https://github.com/Hysilie'>Marion</a></li>
+</ul>
+<br/>
+<br/>
+<h1 href='#'>Tech Stack</h1>
+<a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> 
+  <a href="https://bootstrap.com/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" alt="tailwind" width="40" height="40"/> </a> 
+<a href="https://www.figma.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40" height="40"/> </a>  </p>
+<br/>
+<br/>
+
+<h1 href='#'>Packages to install</h1>
+<ul>
+<li><a href='https://www.npmjs.com/package/react-router-dom'>React-Router</a></li>
+<li><a href='https://www.npmjs.com/package/bootstrap'>Bootstrap</a></li>
+<li><a href='https://www.npmjs.com/package/react-loading-skeleton'>Skeleton</a></li>
+<li><a href='https://www.npmjs.com/package/react-lottie'>Lottie</a></li>
+<li>Please, import the DB on your SQL</li>
+</ul>
+
+
+
+  
+<h1 href='#'>WireFrame</h1>
+<p> Access to the Figma -> <a href='https://www.figma.com/file/KBUQYRHGm10a7J3GR7q4zf/Api-crew---Api-Games?node-id=0%3A1' ART?node-id=0%3A1' >Here</a></p>
+<p align="center">
+  <img src="" width="350" title="hover text">
+</p>
+<p align="center">
+<img src="" alt="Home" border="0">
+<img src="" alt="Gallery" border="0">
+<img src="" alt="Search" border="0">
+<img src="" alt="Focus" border="0">
+<img src="" alt="Artists" border="0">
+<img src="" alt="About" border="0">
+</p>
+<br/>
+<br/>
+
+
+<h1 href='#'>Work in progress</h1>
+<ul>
+<li>Make a Quizz to get a personnalized choice of games </li>
+<li>Upgrade the management of our variables</li>
+<li>Reduce the impact of images</li>
+<li>Deploy</li>
+</ul>
+
+<h1 href='#'>Objectives</h1>
+<p>This project was an opportunity to learn and practice React. Some mistakes are expected.
+<br/> We do appreciate any feedbacks.</p>
+<br/> Thanks ! </p>
+
+
+
+
+
+
+
+
+
+
+
+
 ## Concept
 
 This template is meant to serve as a foundation for every P2/P3 following the React-Express-MySQL stack, as learned in Wild Code School.
