@@ -1,0 +1,61 @@
+/* Media Queries - Bootstrap overlay */
+@media screen and (min-width: 768px) {
+  .still-container-dark {
+    background: #28282889;
+    box-shadow: #110f0ffe 0px 0px 15px 4px;
+  }
+
+  .still-container-light {
+    background: #eee;
+    box-shadow: #a09e9efe 0px 0px 15px 4px;
+  }
+}
+
+/* Light mode */
+.random-img-light {
+  padding: 0;
+  border-radius: 10px;
+  box-shadow: #6b6a6a 0px 0px 10px 3px;
+}
+
+.description-button,
+.btn-outline-light {
+  color: white;
+  border: none;
+  background-color: transparent;
+}
+
+.description-button:active,
+.btn-outline-light:active {
+  color: white;
+  border: none;
+  background-color: transparent;
+}
+
+.description-button:focus,
+.btn-outline-light:focus {
+  color: white;
+  border: none;
+  background-color: transparent;
+}
+
+.description-button:hover,
+.btn-outline-light:hover {
+  color: white;
+  border: none;
+  background-color: transparent;
+}
+
+/* Dark mode */
+
+.random-img-dark {
+  padding: 0;
+  border-radius: 10px;
+  box-shadow: #0c0c0c 0px 0px 10px 3px;
+}
+
+/* Image effect */
+.random-img:hover {
+  transform: scale(1.02);
+  transition: 0.4s;
+}

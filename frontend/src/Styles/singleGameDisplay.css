@@ -1,0 +1,28 @@
+/* Media Queries - Bootstrap overlay */
+
+@media screen and (min-width: 600px) {
+  .totalPresentation {
+    margin-left: 8em;
+    margin-right: 8em;
+    margin-bottom: 0em;
+  }
+}
+
+.details {
+  margin-left: 10em;
+  margin-right: 10em;
+}
+
+.gamePageDescription {
+  margin-top: 0;
+}
+
+.gamePageDetails {
+  margin-bottom: 2em;
+}
+
+.singleGameImage {
+  width: 82%;
+  max-height: 100%;
+  aspect-ratio: auto;
+}

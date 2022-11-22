@@ -1,0 +1,27 @@
+.modal {
+  max-height: 100vh;
+  overflow-y: auto;
+  background-color: var(--main-background-color);
+}
+
+.close-btn {
+  color: white;
+  border-bottom-width: 0px;
+  padding-right: 16px;
+}
+
+.modal-header {
+  border: 0px solid transparent;
+}
+
+.btn-close {
+  background-color: white;
+}
+
+.bglight {
+  background-color: #eee;
+}
+
+.bgdark {
+  background-color: #333;
+}

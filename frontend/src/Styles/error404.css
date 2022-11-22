@@ -1,0 +1,22 @@
+.error404 {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(227, 241, 253);
+  flex-direction: column;
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+.error404 span {
+  color: rgba(27, 45, 53, 0.726);
+  font-size: 1.6rem;
+  text-decoration: underline;
+}
+.error404 span:hover {
+  color: rgb(27, 45, 53);
+  transition: 0.5s;
+  cursor: pointer;
+}

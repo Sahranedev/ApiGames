@@ -1,0 +1,59 @@
+:root {
+  /* Variable for main theme - Dark theme */
+  --dark-main-background-color: #333;
+
+  --dark-element-background-color: #121212;
+  --dark-main-text-color: #e8e8e8;
+
+  /* Variable for specials colours  */
+  --special-color: #f8ac1e;
+
+  /* Variables for light theme color */
+  --light-main-background-color: #eee; /* linear-gradient(34deg, rgba(255,255,255,1) 7%, rgba(238,238,238,1) 87%, rgba(253,170,15,1) 99%); */
+  --light-element-background-color: #eee;
+  --light-main-text-color: #2e2e2e;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.dark {
+  background: var(--dark-main-background-color);
+  color: var(--dark-main-text-color);
+  transition: 0.2s;
+}
+
+.light {
+  background: #eee;
+  color: var(--light-main-text-color);
+  transition: 0.2s;
+}
+
+.special-text {
+  color: var(--special-color);
+}
+.gameListParaph {
+  display: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+
+  font-family: "Inter", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+.fixed-bot {
+  padding-bottom: 13vh;
+}
