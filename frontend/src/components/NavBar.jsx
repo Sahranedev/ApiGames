@@ -97,7 +97,7 @@ function NavBar({ searchValue, setSearchValue, getGame, toggleTheme, theme }) {
               </div>
             </li>
 
-            {/* Incomine Games */}
+            {/* Incoming Games */}
             <li className="nav-item mx-3">
               <div
                 className="nav-link d-flex justify-content-end align-items-center"

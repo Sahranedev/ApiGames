@@ -92,7 +92,7 @@ function MainPage({ theme }) {
             {isLoading && <Skeleton height={200} count={1} />}
           </div>
           <div className="row">
-            {/* Affichage appel API */}
+            {/* APi call display */}
             {Maingames.length > 0
               ? Maingames.map((game) => (
                   <Novelties game={game} key={game.id} theme={theme} />

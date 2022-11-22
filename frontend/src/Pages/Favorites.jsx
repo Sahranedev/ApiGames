@@ -17,7 +17,7 @@ function Favorites({ theme }) {
     const gameId = window.localStorage.games
       ? window.localStorage.games.split(",")
       : [];
-    // pour chaque id dans gameId,faire un fetch
+    /* for each gameID make a fetch  */
     /* eslint-disable-next-line no-plusplus */
     for (let i = 0; i < gameId.length; i++) {
       fetch(`${API_URL}/${gameId[i]}?key=${API_KEY}`)

@@ -4,6 +4,7 @@ import "../Styles/error404.css";
 import Lottie from "react-lottie";
 import animationData from "../lotties/error404.json";
 
+/* Import 404 animation from lottie package */
 function Error404() {
   const defaultOptions = {
     loop: true,
