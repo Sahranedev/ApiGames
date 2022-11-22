@@ -14,11 +14,11 @@ Thanks a lot to RAWG to make a simple and free <a href='https://rawg.io/'>API</a
 <p>The team is composed :</p>
 <p>(You can click to link to our github'profiles )</p>
 <ul>
-<li><a src='https://github.com/Sahranedev'>Sahrane</a></li>
-<li><a src='https://github.com/DsSamy'>Samy</a></li>
-<li><a src='https://github.com/IdirX69'>Idir</a></li>
-<li><a src='https://github.com/Clochettenb'>Chloé</a></li>
-<li><a src='https://github.com/Hysilie'>Marion</a></li>
+<li><a href='https://github.com/Sahranedev'>Sahrane</a></li>
+<li><a href='https://github.com/DsSamy'>Samy</a></li>
+<li><a href='https://github.com/IdirX69'>Idir</a></li>
+<li><a href='https://github.com/Clochettenb'>Chloé</a></li>
+<li><a href='https://github.com/Hysilie'>Marion</a></li>
 </ul>
 <br/>
 <br/>
