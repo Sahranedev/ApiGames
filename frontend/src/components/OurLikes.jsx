@@ -19,7 +19,9 @@ function OurLikes({ theme }) {
 
   return (
     <div>
-      {/* Affichage appel API */}
+      {/*
+        Display the API call of games
+      */}
       {ourLikes?.map((game) => {
         return <OurLikesDisplay key={game.id} {...game} theme={theme} />;
       })}

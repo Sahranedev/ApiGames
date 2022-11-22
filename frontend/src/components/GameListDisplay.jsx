@@ -78,8 +78,8 @@ function GameListDisplay({
                 ) : null}
               </div>
             </div>
-            {/*  Ternaire qui pose une condition d'affichage en appelant le
-              composant qui contient les dates de sorties */}
+            {/*   Ternary that sets a display condition by calling the component that contains the release dates */}
+
             <div className="row-fluid ">
               <span className="text-personalize">
                 {" "}
@@ -95,7 +95,7 @@ function GameListDisplay({
                 {platformeName}
               </span>
             </div>
-            {/* Ternaire qui pose une condition d'affichage en appelant le composant qui contient les genres */}
+            {/*            Ternary that sets a display condition by calling the component that contains the genres */}
 
             <div className="row-fluid d-flex flex-wrap text-personalize">
               <div className="col-fluid"></div>

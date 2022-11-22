@@ -3,6 +3,7 @@ import Lottie from "react-lottie";
 
 import animationData from "../lotties/welcome.json";
 
+/* Import the animation loading screen */
 export default function Landpage() {
   const defaultOptions = {
     loop: false,

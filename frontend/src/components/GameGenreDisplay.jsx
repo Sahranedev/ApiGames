@@ -3,7 +3,7 @@ import React from "react";
 function GameGenreDisplay({ genres: genre }) {
   return (
     <>
-      {/* On map la props pour permettre l'affichage de plusieurs genres si il y (sinon seul le premier genre du tableau apparaît) */}
+      {/* We use the map function to display all the genres of the game */}
 
       {genre.slice(0, 3).map((el) => (
         // eslint-disable-next-line react/no-array-index-key

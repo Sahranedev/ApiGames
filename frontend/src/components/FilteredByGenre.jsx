@@ -47,8 +47,7 @@ function FiltredByGenre({ theme }) {
     setIsLoading(false);
   };
 
-  // On utilise un useEffect basé sur l'évolution du filtredList pour réactualiser la requête
-  // quand on change de plateforme depuis le menu, vu qu'onn ne change pas de composant sinon ça ne recharge pas
+  /* UseEffect to call again the API when the platforms change (because the components not reload with navbar navigation) */
   useEffect(() => {
     getGenreList();
   }, [filtredListByGenre]);
