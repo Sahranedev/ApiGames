@@ -7,6 +7,7 @@
   background-color: #fdaa0feb;
   -webkit-backdrop-filter: blur(0.2em);
   backdrop-filter: blur(0.2em);
+  z-index: 100;
 }
 
 .link-nav,

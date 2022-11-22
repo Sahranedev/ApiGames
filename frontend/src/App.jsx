@@ -19,6 +19,7 @@ import Favorites from "./Pages/Favorites";
 import FilteredbyPlatforms from "./components/FilteredByPlatforms";
 import News from "./components/News";
 import OurLikes from "./components/OurLikes";
+import Error404 from "./Pages/Error404";
 
 /* Import API params */
 const API_URL =
@@ -93,6 +94,7 @@ export default function App() {
 
           <Routes>
             <Route path="/" element={<Mainpage theme={theme} />} />
+            <Route path="*" element={<Error404 theme={theme} />} />
             <Route
               path="/random/:randomID"
               element={<StillLost games={games} theme={theme} />}
