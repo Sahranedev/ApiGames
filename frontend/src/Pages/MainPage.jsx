@@ -25,7 +25,7 @@ function MainPage({ theme }) {
 
   const getNewsGames = () => {
     fetch(
-      `https://api.rawg.io/api/games?key=${API_KEY}&dates=${date1},${nextYear}&ordering=-added&page_size=2`
+      `https://api.rawg.io/api/games?key=17d306a6417e451dbac7946b20c1301c&dates=${date1},${nextYear}&ordering=-added&page_size=2`
     )
       .then((response) => response.json())
       .then((result) => {

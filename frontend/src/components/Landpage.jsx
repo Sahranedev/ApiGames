@@ -1,5 +1,6 @@
 import React from "react";
 import Lottie from "react-lottie";
+
 import animationData from "../lotties/welcome.json";
 
 export default function Landpage() {

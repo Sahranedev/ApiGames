@@ -15,7 +15,7 @@ import "../Styles/stillLost.css";
 function StillLost({ theme }) {
   /* API params */
   const API_URL = "https://api.rawg.io/api/games";
-  const API_KEY = "17de4caa2f4543e6878ebbdafe4072c8";
+  const API_KEY = "17d306a6417e451dbac7946b20c1301c";
 
   /* Import random ID from Main Page */
   const { randomID } = useParams();
@@ -128,7 +128,10 @@ function StillLost({ theme }) {
               Genres :{" "}
               {randomGame
                 ? randomGame.genres?.map((genre) => (
-                    <div className="col d-flex flex-wrap justify-content-md-center">
+                    <div
+                      key={genre.id}
+                      className="col d-flex flex-wrap justify-content-md-center"
+                    >
                       <div className="btn btn-warning btn-sm mx-3 p-1 text-personalize button-personalized-lost">
                         {genre.name}
                       </div>
