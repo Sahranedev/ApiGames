@@ -8,7 +8,7 @@ function LinkToMainPage() {
   };
 
   return (
-    <div className>
+    <div>
       <Link to="/">
         <button type="button" className="btn btn-dark" onClick={closePage}>
           <svg

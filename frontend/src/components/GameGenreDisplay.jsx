@@ -8,7 +8,7 @@ function GameGenreDisplay({ genres: genre }) {
       {genre.slice(0, 3).map((el) => (
         // eslint-disable-next-line react/no-array-index-key
 
-        <div className="col-fluid">
+        <div className="col-fluid" key={el.name}>
           <div className="btn btn-warning btn-sm text-personalize button-personalize">
             {el.name}
           </div>
