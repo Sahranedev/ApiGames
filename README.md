@@ -32,10 +32,10 @@ Thanks a lot to RAWG to make a simple and free <a href='https://rawg.io/'>API</a
 <h1 href='#'>Setup and Packages to install</h1>
 <ul>
 <li>1/ npm run setup</li>
-<li><a href='https://www.npmjs.com/package/react-router-dom'>2/ React-Router</a></li>
-<li><a href='https://www.npmjs.com/package/bootstrap'>3/ Bootstrap</a></li>
-<li><a href='https://www.npmjs.com/package/react-loading-skeleton'>4/ Skeleton</a></li>
-<li><a href='https://www.npmjs.com/package/react-lottie'>5/ Lottie</a></li>
+<li><a href='https://www.npmjs.com/package/react-router-dom' alt='react'>2/ React-Router</a></li>
+<li><a href='https://www.npmjs.com/package/bootstrap' alt='bootstrap'>3/ Bootstrap</a></li>
+<li><a href='https://www.npmjs.com/package/react-loading-skeleton' alt='skeleton'>4/ Skeleton</a></li>
+<li><a href='https://www.npmjs.com/package/react-lottie' alt='lottie'>5/ Lottie</a></li>
 <li>6/ Please, import the DB on your SQL</li>
 </ul>
 
@@ -64,9 +64,7 @@ Thanks a lot to RAWG to make a simple and free <a href='https://rawg.io/'>API</a
   
 <h1 href='#'>WireFrame</h1>
 <p> Access to the Figma -> <a href='https://www.figma.com/file/KBUQYRHGm10a7J3GR7q4zf/Api-crew---Api-Games?node-id=0%3A1' ART?node-id=0%3A1' >Here</a></p>
-<p align="center">
-  <img src="" width="350" title="hover text">
-</p>
+
 <p align="center">
 <img src="https://i.ibb.co/ZGnNrRC/Capture-d-e-cran-2022-11-22-a-14-14-47.png" alt="" border="0">
 <!-- <img src="" alt="" border="0">
