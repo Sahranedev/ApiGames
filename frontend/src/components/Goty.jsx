@@ -5,6 +5,7 @@ import LinkToMainPage from "./LinkToMainPage";
 import GameListDisplay from "./GameListDisplay";
 
 const API_KEY = import.meta.env.VITE_API_KEY;
+
 function Goty({ theme }) {
   /*  Loading screen */
   const [isLoading, setIsLoading] = useState(true);

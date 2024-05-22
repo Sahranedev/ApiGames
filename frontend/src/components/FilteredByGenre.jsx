@@ -7,7 +7,7 @@ import LinkToMainPage from "./LinkToMainPage";
 
 function FiltredByGenre({ theme }) {
   const API_URL = "https://api.rawg.io/api/games";
-  const API_KEY = import.meta.env.VITE_API_KEY;  
+  const API_KEY = import.meta.env.VITE_API_KEY;
 
   /* Params to filter the ID */
 

@@ -24,8 +24,7 @@ import Error404 from "./Pages/Error404";
 
 /* Import API params */
 const API_KEY = import.meta.env.VITE_API_KEY;
-const API_URL =
-  `https://api.rawg.io/api/games?key=${API_KEY}`;
+const API_URL = `https://api.rawg.io/api/games?key=${API_KEY}`;
 
 export default function App() {
   const [loader, setLoader] = useState(true);
