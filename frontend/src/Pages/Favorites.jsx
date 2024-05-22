@@ -5,8 +5,7 @@ import Skeleton from "react-loading-skeleton";
 import FavoriteGame from "./FavoriteGame";
 
 const API_URL = "https://api.rawg.io/api/games";
-const API_KEY = "17d306a6417e451dbac7946b20c1301c";
-
+const API_KEY = import.meta.env.VITE_API_KEY;
 function Favorites({ theme }) {
   /* State to contain the game list put in favorite on the local storage */
   const [isLoading, setIsLoading] = useState(true);

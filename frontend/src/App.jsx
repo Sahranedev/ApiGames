@@ -23,8 +23,9 @@ import OurLikes from "./components/OurLikes";
 import Error404 from "./Pages/Error404";
 
 /* Import API params */
+const API_KEY = import.meta.env.VITE_API_KEY;
 const API_URL =
-  "https://api.rawg.io/api/games?key=17d306a6417e451dbac7946b20c1301c";
+  `https://api.rawg.io/api/games?key=${API_KEY}`;
 
 export default function App() {
   const [loader, setLoader] = useState(true);

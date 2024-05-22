@@ -4,8 +4,7 @@ import Skeleton from "react-loading-skeleton";
 import SingleGameDisplay from "./SingleGameDisplay";
 
 const API_URL = "https://api.rawg.io/api/games";
-const API_KEY = "17d306a6417e451dbac7946b20c1301c";
-
+const API_KEY = import.meta.env.VITE_API_KEY;
 function SingleGame({ id, theme }) {
   const [isLoading, setIsLoading] = useState(true);
   /* API call for single game  */

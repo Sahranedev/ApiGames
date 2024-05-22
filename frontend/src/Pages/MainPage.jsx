@@ -4,8 +4,7 @@ import Skeleton from "react-loading-skeleton";
 import Novelties from "../components/Novelties";
 import "../Styles/mainpage.css";
 
-const API_KEY = "17de4caa2f4543e6878ebbdafe4072c8";
-
+const API_KEY = import.meta.env.VITE_API_KEY;
 function MainPage({ theme }) {
   /*  Loading page  */
   const [isLoading, setIsLoading] = useState(true);

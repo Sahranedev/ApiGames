@@ -4,8 +4,7 @@ import GameListDisplay from "./GameListDisplay";
 import "react-loading-skeleton/dist/skeleton.css";
 import LinkToMainPage from "./LinkToMainPage";
 
-const API_KEY = "17d306a6417e451dbac7946b20c1301c";
-
+const API_KEY = import.meta.env.VITE_API_KEY;
 function News({ theme }) {
   /*  Loading screen */
   const [isLoading, setIsLoading] = useState(true);

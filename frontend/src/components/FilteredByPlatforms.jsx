@@ -7,8 +7,7 @@ import GameListDisplay from "./GameListDisplay";
 
 function FiltredByPlatforms({ theme }) {
   const API_URL = "https://api.rawg.io/api/games";
-  const API_KEY = "17d306a6417e451dbac7946b20c1301c";
-
+  const API_KEY = import.meta.env.VITE_API_KEY;
   /* Params to filter the ID */
   const { filtredListByPlatforms } = useParams();
   /* Stock platforms games */
